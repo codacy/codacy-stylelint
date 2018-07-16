@@ -1,0 +1,22 @@
+{
+  "name": "codacy-stylelint",
+  "version": "1.0.0",
+  "description": "Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/stylelint) support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caldasdeoliveira/codacy-stylelint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caldasdeoliveira/codacy-stylelint/issues"
+  },
+  "homepage": "https://github.com/caldasdeoliveira/codacy-stylelint#readme",
+  "dependencies": {
+    "stylelint": "^9.3.0"
+  }
+}

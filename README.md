@@ -1,5 +1,11 @@
 # codacy-stylelint
-Docker engine to allow Codacy to have stylelint support.
+Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/stylelint) support.
+
+## Docs
+
+[Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
+
+[Tool Developer Guide - Using Scala](https://support.codacy.com/hc/en-us/articles/207280379-Tool-Developer-Guide-Using-Scala)
 
 ## What is Codacy
 
