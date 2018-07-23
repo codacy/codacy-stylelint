@@ -7,7 +7,7 @@ name := """codacy-engine-stylelint"""
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.12.6"
+val languageVersion = "2.11.12"
 
 scalaVersion := languageVersion
 
@@ -39,18 +39,18 @@ toolVersion := {
   toolMap.getOrElse[String]("version", throw new Exception("Failed to retrieve 'version' from patterns.json"))
 }
 
+mappings.in(Universal) ++= resourceDirectory
+ .in(Compile)
+ .map { resourceDir: File =>
+   val src = resourceDir / "docs"
+   val dest = "/docs"
 
-mappings in Universal ++= {
-  (resourceDirectory in Compile) map { (resourceDir: File) =>
-    val src = resourceDir / "docs"
-    val dest = "/docs"
-
-    val docFiles = for {
-      path <- src.***.get if !path.isDirectory
-    } yield path -> path.toString.replaceFirst(src.toString, dest)
-  }
-}
-
+   for {
+     path <- src.***.get
+     if !path.isDirectory
+   } yield path -> path.toString.replaceFirst(src.toString, dest)
+ }
+ .value
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
