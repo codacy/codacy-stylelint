@@ -7,7 +7,7 @@ name := """codacy-engine-stylelint"""
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.11.12"
+val languageVersion = "2.12.4"
 
 scalaVersion := languageVersion
 
@@ -17,8 +17,9 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.4.8",
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.10"
+  "com.typesafe.play" %% "play-json" % "2.6.9",
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141",
+  "com.vladsch.flexmark" % "flexmark-all" % "0.34.8"
 )
 
 enablePlugins(JavaAppPackaging)
@@ -39,18 +40,19 @@ toolVersion := {
   toolMap.getOrElse[String]("version", throw new Exception("Failed to retrieve 'version' from patterns.json"))
 }
 
-mappings.in(Universal) ++= resourceDirectory
- .in(Compile)
- .map { resourceDir: File =>
-   val src = resourceDir / "docs"
-   val dest = "/docs"
-
-   for {
-     path <- src.***.get
-     if !path.isDirectory
-   } yield path -> path.toString.replaceFirst(src.toString, dest)
- }
- .value
+// TODO: check this when building docker
+//mappings.in(Universal) ++= resourceDirectory
+// .in(Compile)
+// .map { resourceDir: File =>
+//   val src = resourceDir / "docs"
+//   val dest = "/docs"
+//
+//   for {
+//     path <- src.***.get
+//     if !path.isDirectory
+//   } yield path -> path.toString.replaceFirst(src.toString, dest)
+// }
+// .value
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
