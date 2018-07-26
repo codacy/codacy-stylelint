@@ -19,9 +19,16 @@ object DocGenerator {
 
     //cloneFromGitToTmpDir(tmpDirectory,version)
 
-    val dir = tmpDirectory + "/lib/rules"
+    val rulesdir = tmpDirectory + "/lib/rules"
 
-    initializePatternsFile(dir, version)
+    val filePathForDocs = "src/main/resources/docs/"
+    //val patternsfile = File(filePathForDocs+"/patterns.json")
+    //val descriptionfile = File(filePathForDocs+"/description.json")
+
+    val (folders, patterns) = getPatterns(rulesdir)
+    initializePatternsFile(patterns , version)
+    initializeDescriptionFile(folders, patterns ,rulesdir)
+    copyDescriptionFiles(filePathForDocs,rulesdir,folders)
 
   }
 
@@ -50,28 +57,17 @@ object DocGenerator {
     directory
       .walk(maxDepth = 1)
       .filter(_.isRegularFile)
-      .filterNot(_.name != "index")
+      .filterNot(_.nameWithoutExtension == "index")
       .toList
       .filter(file => extensions.exists(file.name.endsWith(_)))
       .map(_.nameWithoutExtension)
   }
 
-  def initializePatternsFile(rulesdir: String, version: String): Unit = {
-    //val file = File("main/resources/docs/patterns.json")
-
-    //get non-documented rules
-    val folders = getListOfSubDirectories(rulesdir)
-    folders.foreach(println)
-
-    //get non-documented rules(not enclosed in folders)
-    val okFileExtensions = List("js")
-    val files = getListOfFiles(rulesdir, okFileExtensions)
-    files.foreach(println)
+  def initializePatternsFile(patterns: List[String], version: String): Unit = {
 
     val default = getPatternsFromDefaultConfig()
 
-    //TODO patterns from non directories not done
-    val toolpatterns: Set[Pattern.Specification] = folders.map {
+    val toolpatterns: Set[Pattern.Specification] = patterns.map {
       patternid => addNewPattern(patternid,default.getOrElse(patternid, Parameter.Value(JsNull)))
     }(collection.breakOut)
     val tool = Tool.Specification(Tool.Name("stylelint"), Option(Tool.Version(version)), toolpatterns)
@@ -90,5 +86,47 @@ object DocGenerator {
   def getPatternsFromDefaultConfig(): Map[String, Parameter.Value]={
     var stylelintConfigStandard = Resource.getAsString("default_configs/stylelint-config-recommended-standard.json")(Charset.defaultCharset())
     Json.parse(stylelintConfigStandard).as[Map[String, Parameter.Value]]
+  }
+
+  def getPatterns (rulesdir: String): (List[String],List[String])={
+    //get non-documented rules
+    val folders = getListOfSubDirectories(rulesdir)
+    //folders.foreach(println)
+
+    //get non-documented rules(not enclosed in folders)
+    val okFileExtensions = List("js")
+    val patterns = getListOfFiles(rulesdir, okFileExtensions) ++ folders
+    patterns.foreach(println)
+
+    (folders, patterns)
+  }
+
+  def initializeDescriptionFile( folders: List[String],patterns: List[String], rulesdir: String): Unit = {
+
+    val patternsDescription: Set[Pattern.Description] = patterns.map {
+      patternid =>
+        val patternDescription = if(folders contains patternid) {
+          ParseMarkupRule.parseForDescriptions(File(rulesdir + "/" + patternid + "/README.md"))
+        } else {
+          patternid + ": further description not available"
+        }
+        addNewDescription(patternid, patternDescription) //need to remove non folder
+    }(collection.breakOut)
+    println(Json.prettyPrint(Json.toJson(patternsDescription)))
+  }
+
+  def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
+
+    val param = Option(Set(Parameter.Description(Parameter.Name(patternName),Parameter.DescriptionText(patternName))))
+
+    Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None , param)
+  }
+
+  def copyDescriptionFiles(filePathForDocs: String, temporaryFileLocation: String, folderNames: List[String]): Unit = {
+    folderNames.map{
+      patternName =>
+        File(temporaryFileLocation + "/" + patternName + "/README.md")
+          .copyTo(File(filePathForDocs + "/description/" + patternName + ".md"), overwrite = true)
+    }
   }
 }
