@@ -26,9 +26,9 @@ object DocGenerator {
     //val descriptionfile = File(filePathForDocs+"/description.json")
 
     val (folders, patterns) = getPatterns(rulesdir)
-    initializePatternsFile(patterns , version)
-    initializeDescriptionFile(folders, patterns ,rulesdir)
-    copyDescriptionFiles(filePathForDocs,rulesdir,folders)
+    initializePatternsFile(patterns , version,filePathForDocs)
+    initializeDescriptionFile(folders, patterns ,rulesdir,filePathForDocs)
+    copyDescriptionFiles(folders,rulesdir,filePathForDocs)
 
   }
 
@@ -63,7 +63,7 @@ object DocGenerator {
       .map(_.nameWithoutExtension)
   }
 
-  def initializePatternsFile(patterns: List[String], version: String): Unit = {
+  def initializePatternsFile(patterns: List[String], version: String, filePathForDocs: String): Unit = {
 
     val default = getPatternsFromDefaultConfig()
 
@@ -71,7 +71,7 @@ object DocGenerator {
       patternid => addNewPattern(patternid,default.getOrElse(patternid, Parameter.Value(JsNull)))
     }(collection.breakOut)
     val tool = Tool.Specification(Tool.Name("stylelint"), Option(Tool.Version(version)), toolpatterns)
-    println(Json.prettyPrint(Json.toJson(tool)))
+    File(filePathForDocs+"/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
 
 
   }
@@ -96,12 +96,12 @@ object DocGenerator {
     //get non-documented rules(not enclosed in folders)
     val okFileExtensions = List("js")
     val patterns = getListOfFiles(rulesdir, okFileExtensions) ++ folders
-    patterns.foreach(println)
+    //patterns.foreach(println)
 
     (folders, patterns)
   }
 
-  def initializeDescriptionFile( folders: List[String],patterns: List[String], rulesdir: String): Unit = {
+  def initializeDescriptionFile( folders: List[String],patterns: List[String], rulesdir: String, filePathForDocs: String): Unit = {
 
     val patternsDescription: Set[Pattern.Description] = patterns.map {
       patternid =>
@@ -112,7 +112,7 @@ object DocGenerator {
         }
         addNewDescription(patternid, patternDescription) //need to remove non folder
     }(collection.breakOut)
-    println(Json.prettyPrint(Json.toJson(patternsDescription)))
+    File(filePathForDocs+"/description.json").write(Json.prettyPrint(Json.toJson(patternsDescription)))
   }
 
   def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
@@ -122,7 +122,7 @@ object DocGenerator {
     Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None , param)
   }
 
-  def copyDescriptionFiles(filePathForDocs: String, temporaryFileLocation: String, folderNames: List[String]): Unit = {
+  def copyDescriptionFiles(folderNames: List[String], temporaryFileLocation: String, filePathForDocs: String): Unit = {
     folderNames.map{
       patternName =>
         File(temporaryFileLocation + "/" + patternName + "/README.md")
