@@ -1,12 +1,9 @@
-package com.codacy.stylelint.documentation.parser
+package codacy.stylelint
 
 import better.files.File
-import com.vladsch.flexmark.ast.util.TextCollectingVisitor
-import com.vladsch.flexmark.ast.{Heading, Node}
-import com.vladsch.flexmark.ext.toc.internal.TocUtils
+import com.vladsch.flexmark.ast.Node
 import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.collection.iteration.ReversiblePeekingIterator
-import play.api.libs.json.{JsArray, Json}
 
 import scala.collection.mutable.ArrayBuffer
 

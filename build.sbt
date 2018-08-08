@@ -19,9 +19,10 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-json" % "2.6.9",
   "com.codacy" %% "codacy-engine-scala-seed" % "3.0.141",
-  "com.vladsch.flexmark" % "flexmark-all" % "0.34.8"
+  "com.vladsch.flexmark" % "flexmark-all" % "0.34.8",
+  "org.specs2" %% "specs2-core" % "4.2.0" % "test"
 )
-
+scalacOptions in Test  ++= Seq("-Yrangepos")
 enablePlugins(JavaAppPackaging)
 
 enablePlugins(DockerPlugin)
