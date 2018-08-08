@@ -10,17 +10,15 @@ import play.api.libs.json.{JsNull, Json}
 
 object DocGenerator {
   def main(args: Array[String]): Unit = {
-    //tmpDirectory <- File.temporaryDirectory()
-    val tmpDirectory = File("/tmp/clone")
-    val version = "9.3.0" //for first test
+    val tmpDirectory = File.newTemporaryDirectory()
 
-    //cloneFromGitToTmpDir(tmpDirectory,version)
+    val version = File(".stylelint-version").contentAsString.trim
+
+    cloneFromGitToTmpDir(tmpDirectory,version)
 
     val rulesdir = tmpDirectory + "/lib/rules"
 
     val filePathForDocs = "src/main/resources/docs/"
-    //val patternsfile = File(filePathForDocs+"/patterns.json")
-    //val descriptionfile = File(filePathForDocs+"/description.json")
 
     val (folders, patterns) = getPatterns(rulesdir)
     initializePatternsFile(patterns , version,filePathForDocs)
@@ -88,7 +86,6 @@ object DocGenerator {
   def getPatterns (rulesdir: String): (List[String],List[String])={
     //get non-documented rules
     val folders = getListOfSubDirectories(rulesdir)
-    //folders.foreach(println)
 
     //get non-documented rules(not enclosed in folders)
     val okFileExtensions = List("js")
@@ -119,10 +116,12 @@ object DocGenerator {
   }
 
   def copyDescriptionFiles(folderNames: List[String], temporaryFileLocation: String, filePathForDocs: String): Unit = {
+    val descriptionDir = File(filePathForDocs + "/description/")
+    descriptionDir.createDirectories()
     folderNames.map{
       patternName =>
-        File(temporaryFileLocation + "/" + patternName + "/README.md")
-          .copyTo(File(filePathForDocs + "/description/" + patternName + ".md"), overwrite = true)
+        File(s"$temporaryFileLocation/$patternName/README.md")
+          .copyTo(File(s"$descriptionDir/$patternName.md"), overwrite = true)
     }
   }
 }
