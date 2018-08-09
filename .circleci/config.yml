@@ -19,6 +19,10 @@ jobs:
           working_directory: ~/codacy-plugins-test
           command: sbt compile
       - run:
+          name: Test project
+          working_directory: ~/workdir
+          command: ./scripts/test.sh
+      - run:
           name: Publish tool docker locally
           working_directory: ~/workdir
           command: sbt 'set version in Docker := "latest"' "set name := \"$CIRCLE_PROJECT_REPONAME\"" docker:publishLocal

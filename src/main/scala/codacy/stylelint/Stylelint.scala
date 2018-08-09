@@ -2,23 +2,29 @@ package codacy.stylelint
 
 import java.nio.file.{Path, Paths}
 
-import com.codacy.plugins.api.{Options, Source}
-import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
-
-import scala.util.{Failure, Success, Try}
 import better.files._
-import com.codacy.tools.scala.seed.utils.{CommandResult, CommandRunner, FileHelper}
+import com.codacy.plugins.api.results.{Pattern, Result, Tool}
+import com.codacy.plugins.api.{Options, Source}
+import com.codacy.tools.scala.seed.utils.{CommandResult, CommandRunner}
 import play.api.libs.json._
 
+import scala.util.{Failure, Success, Try}
 
 object Stylelint extends Tool {
 
-  private lazy val configFileNames = Set(".stylelintrc", ".stylelintrc.json", ".stylelintrc.yaml", ".stylelintrc.yml", ".stylelintrc.js", "stylelint.config.js")
+  private lazy val configFileNames = Set(
+    ".stylelintrc",
+    ".stylelintrc.json",
+    ".stylelintrc.yaml",
+    ".stylelintrc.yml",
+    ".stylelintrc.js",
+    "stylelint.config.js")
 
-  override def apply(source: Source.Directory,
-                     configuration: Option[List[Pattern.Definition]],
-                     files: Option[Set[Source.File]],
-                     options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
+  override def apply(
+    source: Source.Directory,
+    configuration: Option[List[Pattern.Definition]],
+    files: Option[Set[Source.File]],
+    options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
 
     val configFilePath = getConfigFile(source, configuration)
 
@@ -47,21 +53,22 @@ object Stylelint extends Tool {
 
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
     configuration.map { config =>
-
       // Generate config file from pattern
       val patterns = config.map { pattern =>
         val parameter = pattern.parameters
-          .flatMap(_.headOption.map {
-            param =>
-              val parameterValue: JsValue = param.value
-              parameterValue
-          }).getOrElse(JsNull)
+          .flatMap(_.headOption.map { param =>
+            val parameterValue: JsValue = param.value
+            parameterValue
+          })
+          .getOrElse(JsNull)
 
         (pattern.patternId.value, parameter)
       }
       // save config file
-      File.newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns))))))).path
+      File
+        .newTemporaryFile("codacy-stylelint", ".json")
+        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
+        .path
       // return config file path
 
     }.orElse {
@@ -72,57 +79,54 @@ object Stylelint extends Tool {
     }.getOrElse {
 
       // save default file
-      File.newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(
-          JsObject(Seq(
-            ("extends", JsString("stylelint-config-standard"))
-          ))
-        ))).path
+      File
+        .newTemporaryFile("codacy-stylelint", ".json")
+        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("extends", JsString("stylelint-config-standard")))))))
+        .path
       // return default file path
     }
   }
 
-  def runStylelint(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
-    val fileArgument = filesOpt.map(files => files.map(_.path))
-      .getOrElse(List("**/**.{css,scss,less}"))
+  def runStylelint(source: Source.Directory,
+                   configFilePath: Path,
+                   filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
+    val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
 
-    val command = List("stylelint") ++ fileArgument ++ List("--config", configFilePath.toString) ++ List("--formatter", "json") ++ List("--config-basedir", "/usr/local/lib/node_modules")
+    val command = List("stylelint") ++ fileArgument ++ List("--config", configFilePath.toString) ++ List(
+      "--formatter",
+      "json") ++ List("--config-basedir", "/usr/local/lib/node_modules")
 
-    CommandRunner.exec(command, Option(File(source.path).toJava))
-      .fold(Failure(_), Success(_))
+    CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
 
-  def parseJson(commandResult: Try[CommandResult]): Try[List[StylelintResult]]= {
+  def parseJson(commandResult: Try[CommandResult]): Try[List[StylelintResult]] = {
     implicit val warningResultFmt: Format[StylelintPatternResult] = Json.format[StylelintPatternResult]
     implicit val resultFmt: Format[StylelintResult] = Json.format[StylelintResult]
 
     commandResult.flatMap { result =>
       val jsonString = result.stdout.mkString("\n")
-      Try(Json.parse(jsonString).as[List[StylelintResult]])
-        .recoverWith {
-          case err =>
-            Failure(new Exception(
-              s"""|Could not parse results json: ${err.getMessage}
+      Try(Json.parse(jsonString).as[List[StylelintResult]]).recoverWith {
+        case err =>
+          Failure(new Exception(s"""|Could not parse results json: ${err.getMessage}
                   |
                   |Json:
                   |$jsonString
-              """.stripMargin
-            ))
-        }
+              """.stripMargin))
+      }
     }
   }
 
-
-  def convertToResult(parsedResults: Try[List[StylelintResult]]): Try[List[Result]]= {
+  def convertToResult(parsedResults: Try[List[StylelintResult]]): Try[List[Result]] = {
     parsedResults match {
       case Success(results) =>
-
-        val issues = results.flatMap {
-          fileResultsData =>
-            fileResultsData.warnings.map {
-              resultData => Result.Issue(Source.File(fileResultsData.source), Result.Message(resultData.text),
-                Pattern.Id(resultData.rule), Source.Line(resultData.line))
-            }
+        val issues = results.flatMap { fileResultsData =>
+          fileResultsData.warnings.map { resultData =>
+            Result.Issue(
+              Source.File(fileResultsData.source),
+              Result.Message(resultData.text),
+              Pattern.Id(resultData.rule),
+              Source.Line(resultData.line))
+          }
         }
 
         Success(issues)
@@ -130,18 +134,15 @@ object Stylelint extends Tool {
       case Failure(err) => Failure(err)
     }
   }
-
-
-//  def main(args: Array[String]): Unit = {
-//    // for test run
-//    val source = Source.Directory("/Users/dco/Desktop/test")
-//    val pattern = "indentation"
-//    val parameterdef = Option(Set(Parameter.Definition(Parameter.Name(pattern), Parameter.Value("100"))))
-//    val configuration = Option(List(Pattern.Definition(Pattern.Id(pattern), parameterdef))) // for test run
-//
-//    val res = apply(source, None, None, Map())(null)
-//    println(res)
-//  }
-
+  //  def main(args: Array[String]): Unit = {
+  //    // for test run
+  //    val source = Source.Directory("/Users/dco/Desktop/test")
+  //    val pattern = "indentation"
+  //    val parameterdef = Option(Set(Parameter.Definition(Parameter.Name(pattern), Parameter.Value("100"))))
+  //    val configuration = Option(List(Pattern.Definition(Pattern.Id(pattern), parameterdef))) // for test run
+  //
+  //    val res = apply(source, None, None, Map())(null)
+  //    println(res)
+  //  }
 
 }
