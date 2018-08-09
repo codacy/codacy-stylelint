@@ -2,7 +2,8 @@ package codacy.stylelint
 
 import better.files._
 import com.codacy.plugins.api.Source
-import com.codacy.plugins.api.results.{Parameter, Pattern, Result}
+//import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
+import com.codacy.plugins.api.results._
 import org.specs2.mutable.Specification
 
 import scala.util.Try
@@ -39,7 +40,7 @@ class ConfigTesting extends Specification {
             Source.Line(9))))
       createConfigWithIndentationRule(300, workspace)
 
-      val result = Stylelint.apply(source, None, None, Map())(null)
+      val result = Stylelint.apply(source, None, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
 
       result should beEqualTo(expectedResult)
     }
@@ -72,7 +73,7 @@ class ConfigTesting extends Specification {
 
       val configuration = createGivenPatternsWithIdentation(100)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(null)
+      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
 
       result should beEqualTo(expectedResult)
     }
@@ -105,7 +106,7 @@ class ConfigTesting extends Specification {
       val configuration = createGivenPatternsWithIdentation(100)
       createConfigWithIndentationRule(300, workspace)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(null)
+      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
       result should beEqualTo(expectedResult)
     }
 
@@ -113,7 +114,7 @@ class ConfigTesting extends Specification {
       val workspace = createTemporaryWorkspace()
       val source = Source.Directory(workspace.pathAsString)
       val expectedResult = Try(List())
-      val result = Stylelint.apply(source, None, None, Map())(null)
+      val result = Stylelint.apply(source, None, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
 
       result should beEqualTo(expectedResult)
     }
@@ -205,7 +206,7 @@ class ConfigTesting extends Specification {
             Source.Line(9))))
       val configuration = createGivenPatternsWithIdentation(100)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(null)
+      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
       result should beEqualTo(expectedResult)
     }
 
@@ -263,7 +264,7 @@ class ConfigTesting extends Specification {
           Set(
             Source.File(workspace.toJava.getCanonicalPath + "/test.css"),
             Source.File(workspace.toJava.getCanonicalPath + "/depth1/depth2/depth3/test4.css"))),
-        Map())(null)
+        Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
       result should beEqualTo(expectedResult)
     }
   }

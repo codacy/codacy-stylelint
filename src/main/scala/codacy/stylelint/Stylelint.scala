@@ -28,7 +28,7 @@ object Stylelint extends Tool {
 
     val configFilePath = getConfigFile(source, configuration)
 
-    val commandResult = runStylelint(source, configFilePath, files)
+    val commandResult = run(source, configFilePath, files)
 
     val parsedResults = parseJson(commandResult)
 
@@ -87,7 +87,7 @@ object Stylelint extends Tool {
     }
   }
 
-  def runStylelint(source: Source.Directory,
+  def run(source: Source.Directory,
                    configFilePath: Path,
                    filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
