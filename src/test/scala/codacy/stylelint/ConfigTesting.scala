@@ -2,12 +2,9 @@ package codacy.stylelint
 
 import better.files._
 import com.codacy.plugins.api.Source
-import play.api.libs.json._
-//import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
 import com.codacy.plugins.api.results._
 import org.specs2.mutable.Specification
-
-import scala.util.Try
+import play.api.libs.json._
 
 class ConfigTesting extends Specification {
 
@@ -15,53 +12,55 @@ class ConfigTesting extends Specification {
 
   "Stylelint" should {
     "utilize the users configuration file when one is provided" in {
-      val (workspace,source) = createTemporaryWorkspace()
+      val (workspace, source) = createTemporaryWorkspace()
 
-      val expectedResult = Try(
-        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css",300)
-      )
+      val expectedResult =
+        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css", 300)
 
       createConfigWithIndentationRule(300, workspace)
 
-      val result = Stylelint.apply(source, None, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
+      val result = Stylelint.apply(source, None, None, Map())(
+        Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
 
-      result should beEqualTo(expectedResult)
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
 
     "generate a configuration file with the rules provided" in {
-      val (workspace,source) = createTemporaryWorkspace()
-      val expectedResult = Try(
-        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css",100)
-      )
+      val (workspace, source) = createTemporaryWorkspace()
+      val expectedResult =
+        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css", 100)
 
       val configuration = createIdentationPattern(100)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
+      val result = Stylelint.apply(source, configuration, None, Map())(
+        Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
 
-      result should beEqualTo(expectedResult)
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
 
     "generate a configuration file with the rules provided even if a configuration file is provided" in {
-      val (workspace,source) = createTemporaryWorkspace()
-      val expectedResult = Try(
-        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css",100)
-      )
+      val (workspace, source) = createTemporaryWorkspace()
+      val expectedResult =
+        fileIssues(s"${workspace.toJava.getCanonicalPath}/test.css", 100)
+
       val configuration = createIdentationPattern(100)
       createConfigWithIndentationRule(300, workspace)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
-      result should beEqualTo(expectedResult)
+      val result = Stylelint.apply(source, configuration, None, Map())(
+        Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
 
     "default to the standard configuration file when neither a configuration file nor a set of rules are provided" in {
       val (_, source) = createTemporaryWorkspace()
-      val expectedResult = Try(List())
-      val result = Stylelint.apply(source, None, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
+      val expectedResult = List()
+      val result = Stylelint.apply(source, None, None, Map())(
+        Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
 
-      result should beEqualTo(expectedResult)
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
 
-    "Select all files in the source directory and below when no files are given" in {
+    "select all files in the source directory and below when no files are given" in {
       val (workspace, source) = createTemporaryWorkspaceWithMultipleFiles()
 
       val testCssFilePath = s"${workspace.toJava.getCanonicalPath}/test.css"
@@ -70,25 +69,28 @@ class ConfigTesting extends Specification {
       val testCssFile4Path = s"${workspace.toJava.getCanonicalPath}/depth1/depth2/depth3/test4.css"
       val ident = 100
 
-      val expectedResult = Try(
-        fileIssues(testCssFilePath, ident) ++ fileIssues(testCssFile2Path, ident) ++ fileIssues(testCssFile3Path, ident) ++ fileIssues(testCssFile4Path, ident)
-      )
+      val expectedResult =
+        fileIssues(testCssFilePath, ident) ++ fileIssues(testCssFile2Path, ident) ++ fileIssues(testCssFile3Path, ident) ++ fileIssues(
+          testCssFile4Path,
+          ident)
+
       val configuration = createIdentationPattern(100)
 
-      val result = Stylelint.apply(source, configuration, None, Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
-      result should beEqualTo(expectedResult)
+      val result = Stylelint.apply(source, configuration, None, Map())(
+        Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
+
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
 
-    "Select only the given files in the source directory and below" in {
+    "select only the given files in the source directory and below" in {
       val (workspace, source) = createTemporaryWorkspaceWithMultipleFiles()
 
       val testCssFilePath = s"${workspace.toJava.getCanonicalPath}/test.css"
       val testCssFile4Path = s"${workspace.toJava.getCanonicalPath}/depth1/depth2/depth3/test4.css"
       val ident = 100
 
-      val expectedResult = Try(
+      val expectedResult =
         fileIssues(testCssFilePath, ident) ++ fileIssues(testCssFile4Path, ident)
-        )
 
       val configuration = createIdentationPattern(ident)
 
@@ -99,17 +101,19 @@ class ConfigTesting extends Specification {
           Set(
             Source.File(s"${workspace.toJava.getCanonicalPath}/test.css"),
             Source.File(s"${workspace.toJava.getCanonicalPath}/depth1/depth2/depth3/test4.css"))),
-        Map())(Tool.Specification(Tool.Name("codacy-stylelint"),Option.empty[Tool.Version],Set()))
-      result should beEqualTo(expectedResult)
+        Map())(Tool.Specification(Tool.Name("codacy-stylelint"), Option.empty[Tool.Version], Set()))
+
+      result should beSuccessfulTry[List[Result]](expectedResult)
     }
   }
 
   private def createConfigWithIndentationRule(ident: Int, dir: File): File = {
-    val rcText = JsObject(Seq(("extends", JsString("stylelint-config-standard")),("rules", JsObject(Seq( ("indentation", JsNumber(ident)))))))
+    val rcText = JsObject(
+      Seq(
+        ("extends", JsString("stylelint-config-standard")),
+        ("rules", JsObject(Seq(("indentation", JsNumber(ident)))))))
 
-    val configFile = File(s"${dir.pathAsString}/.stylelintrc").write(Json.prettyPrint(rcText))
-
-    configFile
+    File(s"${dir.pathAsString}/.stylelintrc").write(Json.prettyPrint(rcText))
   }
 
   private def createIdentationPattern(ident: Int): Option[List[Pattern.Definition]] = {
@@ -118,14 +122,14 @@ class ConfigTesting extends Specification {
     Option(List(Pattern.Definition(Pattern.Id(pattern), parameterdef)))
   }
 
-  private def createTemporaryWorkspace(): (File, Source.Directory)= {
+  private def createTemporaryWorkspace(): (File, Source.Directory) = {
     val dir = File.newTemporaryDirectory()
     val testFilePath = "src/test/resources/codacy/stylelint"
     val originalTestSourceFile = File(s"$testFilePath/test.css")
 
     originalTestSourceFile.copyToDirectory(dir)
 
-    val source= Source.Directory(dir.pathAsString)
+    val source = Source.Directory(dir.pathAsString)
 
     (dir, source)
   }
@@ -151,7 +155,7 @@ class ConfigTesting extends Specification {
     val testFile4 = originalTestSourceFile.copyToDirectory(depth3)
     testFile4.renameTo("test4.css")
 
-    val source= Source.Directory(dir.pathAsString)
+    val source = Source.Directory(dir.pathAsString)
 
     (dir, source)
   }
@@ -164,8 +168,8 @@ class ConfigTesting extends Specification {
       Source.Line(line))
   }
 
-  private def fileIssues(file: String,ident: Int) = {
-    List.range(6, 10).map(indentationIssue(file, _,ident))
+  private def fileIssues(file: String, ident: Int) = {
+    List.range(6, 10).map(indentationIssue(file, _, ident))
   }
 
 }

@@ -53,7 +53,6 @@ object Stylelint extends Tool {
 
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
     configuration.map { config =>
-      // Generate config file from pattern
       val patterns = config.map { pattern =>
         val parameter = pattern.parameters
           .flatMap(_.headOption.map { param =>
@@ -64,32 +63,24 @@ object Stylelint extends Tool {
 
         (pattern.patternId.value, parameter)
       }
-      // save config file
       File
         .newTemporaryFile("codacy-stylelint", ".json")
         .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
         .path
-      // return config file path
 
     }.orElse {
-
-      // find config file
       checkForExistingConfigFile(source)
 
     }.getOrElse {
 
-      // save default file
       File
         .newTemporaryFile("codacy-stylelint", ".json")
         .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("extends", JsString("stylelint-config-standard")))))))
         .path
-      // return default file path
     }
   }
 
-  def run(source: Source.Directory,
-                   configFilePath: Path,
-                   filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
+  def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
 
     val command = List("stylelint") ++ fileArgument ++ List("--config", configFilePath.toString) ++ List(
