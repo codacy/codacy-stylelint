@@ -134,15 +134,5 @@ object Stylelint extends Tool {
       case Failure(err) => Failure(err)
     }
   }
-  //  def main(args: Array[String]): Unit = {
-  //    // for test run
-  //    val source = Source.Directory("/Users/dco/Desktop/test")
-  //    val pattern = "indentation"
-  //    val parameterdef = Option(Set(Parameter.Definition(Parameter.Name(pattern), Parameter.Value("100"))))
-  //    val configuration = Option(List(Pattern.Definition(Pattern.Id(pattern), parameterdef))) // for test run
-  //
-  //    val res = apply(source, None, None, Map())(null)
-  //    println(res)
-  //  }
 
 }
