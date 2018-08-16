@@ -14,11 +14,7 @@ object ParseMarkupRule {
 
   def parseForDescriptions(rule: File): String = {
     val parser = Parser.builder().build
-
     val document = parser.parse(rule.contentAsString)
-
-    val descriptionstr = findDescriptionAsString(document)
-
-    descriptionstr
+    findDescriptionAsString(document)
   }
 }

@@ -1,5 +1,7 @@
 package codacy.stylelint
 
+import java.nio.charset.Charset
+
 import better.files._
 import com.codacy.plugins.api.Source
 import com.codacy.plugins.api.results._
@@ -138,22 +140,23 @@ class ConfigTesting extends Specification {
     //creates 2 files on the workspace (test.css and test2.css) then creates folders up to depth 3 with file test3.css at
     // depth 1 and test4.css at depth 3
 
+    def writeToFile(file: File, contents: String) = {
+      file.parent.createDirectories()
+      file.write(contents)
+    }
     val dir = File.newTemporaryDirectory()
-    val testFilePath = "src/test/resources/codacy/stylelint"
-    val originalTestSourceFile = File(s"$testFilePath/test.css")
 
-    val testFile2 = originalTestSourceFile.copyToDirectory(dir)
-    testFile2.renameTo("test2.css")
-    originalTestSourceFile.copyToDirectory(dir) //testFile1
+    val testFile1 = dir / "test.css"
+    val testFile2 = dir / "test2.css"
+    val testFile3 = dir / "depth1" / "test3.css"
+    val testFile4 = dir / "depth1" / "depth2" / "depth3" / "test4.css"
 
-    val depth1 = File(s"$dir/depth1/").createIfNotExists(true)
-    val depth2 = File(s"$depth1/depth2/").createIfNotExists(true)
-    val depth3 = File(s"$depth2/depth3/").createIfNotExists(true)
-    val testFile3 = originalTestSourceFile.copyToDirectory(depth1)
-    testFile3.renameTo("test3.css")
+    val testFileContents = Resource.getAsString("codacy/stylelint/test.css")(Charset.defaultCharset())
 
-    val testFile4 = originalTestSourceFile.copyToDirectory(depth3)
-    testFile4.renameTo("test4.css")
+    writeToFile(testFile1, testFileContents)
+    writeToFile(testFile2, testFileContents)
+    writeToFile(testFile3, testFileContents)
+    writeToFile(testFile4, testFileContents)
 
     val source = Source.Directory(dir.pathAsString)
 

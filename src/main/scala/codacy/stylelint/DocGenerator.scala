@@ -13,20 +13,17 @@ object DocGenerator {
 
   def main(args: Array[String]): Unit = {
     val tmpDirectory = File.newTemporaryDirectory()
-
     val version = File(".stylelint-version").contentAsString.trim
 
     cloneFromGitToTmpDir(tmpDirectory, version)
 
     val rulesdir = tmpDirectory + "/lib/rules"
-
     val filePathForDocs = "src/main/resources/docs/"
 
     val (folders, patterns) = getPatterns(rulesdir)
     initializePatternsFile(patterns, version, filePathForDocs)
     initializeDescriptionFile(folders, patterns, rulesdir, filePathForDocs)
     copyDescriptionFiles(folders, rulesdir, filePathForDocs)
-
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
@@ -51,7 +48,6 @@ object DocGenerator {
   }
 
   def initializePatternsFile(patterns: List[String], version: String, filePathForDocs: String): File = {
-
     val default = PatternsFromDefaultConfig()
 
     val toolpatterns: Set[Pattern.Specification] = patterns.map { patternid =>
@@ -62,7 +58,6 @@ object DocGenerator {
   }
 
   def addNewPattern(patternName: String, default: Parameter.Value): Pattern.Specification = {
-
     val param = Option(Set(Parameter.Specification(Parameter.Name(patternName), default)))
 
     Pattern.Specification(Pattern.Id(patternName), Result.Level.Err, Pattern.Category.CodeStyle, param)
@@ -96,13 +91,12 @@ object DocGenerator {
       } else {
         patternid + ": further description not available"
       }
-      addNewDescription(patternid, patternDescription) //need to remove non folder
+      addNewDescription(patternid, patternDescription)
     }(collection.breakOut)
     File(filePathForDocs + "/description.json").write(Json.prettyPrint(Json.toJson(patternsDescription)))
   }
 
   def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
-
     val param = Option(Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName))))
 
     Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None, param)

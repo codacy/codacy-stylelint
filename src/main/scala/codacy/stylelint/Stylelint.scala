@@ -6,6 +6,7 @@ import better.files._
 import com.codacy.plugins.api.results.{Pattern, Result, Tool}
 import com.codacy.plugins.api.{Options, Source}
 import com.codacy.tools.scala.seed.utils.{CommandResult, CommandRunner}
+import com.codacy.tools.scala.seed.utils.FileHelper._
 import play.api.libs.json._
 
 import scala.util.{Failure, Success, Try}
@@ -27,28 +28,14 @@ object Stylelint extends Tool {
     options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
 
     val configFilePath = getConfigFile(source, configuration)
-
     val commandResult = run(source, configFilePath, files)
-
     val parsedResults = parseJson(commandResult)
 
     convertToResult(parsedResults)
   }
 
   def checkForExistingConfigFile(source: Source.Directory): Option[Path] = {
-
     findConfigurationFile(Paths.get(source.path), configFileNames)
-
-  }
-
-  def findConfigurationFile(root: Path, configFileNames: Set[String], maxDepth: Int = 5): Option[Path] = {
-    val allFiles = File(root).walk(maxDepth = maxDepth).toList
-
-    val configFiles: List[Path] = configFileNames.flatMap { nativeConfigFileName =>
-      allFiles.filter(_.name == nativeConfigFileName).map(_.path)
-    }(collection.breakOut)
-
-    configFiles.sortBy(_.toString.length).headOption
   }
 
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
@@ -67,12 +54,9 @@ object Stylelint extends Tool {
         .newTemporaryFile("codacy-stylelint", ".json")
         .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
         .path
-
     }.orElse {
       checkForExistingConfigFile(source)
-
     }.getOrElse {
-
       File
         .newTemporaryFile("codacy-stylelint", ".json")
         .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("extends", JsString("stylelint-config-standard")))))))
@@ -82,10 +66,12 @@ object Stylelint extends Tool {
 
   def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
+    val configurationBaseDirectory = List("--config-basedir", "/usr/local/lib/node_modules")
+    val configurationFile = List("--config", configFilePath.toString)
+    val configuration = configurationFile ++ configurationBaseDirectory
+    val formatter = List("--formatter", "json")
 
-    val command = List("stylelint") ++ fileArgument ++ List("--config", configFilePath.toString) ++ List(
-      "--formatter",
-      "json") ++ List("--config-basedir", "/usr/local/lib/node_modules")
+    val command = List("stylelint") ++ fileArgument ++ configuration ++ formatter
 
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
@@ -108,21 +94,16 @@ object Stylelint extends Tool {
   }
 
   def convertToResult(parsedResults: Try[List[StylelintResult]]): Try[List[Result]] = {
-    parsedResults match {
-      case Success(results) =>
-        val issues = results.flatMap { fileResultsData =>
-          fileResultsData.warnings.map { resultData =>
-            Result.Issue(
-              Source.File(fileResultsData.source),
-              Result.Message(resultData.text),
-              Pattern.Id(resultData.rule),
-              Source.Line(resultData.line))
-          }
+    parsedResults.map { results =>
+      results.flatMap { fileResultsData =>
+        fileResultsData.warnings.map { resultData =>
+          Result.Issue(
+            Source.File(fileResultsData.source),
+            Result.Message(resultData.text),
+            Pattern.Id(resultData.rule),
+            Source.Line(resultData.line))
         }
-
-        Success(issues)
-
-      case Failure(err) => Failure(err)
+      }
     }
   }
 
