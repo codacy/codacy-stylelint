@@ -66,7 +66,8 @@ object Stylelint extends Tool {
 
   def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
-    val configurationBaseDirectory = List("--config-basedir", "/usr/local/lib/node_modules")
+    val basedir = sys.env.getOrElse("STYLELINT_CONFIG_BASEDIR", "/usr/local/lib/node_modules")
+    val configurationBaseDirectory = List("--config-basedir", basedir)
     val configurationFile = List("--config", configFilePath.toString)
     val configuration = configurationFile ++ configurationBaseDirectory
     val formatter = List("--formatter", "json")

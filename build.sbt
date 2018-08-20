@@ -63,13 +63,11 @@ mappings.in(Universal) ++= resourceDirectory
       if !path.isDirectory
     } yield path.toJava -> path.toString.replaceFirst(src.toString, dest)).toSeq
 
-    val scripts = Seq((file("./scripts/install.sh"),"install.sh"),
-      (file(".stylelint-version"),".stylelint-version"))
+    val scripts = Seq((file("./scripts/install.sh"), "install.sh"), (file(".stylelint-version"), ".stylelint-version"))
 
     docFiles ++ scripts
   }
   .value
-
 
 def installAll() =
   s"""apk update &&
@@ -97,6 +95,7 @@ dockerCommands := dockerCommands.dependsOn(toolVersion).value.flatMap {
     List(
       Cmd("RUN", "adduser -u 2004 -D docker"),
       Cmd("ENV", s"TOOL_VERSION $toolVersion"),
+      Cmd("ENV", s"STYLELINT_CONFIG_BASEDIR /usr/lib/node_modules"),
       cmd,
       Cmd("RUN", installAll()),
       Cmd("RUN", "mv /opt/docker/docs /docs"),
