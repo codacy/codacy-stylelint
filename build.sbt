@@ -58,34 +58,26 @@ mappings.in(Universal) ++= resourceDirectory
     val src = resourceDir / "docs"
     val dest = "/docs"
 
-    (for {
+    val docFiles = (for {
       path <- better.files.File(src.toPath).listRecursively()
       if !path.isDirectory
     } yield path.toJava -> path.toString.replaceFirst(src.toString, dest)).toSeq
+
+    val scripts = Seq((file("./scripts/install.sh"),"install.sh"),
+      (file(".stylelint-version"),".stylelint-version"))
+
+    docFiles ++ scripts
   }
   .value
 
-def installAll(toolVersion: String) =
+
+def installAll() =
   s"""apk update &&
      |apk add bash curl nodejs-npm &&
-     |npm install -g npm@5 &&
-     |npm install -g stylelint@$toolVersion &&
-     |npm install -g stylelint-config-standard@18.2.0 &&
-     |npm install -g stylelint-config-recommended@2.1.0 &&
-     |npm install -g stylelint-order@0.8.1 &&
-     |npm install -g stylelint-suitcss@3.0.0 &&
-     |npm install -g stylelint-config-suitcss@14.0.0 &&
-     |npm install -g stylelint-scss@3.2.0 &&
-     |npm install -g stylelint-config-wordpress@13.0.0 &&
-     |npm install -g stylelint-csstree-validator@1.3.0 &&
-     |npm install -g stylelint-declaration-strict-value@1.0.4 &&
-     |npm install -g stylelint-declaration-use-variable@1.7.0 &&
-     |npm install -g stylelint-rscss@0.4.0 &&
-     |npm install -g stylelint-selector-bem-pattern@2.0.0 &&
-     |npm install -g stylelint-config-slds@1.0.7 &&
-     |npm install -g stylelint-config-prettier@4.0.0 &&
-     |rm -rf /tmp/* &&
-     |rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
+     |./install.sh
+     ||rm -rf /tmp/* &&
+     |rm -rf /var/cache/apk/*
+     |rm ./install.sh""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 val defaultDockerInstallationPath = "/opt/docker"
 mainClass in Compile := Some("codacy.Engine")
@@ -104,8 +96,9 @@ dockerCommands := dockerCommands.dependsOn(toolVersion).value.flatMap {
   case cmd @ Cmd("ADD", _) =>
     List(
       Cmd("RUN", "adduser -u 2004 -D docker"),
+      Cmd("ENV", s"TOOL_VERSION $toolVersion"),
       cmd,
-      Cmd("RUN", installAll(toolVersion.value)),
+      Cmd("RUN", installAll()),
       Cmd("RUN", "mv /opt/docker/docs /docs"),
       ExecCmd("RUN", Seq("chown", "-R", s"docker:docker", "/docs"): _*),
       Cmd("ENV", "NODE_PATH /usr/lib/node_modules"))

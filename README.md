@@ -1,3 +1,7 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/80607506ff8c4a7f826bbe0b643ba16d)](https://www.codacy.com/app/Codacy/codacy-stylelint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-stylelint&amp;utm_campaign=Badge_Grade)
+
+[![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-stylelint)](https://microbadger.com/images/codacy/codacy-stylelint "Get your own version badge on microbadger.com")
+
 # codacy-stylelint
 Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/stylelint) support.
 
