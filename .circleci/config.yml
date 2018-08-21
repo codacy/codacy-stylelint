@@ -3,6 +3,8 @@ jobs:
   build:
     machine: true
     working_directory: ~/workdir
+    environment:
+      STYLELINT_CONFIG_BASEDIR: /usr/lib/node_modules
     steps:
       - checkout
       - run:
