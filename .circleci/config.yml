@@ -4,7 +4,7 @@ jobs:
     machine: true
     working_directory: ~/workdir
     environment:
-      STYLELINT_CONFIG_BASEDIR: /usr/lib/node_modules
+      STYLELINT_CONFIG_BASEDIR: /opt/circleci/.nvm/versions/node/v6.1.0/lib/node_modules
     steps:
       - checkout
       - run:
@@ -49,11 +49,11 @@ jobs:
       - run:
           name: Test json
           working_directory: ~/codacy-plugins-test
-          command: sbt -Dcodacy.tests.ignore.descriptions=true "run-main codacy.plugins.DockerTest json $CIRCLE_PROJECT_REPONAME:latest"
+          command: sbt -Dcodacy.tests.ignore.descriptions=true "run-main codacy.plugins.DockerTest json codacy/$CIRCLE_PROJECT_REPONAME:latest"
       - run:
           name: Test patterns
           working_directory: ~/codacy-plugins-test
-          command: sbt -Dcodacy.tests.noremove=true -Dcodacy.tests.threads=8 "run-main codacy.plugins.DockerTest pattern $CIRCLE_PROJECT_REPONAME:latest"
+          command: sbt -Dcodacy.tests.noremove=true -Dcodacy.tests.threads=8 "run-main codacy.plugins.DockerTest pattern codacy/$CIRCLE_PROJECT_REPONAME:latest"
       - deploy:
           name: Push application Docker image
           command: |
