@@ -2,6 +2,9 @@
 
 [![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-stylelint)](https://microbadger.com/images/codacy/codacy-stylelint "Get your own version badge on microbadger.com")
 
+[![CircleCI](https://circleci.com/gh/codacy/codacy-stylelint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-stylelint)
+
+
 # codacy-stylelint
 Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/stylelint) support.
 
