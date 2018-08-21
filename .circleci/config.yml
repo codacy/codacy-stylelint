@@ -1,0 +1,71 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    working_directory: ~/workdir
+    environment:
+      STYLELINT_CONFIG_BASEDIR: /opt/circleci/.nvm/versions/node/v6.1.0/lib/node_modules
+    steps:
+      - checkout
+      - run:
+          name: Clone test project
+          working_directory: ~/
+          command: |
+            (git -C ~/codacy-plugins-test fetch --all &&
+              git -C ~/codacy-plugins-test reset --hard origin/master) ||
+                git clone git://github.com/codacy/codacy-plugins-test.git ~/codacy-plugins-test
+      - restore_cache:
+          key: dependencies-{{ checksum "build.sbt" }}
+      - run:
+          name: Compile test project
+          working_directory: ~/codacy-plugins-test
+          command: sbt compile
+      - run:
+          name: Install nodejs 10
+          command: |
+            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            ./scripts/install.sh
+      - run:
+          name: Test project
+          working_directory: ~/workdir
+          command: ./scripts/test.sh
+      - run:
+          name: Publish tool docker locally
+          working_directory: ~/workdir
+          command: sbt 'set version in Docker := "latest"' docker:publishLocal
+      - save_cache:
+          key: dependencies-{{ checksum "build.sbt" }}
+          paths:
+            - "~/.ivy2"
+            - "~/.m2"
+            - "~/.sbt"
+            - "~/codacy-plugins-test/target"
+            - "~/codacy-plugins-test/project/target"
+            - "~/codacy-plugins-test/project/project"
+            - "~/workdir/target"
+            - "~/workdir/project/target"
+            - "~/workdir/project/project"
+      - run:
+          name: Test json
+          working_directory: ~/codacy-plugins-test
+          command: sbt -Dcodacy.tests.ignore.descriptions=true "run-main codacy.plugins.DockerTest json codacy/$CIRCLE_PROJECT_REPONAME:latest"
+      - run:
+          name: Test patterns
+          working_directory: ~/codacy-plugins-test
+          command: sbt -Dcodacy.tests.noremove=true -Dcodacy.tests.threads=8 "run-main codacy.plugins.DockerTest pattern codacy/$CIRCLE_PROJECT_REPONAME:latest"
+      - deploy:
+          name: Push application Docker image
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker login -u $DOCKER_USER -p $DOCKER_PASS
+              docker tag codacy/$CIRCLE_PROJECT_REPONAME:latest codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
+              docker push codacy/$CIRCLE_PROJECT_REPONAME:1.0.$CIRCLE_BUILD_NUM
+              docker push codacy/$CIRCLE_PROJECT_REPONAME:latest
+            fi
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
