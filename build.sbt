@@ -19,9 +19,9 @@ val languageVersion = "2.12.4"
 
 scalaVersion := languageVersion
 
-resolvers ++= Seq(
-  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases",
-  "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/")
+resolvers := Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases") ++
+  resolvers.value ++
+  Seq("Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/")
 
 libraryDependencies ++= Seq(
   "com.codacy" %% "codacy-engine-scala-seed" % "3.0.183",
@@ -100,6 +100,7 @@ dockerCommands := dockerCommands.dependsOn(toolVersion).value.flatMap {
       Cmd("RUN", installAll()),
       Cmd("RUN", "mv /opt/docker/docs /docs"),
       ExecCmd("RUN", Seq("chown", "-R", s"docker:docker", "/docs"): _*),
-      Cmd("ENV", "NODE_PATH /usr/lib/node_modules"))
+      Cmd("ENV", "NODE_PATH /usr/lib/node_modules")
+    )
   case other => List(other)
 }
