@@ -4,7 +4,7 @@ jobs:
     machine: true
     working_directory: ~/workdir
     environment:
-      STYLELINT_CONFIG_BASEDIR: /usr/lib/node_modules
+      STYLELINT_CONFIG_BASEDIR: /opt/circleci/.nvm/versions/node/v6.1.0/lib/node_modules
     steps:
       - checkout
       - run:
