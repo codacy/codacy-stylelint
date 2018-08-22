@@ -1,11 +1,10 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/80607506ff8c4a7f826bbe0b643ba16d)](https://www.codacy.com/app/Codacy/codacy-stylelint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-stylelint&amp;utm_campaign=Badge_Grade)
+# codacy-stylelint
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/80607506ff8c4a7f826bbe0b643ba16d)](https://www.codacy.com/app/Codacy/codacy-stylelint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-stylelint&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/80607506ff8c4a7f826bbe0b643ba16d)](https://www.codacy.com/app/Codacy/codacy-stylelint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-stylelint&utm_campaign=Badge_Coverage)
+[![CircleCI](https://circleci.com/gh/codacy/codacy-stylelint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-stylelint)
 [![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-stylelint.svg)](https://microbadger.com/images/codacy/codacy-stylelint "Get your own version badge on microbadger.com")
 
-[![CircleCI](https://circleci.com/gh/codacy/codacy-stylelint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-stylelint)
-
-
-# codacy-stylelint
 Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/stylelint) support.
 
 ## Usage
