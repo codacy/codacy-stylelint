@@ -1,0 +1,2 @@
+A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+With over 160 built-in rules for CSS and CSS-like syntaxes like SCSS, Sass, Less.
