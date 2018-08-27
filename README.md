@@ -35,7 +35,7 @@ You can follow the instructions there to make sure your tool is working as expec
 ## Generate Docs
 
 ```sh
-sbt "run-main codacy.stylelint.DocGenerator"
+sbt "runMain codacy.stylelint.DocGenerator"
 ```
 
 ## What is Codacy

@@ -93,7 +93,7 @@ object DocGenerator {
       }
       addNewDescription(patternid, patternDescription)
     }(collection.breakOut)
-    File(filePathForDocs + "/description.json").write(Json.prettyPrint(Json.toJson(patternsDescription)))
+    File(filePathForDocs + "/description/description.json").write(Json.prettyPrint(Json.toJson(patternsDescription)))
   }
 
   def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
