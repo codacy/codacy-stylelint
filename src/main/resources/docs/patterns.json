@@ -53,14 +53,6 @@
       "default" : "never"
     } ]
   }, {
-    "patternId" : "findMediaOperator",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "findMediaOperator",
-      "default" : null
-    } ]
-  }, {
     "patternId" : "at-rule-whitelist",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -125,14 +117,6 @@
       "default" : true
     } ]
   }, {
-    "patternId" : "selectorAttributeOperatorSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selectorAttributeOperatorSpaceChecker",
-      "default" : null
-    } ]
-  }, {
     "patternId" : "at-rule-name-newline-after",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -155,14 +139,6 @@
     "parameters" : [ {
       "name" : "declaration-block-single-line-max-declarations",
       "default" : 1
-    } ]
-  }, {
-    "patternId" : "declarationColonSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declarationColonSpaceChecker",
-      "default" : null
     } ]
   }, {
     "patternId" : "shorthand-property-no-redundant-values",
@@ -349,27 +325,11 @@
       "default" : "never"
     } ]
   }, {
-    "patternId" : "atRuleNameSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "atRuleNameSpaceChecker",
-      "default" : null
-    } ]
-  }, {
     "patternId" : "selector-max-specificity",
     "level" : "Error",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-specificity",
-      "default" : null
-    } ]
-  }, {
-    "patternId" : "functionCommaSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "functionCommaSpaceChecker",
       "default" : null
     } ]
   }, {
@@ -411,14 +371,6 @@
     "parameters" : [ {
       "name" : "selector-list-comma-newline-after",
       "default" : "always"
-    } ]
-  }, {
-    "patternId" : "mediaQueryListCommaWhitespaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "mediaQueryListCommaWhitespaceChecker",
-      "default" : null
     } ]
   }, {
     "patternId" : "keyframe-declaration-no-important",
@@ -565,14 +517,6 @@
       "default" : "never"
     } ]
   }, {
-    "patternId" : "valueListCommaWhitespaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "valueListCommaWhitespaceChecker",
-      "default" : null
-    } ]
-  }, {
     "patternId" : "string-quotes",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -587,14 +531,6 @@
     "parameters" : [ {
       "name" : "no-duplicate-selectors",
       "default" : true
-    } ]
-  }, {
-    "patternId" : "mediaFeatureColonSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "mediaFeatureColonSpaceChecker",
-      "default" : null
     } ]
   }, {
     "patternId" : "value-keyword-case",
@@ -763,14 +699,6 @@
       "default" : null
     } ]
   }, {
-    "patternId" : "selectorCombinatorSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selectorCombinatorSpaceChecker",
-      "default" : null
-    } ]
-  }, {
     "patternId" : "function-comma-space-after",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -843,14 +771,6 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-blacklist",
-      "default" : null
-    } ]
-  }, {
-    "patternId" : "selectorListCommaWhitespaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selectorListCommaWhitespaceChecker",
       "default" : null
     } ]
   }, {
@@ -1168,14 +1088,6 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-whitelist",
-      "default" : null
-    } ]
-  }, {
-    "patternId" : "declarationBangSpaceChecker",
-    "level" : "Error",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declarationBangSpaceChecker",
       "default" : null
     } ]
   }, {
