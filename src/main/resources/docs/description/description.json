@@ -13,13 +13,6 @@
     "description" : "selector-attribute-brackets-space-inside"
   } ]
 }, {
-  "patternId" : "selectorListCommaWhitespaceChecker",
-  "title" : "selectorListCommaWhitespaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "selectorListCommaWhitespaceChecker",
-    "description" : "selectorListCommaWhitespaceChecker"
-  } ]
-}, {
   "patternId" : "function-comma-space-after",
   "title" : "Require a single space or disallow whitespace after the commas of functions.\n",
   "parameters" : [ {
@@ -165,13 +158,6 @@
   "parameters" : [ {
     "name" : "at-rule-semicolon-newline-after",
     "description" : "at-rule-semicolon-newline-after"
-  } ]
-}, {
-  "patternId" : "mediaFeatureColonSpaceChecker",
-  "title" : "mediaFeatureColonSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "mediaFeatureColonSpaceChecker",
-    "description" : "mediaFeatureColonSpaceChecker"
   } ]
 }, {
   "patternId" : "media-feature-name-blacklist",
@@ -328,13 +314,6 @@
     "description" : "at-rule-no-unknown"
   } ]
 }, {
-  "patternId" : "selectorCombinatorSpaceChecker",
-  "title" : "selectorCombinatorSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "selectorCombinatorSpaceChecker",
-    "description" : "selectorCombinatorSpaceChecker"
-  } ]
-}, {
   "patternId" : "selector-no-vendor-prefix",
   "title" : "Disallow vendor prefixes for selectors.\n",
   "parameters" : [ {
@@ -375,13 +354,6 @@
   "parameters" : [ {
     "name" : "indentation",
     "description" : "indentation"
-  } ]
-}, {
-  "patternId" : "declarationBangSpaceChecker",
-  "title" : "declarationBangSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "declarationBangSpaceChecker",
-    "description" : "declarationBangSpaceChecker"
   } ]
 }, {
   "patternId" : "declaration-property-unit-blacklist",
@@ -783,13 +755,6 @@
     "description" : "declaration-block-no-redundant-longhand-properties"
   } ]
 }, {
-  "patternId" : "atRuleNameSpaceChecker",
-  "title" : "atRuleNameSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "atRuleNameSpaceChecker",
-    "description" : "atRuleNameSpaceChecker"
-  } ]
-}, {
   "patternId" : "color-no-hex",
   "title" : "Disallow hex colors.\n",
   "parameters" : [ {
@@ -844,13 +809,6 @@
   "parameters" : [ {
     "name" : "selector-pseudo-element-case",
     "description" : "selector-pseudo-element-case"
-  } ]
-}, {
-  "patternId" : "findMediaOperator",
-  "title" : "findMediaOperator: further description not available",
-  "parameters" : [ {
-    "name" : "findMediaOperator",
-    "description" : "findMediaOperator"
   } ]
 }, {
   "patternId" : "block-opening-brace-space-after",
@@ -972,13 +930,6 @@
     "description" : "property-no-unknown"
   } ]
 }, {
-  "patternId" : "valueListCommaWhitespaceChecker",
-  "title" : "valueListCommaWhitespaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "valueListCommaWhitespaceChecker",
-    "description" : "valueListCommaWhitespaceChecker"
-  } ]
-}, {
   "patternId" : "no-extra-semicolons",
   "title" : "Disallow extra semicolons.\n",
   "parameters" : [ {
@@ -991,13 +942,6 @@
   "parameters" : [ {
     "name" : "no-duplicate-at-import-rules",
     "description" : "no-duplicate-at-import-rules"
-  } ]
-}, {
-  "patternId" : "mediaQueryListCommaWhitespaceChecker",
-  "title" : "mediaQueryListCommaWhitespaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "mediaQueryListCommaWhitespaceChecker",
-    "description" : "mediaQueryListCommaWhitespaceChecker"
   } ]
 }, {
   "patternId" : "selector-max-universal",
@@ -1070,13 +1014,6 @@
     "description" : "font-family-no-missing-generic-family-keyword"
   } ]
 }, {
-  "patternId" : "selectorAttributeOperatorSpaceChecker",
-  "title" : "selectorAttributeOperatorSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "selectorAttributeOperatorSpaceChecker",
-    "description" : "selectorAttributeOperatorSpaceChecker"
-  } ]
-}, {
   "patternId" : "comment-empty-line-before",
   "title" : "Require or disallow an empty line before comments.\n",
   "parameters" : [ {
@@ -1131,13 +1068,6 @@
   "parameters" : [ {
     "name" : "declaration-colon-newline-after",
     "description" : "declaration-colon-newline-after"
-  } ]
-}, {
-  "patternId" : "declarationColonSpaceChecker",
-  "title" : "declarationColonSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "declarationColonSpaceChecker",
-    "description" : "declarationColonSpaceChecker"
   } ]
 }, {
   "patternId" : "unit-blacklist",
@@ -1229,13 +1159,6 @@
   "parameters" : [ {
     "name" : "function-max-empty-lines",
     "description" : "function-max-empty-lines"
-  } ]
-}, {
-  "patternId" : "functionCommaSpaceChecker",
-  "title" : "functionCommaSpaceChecker: further description not available",
-  "parameters" : [ {
-    "name" : "functionCommaSpaceChecker",
-    "description" : "functionCommaSpaceChecker"
   } ]
 }, {
   "patternId" : "selector-list-comma-newline-after",
