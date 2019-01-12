@@ -20,3 +20,5 @@ npm install -g stylelint-rscss@0.4.0
 npm install -g stylelint-selector-bem-pattern@2.0.0
 npm install -g stylelint-config-slds@1.0.7
 npm install -g stylelint-config-prettier@4.0.0
+npm install -g stylelint-config-standard-scss@1.0.0
+npm install -g stylelint-config-recommended-scss@1.0.0
