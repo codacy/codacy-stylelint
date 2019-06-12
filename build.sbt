@@ -15,7 +15,7 @@ name := "codacy-stylelint"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.12.4"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
@@ -24,7 +24,7 @@ resolvers := Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/r
   Seq("Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/")
 
 libraryDependencies ++= Seq(
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.183",
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9",
   "com.vladsch.flexmark" % "flexmark-all" % "0.34.8",
   "org.specs2" %% "specs2-core" % "4.2.0" % Test)
 
@@ -80,7 +80,6 @@ def installAll() =
 val defaultDockerInstallationPath = "/opt/docker"
 mainClass in Compile := Some("codacy.Engine")
 packageName in Docker := name.value
-dockerAlias := DockerAlias(None, Some("codacy"), name.value, Some(version.value))
 version in Docker := version.value
 maintainer in Docker := "Rodrigo Fernandes <rodrigo@codacy.com>"
 dockerBaseImage := "library/openjdk:8-jre-alpine"
