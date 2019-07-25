@@ -13,7 +13,8 @@ import com.typesafe.sbt.packager.docker.{Cmd, DockerAlias, ExecCmd}
 import sjsonnew._
 import sjsonnew.BasicJsonProtocol._
 import sjsonnew.support.scalajson.unsafe._
-import java.io.File
+import java.nio.file.Files
+import scala.collection.JavaConverters._
 
 organization := "com.codacy"
 
@@ -51,11 +52,10 @@ toolVersion := {
   val patterns = json.flatMap(Converter.fromJson[Patterns])
   patterns.map(_.version).getOrElse(throw new Exception("Failed to retrieve version from docs/patterns.json"))
 }
-
-lazy val writeStylelintConf = taskKey[Unit]("Create .stylelint-version file from toolVersion")
-writeStylelintConf := {
+val stylelintVersionFileName = ".stylelint-version"
+lazy val writeStylelintVersionFile = Def.task {
   val version = toolVersion.value
-  val f = file(".stylelint-version")
+  val f = file(stylelintVersionFileName)
   IO.write(f, toolVersion.value)
 }
 
@@ -65,24 +65,19 @@ mappings.in(Universal) ++= resourceDirectory
     val src = resourceDir / "docs"
     val dest = "/docs"
 
-    def listRecursively(f: File): Array[File] = {
-      val these = f.listFiles
-      these ++ these.filter(_.isDirectory).flatMap(listRecursively)
-    }
-
     val docFiles = {
       val res = for {
-        path <- listRecursively(src)
-        if !path.isDirectory
-      } yield path -> path.toString.replaceFirst(src.toString, dest)
+        path <- Files.walk(src.toPath).iterator().asScala
+        if !Files.isDirectory(path)
+      } yield path.toFile() -> path.toString.replaceFirst(src.toString, dest)
       res.toSeq
     }
 
-    val scripts = Seq((file("./scripts/install.sh"), "install.sh"), (file(".stylelint-version"), ".stylelint-version"))
+    val scripts = Seq((file("./scripts/install.sh"), "install.sh"), (file(stylelintVersionFileName), stylelintVersionFileName))
 
     docFiles ++ scripts
   }
-  .dependsOn(writeStylelintConf)
+  .dependsOn(writeStylelintVersionFile)
   .value
 
 def installAll() =
