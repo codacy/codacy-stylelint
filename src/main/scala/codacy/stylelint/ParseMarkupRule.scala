@@ -1,7 +1,7 @@
 package codacy.stylelint
 
 import better.files.File
-import com.vladsch.flexmark.ast.Node
+import com.vladsch.flexmark.util.ast.Node
 import com.vladsch.flexmark.parser.Parser
 
 object ParseMarkupRule {

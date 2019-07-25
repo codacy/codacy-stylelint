@@ -6,8 +6,10 @@ Require a newline or disallow whitespace after the commas of value lists.
 a { background-size: 0,
       0; }            ↑
 /**                   ↑
- * The newline after these commas */
+ * The newline after this comma */
 ```
+
+The `--fix` option on the [command line](../../../docs/user-guide/cli.md#autofixing-errors) can automatically fix most of the problems reported by this rule.
 
 ## Options
 

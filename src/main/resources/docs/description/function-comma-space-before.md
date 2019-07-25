@@ -5,8 +5,10 @@ Require a single space or disallow whitespace before the commas of functions.
 ```css
 a { transform: translate(1 ,1) }
 /**                        ↑
- * The space before these commas */
+ * The space before this comma */
 ```
+
+The `--fix` option on the [command line](../../../docs/user-guide/cli.md#autofixing-errors) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -93,7 +95,7 @@ a {
 
 ### `"never-single-line"`
 
-There *must never* be whitepace before the commas in single-line functions.
+There *must never* be whitespace before the commas in single-line functions.
 
 The following patterns are considered violations:
 

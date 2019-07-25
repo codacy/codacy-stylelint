@@ -10,12 +10,16 @@ import com.typesafe.sbt.packager.Keys.{
   packageName
 }
 import com.typesafe.sbt.packager.docker.{Cmd, DockerAlias, ExecCmd}
+import sjsonnew._
+import sjsonnew.BasicJsonProtocol._
+import sjsonnew.support.scalajson.unsafe._
+import java.io.File
+
+organization := "com.codacy"
 
 name := "codacy-stylelint"
 
-version := "1.0.0-SNAPSHOT"
-
-val languageVersion = "2.12.7"
+val languageVersion = "2.12.8"
 
 scalaVersion := languageVersion
 
@@ -24,32 +28,35 @@ resolvers := Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/r
   Seq("Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/")
 
 libraryDependencies ++= Seq(
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9",
-  "com.vladsch.flexmark" % "flexmark-all" % "0.34.8",
-  "org.specs2" %% "specs2-core" % "4.2.0" % Test)
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.296",
+  "com.vladsch.flexmark" % "flexmark-all" % "0.50.20",
+  "org.specs2" %% "specs2-core" % "4.6.0" % Test)
 
-scalacOptions ++= Common.compilerFlags
 scalacOptions.in(Compile, console) --= Seq("-Ywarn-unused", "-Ywarn-unused:imports", "-Xfatal-warnings")
 scalacOptions in Test ++= Seq("-Yrangepos")
 enablePlugins(JavaAppPackaging)
 
 enablePlugins(DockerPlugin)
 
-version in Docker := "1.0.0-SNAPSHOT"
-
-organization := "com.codacy"
-
-lazy val toolVersion = taskKey[String]("Retrieve the version of the underlying tool from patterns.json")
+lazy val toolVersion = settingKey[String]("The version of the underlying tool retrieved from patterns.json")
 toolVersion := {
-  import better.files.File
-  import play.api.libs.json.{JsString, JsValue, Json}
+  case class Patterns(name: String, version: String)
+  implicit val patternsIso: IsoLList[Patterns] =
+    LList.isoCurried((p: Patterns) => ("name", p.name) :*: ("version", p.version) :*: LNil) {
+      case (_, n) :*: (_, v) :*: LNil => Patterns(n, v)
+    }
 
-  val jsonFile = resourceDirectory.in(Compile).value / "docs" / "patterns.json"
-  val patternsJsonValues = Json.parse(File(jsonFile.toPath).contentAsString).as[Map[String, JsValue]]
+  val jsonFile = (resourceDirectory in Compile).value / "docs" / "patterns.json"
+  val json = Parser.parseFromFile(jsonFile)
+  val patterns = json.flatMap(Converter.fromJson[Patterns])
+  patterns.map(_.version).getOrElse(throw new Exception("Failed to retrieve version from docs/patterns.json"))
+}
 
-  patternsJsonValues.collectFirst {
-    case ("version", JsString(ver)) => ver
-  }.getOrElse(throw new Exception("Failed to retrieve version from docs/patterns.json"))
+lazy val writeStylelintConf = taskKey[Unit]("Create .stylelint-version file from toolVersion")
+writeStylelintConf := {
+  val version = toolVersion.value
+  val f = file(".stylelint-version")
+  IO.write(f, toolVersion.value)
 }
 
 mappings.in(Universal) ++= resourceDirectory
@@ -58,20 +65,29 @@ mappings.in(Universal) ++= resourceDirectory
     val src = resourceDir / "docs"
     val dest = "/docs"
 
-    val docFiles = (for {
-      path <- better.files.File(src.toPath).listRecursively()
-      if !path.isDirectory
-    } yield path.toJava -> path.toString.replaceFirst(src.toString, dest)).toSeq
+    def listRecursively(f: File): Array[File] = {
+      val these = f.listFiles
+      these ++ these.filter(_.isDirectory).flatMap(listRecursively)
+    }
+
+    val docFiles = {
+      val res = for {
+        path <- listRecursively(src)
+        if !path.isDirectory
+      } yield path -> path.toString.replaceFirst(src.toString, dest)
+      res.toSeq
+    }
 
     val scripts = Seq((file("./scripts/install.sh"), "install.sh"), (file(".stylelint-version"), ".stylelint-version"))
 
     docFiles ++ scripts
   }
+  .dependsOn(writeStylelintConf)
   .value
 
 def installAll() =
   s"""apk update &&
-     |apk add bash curl nodejs-npm &&
+     |apk add bash curl npm &&
      |./install.sh
      ||rm -rf /tmp/* &&
      |rm -rf /var/cache/apk/*
@@ -89,11 +105,11 @@ daemonUser in Docker := "docker"
 daemonGroup in Docker := "docker"
 dockerEntrypoint := Seq(s"$defaultDockerInstallationPath/bin/${name.value}")
 dockerCmd := Seq()
-dockerCommands := dockerCommands.dependsOn(toolVersion).value.flatMap {
+dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>
     List(
       Cmd("RUN", "adduser -u 2004 -D docker"),
-      Cmd("ENV", s"TOOL_VERSION $toolVersion"),
+      Cmd("ENV", s"TOOL_VERSION ${toolVersion.value}"),
       Cmd("ENV", s"STYLELINT_CONFIG_BASEDIR /usr/lib/node_modules"),
       cmd,
       Cmd("RUN", installAll()),
