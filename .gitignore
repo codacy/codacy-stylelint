@@ -10,3 +10,4 @@
 .DS_Store
 *.iml
 node_modules/
+.stylelint-version
