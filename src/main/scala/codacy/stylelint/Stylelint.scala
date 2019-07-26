@@ -77,10 +77,10 @@ object Stylelint extends Tool {
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
 
-  def parseJson(commandResult: Try[CommandResult]): Try[List[StylelintResult]] = {
-    implicit val warningResultFmt: Format[StylelintPatternResult] = Json.format[StylelintPatternResult]
-    implicit val resultFmt: Format[StylelintResult] = Json.format[StylelintResult]
+  implicit val warningResultFmt: Format[StylelintPatternResult] = Json.format[StylelintPatternResult]
+  implicit val resultFmt: Format[StylelintResult] = Json.format[StylelintResult]
 
+  def parseJson(commandResult: Try[CommandResult]): Try[List[StylelintResult]] = {
     commandResult.flatMap { result =>
       val jsonString = result.stdout.mkString("\n")
       Try(Json.parse(jsonString).as[List[StylelintResult]]).recoverWith {

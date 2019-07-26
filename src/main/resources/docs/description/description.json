@@ -34,6 +34,13 @@
     "description" : "block-opening-brace-newline-before"
   } ]
 }, {
+  "patternId" : "no-empty-first-line",
+  "title" : "Disallow empty first lines.\n",
+  "parameters" : [ {
+    "name" : "no-empty-first-line",
+    "description" : "no-empty-first-line"
+  } ]
+}, {
   "patternId" : "function-calc-no-unspaced-operator",
   "title" : "Disallow an unspaced operator within `calc` functions.\n",
   "parameters" : [ {
@@ -188,18 +195,18 @@
     "description" : "at-rule-name-newline-after"
   } ]
 }, {
-  "patternId" : "declaration-block-single-line-max-declarations",
-  "title" : "Limit the number of declarations within a single line declaration block.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-single-line-max-declarations",
-    "description" : "declaration-block-single-line-max-declarations"
-  } ]
-}, {
   "patternId" : "selector-list-comma-space-before",
   "title" : "Require a single space or disallow whitespace before the commas of selector lists.\n",
   "parameters" : [ {
     "name" : "selector-list-comma-space-before",
     "description" : "selector-list-comma-space-before"
+  } ]
+}, {
+  "patternId" : "function-calc-no-invalid",
+  "title" : "Disallow an invalid expression within `calc` functions.\n",
+  "parameters" : [ {
+    "name" : "function-calc-no-invalid",
+    "description" : "function-calc-no-invalid"
   } ]
 }, {
   "patternId" : "selector-nested-pattern",
@@ -270,13 +277,6 @@
   "parameters" : [ {
     "name" : "selector-list-comma-space-after",
     "description" : "selector-list-comma-space-after"
-  } ]
-}, {
-  "patternId" : "at-rule-semicolon-space-before",
-  "title" : "Require a single space or disallow whitespace before the semicolons at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-semicolon-space-before",
-    "description" : "at-rule-semicolon-space-before"
   } ]
 }, {
   "patternId" : "media-query-list-comma-space-before",
@@ -459,6 +459,13 @@
   "parameters" : [ {
     "name" : "declaration-block-semicolon-space-before",
     "description" : "declaration-block-semicolon-space-before"
+  } ]
+}, {
+  "patternId" : "at-rule-property-requirelist",
+  "title" : "Specify a requirelist of properties for an at-rule.\n",
+  "parameters" : [ {
+    "name" : "at-rule-property-requirelist",
+    "description" : "at-rule-property-requirelist"
   } ]
 }, {
   "patternId" : "property-blacklist",
@@ -832,11 +839,25 @@
     "description" : "function-url-scheme-blacklist"
   } ]
 }, {
+  "patternId" : "max-nesting-depth",
+  "title" : "Limit the depth of nesting.\n",
+  "parameters" : [ {
+    "name" : "max-nesting-depth",
+    "description" : "max-nesting-depth"
+  } ]
+}, {
   "patternId" : "selector-max-attribute",
   "title" : "Limit the number of attribute selectors in a selector.\n",
   "parameters" : [ {
     "name" : "selector-max-attribute",
     "description" : "selector-max-attribute"
+  } ]
+}, {
+  "patternId" : "declaration-block-single-line-max-declarations",
+  "title" : "Limit the number of declarations within a single-line declaration block.\n",
+  "parameters" : [ {
+    "name" : "declaration-block-single-line-max-declarations",
+    "description" : "declaration-block-single-line-max-declarations"
   } ]
 }, {
   "patternId" : "at-rule-no-vendor-prefix",
@@ -916,13 +937,6 @@
     "description" : "function-url-no-scheme-relative"
   } ]
 }, {
-  "patternId" : "function-whitelist",
-  "title" : "Specify a whitelist of allowed functions\n",
-  "parameters" : [ {
-    "name" : "function-whitelist",
-    "description" : "function-whitelist"
-  } ]
-}, {
   "patternId" : "property-no-unknown",
   "title" : "Disallow unknown properties.\n",
   "parameters" : [ {
@@ -942,6 +956,13 @@
   "parameters" : [ {
     "name" : "no-duplicate-at-import-rules",
     "description" : "no-duplicate-at-import-rules"
+  } ]
+}, {
+  "patternId" : "at-rule-semicolon-space-before",
+  "title" : "Require a single space or disallow whitespace before the semicolons of at-rules.\n",
+  "parameters" : [ {
+    "name" : "at-rule-semicolon-space-before",
+    "description" : "at-rule-semicolon-space-before"
   } ]
 }, {
   "patternId" : "selector-max-universal",
@@ -1154,6 +1175,13 @@
     "description" : "declaration-property-unit-whitelist"
   } ]
 }, {
+  "patternId" : "function-whitelist",
+  "title" : "Specify a whitelist of allowed functions.\n",
+  "parameters" : [ {
+    "name" : "function-whitelist",
+    "description" : "function-whitelist"
+  } ]
+}, {
   "patternId" : "function-max-empty-lines",
   "title" : "Limit the number of adjacent empty lines within functions.\n",
   "parameters" : [ {
@@ -1187,12 +1215,5 @@
   "parameters" : [ {
     "name" : "keyframe-declaration-no-important",
     "description" : "keyframe-declaration-no-important"
-  } ]
-}, {
-  "patternId" : "max-nesting-depth",
-  "title" : "Limit the allowed nesting depth.\n",
-  "parameters" : [ {
-    "name" : "max-nesting-depth",
-    "description" : "max-nesting-depth"
   } ]
 } ]

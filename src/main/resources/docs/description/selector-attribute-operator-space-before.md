@@ -4,9 +4,11 @@ Require a single space or disallow whitespace before operators within attribute 
 
 ```css
 [target =_blank]
-/**     ↑    
+/**     ↑
  * The space before operator */
 ```
+
+The `--fix` option on the [command line](../../../docs/user-guide/cli.md#autofixing-errors) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

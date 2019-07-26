@@ -13,7 +13,7 @@ a {} /* ↑ */
 
 ## Options
 
-`int`: Maximum number of characters allowed.
+`int`: Maximum number of adjacent empty lines allowed.
 
 For example, with `2`:
 
@@ -30,12 +30,12 @@ b {}
 Comment strings are also checked -- so the following is a violation:
 
 ```css
-/**
- * Call me Ishmael.
- *
- *
- *
- * Some years ago -- never mind how log precisely -- ...
+/*
+ Call me Ishmael.
+
+
+
+ Some years ago -- never mind how log precisely -- ...
  */
 ```
 
@@ -81,24 +81,25 @@ b {}
 The following patterns are *not* considered violations:
 
 ```css
-/**
- * Call me Ishmael.
- *
- *
- *
- * Some years ago -- never mind how log precisely -- ...
+/*
+ Call me Ishmael.
+
+
+
+ Some years ago -- never mind how long precisely -- ...
  */
 ```
 
 ```css
-a { 
-    /**
-    * Comment 
-    *
-    *
-    *
-    * inside the declaration with a lot of empty lines...
+a {
+    /*
+     Comment
+
+
+
+
+     inside the declaration with a lot of empty lines...
     */
-     color: pink; 
+     color: pink;
 }
 ```
