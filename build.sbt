@@ -15,6 +15,7 @@ import sjsonnew.BasicJsonProtocol._
 import sjsonnew.support.scalajson.unsafe._
 import java.nio.file.Files
 import scala.collection.JavaConverters._
+import Path.flat
 
 organization := "com.codacy"
 
@@ -52,16 +53,17 @@ toolVersion := {
   val patterns = json.flatMap(Converter.fromJson[Patterns])
   patterns.map(_.version).getOrElse(throw new Exception("Failed to retrieve version from docs/patterns.json"))
 }
-val stylelintVersionFileName = ".stylelint-version"
-lazy val writeStylelintVersionFile = Def.task {
-  val version = toolVersion.value
-  val f = file(stylelintVersionFileName)
+
+lazy val stylelintVersionFile = Def.setting {
+  val f = file(".stylelint-version")
   IO.write(f, toolVersion.value)
+  f
 }
 
 mappings.in(Universal) ++= resourceDirectory
   .in(Compile)
-  .map { resourceDir: File =>
+  .zip(stylelintVersionFile)
+  .map { case (resourceDir: File, versionFile: File) =>
     val src = resourceDir / "docs"
     val dest = "/docs"
 
@@ -69,16 +71,14 @@ mappings.in(Universal) ++= resourceDirectory
       val res = for {
         path <- Files.walk(src.toPath).iterator().asScala
         if !Files.isDirectory(path)
-      } yield path.toFile() -> path.toString.replaceFirst(src.toString, dest)
+      } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)
       res.toSeq
     }
 
-    val scripts = Seq((file("./scripts/install.sh"), "install.sh"), (file(stylelintVersionFileName), stylelintVersionFileName))
-
+    val scripts = Seq(file("./scripts/install.sh"), versionFile).pair(flat)
+    
     docFiles ++ scripts
-  }
-  .dependsOn(writeStylelintVersionFile)
-  .value
+  }.value
 
 def installAll() =
   s"""apk update &&
