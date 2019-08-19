@@ -24,3 +24,5 @@ npm install -g stylelint-config-prettier@5.2.0
 npm install -g stylelint-config-css-modules@1.4.0
 npm install -g prettier@1.18.2
 npm install -g stylelint-prettier@1.1.1
+npm install -g stylelint-config-styled-components@0.1.1
+npm install -g stylelint-processor-styled-components@1.8.0
