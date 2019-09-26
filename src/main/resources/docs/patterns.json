@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "10.1.0",
+  "version" : "11.0.0",
   "patterns" : [ {
     "patternId" : "at-rule-blacklist",
     "level" : "Error",
@@ -1320,6 +1320,14 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "time-min-milliseconds",
+      "default" : null
+    } ]
+  }, {
+    "patternId" : "unicode-bom",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unicode-bom",
       "default" : null
     } ]
   }, {

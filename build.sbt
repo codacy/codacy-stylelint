@@ -21,13 +21,7 @@ organization := "com.codacy"
 
 name := "codacy-stylelint"
 
-val languageVersion = "2.12.8"
-
-scalaVersion := languageVersion
-
-resolvers := Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/releases") ++
-  resolvers.value ++
-  Seq("Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/")
+scalaVersion := "2.12.10"
 
 libraryDependencies ++= Seq(
   "com.codacy" %% "codacy-engine-scala-seed" % "3.0.296",
@@ -63,22 +57,24 @@ lazy val stylelintVersionFile = Def.setting {
 mappings.in(Universal) ++= resourceDirectory
   .in(Compile)
   .zip(stylelintVersionFile)
-  .map { case (resourceDir: File, versionFile: File) =>
-    val src = resourceDir / "docs"
-    val dest = "/docs"
+  .map {
+    case (resourceDir: File, versionFile: File) =>
+      val src = resourceDir / "docs"
+      val dest = "/docs"
 
-    val docFiles = {
-      val res = for {
-        path <- Files.walk(src.toPath).iterator().asScala
-        if !Files.isDirectory(path)
-      } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)
-      res.toSeq
-    }
+      val docFiles = {
+        val res = for {
+          path <- Files.walk(src.toPath).iterator().asScala
+          if !Files.isDirectory(path)
+        } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)
+        res.toSeq
+      }
 
-    val scripts = Seq(file("./scripts/install.sh"), versionFile).pair(flat)
-    
-    docFiles ++ scripts
-  }.value
+      val scripts = Seq(file("./scripts/install.sh"), versionFile).pair(flat)
+
+      docFiles ++ scripts
+  }
+  .value
 
 def installAll() =
   s"""apk update &&
@@ -110,7 +106,6 @@ dockerCommands := dockerCommands.value.flatMap {
       Cmd("RUN", installAll()),
       Cmd("RUN", "mv /opt/docker/docs /docs"),
       ExecCmd("RUN", Seq("chown", "-R", s"docker:docker", "/docs"): _*),
-      Cmd("ENV", "NODE_PATH /usr/lib/node_modules")
-    )
+      Cmd("ENV", "NODE_PATH /usr/lib/node_modules"))
   case other => List(other)
 }
