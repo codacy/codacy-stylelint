@@ -27,12 +27,9 @@
 
         <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="error" />
 
-        <error source="no-missing-end-of-source-newline" line="22" message="Unexpected missing end-of-source newline (no-missing-end-of-source-newline)" severity="error" />
-
         <error source="no-eol-whitespace" line="4" message="Unexpected whitespace at end of line (no-eol-whitespace)" severity="error" />
         <error source="no-eol-whitespace" line="8" message="Unexpected whitespace at end of line (no-eol-whitespace)" severity="error" />
         <error source="no-eol-whitespace" line="17" message="Unexpected whitespace at end of line (no-eol-whitespace)" severity="error" />
-        <error source="no-eol-whitespace" line="22" message="Unexpected whitespace at end of line (no-eol-whitespace)" severity="error" />
 
         <error source="indentation" line="2" message="Expected indentation of 2 spaces (indentation)" severity="error" />
         <error source="indentation" line="3" message="Expected indentation of 0 spaces (indentation)" severity="error" />
