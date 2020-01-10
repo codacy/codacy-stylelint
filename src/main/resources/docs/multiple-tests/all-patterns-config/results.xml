@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="1.5">
+    <file name="noTestResults.css">
+        <error source="scale-unlimited/declaration-strict-value" line="2" message="Expected variable or function for &quot;#aaaaaa&quot; of &quot;color&quot; (scale-unlimited/declaration-strict-value)" severity="info" />
+        <error source="sh-waqar/declaration-use-variable" line="2" message="Expected variable for &quot;color&quot;. (sh-waqar/declaration-use-variable)" severity="info" />
+        <error source="color-hex-length" line="2" message="Expected &quot;#aaaaaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="error" />
+    </file>
+</checkstyle>

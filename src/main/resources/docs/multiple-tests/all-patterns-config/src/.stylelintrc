@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-suitcss",
+    "stylelint-config-wordpress",
+    "stylelint-config-slds",
+    "stylelint-config-prettier",
+    "stylelint-rscss/config"
+  ],
+  "plugins":[
+    "stylelint-order",
+    "stylelint-suitcss",
+    "stylelint-scss",
+    "stylelint-csstree-validator",
+    "stylelint-declaration-strict-value",
+    "stylelint-declaration-use-variable",
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules": {
+    "csstree/validator": true,
+    "scale-unlimited/declaration-strict-value": "color",
+    "sh-waqar/declaration-use-variable": "/color/",
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
+  }
+}
