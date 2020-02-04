@@ -22,6 +22,7 @@ npm install -g stylelint-selector-bem-pattern@2.1.0
 npm install -g stylelint-config-slds@1.0.7
 npm install -g stylelint-config-prettier@6.0.0
 npm install -g stylelint-config-css-modules@1.5.0
+npm install -g postcss@7.0.26
 npm install -g prettier@1.18.2
 npm install -g stylelint-prettier@1.1.1
 npm install -g stylelint-config-styled-components@0.1.1
