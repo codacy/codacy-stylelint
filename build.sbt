@@ -24,7 +24,7 @@ name := "codacy-stylelint"
 scalaVersion := "2.12.10"
 
 libraryDependencies ++= Seq(
-  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.296",
+  "com.codacy" %% "codacy-engine-scala-seed" % "4.0.0",
   "com.vladsch.flexmark" % "flexmark-all" % "0.50.20",
   "org.specs2" %% "specs2-core" % "4.6.0" % Test)
 
