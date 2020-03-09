@@ -22,15 +22,20 @@ workflows:
           write_sbt_version: true
       - codacy/sbt:
           name: test_and_coverage
+          persist_to_workspace: true
           cmd: |
-            sbt "set scalafmtUseIvy in ThisBuild := false;
+            export NVM_DIR="/opt/circleci/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm install v8.11.3
+            nvm alias default v8.11.3
+
+            npm install
+            export PATH=$PATH:$(pwd)/node_modules/.bin
+            STYLELINT_CONFIG_BASEDIR=$(pwd)/node_modules sbt "set scalafmtUseIvy in ThisBuild := false;
                  scalafmt::test;
                  test:scalafmt::test;
-                 sbt:scalafmt::test;"
-            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-            ./scripts/install.sh
-            sbt "coverage;
+                 sbt:scalafmt::test;
+                 coverage;
                  test;
                  coverageReport;
                  coverageAggregate"
@@ -42,6 +47,8 @@ workflows:
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
+            sbt "runMain codacy.stylelint.DocGenerator"
+            docker build -t codacy-stylelint-base .
             sbt "set scalafmtUseIvy in ThisBuild := false;
                  set version in Docker := \"latest\";
                  docker:publishLocal"

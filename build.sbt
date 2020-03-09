@@ -1,7 +1,8 @@
+import java.nio.file.Files
+
 import com.typesafe.sbt.packager.Keys.{
   daemonUser,
   defaultLinuxInstallLocation,
-  dockerAlias,
   dockerBaseImage,
   dockerCmd,
   dockerEntrypoint,
@@ -9,13 +10,12 @@ import com.typesafe.sbt.packager.Keys.{
   maintainer,
   packageName
 }
-import com.typesafe.sbt.packager.docker.{Cmd, DockerAlias, ExecCmd}
-import sjsonnew._
+import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 import sjsonnew.BasicJsonProtocol._
+import sjsonnew._
 import sjsonnew.support.scalajson.unsafe._
-import java.nio.file.Files
+
 import scala.collection.JavaConverters._
-import Path.flat
 
 organization := "com.codacy"
 
@@ -36,16 +36,19 @@ enablePlugins(DockerPlugin)
 
 lazy val toolVersion = settingKey[String]("The version of the underlying tool retrieved from patterns.json")
 toolVersion := {
-  case class Patterns(name: String, version: String)
-  implicit val patternsIso: IsoLList[Patterns] =
-    LList.isoCurried((p: Patterns) => ("name", p.name) :*: ("version", p.version) :*: LNil) {
-      case (_, n) :*: (_, v) :*: LNil => Patterns(n, v)
+  case class PackageJson(name: String, version: String, dependencies: Map[String, String])
+  implicit val patternsIso: IsoLList[PackageJson] =
+    LList.isoCurried((p: PackageJson) =>
+      ("name", p.name) :*: ("version", p.version) :*: ("dependencies", p.dependencies) :*: LNil) {
+      case (_, n) :*: (_, v) :*: (_, d) :*: LNil => PackageJson(n, v, d)
     }
 
-  val jsonFile = (resourceDirectory in Compile).value / "docs" / "patterns.json"
+  val jsonFile = file("./package.json")
   val json = Parser.parseFromFile(jsonFile)
-  val patterns = json.flatMap(Converter.fromJson[Patterns])
-  patterns.map(_.version).getOrElse(throw new Exception("Failed to retrieve version from docs/patterns.json"))
+  val patterns = json.flatMap(Converter.fromJson[PackageJson])
+  patterns
+    .map(_.dependencies("stylelint"))
+    .getOrElse(throw new Exception("Failed to retrieve version from package.json"))
 }
 
 lazy val stylelintVersionFile = Def.setting {
@@ -62,34 +65,19 @@ mappings.in(Universal) ++= resourceDirectory
       val src = resourceDir / "docs"
       val dest = "/docs"
 
-      val docFiles = {
-        val res = for {
-          path <- Files.walk(src.toPath).iterator().asScala
-          if !Files.isDirectory(path)
-        } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)
-        res.toSeq
-      }
-
-      val scripts = Seq(file("./scripts/install.sh"), versionFile).pair(flat)
-
-      docFiles ++ scripts
+      (for {
+        path <- Files.walk(src.toPath).iterator().asScala
+        if !Files.isDirectory(path)
+      } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)).toSeq
   }
   .value
-
-def installAll() =
-  s"""apk update &&
-     |apk add bash curl npm &&
-     |./install.sh
-     ||rm -rf /tmp/* &&
-     |rm -rf /var/cache/apk/*
-     |rm ./install.sh""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
 val defaultDockerInstallationPath = "/opt/docker"
 mainClass in Compile := Some("codacy.Engine")
 packageName in Docker := name.value
 version in Docker := version.value
 maintainer in Docker := "Rodrigo Fernandes <rodrigo@codacy.com>"
-dockerBaseImage := "library/openjdk:8-jre-alpine"
+dockerBaseImage := "codacy-stylelint-base:latest"
 dockerUpdateLatest := true
 defaultLinuxInstallLocation in Docker := defaultDockerInstallationPath
 daemonUser in Docker := "docker"
@@ -100,12 +88,11 @@ dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>
     List(
       Cmd("RUN", "adduser -u 2004 -D docker"),
-      Cmd("ENV", s"TOOL_VERSION ${toolVersion.value}"),
-      Cmd("ENV", s"STYLELINT_CONFIG_BASEDIR /usr/lib/node_modules"),
+      Cmd("ENV", s"STYLELINT_CONFIG_BASEDIR $defaultDockerInstallationPath/node_modules"),
       cmd,
-      Cmd("RUN", installAll()),
-      Cmd("RUN", "mv /opt/docker/docs /docs"),
+      Cmd("RUN", s"mv $defaultDockerInstallationPath/docs /docs"),
       ExecCmd("RUN", Seq("chown", "-R", s"docker:docker", "/docs"): _*),
-      Cmd("ENV", "NODE_PATH /usr/lib/node_modules"))
+      Cmd("ENV", s"NODE_PATH $defaultDockerInstallationPath/node_modules"),
+      Cmd("ENV", s"PATH $$PATH:$defaultDockerInstallationPath/node_modules/.bin"))
   case other => List(other)
 }

@@ -9,8 +9,14 @@ Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/s
 
 ## Usage
 
-You can create the docker by doing:
+You can create the docker by following these steps:
 
+1) Generate base image:
+```
+docker build -t codacy-stylelint-base .
+```
+
+2) Generate tool image:
 ```
 sbt docker:publishLocal
 ```
@@ -31,6 +37,12 @@ docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 
 We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
 You can follow the instructions there to make sure your tool is working as expected.
+
+## Update tool version
+
+1. Open package.json file 
+2. Update *stylint* to the desired version
+3. Generate docs
 
 ## Generate Docs
 
