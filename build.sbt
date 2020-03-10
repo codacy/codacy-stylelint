@@ -65,10 +65,12 @@ mappings.in(Universal) ++= resourceDirectory
       val src = resourceDir / "docs"
       val dest = "/docs"
 
-      (for {
+      val docs = for {
         path <- Files.walk(src.toPath).iterator().asScala
         if !Files.isDirectory(path)
-      } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)).toSeq
+      } yield path.toFile -> path.toString.replaceFirst(src.toString, dest)
+
+      docs.toSeq
   }
   .value
 

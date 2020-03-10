@@ -27,8 +27,7 @@ workflows:
                  sbt:scalafmt::test;
                  coverage;
                  test;
-                 coverageReport;
-                 coverageAggregate"
+                 coverageReport"
             bash <(curl -Ls https://coverage.codacy.com/get.sh)
           requires:
             - codacy/checkout_and_version

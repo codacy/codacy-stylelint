@@ -72,7 +72,7 @@ object Stylelint extends Tool {
     val configuration = configurationFile ++ configurationBaseDirectory
     val formatter = List("--formatter", "json")
 
-    val command = List("npx", "--no-install", "stylelint") ++ fileArgument ++ configuration ++ formatter
+    val command = List("stylelint") ++ fileArgument ++ configuration ++ formatter
 
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
