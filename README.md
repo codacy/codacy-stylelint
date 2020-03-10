@@ -40,8 +40,16 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ## Update tool version
 
-1. Open package.json file 
-2. Update *stylint* to the desired version
+The tool is dependabot friendly, so it is automatically updated. 
+In order to update manually: 
+
+1. Open package.json file
+2. Update *stylint* to the desired version and run:
+
+    ```
+    npm update
+    ```
+
 3. Generate docs
 
 ## Generate Docs
