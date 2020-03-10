@@ -89,11 +89,11 @@ dockerCmd := Seq()
 dockerCommands := dockerCommands.value.flatMap {
   case cmd @ Cmd("ADD", _) =>
     List(
-      Cmd("RUN", "adduser -u 2004 -D docker"),
+      ExecCmd("RUN", "adduser -u 2004 -D docker"),
       Cmd("ENV", s"STYLELINT_CONFIG_BASEDIR $defaultDockerInstallationPath/node_modules"),
       cmd,
-      Cmd("RUN", s"mv $defaultDockerInstallationPath/docs /docs"),
-      ExecCmd("RUN", Seq("chown", "-R", s"docker:docker", "/docs"): _*),
+      ExecCmd("RUN", s"mv $defaultDockerInstallationPath/docs /docs"),
+      ExecCmd("RUN", "chown", "-R", "docker:docker", "/docs"),
       Cmd("ENV", s"NODE_PATH $defaultDockerInstallationPath/node_modules"),
       Cmd("ENV", s"PATH $$PATH:$defaultDockerInstallationPath/node_modules/.bin"))
   case other => List(other)
