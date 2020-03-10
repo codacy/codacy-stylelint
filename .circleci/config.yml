@@ -3,16 +3,6 @@ version: 2.1
 orbs:
   codacy: codacy/base@2.7.0
   codacy_plugins_test: codacy/plugins-test@0.10.3
-  coverage-reporter: codacy/coverage-reporter@7.5.0
-
-jobs:
-  send-coverage-report:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/workdir
-      - coverage-reporter/send_report
 
 workflows:
   version: 2
@@ -39,11 +29,9 @@ workflows:
                  test;
                  coverageReport;
                  coverageAggregate"
+            bash <(curl -Ls https://coverage.codacy.com/get.sh)
           requires:
             - codacy/checkout_and_version
-      - send-coverage-report:
-          requires:
-            - test_and_coverage
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
