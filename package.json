@@ -18,7 +18,7 @@
     "stylelint-rscss": "0.4.0",
     "stylelint-selector-bem-pattern": "2.1.0",
     "stylelint-config-slds": "1.0.7",
-    "stylelint-config-prettier": "6.0.0",
+    "stylelint-config-prettier": "8.0.1",
     "stylelint-config-css-modules": "1.5.0",
     "postcss": "7.0.27",
     "prettier": "1.18.2",
