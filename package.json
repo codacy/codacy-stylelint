@@ -21,7 +21,7 @@
     "stylelint-config-prettier": "8.0.1",
     "stylelint-config-css-modules": "2.2.0",
     "postcss": "7.0.27",
-    "prettier": "1.19.1",
+    "prettier": "2.0.1",
     "stylelint-prettier": "1.1.2",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.10.0",
