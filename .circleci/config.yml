@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@2.7.0
-  codacy_plugins_test: codacy/plugins-test@0.10.3
+  codacy: codacy/base@2.9.3
+  codacy_plugins_test: codacy/plugins-test@0.10.6
 
 workflows:
   version: 2
@@ -28,7 +28,7 @@ workflows:
                  coverage;
                  test;
                  coverageReport"
-            bash <(curl -Ls https://coverage.codacy.com/get.sh)
+            bash <(curl -Ls https://coverage.codacy.com/get.sh) report --skip
           requires:
             - codacy/checkout_and_version
       - codacy/sbt:
