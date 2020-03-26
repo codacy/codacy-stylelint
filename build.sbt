@@ -36,18 +36,17 @@ enablePlugins(DockerPlugin)
 
 lazy val toolVersion = settingKey[String]("The version of the underlying tool retrieved from patterns.json")
 toolVersion := {
-  case class PackageJson(name: String, version: String, dependencies: Map[String, String])
+  case class PackageJson(dependencies: Map[String, String])
   implicit val patternsIso: IsoLList[PackageJson] =
-    LList.isoCurried((p: PackageJson) =>
-      ("name", p.name) :*: ("version", p.version) :*: ("dependencies", p.dependencies) :*: LNil) {
-      case (_, n) :*: (_, v) :*: (_, d) :*: LNil => PackageJson(n, v, d)
+    LList.isoCurried((p: PackageJson) => ("dependencies", p.dependencies) :*: LNil) {
+      case (_, d) :*: LNil => PackageJson(d)
     }
 
   val jsonFile = file("./package.json")
   val json = Parser.parseFromFile(jsonFile)
   val patterns = json.flatMap(Converter.fromJson[PackageJson])
   patterns
-    .map(_.dependencies("stylelint"))
+    .map(_.dependencies("stylelint").stripPrefix("^"))
     .getOrElse(throw new Exception("Failed to retrieve version from package.json"))
 }
 
