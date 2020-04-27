@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="1.5">
+  <file name="test.css">
+    <error source="block-no-empty" line="1" message="Unexpected empty block (block-no-empty)" severity="error" />
+  </file>
+</checkstyle>

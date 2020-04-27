@@ -7,6 +7,7 @@ import com.codacy.plugins.api.results.{Pattern, Result, Tool}
 import com.codacy.plugins.api.{Options, Source}
 import com.codacy.tools.scala.seed.utils.{CommandResult, CommandRunner}
 import com.codacy.tools.scala.seed.utils.FileHelper._
+import com.codacy.tools.scala.seed.utils.ToolHelper._
 import play.api.libs.json._
 
 import scala.util.{Failure, Success, Try}
@@ -27,7 +28,7 @@ object Stylelint extends Tool {
     files: Option[Set[Source.File]],
     options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
 
-    val configFilePath = getConfigFile(source, configuration)
+    val configFilePath = getConfigFile(source, configuration.withDefaultParameters)
     val commandResult = run(source, configFilePath, files)
     val parsedResults = parseJson(commandResult)
 

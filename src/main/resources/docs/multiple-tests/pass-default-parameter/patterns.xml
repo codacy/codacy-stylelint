@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<module name="root">
+    <module name="block-no-empty">
+        <!-- Not setting the parameter should give same result -->
+        <!-- <property name="block-no-empty" value="true" /> -->
+    </module>
+</module>
