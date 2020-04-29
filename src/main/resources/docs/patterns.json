@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "13.2.1",
+  "version" : "13.3.3",
   "patterns" : [ {
     "patternId" : "at-rule-blacklist",
     "level" : "Error",
