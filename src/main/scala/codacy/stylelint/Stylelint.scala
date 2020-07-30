@@ -28,11 +28,16 @@ object Stylelint extends Tool {
     files: Option[Set[Source.File]],
     options: Map[Options.Key, Options.Value])(implicit specification: Tool.Specification): Try[List[Result]] = {
 
-    val configFilePath = getConfigFile(source, configuration.withDefaultParameters)
-    val commandResult = run(source, configFilePath, files)
-    val parsedResults = parseJson(commandResult)
+    files match {
+      case Some(set) if set.isEmpty =>
+        Success(List.empty)
+      case _ =>
+        val configFilePath = getConfigFile(source, configuration.withDefaultParameters)
+        val commandResult = run(source, configFilePath, files)
+        val parsedResults = parseJson(commandResult)
 
-    convertToResult(parsedResults)
+        convertToResult(parsedResults)
+    }
   }
 
   def checkForExistingConfigFile(source: Source.Directory): Option[Path] = {
