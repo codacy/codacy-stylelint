@@ -34,9 +34,16 @@ object Stylelint extends Tool {
       case _ =>
         val configFilePath = getConfigFile(source, configuration.withDefaultParameters)
         val commandResult = run(source, configFilePath, files)
-        val parsedResults = parseJson(commandResult)
+        commandResult match {
+          case Failure(err) =>
+            Failure(new Exception(s"Could not run stylelint: ${err.getCause}"))
+          case Success(result) if result.stderr.nonEmpty =>
+            Failure(new Exception(s"Stylelint failed with: ${result.stderr.headOption.getOrElse("")}"))
+          case _ =>
+            val parsedResults = parseJson(commandResult)
 
-        convertToResult(parsedResults)
+            convertToResult(parsedResults)
+        }
     }
   }
 
