@@ -258,6 +258,13 @@
     "description" : "at-rule-empty-line-before"
   } ]
 }, {
+  "patternId" : "hue-degree-notation",
+  "title" : "Specify number or angle notation for degree hues.\n",
+  "parameters" : [ {
+    "name" : "hue-degree-notation",
+    "description" : "hue-degree-notation"
+  } ]
+}, {
   "patternId" : "property-case",
   "title" : "Specify lowercase or uppercase for properties.\n",
   "parameters" : [ {
@@ -424,6 +431,13 @@
   "parameters" : [ {
     "name" : "length-zero-no-unit",
     "description" : "length-zero-no-unit"
+  } ]
+}, {
+  "patternId" : "alpha-value-notation",
+  "title" : "Specify percentage or number notation for alpha-values.\n",
+  "parameters" : [ {
+    "name" : "alpha-value-notation",
+    "description" : "alpha-value-notation"
   } ]
 }, {
   "patternId" : "media-feature-range-operator-space-after",
@@ -1215,6 +1229,13 @@
   "parameters" : [ {
     "name" : "function-url-quotes",
     "description" : "function-url-quotes"
+  } ]
+}, {
+  "patternId" : "color-function-notation",
+  "title" : "Specify modern or legacy notation for applicable color-functions.\n",
+  "parameters" : [ {
+    "name" : "color-function-notation",
+    "description" : "color-function-notation"
   } ]
 }, {
   "patternId" : "keyframe-declaration-no-important",
