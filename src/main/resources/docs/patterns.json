@@ -1,7 +1,15 @@
 {
   "name" : "stylelint",
-  "version" : "13.3.3",
+  "version" : "13.6.1",
   "patterns" : [ {
+    "patternId" : "alpha-value-notation",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "alpha-value-notation",
+      "default" : null
+    } ]
+  }, {
     "patternId" : "at-rule-blacklist",
     "level" : "Error",
     "category" : "CodeStyle",
@@ -171,6 +179,14 @@
     "parameters" : [ {
       "name" : "block-opening-brace-space-before",
       "default" : "always"
+    } ]
+  }, {
+    "patternId" : "color-function-notation",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-function-notation",
+      "default" : null
     } ]
   }, {
     "patternId" : "color-hex-case",
@@ -614,6 +630,14 @@
     "parameters" : [ {
       "name" : "function-whitespace-after",
       "default" : "always"
+    } ]
+  }, {
+    "patternId" : "hue-degree-notation",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "hue-degree-notation",
+      "default" : null
     } ]
   }, {
     "patternId" : "indentation",
