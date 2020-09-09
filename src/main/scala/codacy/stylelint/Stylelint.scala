@@ -31,6 +31,10 @@ object Stylelint extends Tool {
     files match {
       case Some(set) if set.isEmpty =>
         Success(List.empty)
+      // this case happens when we test this tool locally without a list of files and there's nothing to analyse
+      // otherwise, calling stylelint without files to analyse return an error
+      case None if !existsFileToAnalyse =>
+        Success(List.empty)
       case _ =>
         val configFilePath = getConfigFile(source, configuration.withDefaultParameters)
         val commandResult = run(source, configFilePath, files)
@@ -45,6 +49,11 @@ object Stylelint extends Tool {
             convertToResult(parsedResults)
         }
     }
+  }
+
+  private def existsFileToAnalyse: Boolean = {
+    val validExtensions = Set("css", "scss", "less", "sass")
+    File("/src").listRecursively.exists(f => validExtensions.contains(f.extension(includeDot = false).getOrElse("")))
   }
 
   def checkForExistingConfigFile(source: Source.Directory): Option[Path] = {
@@ -86,6 +95,8 @@ object Stylelint extends Tool {
     val formatter = List("--formatter", "json")
 
     val command = List("stylelint") ++ fileArgument ++ configuration ++ formatter
+
+    println(command)
 
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
