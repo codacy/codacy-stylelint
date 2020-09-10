@@ -1,6 +1,8 @@
 # selector-pseudo-element-whitelist
 
-Specify a whitelist of allowed pseudo-element selectors.
+**_Deprecated: Instead use the [`selector-pseudo-element-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-pseudo-element-allowed-list/README.md) rule._**
+
+Specify a list of allowed pseudo-element selectors.
 
 <!-- prettier-ignore -->
 ```css

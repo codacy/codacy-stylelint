@@ -1,6 +1,8 @@
 # declaration-property-unit-blacklist
 
-Specify a blacklist of disallowed property and unit pairs within declarations.
+**_Deprecated: Instead use the [`declaration-property-unit-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/declaration-property-unit-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed property and unit pairs within declarations.
 
 <!-- prettier-ignore -->
 ```css

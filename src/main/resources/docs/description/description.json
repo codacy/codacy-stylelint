@@ -1,1247 +1,1436 @@
 [ {
-  "patternId" : "media-query-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of media query lists.\n",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-space-after",
-    "description" : "media-query-list-comma-space-after"
-  } ]
-}, {
-  "patternId" : "selector-attribute-brackets-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-attribute-brackets-space-inside",
-    "description" : "selector-attribute-brackets-space-inside"
-  } ]
-}, {
-  "patternId" : "function-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of functions.\n",
-  "parameters" : [ {
-    "name" : "function-comma-space-after",
-    "description" : "function-comma-space-after"
-  } ]
-}, {
-  "patternId" : "no-descending-specificity",
-  "title" : "Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.\n",
-  "parameters" : [ {
-    "name" : "no-descending-specificity",
-    "description" : "no-descending-specificity"
-  } ]
-}, {
-  "patternId" : "block-opening-brace-newline-before",
-  "title" : "Require a newline or disallow whitespace before the opening brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-opening-brace-newline-before",
-    "description" : "block-opening-brace-newline-before"
-  } ]
-}, {
-  "patternId" : "no-empty-first-line",
-  "title" : "Disallow empty first lines.\n",
-  "parameters" : [ {
-    "name" : "no-empty-first-line",
-    "description" : "no-empty-first-line"
-  } ]
-}, {
-  "patternId" : "function-calc-no-unspaced-operator",
-  "title" : "Disallow an unspaced operator within `calc` functions.\n",
-  "parameters" : [ {
-    "name" : "function-calc-no-unspaced-operator",
-    "description" : "function-calc-no-unspaced-operator"
-  } ]
-}, {
-  "patternId" : "selector-combinator-space-before",
-  "title" : "Require a single space or disallow whitespace before the combinators of selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-combinator-space-before",
-    "description" : "selector-combinator-space-before"
-  } ]
-}, {
-  "patternId" : "no-eol-whitespace",
-  "title" : "Disallow end-of-line whitespace.\n",
-  "parameters" : [ {
-    "name" : "no-eol-whitespace",
-    "description" : "no-eol-whitespace"
-  } ]
-}, {
-  "patternId" : "at-rule-name-space-after",
-  "title" : "Require a single space after at-rule names.\n",
-  "parameters" : [ {
-    "name" : "at-rule-name-space-after",
-    "description" : "at-rule-name-space-after"
-  } ]
-}, {
-  "patternId" : "selector-attribute-operator-space-before",
-  "title" : "Require a single space or disallow whitespace before operators within attribute selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-space-before",
-    "description" : "selector-attribute-operator-space-before"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of media query lists.\n",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-newline-before",
-    "description" : "media-query-list-comma-newline-before"
-  } ]
-}, {
-  "patternId" : "block-closing-brace-newline-before",
-  "title" : "Require a newline or disallow whitespace before the closing brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-closing-brace-newline-before",
-    "description" : "block-closing-brace-newline-before"
-  } ]
-}, {
-  "patternId" : "block-no-empty",
-  "title" : "Disallow empty blocks.\n",
-  "parameters" : [ {
-    "name" : "block-no-empty",
-    "description" : "block-no-empty"
-  } ]
-}, {
-  "patternId" : "selector-combinator-blacklist",
-  "title" : "Specify a blacklist of disallowed combinators.\n",
-  "parameters" : [ {
-    "name" : "selector-combinator-blacklist",
-    "description" : "selector-combinator-blacklist"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of media query lists.\n",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-newline-after",
-    "description" : "media-query-list-comma-newline-after"
-  } ]
-}, {
-  "patternId" : "selector-combinator-whitelist",
-  "title" : "Specify a whitelist of allowed combinators.\n",
-  "parameters" : [ {
-    "name" : "selector-combinator-whitelist",
-    "description" : "selector-combinator-whitelist"
-  } ]
-}, {
-  "patternId" : "media-feature-name-whitelist",
-  "title" : "Specify a whitelist of allowed media feature names.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-whitelist",
-    "description" : "media-feature-name-whitelist"
-  } ]
-}, {
-  "patternId" : "custom-property-empty-line-before",
-  "title" : "Require or disallow an empty line before custom properties.\n",
-  "parameters" : [ {
-    "name" : "custom-property-empty-line-before",
-    "description" : "custom-property-empty-line-before"
-  } ]
-}, {
-  "patternId" : "selector-attribute-operator-whitelist",
-  "title" : "Specify a whitelist of allowed attribute operators.\n",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-whitelist",
-    "description" : "selector-attribute-operator-whitelist"
-  } ]
-}, {
-  "patternId" : "block-opening-brace-newline-after",
-  "title" : "Require a newline after the opening brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-opening-brace-newline-after",
-    "description" : "block-opening-brace-newline-after"
-  } ]
-}, {
-  "patternId" : "declaration-block-semicolon-space-after",
-  "title" : "Require a single space or disallow whitespace after the semicolons of declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-space-after",
-    "description" : "declaration-block-semicolon-space-after"
-  } ]
-}, {
-  "patternId" : "string-quotes",
-  "title" : "Specify single or double quotes around strings.\n",
-  "parameters" : [ {
-    "name" : "string-quotes",
-    "description" : "string-quotes"
-  } ]
-}, {
-  "patternId" : "at-rule-semicolon-newline-after",
-  "title" : "Require a newline after the semicolon of at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-semicolon-newline-after",
-    "description" : "at-rule-semicolon-newline-after"
-  } ]
-}, {
-  "patternId" : "media-feature-name-blacklist",
-  "title" : "Specify a blacklist of disallowed media feature names.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-blacklist",
-    "description" : "media-feature-name-blacklist"
-  } ]
-}, {
-  "patternId" : "selector-combinator-space-after",
-  "title" : "Require a single space or disallow whitespace after the combinators of selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-combinator-space-after",
-    "description" : "selector-combinator-space-after"
-  } ]
-}, {
-  "patternId" : "at-rule-name-case",
-  "title" : "Specify lowercase or uppercase for at-rules names.\n",
-  "parameters" : [ {
-    "name" : "at-rule-name-case",
-    "description" : "at-rule-name-case"
-  } ]
-}, {
-  "patternId" : "at-rule-name-newline-after",
-  "title" : "Require a newline after at-rule names.\n",
-  "parameters" : [ {
-    "name" : "at-rule-name-newline-after",
-    "description" : "at-rule-name-newline-after"
-  } ]
-}, {
-  "patternId" : "selector-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of selector lists.\n",
-  "parameters" : [ {
-    "name" : "selector-list-comma-space-before",
-    "description" : "selector-list-comma-space-before"
-  } ]
-}, {
-  "patternId" : "unicode-bom",
-  "title" : "Require or disallow the Unicode Byte Order Mark.\n",
-  "parameters" : [ {
-    "name" : "unicode-bom",
-    "description" : "unicode-bom"
-  } ]
-}, {
-  "patternId" : "function-calc-no-invalid",
-  "title" : "Disallow an invalid expression within `calc` functions.\n",
-  "parameters" : [ {
-    "name" : "function-calc-no-invalid",
-    "description" : "function-calc-no-invalid"
-  } ]
-}, {
-  "patternId" : "selector-nested-pattern",
-  "title" : "Specify a pattern for the selectors of rules nested within rules.\n",
-  "parameters" : [ {
-    "name" : "selector-nested-pattern",
-    "description" : "selector-nested-pattern"
-  } ]
-}, {
   "patternId" : "value-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of value lists.\n",
+  "title" : "Require a single space or disallow whitespace after the commas of value lists.",
   "parameters" : [ {
     "name" : "value-list-comma-space-after",
     "description" : "value-list-comma-space-after"
   } ]
 }, {
-  "patternId" : "media-feature-name-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for media feature names.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-no-vendor-prefix",
-    "description" : "media-feature-name-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "property-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for properties.\n",
-  "parameters" : [ {
-    "name" : "property-no-vendor-prefix",
-    "description" : "property-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-whitelist",
-  "title" : "Specify a whitelist of allowed property and value pairs within declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-property-value-whitelist",
-    "description" : "declaration-property-value-whitelist"
-  } ]
-}, {
-  "patternId" : "at-rule-empty-line-before",
-  "title" : "Require or disallow an empty line before at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-empty-line-before",
-    "description" : "at-rule-empty-line-before"
-  } ]
-}, {
-  "patternId" : "hue-degree-notation",
-  "title" : "Specify number or angle notation for degree hues.\n",
-  "parameters" : [ {
-    "name" : "hue-degree-notation",
-    "description" : "hue-degree-notation"
-  } ]
-}, {
-  "patternId" : "property-case",
-  "title" : "Specify lowercase or uppercase for properties.\n",
-  "parameters" : [ {
-    "name" : "property-case",
-    "description" : "property-case"
-  } ]
-}, {
-  "patternId" : "no-empty-source",
-  "title" : "Disallow empty sources.\n",
-  "parameters" : [ {
-    "name" : "no-empty-source",
-    "description" : "no-empty-source"
-  } ]
-}, {
-  "patternId" : "linebreaks",
-  "title" : "Specify unix or windows linebreaks.\n",
-  "parameters" : [ {
-    "name" : "linebreaks",
-    "description" : "linebreaks"
-  } ]
-}, {
-  "patternId" : "selector-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of selector lists.\n",
-  "parameters" : [ {
-    "name" : "selector-list-comma-space-after",
-    "description" : "selector-list-comma-space-after"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of media query lists.\n",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-space-before",
-    "description" : "media-query-list-comma-space-before"
-  } ]
-}, {
-  "patternId" : "declaration-block-semicolon-newline-after",
-  "title" : "Require a newline or disallow whitespace after the semicolons of declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-newline-after",
-    "description" : "declaration-block-semicolon-newline-after"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-parentheses-space-inside",
-    "description" : "selector-pseudo-class-parentheses-space-inside"
-  } ]
-}, {
-  "patternId" : "declaration-colon-space-after",
-  "title" : "Require a single space or disallow whitespace after the colon of declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-colon-space-after",
-    "description" : "declaration-colon-space-after"
-  } ]
-}, {
-  "patternId" : "at-rule-no-unknown",
-  "title" : "Disallow unknown at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-no-unknown",
-    "description" : "at-rule-no-unknown"
-  } ]
-}, {
-  "patternId" : "selector-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-no-vendor-prefix",
-    "description" : "selector-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "number-max-precision",
-  "title" : "Limit the number of decimal places allowed in numbers.\n",
-  "parameters" : [ {
-    "name" : "number-max-precision",
-    "description" : "number-max-precision"
-  } ]
-}, {
-  "patternId" : "declaration-empty-line-before",
-  "title" : "Require or disallow an empty line before declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-empty-line-before",
-    "description" : "declaration-empty-line-before"
-  } ]
-}, {
-  "patternId" : "color-no-invalid-hex",
-  "title" : "Disallow invalid hex colors.\n",
-  "parameters" : [ {
-    "name" : "color-no-invalid-hex",
-    "description" : "color-no-invalid-hex"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-no-unknown",
-  "title" : "Disallow unknown pseudo-class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-no-unknown",
-    "description" : "selector-pseudo-class-no-unknown"
-  } ]
-}, {
-  "patternId" : "indentation",
-  "title" : "Specify indentation.\n",
-  "parameters" : [ {
-    "name" : "indentation",
-    "description" : "indentation"
-  } ]
-}, {
-  "patternId" : "declaration-property-unit-blacklist",
-  "title" : "Specify a blacklist of disallowed property and unit pairs within declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-property-unit-blacklist",
-    "description" : "declaration-property-unit-blacklist"
-  } ]
-}, {
-  "patternId" : "function-whitespace-after",
-  "title" : "Require or disallow whitespace after functions.\n",
-  "parameters" : [ {
-    "name" : "function-whitespace-after",
-    "description" : "function-whitespace-after"
-  } ]
-}, {
-  "patternId" : "function-name-case",
-  "title" : "Specify lowercase or uppercase for function names.\n",
-  "parameters" : [ {
-    "name" : "function-name-case",
-    "description" : "function-name-case"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-no-unknown",
-  "title" : "Disallow unknown pseudo-element selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-no-unknown",
-    "description" : "selector-pseudo-element-no-unknown"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-case",
-  "title" : "Specify lowercase or uppercase for pseudo-class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-case",
-    "description" : "selector-pseudo-class-case"
-  } ]
-}, {
-  "patternId" : "selector-descendant-combinator-no-non-space",
-  "title" : "Disallow non-space characters for descendant combinators of selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-descendant-combinator-no-non-space",
-    "description" : "selector-descendant-combinator-no-non-space"
-  } ]
-}, {
-  "patternId" : "function-blacklist",
-  "title" : "Specify a blacklist of disallowed functions.\n",
-  "parameters" : [ {
-    "name" : "function-blacklist",
-    "description" : "function-blacklist"
-  } ]
-}, {
-  "patternId" : "function-parentheses-newline-inside",
-  "title" : "Require a newline or disallow whitespace on the inside of the parentheses of functions.\n",
-  "parameters" : [ {
-    "name" : "function-parentheses-newline-inside",
-    "description" : "function-parentheses-newline-inside"
-  } ]
-}, {
-  "patternId" : "length-zero-no-unit",
-  "title" : "Disallow units for zero lengths.\n",
-  "parameters" : [ {
-    "name" : "length-zero-no-unit",
-    "description" : "length-zero-no-unit"
-  } ]
-}, {
-  "patternId" : "alpha-value-notation",
-  "title" : "Specify percentage or number notation for alpha-values.\n",
-  "parameters" : [ {
-    "name" : "alpha-value-notation",
-    "description" : "alpha-value-notation"
-  } ]
-}, {
-  "patternId" : "media-feature-range-operator-space-after",
-  "title" : "Require a single space or disallow whitespace after the range operator in media features.\n",
-  "parameters" : [ {
-    "name" : "media-feature-range-operator-space-after",
-    "description" : "media-feature-range-operator-space-after"
-  } ]
-}, {
-  "patternId" : "declaration-colon-space-before",
-  "title" : "Require a single space or disallow whitespace before the colon of declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-colon-space-before",
-    "description" : "declaration-colon-space-before"
-  } ]
-}, {
-  "patternId" : "selector-max-class",
-  "title" : "Limit the number of classes in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-class",
-    "description" : "selector-max-class"
-  } ]
-}, {
-  "patternId" : "selector-no-qualifying-type",
-  "title" : "Disallow qualifying a selector by type.\n",
-  "parameters" : [ {
-    "name" : "selector-no-qualifying-type",
-    "description" : "selector-no-qualifying-type"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-whitelist",
-  "title" : "Specify a whitelist of allowed pseudo-class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-whitelist",
-    "description" : "selector-pseudo-class-whitelist"
-  } ]
-}, {
-  "patternId" : "declaration-block-semicolon-space-before",
-  "title" : "Require a single space or disallow whitespace before the semicolons of declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-space-before",
-    "description" : "declaration-block-semicolon-space-before"
-  } ]
-}, {
-  "patternId" : "at-rule-property-requirelist",
-  "title" : "Specify a requirelist of properties for an at-rule.\n",
-  "parameters" : [ {
-    "name" : "at-rule-property-requirelist",
-    "description" : "at-rule-property-requirelist"
-  } ]
-}, {
-  "patternId" : "property-blacklist",
-  "title" : "Specify a blacklist of disallowed properties.\n",
-  "parameters" : [ {
-    "name" : "property-blacklist",
-    "description" : "property-blacklist"
-  } ]
-}, {
-  "patternId" : "block-closing-brace-empty-line-before",
-  "title" : "Require or disallow an empty line before the closing brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-closing-brace-empty-line-before",
-    "description" : "block-closing-brace-empty-line-before"
-  } ]
-}, {
-  "patternId" : "unit-case",
-  "title" : "Specify lowercase or uppercase for units.\n",
-  "parameters" : [ {
-    "name" : "unit-case",
-    "description" : "unit-case"
-  } ]
-}, {
-  "patternId" : "selector-class-pattern",
-  "title" : "Specify a pattern for class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-class-pattern",
-    "description" : "selector-class-pattern"
-  } ]
-}, {
-  "patternId" : "media-feature-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within media features.\n",
-  "parameters" : [ {
-    "name" : "media-feature-parentheses-space-inside",
-    "description" : "media-feature-parentheses-space-inside"
-  } ]
-}, {
-  "patternId" : "block-closing-brace-space-before",
-  "title" : "Require a single space or disallow whitespace before the closing brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-closing-brace-space-before",
-    "description" : "block-closing-brace-space-before"
-  } ]
-}, {
-  "patternId" : "media-feature-colon-space-after",
-  "title" : "Require a single space or disallow whitespace after the colon in media features.\n",
-  "parameters" : [ {
-    "name" : "media-feature-colon-space-after",
-    "description" : "media-feature-colon-space-after"
-  } ]
-}, {
-  "patternId" : "font-family-no-duplicate-names",
-  "title" : "Disallow duplicate font family names.\n",
-  "parameters" : [ {
-    "name" : "font-family-no-duplicate-names",
-    "description" : "font-family-no-duplicate-names"
-  } ]
-}, {
-  "patternId" : "selector-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-max-empty-lines",
-    "description" : "selector-max-empty-lines"
-  } ]
-}, {
-  "patternId" : "no-invalid-double-slash-comments",
-  "title" : "Disallow double-slash comments (`//...`) which are not supported by CSS and [could lead to unexpected results](https://stackoverflow.com/a/20192639/130652).\n",
-  "parameters" : [ {
-    "name" : "no-invalid-double-slash-comments",
-    "description" : "no-invalid-double-slash-comments"
-  } ]
-}, {
-  "patternId" : "block-opening-brace-space-before",
-  "title" : "Require a single space or disallow whitespace before the opening brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-opening-brace-space-before",
-    "description" : "block-opening-brace-space-before"
-  } ]
-}, {
-  "patternId" : "selector-max-id",
-  "title" : "Limit the number of ID selectors in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-id",
-    "description" : "selector-max-id"
-  } ]
-}, {
-  "patternId" : "function-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of functions.\n",
-  "parameters" : [ {
-    "name" : "function-comma-space-before",
-    "description" : "function-comma-space-before"
-  } ]
-}, {
-  "patternId" : "selector-type-no-unknown",
-  "title" : "Disallow unknown type selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-type-no-unknown",
-    "description" : "selector-type-no-unknown"
-  } ]
-}, {
-  "patternId" : "declaration-block-no-duplicate-properties",
-  "title" : "Disallow duplicate properties within declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-no-duplicate-properties",
-    "description" : "declaration-block-no-duplicate-properties"
-  } ]
-}, {
-  "patternId" : "function-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses of functions.\n",
-  "parameters" : [ {
-    "name" : "function-parentheses-space-inside",
-    "description" : "function-parentheses-space-inside"
-  } ]
-}, {
-  "patternId" : "color-hex-length",
-  "title" : "Specify short or long notation for hex colors.\n",
-  "parameters" : [ {
-    "name" : "color-hex-length",
-    "description" : "color-hex-length"
-  } ]
-}, {
-  "patternId" : "rule-empty-line-before",
-  "title" : "Require or disallow an empty line before rules.\n",
-  "parameters" : [ {
-    "name" : "rule-empty-line-before",
-    "description" : "rule-empty-line-before"
-  } ]
-}, {
-  "patternId" : "value-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of value lists.\n",
-  "parameters" : [ {
-    "name" : "value-list-comma-newline-after",
-    "description" : "value-list-comma-newline-after"
-  } ]
-}, {
-  "patternId" : "declaration-no-important",
-  "title" : "Disallow `!important` within declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-no-important",
-    "description" : "declaration-no-important"
-  } ]
-}, {
-  "patternId" : "no-duplicate-selectors",
-  "title" : "Disallow duplicate selectors within a stylesheet.\n",
-  "parameters" : [ {
-    "name" : "no-duplicate-selectors",
-    "description" : "no-duplicate-selectors"
-  } ]
-}, {
-  "patternId" : "max-line-length",
-  "title" : "Limit the length of a line.\n",
-  "parameters" : [ {
-    "name" : "max-line-length",
-    "description" : "max-line-length"
-  } ]
-}, {
-  "patternId" : "declaration-block-semicolon-newline-before",
-  "title" : "Require a newline or disallow whitespace before the semicolons of declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-newline-before",
-    "description" : "declaration-block-semicolon-newline-before"
-  } ]
-}, {
-  "patternId" : "selector-max-specificity",
-  "title" : "Limit the specificity of selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-max-specificity",
-    "description" : "selector-max-specificity"
-  } ]
-}, {
-  "patternId" : "selector-max-type",
-  "title" : "Limit the number of type selectors in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-type",
-    "description" : "selector-max-type"
-  } ]
-}, {
-  "patternId" : "unit-no-unknown",
-  "title" : "Disallow unknown units.\n",
-  "parameters" : [ {
-    "name" : "unit-no-unknown",
-    "description" : "unit-no-unknown"
-  } ]
-}, {
-  "patternId" : "selector-type-case",
-  "title" : "Specify lowercase or uppercase for type selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-type-case",
-    "description" : "selector-type-case"
-  } ]
-}, {
-  "patternId" : "function-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of functions.\n",
-  "parameters" : [ {
-    "name" : "function-comma-newline-before",
-    "description" : "function-comma-newline-before"
-  } ]
-}, {
-  "patternId" : "unit-whitelist",
-  "title" : "Specify a whitelist of allowed units.\n",
-  "parameters" : [ {
-    "name" : "unit-whitelist",
-    "description" : "unit-whitelist"
-  } ]
-}, {
-  "patternId" : "selector-max-compound-selectors",
-  "title" : "Limit the number of compound selectors in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-compound-selectors",
-    "description" : "selector-max-compound-selectors"
-  } ]
-}, {
-  "patternId" : "value-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of value lists.\n",
-  "parameters" : [ {
-    "name" : "value-list-comma-newline-before",
-    "description" : "value-list-comma-newline-before"
-  } ]
-}, {
-  "patternId" : "selector-id-pattern",
-  "title" : "Specify a pattern for ID selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-id-pattern",
-    "description" : "selector-id-pattern"
-  } ]
-}, {
-  "patternId" : "value-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for values.\n",
-  "parameters" : [ {
-    "name" : "value-no-vendor-prefix",
-    "description" : "value-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "selector-max-combinators",
-  "title" : "Limit the number of combinators in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-combinators",
-    "description" : "selector-max-combinators"
-  } ]
-}, {
-  "patternId" : "max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines.\n",
-  "parameters" : [ {
-    "name" : "max-empty-lines",
-    "description" : "max-empty-lines"
-  } ]
-}, {
-  "patternId" : "selector-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of selector lists.\n",
-  "parameters" : [ {
-    "name" : "selector-list-comma-newline-before",
-    "description" : "selector-list-comma-newline-before"
-  } ]
-}, {
-  "patternId" : "value-list-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within value lists.\n",
-  "parameters" : [ {
-    "name" : "value-list-max-empty-lines",
-    "description" : "value-list-max-empty-lines"
-  } ]
-}, {
-  "patternId" : "color-hex-case",
-  "title" : "Specify lowercase or uppercase for hex colors.\n",
-  "parameters" : [ {
-    "name" : "color-hex-case",
-    "description" : "color-hex-case"
-  } ]
-}, {
-  "patternId" : "function-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of functions.\n",
-  "parameters" : [ {
-    "name" : "function-comma-newline-after",
-    "description" : "function-comma-newline-after"
-  } ]
-}, {
-  "patternId" : "font-family-name-quotes",
-  "title" : "Specify whether or not quotation marks should be used around font family names.\n",
-  "parameters" : [ {
-    "name" : "font-family-name-quotes",
-    "description" : "font-family-name-quotes"
-  } ]
-}, {
   "patternId" : "at-rule-whitelist",
-  "title" : "Specify a whitelist of allowed at-rules.\n",
+  "title" : "**_Deprecated: Instead use the `at-rule-allowed-list` rule._**",
   "parameters" : [ {
     "name" : "at-rule-whitelist",
     "description" : "at-rule-whitelist"
   } ]
 }, {
-  "patternId" : "declaration-block-no-redundant-longhand-properties",
-  "title" : "Disallow longhand properties that can be combined into one shorthand property.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-no-redundant-longhand-properties",
-    "description" : "declaration-block-no-redundant-longhand-properties"
-  } ]
-}, {
-  "patternId" : "color-no-hex",
-  "title" : "Disallow hex colors.\n",
-  "parameters" : [ {
-    "name" : "color-no-hex",
-    "description" : "color-no-hex"
-  } ]
-}, {
-  "patternId" : "keyframes-name-pattern",
-  "title" : "Specify a pattern for keyframe names.\n",
-  "parameters" : [ {
-    "name" : "keyframes-name-pattern",
-    "description" : "keyframes-name-pattern"
-  } ]
-}, {
-  "patternId" : "media-feature-colon-space-before",
-  "title" : "Require a single space or disallow whitespace before the colon in media features.\n",
-  "parameters" : [ {
-    "name" : "media-feature-colon-space-before",
-    "description" : "media-feature-colon-space-before"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-blacklist",
-  "title" : "Specify a blacklist of disallowed pseudo-element selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-blacklist",
-    "description" : "selector-pseudo-element-blacklist"
-  } ]
-}, {
-  "patternId" : "selector-attribute-operator-blacklist",
-  "title" : "Specify a blacklist of disallowed attribute operators.\n",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-blacklist",
-    "description" : "selector-attribute-operator-blacklist"
-  } ]
-}, {
-  "patternId" : "color-named",
-  "title" : "Require (where possible) or disallow named colors.\n",
-  "parameters" : [ {
-    "name" : "color-named",
-    "description" : "color-named"
-  } ]
-}, {
-  "patternId" : "number-no-trailing-zeros",
-  "title" : "Disallow trailing zeros in numbers.\n",
-  "parameters" : [ {
-    "name" : "number-no-trailing-zeros",
-    "description" : "number-no-trailing-zeros"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-case",
-  "title" : "Specify lowercase or uppercase for pseudo-element selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-case",
-    "description" : "selector-pseudo-element-case"
-  } ]
-}, {
-  "patternId" : "block-opening-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the opening brace of blocks.\n",
-  "parameters" : [ {
-    "name" : "block-opening-brace-space-after",
-    "description" : "block-opening-brace-space-after"
-  } ]
-}, {
-  "patternId" : "string-no-newline",
-  "title" : "Disallow (unescaped) newlines in strings.\n",
-  "parameters" : [ {
-    "name" : "string-no-newline",
-    "description" : "string-no-newline"
-  } ]
-}, {
-  "patternId" : "function-url-scheme-blacklist",
-  "title" : "Specify a blacklist of disallowed URL schemes.\n",
-  "parameters" : [ {
-    "name" : "function-url-scheme-blacklist",
-    "description" : "function-url-scheme-blacklist"
-  } ]
-}, {
-  "patternId" : "max-nesting-depth",
-  "title" : "Limit the depth of nesting.\n",
-  "parameters" : [ {
-    "name" : "max-nesting-depth",
-    "description" : "max-nesting-depth"
-  } ]
-}, {
-  "patternId" : "selector-max-attribute",
-  "title" : "Limit the number of attribute selectors in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-attribute",
-    "description" : "selector-max-attribute"
-  } ]
-}, {
-  "patternId" : "declaration-block-single-line-max-declarations",
-  "title" : "Limit the number of declarations within a single-line declaration block.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-single-line-max-declarations",
-    "description" : "declaration-block-single-line-max-declarations"
-  } ]
-}, {
-  "patternId" : "at-rule-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-no-vendor-prefix",
-    "description" : "at-rule-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "custom-property-pattern",
-  "title" : "Specify a pattern for custom properties.\n",
-  "parameters" : [ {
-    "name" : "custom-property-pattern",
-    "description" : "custom-property-pattern"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-blacklist",
-  "title" : "Specify a blacklist of disallowed property and value pairs within declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-property-value-blacklist",
-    "description" : "declaration-property-value-blacklist"
-  } ]
-}, {
-  "patternId" : "custom-media-pattern",
-  "title" : "Specify a pattern for custom media query names.\n",
-  "parameters" : [ {
-    "name" : "custom-media-pattern",
-    "description" : "custom-media-pattern"
-  } ]
-}, {
-  "patternId" : "no-unknown-animations",
-  "title" : "Disallow unknown animations.\n",
-  "parameters" : [ {
-    "name" : "no-unknown-animations",
-    "description" : "no-unknown-animations"
-  } ]
-}, {
-  "patternId" : "font-weight-notation",
-  "title" : "Require numeric or named (where possible) `font-weight` values. Also, when named values are expected, require only valid names.\n",
-  "parameters" : [ {
-    "name" : "font-weight-notation",
-    "description" : "font-weight-notation"
-  } ]
-}, {
-  "patternId" : "time-min-milliseconds",
-  "title" : "Specify the minimum number of milliseconds for time values.\n",
-  "parameters" : [ {
-    "name" : "time-min-milliseconds",
-    "description" : "time-min-milliseconds"
-  } ]
-}, {
-  "patternId" : "function-linear-gradient-no-nonstandard-direction",
-  "title" : "Disallow direction values in `linear-gradient()` calls that are not valid according to the\n[standard syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient#Syntax).\n",
-  "parameters" : [ {
-    "name" : "function-linear-gradient-no-nonstandard-direction",
-    "description" : "function-linear-gradient-no-nonstandard-direction"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-colon-notation",
-  "title" : "Specify single or double colon notation for applicable pseudo-elements.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-colon-notation",
-    "description" : "selector-pseudo-element-colon-notation"
-  } ]
-}, {
-  "patternId" : "property-whitelist",
-  "title" : "Specify a whitelist of allowed properties.\n",
-  "parameters" : [ {
-    "name" : "property-whitelist",
-    "description" : "property-whitelist"
-  } ]
-}, {
-  "patternId" : "function-url-no-scheme-relative",
-  "title" : "Disallow scheme-relative urls.\n",
-  "parameters" : [ {
-    "name" : "function-url-no-scheme-relative",
-    "description" : "function-url-no-scheme-relative"
-  } ]
-}, {
-  "patternId" : "property-no-unknown",
-  "title" : "Disallow unknown properties.\n",
-  "parameters" : [ {
-    "name" : "property-no-unknown",
-    "description" : "property-no-unknown"
-  } ]
-}, {
-  "patternId" : "no-extra-semicolons",
-  "title" : "Disallow extra semicolons.\n",
-  "parameters" : [ {
-    "name" : "no-extra-semicolons",
-    "description" : "no-extra-semicolons"
-  } ]
-}, {
-  "patternId" : "no-duplicate-at-import-rules",
-  "title" : "Disallow duplicate `@import` rules within a stylesheet.\n",
-  "parameters" : [ {
-    "name" : "no-duplicate-at-import-rules",
-    "description" : "no-duplicate-at-import-rules"
-  } ]
-}, {
-  "patternId" : "at-rule-semicolon-space-before",
-  "title" : "Require a single space or disallow whitespace before the semicolons of at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-semicolon-space-before",
-    "description" : "at-rule-semicolon-space-before"
-  } ]
-}, {
-  "patternId" : "selector-max-universal",
-  "title" : "Limit the number of universal selectors in a selector.\n",
-  "parameters" : [ {
-    "name" : "selector-max-universal",
-    "description" : "selector-max-universal"
-  } ]
-}, {
-  "patternId" : "declaration-block-trailing-semicolon",
-  "title" : "Require or disallow a trailing semicolon within declaration blocks.\n",
-  "parameters" : [ {
-    "name" : "declaration-block-trailing-semicolon",
-    "description" : "declaration-block-trailing-semicolon"
-  } ]
-}, {
-  "patternId" : "no-missing-end-of-source-newline",
-  "title" : "Disallow missing end-of-source newlines.\n",
-  "parameters" : [ {
-    "name" : "no-missing-end-of-source-newline",
-    "description" : "no-missing-end-of-source-newline"
-  } ]
-}, {
-  "patternId" : "value-keyword-case",
-  "title" : "Specify lowercase or uppercase for keywords values.\n",
-  "parameters" : [ {
-    "name" : "value-keyword-case",
-    "description" : "value-keyword-case"
-  } ]
-}, {
-  "patternId" : "media-feature-name-no-unknown",
-  "title" : "Disallow unknown media feature names.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-no-unknown",
-    "description" : "media-feature-name-no-unknown"
-  } ]
-}, {
   "patternId" : "declaration-bang-space-before",
-  "title" : "Require a single space or disallow whitespace before the bang of declarations.\n",
+  "title" : "Require a single space or disallow whitespace before the bang of declarations.",
   "parameters" : [ {
     "name" : "declaration-bang-space-before",
     "description" : "declaration-bang-space-before"
   } ]
 }, {
-  "patternId" : "block-closing-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the closing brace of blocks.\n",
+  "patternId" : "function-disallowed-list",
+  "title" : "Specify a list of disallowed functions.",
   "parameters" : [ {
-    "name" : "block-closing-brace-space-after",
-    "description" : "block-closing-brace-space-after"
+    "name" : "function-disallowed-list",
+    "description" : "function-disallowed-list"
   } ]
 }, {
-  "patternId" : "comment-whitespace-inside",
-  "title" : "Require or disallow whitespace on the inside of comment markers.\n",
+  "patternId" : "unit-whitelist",
+  "title" : "**_Deprecated: Instead use the `unit-allowed-list` rule._**",
   "parameters" : [ {
-    "name" : "comment-whitespace-inside",
-    "description" : "comment-whitespace-inside"
+    "name" : "unit-whitelist",
+    "description" : "unit-whitelist"
   } ]
 }, {
-  "patternId" : "block-closing-brace-newline-after",
-  "title" : "Require a newline or disallow whitespace after the closing brace of blocks.\n",
+  "patternId" : "function-allowed-list",
+  "title" : "Specify a list of allowed functions.",
   "parameters" : [ {
-    "name" : "block-closing-brace-newline-after",
-    "description" : "block-closing-brace-newline-after"
+    "name" : "function-allowed-list",
+    "description" : "function-allowed-list"
   } ]
 }, {
-  "patternId" : "font-family-no-missing-generic-family-keyword",
-  "title" : "Disallow missing generic families in lists of font family names.\n",
+  "patternId" : "block-no-empty",
+  "title" : "Disallow empty blocks.",
   "parameters" : [ {
-    "name" : "font-family-no-missing-generic-family-keyword",
-    "description" : "font-family-no-missing-generic-family-keyword"
+    "name" : "block-no-empty",
+    "description" : "block-no-empty"
   } ]
 }, {
-  "patternId" : "comment-empty-line-before",
-  "title" : "Require or disallow an empty line before comments.\n",
+  "patternId" : "at-rule-disallowed-list",
+  "title" : "Specify a list of disallowed at-rules.",
   "parameters" : [ {
-    "name" : "comment-empty-line-before",
-    "description" : "comment-empty-line-before"
-  } ]
-}, {
-  "patternId" : "comment-no-empty",
-  "title" : "Disallow empty comments.\n",
-  "parameters" : [ {
-    "name" : "comment-no-empty",
-    "description" : "comment-no-empty"
-  } ]
-}, {
-  "patternId" : "selector-attribute-quotes",
-  "title" : "Require or disallow quotes for attribute values.\n",
-  "parameters" : [ {
-    "name" : "selector-attribute-quotes",
-    "description" : "selector-attribute-quotes"
+    "name" : "at-rule-disallowed-list",
+    "description" : "at-rule-disallowed-list"
   } ]
 }, {
   "patternId" : "number-leading-zero",
-  "title" : "Require or disallow a leading zero for fractional numbers less than 1.\n",
+  "title" : "Require or disallow a leading zero for fractional numbers less than 1.",
   "parameters" : [ {
     "name" : "number-leading-zero",
     "description" : "number-leading-zero"
   } ]
 }, {
-  "patternId" : "comment-word-blacklist",
-  "title" : "Specify a blacklist of disallowed words within comments.\n",
+  "patternId" : "selector-pseudo-element-no-unknown",
+  "title" : "Disallow unknown pseudo-element selectors.",
   "parameters" : [ {
-    "name" : "comment-word-blacklist",
-    "description" : "comment-word-blacklist"
-  } ]
-}, {
-  "patternId" : "media-feature-name-value-whitelist",
-  "title" : "Specify a whitelist of allowed media feature name and value pairs.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-value-whitelist",
-    "description" : "media-feature-name-value-whitelist"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-whitelist",
-  "title" : "Specify a whitelist of allowed pseudo-element selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-whitelist",
-    "description" : "selector-pseudo-element-whitelist"
-  } ]
-}, {
-  "patternId" : "declaration-colon-newline-after",
-  "title" : "Require a newline or disallow whitespace after the colon of declarations.\n",
-  "parameters" : [ {
-    "name" : "declaration-colon-newline-after",
-    "description" : "declaration-colon-newline-after"
-  } ]
-}, {
-  "patternId" : "unit-blacklist",
-  "title" : "Specify a blacklist of disallowed units.\n",
-  "parameters" : [ {
-    "name" : "unit-blacklist",
-    "description" : "unit-blacklist"
-  } ]
-}, {
-  "patternId" : "at-rule-blacklist",
-  "title" : "Specify a blacklist of disallowed at-rules.\n",
-  "parameters" : [ {
-    "name" : "at-rule-blacklist",
-    "description" : "at-rule-blacklist"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-blacklist",
-  "title" : "Specify a blacklist of disallowed pseudo-class selectors.\n",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-blacklist",
-    "description" : "selector-pseudo-class-blacklist"
-  } ]
-}, {
-  "patternId" : "media-feature-name-case",
-  "title" : "Specify lowercase or uppercase for media feature names.\n",
-  "parameters" : [ {
-    "name" : "media-feature-name-case",
-    "description" : "media-feature-name-case"
-  } ]
-}, {
-  "patternId" : "function-url-scheme-whitelist",
-  "title" : "Specify a whitelist of allowed URL schemes.\n",
-  "parameters" : [ {
-    "name" : "function-url-scheme-whitelist",
-    "description" : "function-url-scheme-whitelist"
-  } ]
-}, {
-  "patternId" : "shorthand-property-no-redundant-values",
-  "title" : "Disallow redundant values in shorthand properties.\n",
-  "parameters" : [ {
-    "name" : "shorthand-property-no-redundant-values",
-    "description" : "shorthand-property-no-redundant-values"
+    "name" : "selector-pseudo-element-no-unknown",
+    "description" : "selector-pseudo-element-no-unknown"
   } ]
 }, {
   "patternId" : "value-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of value lists.\n",
+  "title" : "Require a single space or disallow whitespace before the commas of value lists.",
   "parameters" : [ {
     "name" : "value-list-comma-space-before",
     "description" : "value-list-comma-space-before"
   } ]
 }, {
-  "patternId" : "declaration-block-no-shorthand-property-overrides",
-  "title" : "Disallow shorthand properties that override related longhand properties.\n",
+  "patternId" : "block-opening-brace-newline-after",
+  "title" : "Require a newline after the opening brace of blocks.",
   "parameters" : [ {
-    "name" : "declaration-block-no-shorthand-property-overrides",
-    "description" : "declaration-block-no-shorthand-property-overrides"
+    "name" : "block-opening-brace-newline-after",
+    "description" : "block-opening-brace-newline-after"
   } ]
 }, {
-  "patternId" : "selector-attribute-operator-space-after",
-  "title" : "Require a single space or disallow whitespace after operators within attribute selectors.\n",
+  "patternId" : "selector-pseudo-element-allowed-list",
+  "title" : "Specify a list of allowed pseudo-element selectors.",
   "parameters" : [ {
-    "name" : "selector-attribute-operator-space-after",
-    "description" : "selector-attribute-operator-space-after"
+    "name" : "selector-pseudo-element-allowed-list",
+    "description" : "selector-pseudo-element-allowed-list"
   } ]
 }, {
-  "patternId" : "declaration-bang-space-after",
-  "title" : "Require a single space or disallow whitespace after the bang of declarations.\n",
+  "patternId" : "at-rule-semicolon-space-before",
+  "title" : "Require a single space or disallow whitespace before the semicolons of at-rules.",
   "parameters" : [ {
-    "name" : "declaration-bang-space-after",
-    "description" : "declaration-bang-space-after"
+    "name" : "at-rule-semicolon-space-before",
+    "description" : "at-rule-semicolon-space-before"
   } ]
 }, {
-  "patternId" : "selector-max-pseudo-class",
-  "title" : "Limit the number of pseudo-classes in a selector.\n",
+  "patternId" : "at-rule-semicolon-newline-after",
+  "title" : "Require a newline after the semicolon of at-rules.",
   "parameters" : [ {
-    "name" : "selector-max-pseudo-class",
-    "description" : "selector-max-pseudo-class"
+    "name" : "at-rule-semicolon-newline-after",
+    "description" : "at-rule-semicolon-newline-after"
   } ]
 }, {
-  "patternId" : "declaration-property-unit-whitelist",
-  "title" : "Specify a whitelist of allowed property and unit pairs within declarations.\n",
+  "patternId" : "block-closing-brace-space-before",
+  "title" : "Require a single space or disallow whitespace before the closing brace of blocks.",
   "parameters" : [ {
-    "name" : "declaration-property-unit-whitelist",
-    "description" : "declaration-property-unit-whitelist"
+    "name" : "block-closing-brace-space-before",
+    "description" : "block-closing-brace-space-before"
   } ]
 }, {
-  "patternId" : "function-whitelist",
-  "title" : "Specify a whitelist of allowed functions.\n",
+  "patternId" : "at-rule-empty-line-before",
+  "title" : "Require or disallow an empty line before at-rules.",
   "parameters" : [ {
-    "name" : "function-whitelist",
-    "description" : "function-whitelist"
+    "name" : "at-rule-empty-line-before",
+    "description" : "at-rule-empty-line-before"
   } ]
 }, {
-  "patternId" : "function-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within functions.\n",
+  "patternId" : "keyframe-declaration-no-important",
+  "title" : "Disallow `!important` within keyframe declarations.",
   "parameters" : [ {
-    "name" : "function-max-empty-lines",
-    "description" : "function-max-empty-lines"
+    "name" : "keyframe-declaration-no-important",
+    "description" : "keyframe-declaration-no-important"
   } ]
 }, {
-  "patternId" : "selector-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of selector lists.\n",
+  "patternId" : "at-rule-no-unknown",
+  "title" : "Disallow unknown at-rules.",
   "parameters" : [ {
-    "name" : "selector-list-comma-newline-after",
-    "description" : "selector-list-comma-newline-after"
+    "name" : "at-rule-no-unknown",
+    "description" : "at-rule-no-unknown"
+  } ]
+}, {
+  "patternId" : "number-max-precision",
+  "title" : "Limit the number of decimal places allowed in numbers.",
+  "parameters" : [ {
+    "name" : "number-max-precision",
+    "description" : "number-max-precision"
+  } ]
+}, {
+  "patternId" : "selector-descendant-combinator-no-non-space",
+  "title" : "Disallow non-space characters for descendant combinators of selectors.",
+  "parameters" : [ {
+    "name" : "selector-descendant-combinator-no-non-space",
+    "description" : "selector-descendant-combinator-no-non-space"
+  } ]
+}, {
+  "patternId" : "declaration-colon-space-after",
+  "title" : "Require a single space or disallow whitespace after the colon of declarations.",
+  "parameters" : [ {
+    "name" : "declaration-colon-space-after",
+    "description" : "declaration-colon-space-after"
+  } ]
+}, {
+  "patternId" : "selector-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for selectors.",
+  "parameters" : [ {
+    "name" : "selector-no-vendor-prefix",
+    "description" : "selector-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "declaration-block-no-redundant-longhand-properties",
+  "title" : "Disallow longhand properties that can be combined into one shorthand property.",
+  "parameters" : [ {
+    "name" : "declaration-block-no-redundant-longhand-properties",
+    "description" : "declaration-block-no-redundant-longhand-properties"
+  } ]
+}, {
+  "patternId" : "declaration-block-semicolon-space-before",
+  "title" : "Require a single space or disallow whitespace before the semicolons of declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-semicolon-space-before",
+    "description" : "declaration-block-semicolon-space-before"
+  } ]
+}, {
+  "patternId" : "font-family-no-duplicate-names",
+  "title" : "Disallow duplicate font family names.",
+  "parameters" : [ {
+    "name" : "font-family-no-duplicate-names",
+    "description" : "font-family-no-duplicate-names"
+  } ]
+}, {
+  "patternId" : "media-query-list-comma-newline-after",
+  "title" : "Require a newline or disallow whitespace after the commas of media query lists.",
+  "parameters" : [ {
+    "name" : "media-query-list-comma-newline-after",
+    "description" : "media-query-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "comment-whitespace-inside",
+  "title" : "Require or disallow whitespace on the inside of comment markers.",
+  "parameters" : [ {
+    "name" : "comment-whitespace-inside",
+    "description" : "comment-whitespace-inside"
+  } ]
+}, {
+  "patternId" : "media-feature-name-disallowed-list",
+  "title" : "Specify a list of disallowed media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-disallowed-list",
+    "description" : "media-feature-name-disallowed-list"
+  } ]
+}, {
+  "patternId" : "selector-attribute-brackets-space-inside",
+  "title" : "Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.",
+  "parameters" : [ {
+    "name" : "selector-attribute-brackets-space-inside",
+    "description" : "selector-attribute-brackets-space-inside"
+  } ]
+}, {
+  "patternId" : "rule-empty-line-before",
+  "title" : "Require or disallow an empty line before rules.",
+  "parameters" : [ {
+    "name" : "rule-empty-line-before",
+    "description" : "rule-empty-line-before"
+  } ]
+}, {
+  "patternId" : "declaration-no-important",
+  "title" : "Disallow `!important` within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-no-important",
+    "description" : "declaration-no-important"
+  } ]
+}, {
+  "patternId" : "unit-allowed-list",
+  "title" : "Specify a list of allowed units.",
+  "parameters" : [ {
+    "name" : "unit-allowed-list",
+    "description" : "unit-allowed-list"
+  } ]
+}, {
+  "patternId" : "comment-word-blacklist",
+  "title" : "**_Deprecated: Instead use the `comment-word-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "comment-word-blacklist",
+    "description" : "comment-word-blacklist"
+  } ]
+}, {
+  "patternId" : "declaration-colon-space-before",
+  "title" : "Require a single space or disallow whitespace before the colon of declarations.",
+  "parameters" : [ {
+    "name" : "declaration-colon-space-before",
+    "description" : "declaration-colon-space-before"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-whitelist",
+  "title" : "**_Deprecated: Instead use the `selector-pseudo-class-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-whitelist",
+    "description" : "selector-pseudo-class-whitelist"
+  } ]
+}, {
+  "patternId" : "value-list-comma-newline-after",
+  "title" : "Require a newline or disallow whitespace after the commas of value lists.",
+  "parameters" : [ {
+    "name" : "value-list-comma-newline-after",
+    "description" : "value-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-no-unknown",
+  "title" : "Disallow unknown pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-no-unknown",
+    "description" : "selector-pseudo-class-no-unknown"
+  } ]
+}, {
+  "patternId" : "function-comma-space-before",
+  "title" : "Require a single space or disallow whitespace before the commas of functions.",
+  "parameters" : [ {
+    "name" : "function-comma-space-before",
+    "description" : "function-comma-space-before"
   } ]
 }, {
   "patternId" : "media-feature-range-operator-space-before",
-  "title" : "Require a single space or disallow whitespace before the range operator in media features.\n",
+  "title" : "Require a single space or disallow whitespace before the range operator in media features.",
   "parameters" : [ {
     "name" : "media-feature-range-operator-space-before",
     "description" : "media-feature-range-operator-space-before"
   } ]
 }, {
-  "patternId" : "function-url-quotes",
-  "title" : "Require or disallow quotes for urls.\n",
+  "patternId" : "media-feature-name-blacklist",
+  "title" : "**_Deprecated: Instead use the `media-feature-name-disallowed-list` rule._**",
   "parameters" : [ {
-    "name" : "function-url-quotes",
-    "description" : "function-url-quotes"
+    "name" : "media-feature-name-blacklist",
+    "description" : "media-feature-name-blacklist"
+  } ]
+}, {
+  "patternId" : "comment-no-empty",
+  "title" : "Disallow empty comments.",
+  "parameters" : [ {
+    "name" : "comment-no-empty",
+    "description" : "comment-no-empty"
+  } ]
+}, {
+  "patternId" : "selector-combinator-whitelist",
+  "title" : "**_Deprecated: Instead use the `selector-combinator-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-combinator-whitelist",
+    "description" : "selector-combinator-whitelist"
+  } ]
+}, {
+  "patternId" : "unit-no-unknown",
+  "title" : "Disallow unknown units.",
+  "parameters" : [ {
+    "name" : "unit-no-unknown",
+    "description" : "unit-no-unknown"
+  } ]
+}, {
+  "patternId" : "selector-max-id",
+  "title" : "Limit the number of ID selectors in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-id",
+    "description" : "selector-max-id"
   } ]
 }, {
   "patternId" : "color-function-notation",
-  "title" : "Specify modern or legacy notation for applicable color-functions.\n",
+  "title" : "Specify modern or legacy notation for applicable color-functions.",
   "parameters" : [ {
     "name" : "color-function-notation",
     "description" : "color-function-notation"
   } ]
 }, {
-  "patternId" : "keyframe-declaration-no-important",
-  "title" : "Disallow `!important` within keyframe declarations.\n",
+  "patternId" : "selector-type-no-unknown",
+  "title" : "Disallow unknown type selectors.",
   "parameters" : [ {
-    "name" : "keyframe-declaration-no-important",
-    "description" : "keyframe-declaration-no-important"
+    "name" : "selector-type-no-unknown",
+    "description" : "selector-type-no-unknown"
+  } ]
+}, {
+  "patternId" : "function-whitespace-after",
+  "title" : "Require or disallow whitespace after functions.",
+  "parameters" : [ {
+    "name" : "function-whitespace-after",
+    "description" : "function-whitespace-after"
+  } ]
+}, {
+  "patternId" : "no-missing-end-of-source-newline",
+  "title" : "Disallow missing end-of-source newlines.",
+  "parameters" : [ {
+    "name" : "no-missing-end-of-source-newline",
+    "description" : "no-missing-end-of-source-newline"
+  } ]
+}, {
+  "patternId" : "function-url-scheme-blacklist",
+  "title" : "**_Deprecated: Instead use the `function-url-scheme-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "function-url-scheme-blacklist",
+    "description" : "function-url-scheme-blacklist"
+  } ]
+}, {
+  "patternId" : "media-query-list-comma-space-before",
+  "title" : "Require a single space or disallow whitespace before the commas of media query lists.",
+  "parameters" : [ {
+    "name" : "media-query-list-comma-space-before",
+    "description" : "media-query-list-comma-space-before"
+  } ]
+}, {
+  "patternId" : "no-empty-source",
+  "title" : "Disallow empty sources.",
+  "parameters" : [ {
+    "name" : "no-empty-source",
+    "description" : "no-empty-source"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-space-after",
+  "title" : "Require a single space or disallow whitespace after operators within attribute selectors.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-space-after",
+    "description" : "selector-attribute-operator-space-after"
+  } ]
+}, {
+  "patternId" : "declaration-property-unit-blacklist",
+  "title" : "**_Deprecated: Instead use the `declaration-property-unit-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "declaration-property-unit-blacklist",
+    "description" : "declaration-property-unit-blacklist"
+  } ]
+}, {
+  "patternId" : "declaration-block-semicolon-newline-after",
+  "title" : "Require a newline or disallow whitespace after the semicolons of declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-semicolon-newline-after",
+    "description" : "declaration-block-semicolon-newline-after"
+  } ]
+}, {
+  "patternId" : "property-allowed-list",
+  "title" : "Specify a list of allowed properties.",
+  "parameters" : [ {
+    "name" : "property-allowed-list",
+    "description" : "property-allowed-list"
+  } ]
+}, {
+  "patternId" : "unicode-bom",
+  "title" : "Require or disallow the Unicode Byte Order Mark.",
+  "parameters" : [ {
+    "name" : "unicode-bom",
+    "description" : "unicode-bom"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-blacklist",
+  "title" : "**_Deprecated: Instead use the `declaration-property-value-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "declaration-property-value-blacklist",
+    "description" : "declaration-property-value-blacklist"
+  } ]
+}, {
+  "patternId" : "string-quotes",
+  "title" : "Specify single or double quotes around strings.",
+  "parameters" : [ {
+    "name" : "string-quotes",
+    "description" : "string-quotes"
+  } ]
+}, {
+  "patternId" : "shorthand-property-no-redundant-values",
+  "title" : "Disallow redundant values in shorthand properties.",
+  "parameters" : [ {
+    "name" : "shorthand-property-no-redundant-values",
+    "description" : "shorthand-property-no-redundant-values"
+  } ]
+}, {
+  "patternId" : "value-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for values.",
+  "parameters" : [ {
+    "name" : "value-no-vendor-prefix",
+    "description" : "value-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-parentheses-space-inside",
+  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-parentheses-space-inside",
+    "description" : "selector-pseudo-class-parentheses-space-inside"
+  } ]
+}, {
+  "patternId" : "block-opening-brace-newline-before",
+  "title" : "Require a newline or disallow whitespace before the opening brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-opening-brace-newline-before",
+    "description" : "block-opening-brace-newline-before"
+  } ]
+}, {
+  "patternId" : "at-rule-blacklist",
+  "title" : "**_Deprecated: Instead use the `at-rule-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "at-rule-blacklist",
+    "description" : "at-rule-blacklist"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-allowed-list",
+  "title" : "Specify a list of allowed pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-allowed-list",
+    "description" : "selector-pseudo-class-allowed-list"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-disallowed-list",
+  "title" : "Specify a list of disallowed attribute operators.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-disallowed-list",
+    "description" : "selector-attribute-operator-disallowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-empty-line-before",
+  "title" : "Require or disallow an empty line before declarations.",
+  "parameters" : [ {
+    "name" : "declaration-empty-line-before",
+    "description" : "declaration-empty-line-before"
+  } ]
+}, {
+  "patternId" : "value-list-max-empty-lines",
+  "title" : "Limit the number of adjacent empty lines within value lists.",
+  "parameters" : [ {
+    "name" : "value-list-max-empty-lines",
+    "description" : "value-list-max-empty-lines"
+  } ]
+}, {
+  "patternId" : "declaration-block-trailing-semicolon",
+  "title" : "Require or disallow a trailing semicolon within declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-trailing-semicolon",
+    "description" : "declaration-block-trailing-semicolon"
+  } ]
+}, {
+  "patternId" : "no-invalid-double-slash-comments",
+  "title" : "Disallow double-slash comments (`//...`) which are not supported by CSS and could lead to unexpected results.",
+  "parameters" : [ {
+    "name" : "no-invalid-double-slash-comments",
+    "description" : "no-invalid-double-slash-comments"
+  } ]
+}, {
+  "patternId" : "function-calc-no-unspaced-operator",
+  "title" : "Disallow an unspaced operator within `calc` functions.",
+  "parameters" : [ {
+    "name" : "function-calc-no-unspaced-operator",
+    "description" : "function-calc-no-unspaced-operator"
+  } ]
+}, {
+  "patternId" : "function-calc-no-invalid",
+  "title" : "Disallow an invalid expression within `calc` functions.",
+  "parameters" : [ {
+    "name" : "function-calc-no-invalid",
+    "description" : "function-calc-no-invalid"
+  } ]
+}, {
+  "patternId" : "selector-type-case",
+  "title" : "Specify lowercase or uppercase for type selectors.",
+  "parameters" : [ {
+    "name" : "selector-type-case",
+    "description" : "selector-type-case"
+  } ]
+}, {
+  "patternId" : "block-opening-brace-space-before",
+  "title" : "Require a single space or disallow whitespace before the opening brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-opening-brace-space-before",
+    "description" : "block-opening-brace-space-before"
+  } ]
+}, {
+  "patternId" : "at-rule-allowed-list",
+  "title" : "Specify a list of allowed at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-allowed-list",
+    "description" : "at-rule-allowed-list"
+  } ]
+}, {
+  "patternId" : "no-eol-whitespace",
+  "title" : "Disallow end-of-line whitespace.",
+  "parameters" : [ {
+    "name" : "no-eol-whitespace",
+    "description" : "no-eol-whitespace"
+  } ]
+}, {
+  "patternId" : "value-list-comma-newline-before",
+  "title" : "Require a newline or disallow whitespace before the commas of value lists.",
+  "parameters" : [ {
+    "name" : "value-list-comma-newline-before",
+    "description" : "value-list-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "media-feature-name-case",
+  "title" : "Specify lowercase or uppercase for media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-case",
+    "description" : "media-feature-name-case"
+  } ]
+}, {
+  "patternId" : "selector-max-compound-selectors",
+  "title" : "Limit the number of compound selectors in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-compound-selectors",
+    "description" : "selector-max-compound-selectors"
+  } ]
+}, {
+  "patternId" : "function-max-empty-lines",
+  "title" : "Limit the number of adjacent empty lines within functions.",
+  "parameters" : [ {
+    "name" : "function-max-empty-lines",
+    "description" : "function-max-empty-lines"
+  } ]
+}, {
+  "patternId" : "no-duplicate-selectors",
+  "title" : "Disallow duplicate selectors within a stylesheet.",
+  "parameters" : [ {
+    "name" : "no-duplicate-selectors",
+    "description" : "no-duplicate-selectors"
+  } ]
+}, {
+  "patternId" : "function-parentheses-newline-inside",
+  "title" : "Require a newline or disallow whitespace on the inside of the parentheses of functions.",
+  "parameters" : [ {
+    "name" : "function-parentheses-newline-inside",
+    "description" : "function-parentheses-newline-inside"
+  } ]
+}, {
+  "patternId" : "comment-empty-line-before",
+  "title" : "Require or disallow an empty line before comments.",
+  "parameters" : [ {
+    "name" : "comment-empty-line-before",
+    "description" : "comment-empty-line-before"
+  } ]
+}, {
+  "patternId" : "selector-list-comma-newline-after",
+  "title" : "Require a newline or disallow whitespace after the commas of selector lists.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-newline-after",
+    "description" : "selector-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-blacklist",
+  "title" : "**_Deprecated: Instead use the `selector-pseudo-element-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-blacklist",
+    "description" : "selector-pseudo-element-blacklist"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-whitelist",
+  "title" : "**_Deprecated: Instead use the `selector-attribute-operator-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-whitelist",
+    "description" : "selector-attribute-operator-whitelist"
+  } ]
+}, {
+  "patternId" : "function-url-no-scheme-relative",
+  "title" : "Disallow scheme-relative urls.",
+  "parameters" : [ {
+    "name" : "function-url-no-scheme-relative",
+    "description" : "function-url-no-scheme-relative"
+  } ]
+}, {
+  "patternId" : "number-no-trailing-zeros",
+  "title" : "Disallow trailing zeros in numbers.",
+  "parameters" : [ {
+    "name" : "number-no-trailing-zeros",
+    "description" : "number-no-trailing-zeros"
+  } ]
+}, {
+  "patternId" : "function-url-scheme-whitelist",
+  "title" : "**_Deprecated: Instead use the `function-url-scheme-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "function-url-scheme-whitelist",
+    "description" : "function-url-scheme-whitelist"
+  } ]
+}, {
+  "patternId" : "max-line-length",
+  "title" : "Limit the length of a line.",
+  "parameters" : [ {
+    "name" : "max-line-length",
+    "description" : "max-line-length"
+  } ]
+}, {
+  "patternId" : "selector-id-pattern",
+  "title" : "Specify a pattern for ID selectors.",
+  "parameters" : [ {
+    "name" : "selector-id-pattern",
+    "description" : "selector-id-pattern"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-allowed-list",
+  "title" : "Specify a list of allowed property and value pairs within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-value-allowed-list",
+    "description" : "declaration-property-value-allowed-list"
+  } ]
+}, {
+  "patternId" : "function-comma-newline-after",
+  "title" : "Require a newline or disallow whitespace after the commas of functions.",
+  "parameters" : [ {
+    "name" : "function-comma-newline-after",
+    "description" : "function-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "function-url-scheme-disallowed-list",
+  "title" : "Specify a list of disallowed URL schemes.",
+  "parameters" : [ {
+    "name" : "function-url-scheme-disallowed-list",
+    "description" : "function-url-scheme-disallowed-list"
+  } ]
+}, {
+  "patternId" : "media-feature-name-no-unknown",
+  "title" : "Disallow unknown media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-no-unknown",
+    "description" : "media-feature-name-no-unknown"
+  } ]
+}, {
+  "patternId" : "property-whitelist",
+  "title" : "**_Deprecated: Instead use the `property-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "property-whitelist",
+    "description" : "property-whitelist"
+  } ]
+}, {
+  "patternId" : "font-weight-notation",
+  "title" : "Require numeric or named (where possible) `font-weight` values. Also, when named values are expected, require only valid names.",
+  "parameters" : [ {
+    "name" : "font-weight-notation",
+    "description" : "font-weight-notation"
+  } ]
+}, {
+  "patternId" : "font-family-no-missing-generic-family-keyword",
+  "title" : "Disallow missing generic families in lists of font family names.",
+  "parameters" : [ {
+    "name" : "font-family-no-missing-generic-family-keyword",
+    "description" : "font-family-no-missing-generic-family-keyword"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-whitelist",
+  "title" : "**_Deprecated: Instead use the `selector-pseudo-element-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-whitelist",
+    "description" : "selector-pseudo-element-whitelist"
+  } ]
+}, {
+  "patternId" : "media-feature-parentheses-space-inside",
+  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within media features.",
+  "parameters" : [ {
+    "name" : "media-feature-parentheses-space-inside",
+    "description" : "media-feature-parentheses-space-inside"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-empty-line-before",
+  "title" : "Require or disallow an empty line before the closing brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-empty-line-before",
+    "description" : "block-closing-brace-empty-line-before"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-disallowed-list",
+  "title" : "Specify a list of disallowed pseudo-element selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-disallowed-list",
+    "description" : "selector-pseudo-element-disallowed-list"
+  } ]
+}, {
+  "patternId" : "no-unknown-animations",
+  "title" : "Disallow unknown animations.",
+  "parameters" : [ {
+    "name" : "no-unknown-animations",
+    "description" : "no-unknown-animations"
+  } ]
+}, {
+  "patternId" : "color-named",
+  "title" : "Require (where possible) or disallow named colors.",
+  "parameters" : [ {
+    "name" : "color-named",
+    "description" : "color-named"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-case",
+  "title" : "Specify lowercase or uppercase for pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-case",
+    "description" : "selector-pseudo-class-case"
+  } ]
+}, {
+  "patternId" : "custom-media-pattern",
+  "title" : "Specify a pattern for custom media query names.",
+  "parameters" : [ {
+    "name" : "custom-media-pattern",
+    "description" : "custom-media-pattern"
+  } ]
+}, {
+  "patternId" : "selector-attribute-quotes",
+  "title" : "Require or disallow quotes for attribute values.",
+  "parameters" : [ {
+    "name" : "selector-attribute-quotes",
+    "description" : "selector-attribute-quotes"
+  } ]
+}, {
+  "patternId" : "unit-disallowed-list",
+  "title" : "Specify a list of disallowed units.",
+  "parameters" : [ {
+    "name" : "unit-disallowed-list",
+    "description" : "unit-disallowed-list"
+  } ]
+}, {
+  "patternId" : "at-rule-name-space-after",
+  "title" : "Require a single space after at-rule names.",
+  "parameters" : [ {
+    "name" : "at-rule-name-space-after",
+    "description" : "at-rule-name-space-after"
+  } ]
+}, {
+  "patternId" : "function-blacklist",
+  "title" : "**_Deprecated: Instead use the `function-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "function-blacklist",
+    "description" : "function-blacklist"
+  } ]
+}, {
+  "patternId" : "selector-max-universal",
+  "title" : "Limit the number of universal selectors in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-universal",
+    "description" : "selector-max-universal"
+  } ]
+}, {
+  "patternId" : "max-empty-lines",
+  "title" : "Limit the number of adjacent empty lines.",
+  "parameters" : [ {
+    "name" : "max-empty-lines",
+    "description" : "max-empty-lines"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-newline-after",
+  "title" : "Require a newline or disallow whitespace after the closing brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-newline-after",
+    "description" : "block-closing-brace-newline-after"
+  } ]
+}, {
+  "patternId" : "at-rule-property-required-list",
+  "title" : "Specify a list of required properties for an at-rule.",
+  "parameters" : [ {
+    "name" : "at-rule-property-required-list",
+    "description" : "at-rule-property-required-list"
+  } ]
+}, {
+  "patternId" : "custom-property-empty-line-before",
+  "title" : "Require or disallow an empty line before custom properties.",
+  "parameters" : [ {
+    "name" : "custom-property-empty-line-before",
+    "description" : "custom-property-empty-line-before"
+  } ]
+}, {
+  "patternId" : "media-query-list-comma-newline-before",
+  "title" : "Require a newline or disallow whitespace before the commas of media query lists.",
+  "parameters" : [ {
+    "name" : "media-query-list-comma-newline-before",
+    "description" : "media-query-list-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "no-extra-semicolons",
+  "title" : "Disallow extra semicolons.",
+  "parameters" : [ {
+    "name" : "no-extra-semicolons",
+    "description" : "no-extra-semicolons"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-space-after",
+  "title" : "Require a single space or disallow whitespace after the closing brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-space-after",
+    "description" : "block-closing-brace-space-after"
+  } ]
+}, {
+  "patternId" : "selector-list-comma-space-after",
+  "title" : "Require a single space or disallow whitespace after the commas of selector lists.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-space-after",
+    "description" : "selector-list-comma-space-after"
+  } ]
+}, {
+  "patternId" : "no-duplicate-at-import-rules",
+  "title" : "Disallow duplicate `@import` rules within a stylesheet.",
+  "parameters" : [ {
+    "name" : "no-duplicate-at-import-rules",
+    "description" : "no-duplicate-at-import-rules"
+  } ]
+}, {
+  "patternId" : "function-comma-newline-before",
+  "title" : "Require a newline or disallow whitespace before the commas of functions.",
+  "parameters" : [ {
+    "name" : "function-comma-newline-before",
+    "description" : "function-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "selector-combinator-space-before",
+  "title" : "Require a single space or disallow whitespace before the combinators of selectors.",
+  "parameters" : [ {
+    "name" : "selector-combinator-space-before",
+    "description" : "selector-combinator-space-before"
+  } ]
+}, {
+  "patternId" : "font-family-name-quotes",
+  "title" : "Specify whether or not quotation marks should be used around font family names.",
+  "parameters" : [ {
+    "name" : "font-family-name-quotes",
+    "description" : "font-family-name-quotes"
+  } ]
+}, {
+  "patternId" : "media-feature-name-allowed-list",
+  "title" : "Specify a list of allowed media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-allowed-list",
+    "description" : "media-feature-name-allowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-block-no-shorthand-property-overrides",
+  "title" : "Disallow shorthand properties that override related longhand properties.",
+  "parameters" : [ {
+    "name" : "declaration-block-no-shorthand-property-overrides",
+    "description" : "declaration-block-no-shorthand-property-overrides"
+  } ]
+}, {
+  "patternId" : "property-blacklist",
+  "title" : "**_Deprecated: Instead use the `property-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "property-blacklist",
+    "description" : "property-blacklist"
+  } ]
+}, {
+  "patternId" : "function-comma-space-after",
+  "title" : "Require a single space or disallow whitespace after the commas of functions.",
+  "parameters" : [ {
+    "name" : "function-comma-space-after",
+    "description" : "function-comma-space-after"
+  } ]
+}, {
+  "patternId" : "color-no-invalid-hex",
+  "title" : "Disallow invalid hex colors.",
+  "parameters" : [ {
+    "name" : "color-no-invalid-hex",
+    "description" : "color-no-invalid-hex"
+  } ]
+}, {
+  "patternId" : "no-descending-specificity",
+  "title" : "Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.",
+  "parameters" : [ {
+    "name" : "no-descending-specificity",
+    "description" : "no-descending-specificity"
+  } ]
+}, {
+  "patternId" : "selector-max-pseudo-class",
+  "title" : "Limit the number of pseudo-classes in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-pseudo-class",
+    "description" : "selector-max-pseudo-class"
+  } ]
+}, {
+  "patternId" : "selector-max-empty-lines",
+  "title" : "Limit the number of adjacent empty lines within selectors.",
+  "parameters" : [ {
+    "name" : "selector-max-empty-lines",
+    "description" : "selector-max-empty-lines"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-newline-before",
+  "title" : "Require a newline or disallow whitespace before the closing brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-newline-before",
+    "description" : "block-closing-brace-newline-before"
+  } ]
+}, {
+  "patternId" : "at-rule-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-no-vendor-prefix",
+    "description" : "at-rule-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "declaration-block-semicolon-newline-before",
+  "title" : "Require a newline or disallow whitespace before the semicolons of declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-semicolon-newline-before",
+    "description" : "declaration-block-semicolon-newline-before"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-disallowed-list",
+  "title" : "Specify a list of disallowed property and value pairs within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-value-disallowed-list",
+    "description" : "declaration-property-value-disallowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-property-unit-allowed-list",
+  "title" : "Specify a list of allowed property and unit pairs within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-unit-allowed-list",
+    "description" : "declaration-property-unit-allowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-property-unit-disallowed-list",
+  "title" : "Specify a list of disallowed property and unit pairs within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-unit-disallowed-list",
+    "description" : "declaration-property-unit-disallowed-list"
+  } ]
+}, {
+  "patternId" : "property-disallowed-list",
+  "title" : "Specify a list of disallowed properties.",
+  "parameters" : [ {
+    "name" : "property-disallowed-list",
+    "description" : "property-disallowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-block-semicolon-space-after",
+  "title" : "Require a single space or disallow whitespace after the semicolons of declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-semicolon-space-after",
+    "description" : "declaration-block-semicolon-space-after"
+  } ]
+}, {
+  "patternId" : "declaration-property-unit-whitelist",
+  "title" : "**_Deprecated: Instead use the `declaration-property-unit-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "declaration-property-unit-whitelist",
+    "description" : "declaration-property-unit-whitelist"
+  } ]
+}, {
+  "patternId" : "selector-no-qualifying-type",
+  "title" : "Disallow qualifying a selector by type.",
+  "parameters" : [ {
+    "name" : "selector-no-qualifying-type",
+    "description" : "selector-no-qualifying-type"
+  } ]
+}, {
+  "patternId" : "declaration-colon-newline-after",
+  "title" : "Require a newline or disallow whitespace after the colon of declarations.",
+  "parameters" : [ {
+    "name" : "declaration-colon-newline-after",
+    "description" : "declaration-colon-newline-after"
+  } ]
+}, {
+  "patternId" : "color-hex-length",
+  "title" : "Specify short or long notation for hex colors.",
+  "parameters" : [ {
+    "name" : "color-hex-length",
+    "description" : "color-hex-length"
+  } ]
+}, {
+  "patternId" : "media-feature-colon-space-before",
+  "title" : "Require a single space or disallow whitespace before the colon in media features.",
+  "parameters" : [ {
+    "name" : "media-feature-colon-space-before",
+    "description" : "media-feature-colon-space-before"
+  } ]
+}, {
+  "patternId" : "selector-combinator-allowed-list",
+  "title" : "Specify a list of allowed combinators.",
+  "parameters" : [ {
+    "name" : "selector-combinator-allowed-list",
+    "description" : "selector-combinator-allowed-list"
+  } ]
+}, {
+  "patternId" : "alpha-value-notation",
+  "title" : "Specify percentage or number notation for alpha-values.",
+  "parameters" : [ {
+    "name" : "alpha-value-notation",
+    "description" : "alpha-value-notation"
+  } ]
+}, {
+  "patternId" : "function-url-quotes",
+  "title" : "Require or disallow quotes for urls.",
+  "parameters" : [ {
+    "name" : "function-url-quotes",
+    "description" : "function-url-quotes"
+  } ]
+}, {
+  "patternId" : "keyframes-name-pattern",
+  "title" : "Specify a pattern for keyframe names.",
+  "parameters" : [ {
+    "name" : "keyframes-name-pattern",
+    "description" : "keyframes-name-pattern"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-whitelist",
+  "title" : "**_Deprecated: Instead use the `declaration-property-value-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "declaration-property-value-whitelist",
+    "description" : "declaration-property-value-whitelist"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-blacklist",
+  "title" : "**_Deprecated: Instead use the `selector-attribute-operator-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-blacklist",
+    "description" : "selector-attribute-operator-blacklist"
+  } ]
+}, {
+  "patternId" : "unit-blacklist",
+  "title" : "**_Deprecated: Instead use the `unit-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "unit-blacklist",
+    "description" : "unit-blacklist"
+  } ]
+}, {
+  "patternId" : "custom-property-pattern",
+  "title" : "Specify a pattern for custom properties.",
+  "parameters" : [ {
+    "name" : "custom-property-pattern",
+    "description" : "custom-property-pattern"
+  } ]
+}, {
+  "patternId" : "function-name-case",
+  "title" : "Specify lowercase or uppercase for function names.",
+  "parameters" : [ {
+    "name" : "function-name-case",
+    "description" : "function-name-case"
+  } ]
+}, {
+  "patternId" : "color-hex-case",
+  "title" : "Specify lowercase or uppercase for hex colors.",
+  "parameters" : [ {
+    "name" : "color-hex-case",
+    "description" : "color-hex-case"
+  } ]
+}, {
+  "patternId" : "hue-degree-notation",
+  "title" : "Specify number or angle notation for degree hues.",
+  "parameters" : [ {
+    "name" : "hue-degree-notation",
+    "description" : "hue-degree-notation"
+  } ]
+}, {
+  "patternId" : "selector-class-pattern",
+  "title" : "Specify a pattern for class selectors.",
+  "parameters" : [ {
+    "name" : "selector-class-pattern",
+    "description" : "selector-class-pattern"
+  } ]
+}, {
+  "patternId" : "selector-list-comma-newline-before",
+  "title" : "Require a newline or disallow whitespace before the commas of selector lists.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-newline-before",
+    "description" : "selector-list-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "media-feature-name-value-allowed-list",
+  "title" : "Specify a list of allowed media feature name and value pairs.",
+  "parameters" : [ {
+    "name" : "media-feature-name-value-allowed-list",
+    "description" : "media-feature-name-value-allowed-list"
+  } ]
+}, {
+  "patternId" : "comment-word-disallowed-list",
+  "title" : "Specify a list of disallowed words within comments.",
+  "parameters" : [ {
+    "name" : "comment-word-disallowed-list",
+    "description" : "comment-word-disallowed-list"
+  } ]
+}, {
+  "patternId" : "declaration-block-single-line-max-declarations",
+  "title" : "Limit the number of declarations within a single-line declaration block.",
+  "parameters" : [ {
+    "name" : "declaration-block-single-line-max-declarations",
+    "description" : "declaration-block-single-line-max-declarations"
+  } ]
+}, {
+  "patternId" : "linebreaks",
+  "title" : "Specify unix or windows linebreaks.",
+  "parameters" : [ {
+    "name" : "linebreaks",
+    "description" : "linebreaks"
+  } ]
+}, {
+  "patternId" : "value-keyword-case",
+  "title" : "Specify lowercase or uppercase for keywords values.",
+  "parameters" : [ {
+    "name" : "value-keyword-case",
+    "description" : "value-keyword-case"
+  } ]
+}, {
+  "patternId" : "selector-max-type",
+  "title" : "Limit the number of type selectors in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-type",
+    "description" : "selector-max-type"
+  } ]
+}, {
+  "patternId" : "at-rule-property-requirelist",
+  "title" : "**_Deprecated: Instead use the `at-rule-property-required-list` rule._**",
+  "parameters" : [ {
+    "name" : "at-rule-property-requirelist",
+    "description" : "at-rule-property-requirelist"
+  } ]
+}, {
+  "patternId" : "time-min-milliseconds",
+  "title" : "Specify the minimum number of milliseconds for time values.",
+  "parameters" : [ {
+    "name" : "time-min-milliseconds",
+    "description" : "time-min-milliseconds"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-case",
+  "title" : "Specify lowercase or uppercase for pseudo-element selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-case",
+    "description" : "selector-pseudo-element-case"
+  } ]
+}, {
+  "patternId" : "selector-max-specificity",
+  "title" : "Limit the specificity of selectors.",
+  "parameters" : [ {
+    "name" : "selector-max-specificity",
+    "description" : "selector-max-specificity"
+  } ]
+}, {
+  "patternId" : "selector-list-comma-space-before",
+  "title" : "Require a single space or disallow whitespace before the commas of selector lists.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-space-before",
+    "description" : "selector-list-comma-space-before"
+  } ]
+}, {
+  "patternId" : "function-parentheses-space-inside",
+  "title" : "Require a single space or disallow whitespace on the inside of the parentheses of functions.",
+  "parameters" : [ {
+    "name" : "function-parentheses-space-inside",
+    "description" : "function-parentheses-space-inside"
+  } ]
+}, {
+  "patternId" : "selector-combinator-disallowed-list",
+  "title" : "Specify a list of disallowed combinators.",
+  "parameters" : [ {
+    "name" : "selector-combinator-disallowed-list",
+    "description" : "selector-combinator-disallowed-list"
+  } ]
+}, {
+  "patternId" : "length-zero-no-unit",
+  "title" : "Disallow units for zero lengths.",
+  "parameters" : [ {
+    "name" : "length-zero-no-unit",
+    "description" : "length-zero-no-unit"
+  } ]
+}, {
+  "patternId" : "function-whitelist",
+  "title" : "**_Deprecated: Instead use the `function-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "function-whitelist",
+    "description" : "function-whitelist"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-space-before",
+  "title" : "Require a single space or disallow whitespace before operators within attribute selectors.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-space-before",
+    "description" : "selector-attribute-operator-space-before"
+  } ]
+}, {
+  "patternId" : "unit-case",
+  "title" : "Specify lowercase or uppercase for units.",
+  "parameters" : [ {
+    "name" : "unit-case",
+    "description" : "unit-case"
+  } ]
+}, {
+  "patternId" : "media-feature-name-value-whitelist",
+  "title" : "**_Deprecated: Instead use the `media-feature-name-value-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "media-feature-name-value-whitelist",
+    "description" : "media-feature-name-value-whitelist"
+  } ]
+}, {
+  "patternId" : "selector-combinator-blacklist",
+  "title" : "**_Deprecated: Instead use the `selector-combinator-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-combinator-blacklist",
+    "description" : "selector-combinator-blacklist"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-disallowed-list",
+  "title" : "Specify a list of disallowed pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-disallowed-list",
+    "description" : "selector-pseudo-class-disallowed-list"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-allowed-list",
+  "title" : "Specify a list of allowed attribute operators.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-allowed-list",
+    "description" : "selector-attribute-operator-allowed-list"
+  } ]
+}, {
+  "patternId" : "function-linear-gradient-no-nonstandard-direction",
+  "title" : "Disallow direction values in `linear-gradient()` calls that are not valid according to the\nstandard syntax.",
+  "parameters" : [ {
+    "name" : "function-linear-gradient-no-nonstandard-direction",
+    "description" : "function-linear-gradient-no-nonstandard-direction"
+  } ]
+}, {
+  "patternId" : "function-url-scheme-allowed-list",
+  "title" : "Specify a list of allowed URL schemes.",
+  "parameters" : [ {
+    "name" : "function-url-scheme-allowed-list",
+    "description" : "function-url-scheme-allowed-list"
+  } ]
+}, {
+  "patternId" : "max-nesting-depth",
+  "title" : "Limit the depth of nesting.",
+  "parameters" : [ {
+    "name" : "max-nesting-depth",
+    "description" : "max-nesting-depth"
+  } ]
+}, {
+  "patternId" : "no-empty-first-line",
+  "title" : "Disallow empty first lines.",
+  "parameters" : [ {
+    "name" : "no-empty-first-line",
+    "description" : "no-empty-first-line"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-colon-notation",
+  "title" : "Specify single or double colon notation for applicable pseudo-elements.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-colon-notation",
+    "description" : "selector-pseudo-element-colon-notation"
+  } ]
+}, {
+  "patternId" : "string-no-newline",
+  "title" : "Disallow (unescaped) newlines in strings.",
+  "parameters" : [ {
+    "name" : "string-no-newline",
+    "description" : "string-no-newline"
+  } ]
+}, {
+  "patternId" : "selector-max-class",
+  "title" : "Limit the number of classes in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-class",
+    "description" : "selector-max-class"
+  } ]
+}, {
+  "patternId" : "media-feature-name-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-no-vendor-prefix",
+    "description" : "media-feature-name-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "selector-combinator-space-after",
+  "title" : "Require a single space or disallow whitespace after the combinators of selectors.",
+  "parameters" : [ {
+    "name" : "selector-combinator-space-after",
+    "description" : "selector-combinator-space-after"
+  } ]
+}, {
+  "patternId" : "property-case",
+  "title" : "Specify lowercase or uppercase for properties.",
+  "parameters" : [ {
+    "name" : "property-case",
+    "description" : "property-case"
+  } ]
+}, {
+  "patternId" : "selector-max-attribute",
+  "title" : "Limit the number of attribute selectors in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-attribute",
+    "description" : "selector-max-attribute"
+  } ]
+}, {
+  "patternId" : "declaration-block-no-duplicate-properties",
+  "title" : "Disallow duplicate properties within declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-no-duplicate-properties",
+    "description" : "declaration-block-no-duplicate-properties"
+  } ]
+}, {
+  "patternId" : "at-rule-name-newline-after",
+  "title" : "Require a newline after at-rule names.",
+  "parameters" : [ {
+    "name" : "at-rule-name-newline-after",
+    "description" : "at-rule-name-newline-after"
+  } ]
+}, {
+  "patternId" : "block-opening-brace-space-after",
+  "title" : "Require a single space or disallow whitespace after the opening brace of blocks.",
+  "parameters" : [ {
+    "name" : "block-opening-brace-space-after",
+    "description" : "block-opening-brace-space-after"
+  } ]
+}, {
+  "patternId" : "color-no-hex",
+  "title" : "Disallow hex colors.",
+  "parameters" : [ {
+    "name" : "color-no-hex",
+    "description" : "color-no-hex"
+  } ]
+}, {
+  "patternId" : "selector-nested-pattern",
+  "title" : "Specify a pattern for the selectors of rules nested within rules.",
+  "parameters" : [ {
+    "name" : "selector-nested-pattern",
+    "description" : "selector-nested-pattern"
+  } ]
+}, {
+  "patternId" : "media-feature-colon-space-after",
+  "title" : "Require a single space or disallow whitespace after the colon in media features.",
+  "parameters" : [ {
+    "name" : "media-feature-colon-space-after",
+    "description" : "media-feature-colon-space-after"
+  } ]
+}, {
+  "patternId" : "media-feature-name-whitelist",
+  "title" : "**_Deprecated: Instead use the `media-feature-name-allowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "media-feature-name-whitelist",
+    "description" : "media-feature-name-whitelist"
+  } ]
+}, {
+  "patternId" : "media-query-list-comma-space-after",
+  "title" : "Require a single space or disallow whitespace after the commas of media query lists.",
+  "parameters" : [ {
+    "name" : "media-query-list-comma-space-after",
+    "description" : "media-query-list-comma-space-after"
+  } ]
+}, {
+  "patternId" : "at-rule-name-case",
+  "title" : "Specify lowercase or uppercase for at-rules names.",
+  "parameters" : [ {
+    "name" : "at-rule-name-case",
+    "description" : "at-rule-name-case"
+  } ]
+}, {
+  "patternId" : "property-no-unknown",
+  "title" : "Disallow unknown properties.",
+  "parameters" : [ {
+    "name" : "property-no-unknown",
+    "description" : "property-no-unknown"
+  } ]
+}, {
+  "patternId" : "media-feature-range-operator-space-after",
+  "title" : "Require a single space or disallow whitespace after the range operator in media features.",
+  "parameters" : [ {
+    "name" : "media-feature-range-operator-space-after",
+    "description" : "media-feature-range-operator-space-after"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-blacklist",
+  "title" : "**_Deprecated: Instead use the `selector-pseudo-class-disallowed-list` rule._**",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-blacklist",
+    "description" : "selector-pseudo-class-blacklist"
+  } ]
+}, {
+  "patternId" : "selector-max-combinators",
+  "title" : "Limit the number of combinators in a selector.",
+  "parameters" : [ {
+    "name" : "selector-max-combinators",
+    "description" : "selector-max-combinators"
+  } ]
+}, {
+  "patternId" : "declaration-bang-space-after",
+  "title" : "Require a single space or disallow whitespace after the bang of declarations.",
+  "parameters" : [ {
+    "name" : "declaration-bang-space-after",
+    "description" : "declaration-bang-space-after"
+  } ]
+}, {
+  "patternId" : "property-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for properties.",
+  "parameters" : [ {
+    "name" : "property-no-vendor-prefix",
+    "description" : "property-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "indentation",
+  "title" : "Specify indentation.",
+  "parameters" : [ {
+    "name" : "indentation",
+    "description" : "indentation"
   } ]
 } ]

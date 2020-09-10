@@ -1,6 +1,8 @@
 # comment-word-blacklist
 
-Specify a blacklist of disallowed words within comments.
+**_Deprecated: Instead use the [`comment-word-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/comment-word-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed words within comments.
 
 <!-- prettier-ignore -->
 ```css

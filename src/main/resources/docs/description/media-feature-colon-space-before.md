@@ -9,7 +9,7 @@ Require a single space or disallow whitespace before the colon in media features
  * The space before this colon */
 ```
 
-The [`fix` option](../../../docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

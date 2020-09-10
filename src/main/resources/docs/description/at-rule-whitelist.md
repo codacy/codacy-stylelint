@@ -1,6 +1,8 @@
 # at-rule-whitelist
 
-Specify a whitelist of allowed at-rules.
+**_Deprecated: Instead use the [`at-rule-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/at-rule-allowed-list/README.md) rule._**
+
+Specify a list of allowed at-rules.
 
 <!-- prettier-ignore -->
 ```css

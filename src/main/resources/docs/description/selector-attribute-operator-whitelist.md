@@ -1,6 +1,8 @@
 # selector-attribute-operator-whitelist
 
-Specify a whitelist of allowed attribute operators.
+**_Deprecated: Instead use the [`selector-attribute-operator-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-attribute-operator-allowed-list/README.md) rule._**
+
+Specify a list of allowed attribute operators.
 
 <!-- prettier-ignore -->
 ```css

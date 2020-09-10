@@ -1,6 +1,8 @@
 # media-feature-name-whitelist
 
-Specify a whitelist of allowed media feature names.
+**_Deprecated: Instead use the [`media-feature-name-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/media-feature-name-allowed-list/README.md) rule._**
+
+Specify a list of allowed media feature names.
 
 <!-- prettier-ignore -->
 ```css
