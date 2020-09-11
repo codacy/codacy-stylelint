@@ -1,6 +1,8 @@
 # function-whitelist
 
-Specify a whitelist of allowed functions.
+**_Deprecated: Instead use the [`function-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/function-allowed-list/README.md) rule._**
+
+Specify a list of allowed functions.
 
 <!-- prettier-ignore -->
 ```css

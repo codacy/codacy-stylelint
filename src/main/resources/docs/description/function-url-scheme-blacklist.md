@@ -1,6 +1,8 @@
 # function-url-scheme-blacklist
 
-Specify a blacklist of disallowed URL schemes.
+**_Deprecated: Instead use the [`function-url-scheme-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/function-url-scheme-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed URL schemes.
 
 <!-- prettier-ignore -->
 ```css

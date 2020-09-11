@@ -1,6 +1,8 @@
 # selector-pseudo-class-blacklist
 
-Specify a blacklist of disallowed pseudo-class selectors.
+**_Deprecated: Instead use the [`selector-pseudo-class-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-pseudo-class-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed pseudo-class selectors.
 
 <!-- prettier-ignore -->
 ```css

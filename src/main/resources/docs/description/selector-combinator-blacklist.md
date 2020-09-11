@@ -1,6 +1,8 @@
 # selector-combinator-blacklist
 
-Specify a blacklist of disallowed combinators.
+**_Deprecated: Instead use the [`selector-combinator-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-combinator-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed combinators.
 
 <!-- prettier-ignore -->
 ```css

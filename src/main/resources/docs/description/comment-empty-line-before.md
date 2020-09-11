@@ -18,7 +18,7 @@ This rule ignores:
 - single-line comments with `//` (when you're using a custom syntax that supports them)
 - comments within selector and value lists
 
-The [`fix` option](../../../docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](../indentation/README.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
 
 ## Options
 
@@ -162,6 +162,34 @@ The following patterns are _not_ considered violations:
 a {
   background: pink;
   /* stylelint-disable color-no-hex */
+  color: pink;
+}
+```
+
+### `ignoreComments: ["/regex/", /regex/, "string"]`
+
+Ignore comments matching the given regular expressions or strings.
+
+For example, with `"always"` and given:
+
+```
+[/^ignore/, "string-ignore"]
+```
+
+The following comments are _not_ considered violations:
+
+```css
+:root {
+  background: pink;
+  /* ignore this comment because of the regex */
+  color: pink;
+}
+```
+
+```css
+:root {
+  background: pink;
+  /* string-ignore */
   color: pink;
 }
 ```

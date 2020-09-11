@@ -11,3 +11,4 @@
 *.iml
 node_modules/
 .stylelint-version
+.vscode/

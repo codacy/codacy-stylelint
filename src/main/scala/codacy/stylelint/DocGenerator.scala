@@ -23,7 +23,7 @@ object DocGenerator {
     val patterns = getListOfSubDirectories(rulesdir)
     initializePatternsFile(patterns, version, filePathForDocs)
     initializeDescriptionFile(patterns, rulesdir, filePathForDocs)
-    copyDescriptionFiles(patterns, rulesdir, filePathForDocs)
+    copyDescriptionFiles(patterns, rulesdir, tmpDirectory, filePathForDocs, version)
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
@@ -63,7 +63,11 @@ object DocGenerator {
     val patternsDescription: Set[Pattern.Description] = patterns.map { patternid =>
       val patternDescription =
         ParseMarkupRule.parseForDescriptions(File(rulesdir + "/" + patternid + "/README.md"))
-      addNewDescription(patternid, patternDescription)
+
+      // looking for markdown links, e.g., [text](https://www.example.com)
+      val urlRegex = """\[(.+?)\]\((.+?)\)""".r
+      val descriptionWithoutUrl = urlRegex.replaceAllIn(patternDescription, m => m.group(1)).trim
+      addNewDescription(patternid, descriptionWithoutUrl)
     }(collection.breakOut)
     File(filePathForDocs + "/description/description.json").write(Json.prettyPrint(Json.toJson(patternsDescription)))
   }
@@ -74,12 +78,30 @@ object DocGenerator {
     Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None, param)
   }
 
-  def copyDescriptionFiles(folderNames: List[String], temporaryFileLocation: String, filePathForDocs: String): Unit = {
-    val descriptionDir = File(filePathForDocs + "/description/")
+  def copyDescriptionFiles(folderNames: List[String],
+                           rulesDirectory: String,
+                           mainDirectory: File,
+                           docsDirectory: String,
+                           version: String): Unit = {
+    val descriptionDir = File(docsDirectory + "/description/")
     descriptionDir.createDirectories()
     folderNames.foreach { patternName =>
-      File(s"$temporaryFileLocation/$patternName/README.md")
-        .copyTo(File(s"$descriptionDir/$patternName.md"), overwrite = true)
+      val documentationFile = File(s"$rulesDirectory/$patternName/README.md")
+      val fileContent = documentationFile.contentAsString
+
+      // looking for markdown link to local resources, e.g, [`fix` option](../../../docs/user-guide/usage/options.md#fix)
+      // assuming local URLs start with "../" this is the pattern used at the time of this solution
+      val localUrlRegex = """\[(.+?)\]\((\.\./.+?)\)""".r
+
+      val contentWithReplacedUrls = localUrlRegex.replaceAllIn(fileContent, m => {
+        val linkText = m.group(1)
+        val localUrl = m.group(2)
+        val absoluteFilePath = documentationFile.parent / localUrl
+        val relativePath = mainDirectory.relativize(absoluteFilePath).toString
+        s"[$linkText](https://github.com/stylelint/stylelint/tree/$version/$relativePath)"
+      })
+
+      File(s"$descriptionDir/$patternName.md").write(contentWithReplacedUrls)
     }
   }
 }

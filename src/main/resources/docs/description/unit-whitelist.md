@@ -1,6 +1,8 @@
 # unit-whitelist
 
-Specify a whitelist of allowed units.
+**_Deprecated: Instead use the [`unit-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/unit-allowed-list/README.md) rule._**
+
+Specify a list of allowed units.
 
 <!-- prettier-ignore -->
 ```css

@@ -1,6 +1,8 @@
 # property-blacklist
 
-Specify a blacklist of disallowed properties.
+**_Deprecated: Instead use the [`property-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/property-disallowed-list/README.md) rule._**
+
+Specify a list of disallowed properties.
 
 <!-- prettier-ignore -->
 ```css
