@@ -64,7 +64,8 @@ object DocGenerator {
       val patternDescription =
         ParseMarkupRule.parseForDescriptions(File(rulesdir + "/" + patternid + "/README.md"))
 
-      val urlRegex = """\[(.+)]\((.+)\)""".r
+      // looking for markdown links, e.g., [text](https://www.example.com)
+      val urlRegex = """\[(.+?)\]\((.+?)\)""".r
       val descriptionWithoutUrl = urlRegex.replaceAllIn(patternDescription, m => m.group(1)).trim
       addNewDescription(patternid, descriptionWithoutUrl)
     }(collection.breakOut)
@@ -88,8 +89,9 @@ object DocGenerator {
       val documentationFile = File(s"$rulesDirectory/$patternName/README.md")
       val fileContent = documentationFile.contentAsString
 
+      // looking for markdown link to local resources, e.g, [`fix` option](../../../docs/user-guide/usage/options.md#fix)
       // assuming local URLs start with "../" this is the pattern used at the time of this solution
-      val localUrlRegex = """\[([^]]+)]\((\.\./[^)]+)\)""".r
+      val localUrlRegex = """\[(.+?)\]\((\.\./.+?)\)""".r
 
       val contentWithReplacedUrls = localUrlRegex.replaceAllIn(fileContent, m => {
         val linkText = m.group(1)
