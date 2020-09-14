@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "13.7.0",
+  "version" : "13.7.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Error",
@@ -8,7 +8,9 @@
     "parameters" : [ {
       "name" : "alpha-value-notation",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-allowed-list",
     "level" : "Error",
@@ -16,7 +18,9 @@
     "parameters" : [ {
       "name" : "at-rule-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-blacklist",
     "level" : "Error",
@@ -24,7 +28,9 @@
     "parameters" : [ {
       "name" : "at-rule-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-disallowed-list",
     "level" : "Error",
@@ -32,7 +38,9 @@
     "parameters" : [ {
       "name" : "at-rule-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-empty-line-before",
     "level" : "Error",
@@ -43,7 +51,9 @@
         "except" : [ "blockless-after-same-name-blockless", "first-nested" ],
         "ignore" : [ "after-comment" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "at-rule-name-case",
     "level" : "Error",
@@ -51,7 +61,9 @@
     "parameters" : [ {
       "name" : "at-rule-name-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "at-rule-name-newline-after",
     "level" : "Error",
@@ -59,7 +71,9 @@
     "parameters" : [ {
       "name" : "at-rule-name-newline-after",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-name-space-after",
     "level" : "Error",
@@ -67,7 +81,9 @@
     "parameters" : [ {
       "name" : "at-rule-name-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "at-rule-no-unknown",
     "level" : "Error",
@@ -75,7 +91,9 @@
     "parameters" : [ {
       "name" : "at-rule-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "at-rule-no-vendor-prefix",
     "level" : "Error",
@@ -83,7 +101,9 @@
     "parameters" : [ {
       "name" : "at-rule-no-vendor-prefix",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-property-required-list",
     "level" : "Error",
@@ -91,7 +111,9 @@
     "parameters" : [ {
       "name" : "at-rule-property-required-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-property-requirelist",
     "level" : "Error",
@@ -99,7 +121,9 @@
     "parameters" : [ {
       "name" : "at-rule-property-requirelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-semicolon-newline-after",
     "level" : "Error",
@@ -107,7 +131,9 @@
     "parameters" : [ {
       "name" : "at-rule-semicolon-newline-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "at-rule-semicolon-space-before",
     "level" : "Error",
@@ -115,7 +141,9 @@
     "parameters" : [ {
       "name" : "at-rule-semicolon-space-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "at-rule-whitelist",
     "level" : "Error",
@@ -123,7 +151,9 @@
     "parameters" : [ {
       "name" : "at-rule-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "block-closing-brace-empty-line-before",
     "level" : "Error",
@@ -131,7 +161,9 @@
     "parameters" : [ {
       "name" : "block-closing-brace-empty-line-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-closing-brace-newline-after",
     "level" : "Error",
@@ -139,7 +171,9 @@
     "parameters" : [ {
       "name" : "block-closing-brace-newline-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-closing-brace-newline-before",
     "level" : "Error",
@@ -147,7 +181,9 @@
     "parameters" : [ {
       "name" : "block-closing-brace-newline-before",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-closing-brace-space-after",
     "level" : "Error",
@@ -155,7 +191,9 @@
     "parameters" : [ {
       "name" : "block-closing-brace-space-after",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "block-closing-brace-space-before",
     "level" : "Error",
@@ -163,7 +201,9 @@
     "parameters" : [ {
       "name" : "block-closing-brace-space-before",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-no-empty",
     "level" : "Error",
@@ -171,7 +211,9 @@
     "parameters" : [ {
       "name" : "block-no-empty",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-opening-brace-newline-after",
     "level" : "Error",
@@ -179,7 +221,9 @@
     "parameters" : [ {
       "name" : "block-opening-brace-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-opening-brace-newline-before",
     "level" : "Error",
@@ -187,7 +231,9 @@
     "parameters" : [ {
       "name" : "block-opening-brace-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "block-opening-brace-space-after",
     "level" : "Error",
@@ -195,7 +241,9 @@
     "parameters" : [ {
       "name" : "block-opening-brace-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "block-opening-brace-space-before",
     "level" : "Error",
@@ -203,7 +251,9 @@
     "parameters" : [ {
       "name" : "block-opening-brace-space-before",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "color-function-notation",
     "level" : "Error",
@@ -211,7 +261,9 @@
     "parameters" : [ {
       "name" : "color-function-notation",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "color-hex-case",
     "level" : "Error",
@@ -219,7 +271,9 @@
     "parameters" : [ {
       "name" : "color-hex-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "color-hex-length",
     "level" : "Error",
@@ -227,7 +281,9 @@
     "parameters" : [ {
       "name" : "color-hex-length",
       "default" : "short"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "color-named",
     "level" : "Error",
@@ -235,7 +291,9 @@
     "parameters" : [ {
       "name" : "color-named",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "color-no-hex",
     "level" : "Error",
@@ -243,7 +301,9 @@
     "parameters" : [ {
       "name" : "color-no-hex",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "color-no-invalid-hex",
     "level" : "Error",
@@ -251,7 +311,9 @@
     "parameters" : [ {
       "name" : "color-no-invalid-hex",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "comment-empty-line-before",
     "level" : "Error",
@@ -262,7 +324,9 @@
         "except" : [ "first-nested" ],
         "ignore" : [ "stylelint-commands" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "comment-no-empty",
     "level" : "Error",
@@ -270,7 +334,9 @@
     "parameters" : [ {
       "name" : "comment-no-empty",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "comment-whitespace-inside",
     "level" : "Error",
@@ -278,7 +344,9 @@
     "parameters" : [ {
       "name" : "comment-whitespace-inside",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "comment-word-blacklist",
     "level" : "Error",
@@ -286,7 +354,9 @@
     "parameters" : [ {
       "name" : "comment-word-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "comment-word-disallowed-list",
     "level" : "Error",
@@ -294,7 +364,9 @@
     "parameters" : [ {
       "name" : "comment-word-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "custom-media-pattern",
     "level" : "Error",
@@ -302,7 +374,9 @@
     "parameters" : [ {
       "name" : "custom-media-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "custom-property-empty-line-before",
     "level" : "Error",
@@ -313,7 +387,9 @@
         "except" : [ "after-custom-property", "first-nested" ],
         "ignore" : [ "after-comment", "inside-single-line-block" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "custom-property-pattern",
     "level" : "Error",
@@ -321,7 +397,9 @@
     "parameters" : [ {
       "name" : "custom-property-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-bang-space-after",
     "level" : "Error",
@@ -329,7 +407,9 @@
     "parameters" : [ {
       "name" : "declaration-bang-space-after",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-bang-space-before",
     "level" : "Error",
@@ -337,7 +417,9 @@
     "parameters" : [ {
       "name" : "declaration-bang-space-before",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-no-duplicate-properties",
     "level" : "Error",
@@ -347,7 +429,9 @@
       "default" : [ true, {
         "ignore" : [ "consecutive-duplicates-with-different-values" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-no-redundant-longhand-properties",
     "level" : "Error",
@@ -355,7 +439,9 @@
     "parameters" : [ {
       "name" : "declaration-block-no-redundant-longhand-properties",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-block-no-shorthand-property-overrides",
     "level" : "Error",
@@ -363,7 +449,9 @@
     "parameters" : [ {
       "name" : "declaration-block-no-shorthand-property-overrides",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-semicolon-newline-after",
     "level" : "Error",
@@ -371,7 +459,9 @@
     "parameters" : [ {
       "name" : "declaration-block-semicolon-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-semicolon-newline-before",
     "level" : "Error",
@@ -379,7 +469,9 @@
     "parameters" : [ {
       "name" : "declaration-block-semicolon-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-block-semicolon-space-after",
     "level" : "Error",
@@ -387,7 +479,9 @@
     "parameters" : [ {
       "name" : "declaration-block-semicolon-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-semicolon-space-before",
     "level" : "Error",
@@ -395,7 +489,9 @@
     "parameters" : [ {
       "name" : "declaration-block-semicolon-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-single-line-max-declarations",
     "level" : "Error",
@@ -403,7 +499,9 @@
     "parameters" : [ {
       "name" : "declaration-block-single-line-max-declarations",
       "default" : 1
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-block-trailing-semicolon",
     "level" : "Error",
@@ -411,7 +509,9 @@
     "parameters" : [ {
       "name" : "declaration-block-trailing-semicolon",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-colon-newline-after",
     "level" : "Error",
@@ -419,7 +519,9 @@
     "parameters" : [ {
       "name" : "declaration-colon-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-colon-space-after",
     "level" : "Error",
@@ -427,7 +529,9 @@
     "parameters" : [ {
       "name" : "declaration-colon-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-colon-space-before",
     "level" : "Error",
@@ -435,7 +539,9 @@
     "parameters" : [ {
       "name" : "declaration-colon-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-empty-line-before",
     "level" : "Error",
@@ -446,7 +552,9 @@
         "except" : [ "after-declaration", "first-nested" ],
         "ignore" : [ "after-comment", "inside-single-line-block" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "declaration-no-important",
     "level" : "Error",
@@ -454,7 +562,9 @@
     "parameters" : [ {
       "name" : "declaration-no-important",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-unit-allowed-list",
     "level" : "Error",
@@ -462,7 +572,9 @@
     "parameters" : [ {
       "name" : "declaration-property-unit-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-unit-blacklist",
     "level" : "Error",
@@ -470,7 +582,9 @@
     "parameters" : [ {
       "name" : "declaration-property-unit-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-unit-disallowed-list",
     "level" : "Error",
@@ -478,7 +592,9 @@
     "parameters" : [ {
       "name" : "declaration-property-unit-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-unit-whitelist",
     "level" : "Error",
@@ -486,7 +602,9 @@
     "parameters" : [ {
       "name" : "declaration-property-unit-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-value-allowed-list",
     "level" : "Error",
@@ -494,7 +612,9 @@
     "parameters" : [ {
       "name" : "declaration-property-value-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-value-blacklist",
     "level" : "Error",
@@ -502,7 +622,9 @@
     "parameters" : [ {
       "name" : "declaration-property-value-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-value-disallowed-list",
     "level" : "Error",
@@ -510,7 +632,9 @@
     "parameters" : [ {
       "name" : "declaration-property-value-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "declaration-property-value-whitelist",
     "level" : "Error",
@@ -518,7 +642,9 @@
     "parameters" : [ {
       "name" : "declaration-property-value-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "font-family-name-quotes",
     "level" : "Error",
@@ -526,7 +652,9 @@
     "parameters" : [ {
       "name" : "font-family-name-quotes",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "font-family-no-duplicate-names",
     "level" : "Error",
@@ -534,7 +662,9 @@
     "parameters" : [ {
       "name" : "font-family-no-duplicate-names",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "font-family-no-missing-generic-family-keyword",
     "level" : "Error",
@@ -542,7 +672,9 @@
     "parameters" : [ {
       "name" : "font-family-no-missing-generic-family-keyword",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "font-weight-notation",
     "level" : "Error",
@@ -550,7 +682,9 @@
     "parameters" : [ {
       "name" : "font-weight-notation",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-allowed-list",
     "level" : "Error",
@@ -558,7 +692,9 @@
     "parameters" : [ {
       "name" : "function-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-blacklist",
     "level" : "Error",
@@ -566,7 +702,9 @@
     "parameters" : [ {
       "name" : "function-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-calc-no-invalid",
     "level" : "Error",
@@ -574,7 +712,9 @@
     "parameters" : [ {
       "name" : "function-calc-no-invalid",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-calc-no-unspaced-operator",
     "level" : "Error",
@@ -582,7 +722,9 @@
     "parameters" : [ {
       "name" : "function-calc-no-unspaced-operator",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-comma-newline-after",
     "level" : "Error",
@@ -590,7 +732,9 @@
     "parameters" : [ {
       "name" : "function-comma-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-comma-newline-before",
     "level" : "Error",
@@ -598,7 +742,9 @@
     "parameters" : [ {
       "name" : "function-comma-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-comma-space-after",
     "level" : "Error",
@@ -606,7 +752,9 @@
     "parameters" : [ {
       "name" : "function-comma-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-comma-space-before",
     "level" : "Error",
@@ -614,7 +762,9 @@
     "parameters" : [ {
       "name" : "function-comma-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-disallowed-list",
     "level" : "Error",
@@ -622,7 +772,9 @@
     "parameters" : [ {
       "name" : "function-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-linear-gradient-no-nonstandard-direction",
     "level" : "Error",
@@ -630,7 +782,9 @@
     "parameters" : [ {
       "name" : "function-linear-gradient-no-nonstandard-direction",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-max-empty-lines",
     "level" : "Error",
@@ -638,7 +792,9 @@
     "parameters" : [ {
       "name" : "function-max-empty-lines",
       "default" : 0
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-name-case",
     "level" : "Error",
@@ -646,7 +802,9 @@
     "parameters" : [ {
       "name" : "function-name-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-parentheses-newline-inside",
     "level" : "Error",
@@ -654,7 +812,9 @@
     "parameters" : [ {
       "name" : "function-parentheses-newline-inside",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-parentheses-space-inside",
     "level" : "Error",
@@ -662,7 +822,9 @@
     "parameters" : [ {
       "name" : "function-parentheses-space-inside",
       "default" : "never-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "function-url-no-scheme-relative",
     "level" : "Error",
@@ -670,7 +832,9 @@
     "parameters" : [ {
       "name" : "function-url-no-scheme-relative",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-url-quotes",
     "level" : "Error",
@@ -678,7 +842,9 @@
     "parameters" : [ {
       "name" : "function-url-quotes",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-url-scheme-allowed-list",
     "level" : "Error",
@@ -686,7 +852,9 @@
     "parameters" : [ {
       "name" : "function-url-scheme-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-url-scheme-blacklist",
     "level" : "Error",
@@ -694,7 +862,9 @@
     "parameters" : [ {
       "name" : "function-url-scheme-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-url-scheme-disallowed-list",
     "level" : "Error",
@@ -702,7 +872,9 @@
     "parameters" : [ {
       "name" : "function-url-scheme-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-url-scheme-whitelist",
     "level" : "Error",
@@ -710,7 +882,9 @@
     "parameters" : [ {
       "name" : "function-url-scheme-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-whitelist",
     "level" : "Error",
@@ -718,7 +892,9 @@
     "parameters" : [ {
       "name" : "function-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "function-whitespace-after",
     "level" : "Error",
@@ -726,7 +902,9 @@
     "parameters" : [ {
       "name" : "function-whitespace-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "hue-degree-notation",
     "level" : "Error",
@@ -734,7 +912,9 @@
     "parameters" : [ {
       "name" : "hue-degree-notation",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "indentation",
     "level" : "Error",
@@ -742,7 +922,9 @@
     "parameters" : [ {
       "name" : "indentation",
       "default" : 2
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "keyframe-declaration-no-important",
     "level" : "Error",
@@ -750,7 +932,9 @@
     "parameters" : [ {
       "name" : "keyframe-declaration-no-important",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "keyframes-name-pattern",
     "level" : "Error",
@@ -758,7 +942,9 @@
     "parameters" : [ {
       "name" : "keyframes-name-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "length-zero-no-unit",
     "level" : "Error",
@@ -766,7 +952,9 @@
     "parameters" : [ {
       "name" : "length-zero-no-unit",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "linebreaks",
     "level" : "Error",
@@ -774,7 +962,9 @@
     "parameters" : [ {
       "name" : "linebreaks",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "max-empty-lines",
     "level" : "Error",
@@ -782,7 +972,9 @@
     "parameters" : [ {
       "name" : "max-empty-lines",
       "default" : 1
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "max-line-length",
     "level" : "Error",
@@ -790,7 +982,9 @@
     "parameters" : [ {
       "name" : "max-line-length",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "max-nesting-depth",
     "level" : "Error",
@@ -798,7 +992,9 @@
     "parameters" : [ {
       "name" : "max-nesting-depth",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-colon-space-after",
     "level" : "Error",
@@ -806,7 +1002,9 @@
     "parameters" : [ {
       "name" : "media-feature-colon-space-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-colon-space-before",
     "level" : "Error",
@@ -814,7 +1012,9 @@
     "parameters" : [ {
       "name" : "media-feature-colon-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-name-allowed-list",
     "level" : "Error",
@@ -822,7 +1022,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-blacklist",
     "level" : "Error",
@@ -830,7 +1032,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-case",
     "level" : "Error",
@@ -838,7 +1042,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-name-disallowed-list",
     "level" : "Error",
@@ -846,7 +1052,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-no-unknown",
     "level" : "Error",
@@ -854,7 +1062,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-name-no-vendor-prefix",
     "level" : "Error",
@@ -862,7 +1072,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-no-vendor-prefix",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-value-allowed-list",
     "level" : "Error",
@@ -870,7 +1082,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-value-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-value-whitelist",
     "level" : "Error",
@@ -878,7 +1092,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-value-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-name-whitelist",
     "level" : "Error",
@@ -886,7 +1102,9 @@
     "parameters" : [ {
       "name" : "media-feature-name-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-parentheses-space-inside",
     "level" : "Error",
@@ -894,7 +1112,9 @@
     "parameters" : [ {
       "name" : "media-feature-parentheses-space-inside",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-range-operator-space-after",
     "level" : "Error",
@@ -902,7 +1122,9 @@
     "parameters" : [ {
       "name" : "media-feature-range-operator-space-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-feature-range-operator-space-before",
     "level" : "Error",
@@ -910,7 +1132,9 @@
     "parameters" : [ {
       "name" : "media-feature-range-operator-space-before",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-query-list-comma-newline-after",
     "level" : "Error",
@@ -918,7 +1142,9 @@
     "parameters" : [ {
       "name" : "media-query-list-comma-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-query-list-comma-newline-before",
     "level" : "Error",
@@ -926,7 +1152,9 @@
     "parameters" : [ {
       "name" : "media-query-list-comma-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-query-list-comma-space-after",
     "level" : "Error",
@@ -934,7 +1162,9 @@
     "parameters" : [ {
       "name" : "media-query-list-comma-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "media-query-list-comma-space-before",
     "level" : "Error",
@@ -942,7 +1172,9 @@
     "parameters" : [ {
       "name" : "media-query-list-comma-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-descending-specificity",
     "level" : "Error",
@@ -950,7 +1182,9 @@
     "parameters" : [ {
       "name" : "no-descending-specificity",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-duplicate-at-import-rules",
     "level" : "Error",
@@ -958,7 +1192,9 @@
     "parameters" : [ {
       "name" : "no-duplicate-at-import-rules",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-duplicate-selectors",
     "level" : "Error",
@@ -966,7 +1202,9 @@
     "parameters" : [ {
       "name" : "no-duplicate-selectors",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-empty-first-line",
     "level" : "Error",
@@ -974,7 +1212,9 @@
     "parameters" : [ {
       "name" : "no-empty-first-line",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "no-empty-source",
     "level" : "Error",
@@ -982,7 +1222,9 @@
     "parameters" : [ {
       "name" : "no-empty-source",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-eol-whitespace",
     "level" : "Error",
@@ -990,7 +1232,9 @@
     "parameters" : [ {
       "name" : "no-eol-whitespace",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-extra-semicolons",
     "level" : "Error",
@@ -998,7 +1242,9 @@
     "parameters" : [ {
       "name" : "no-extra-semicolons",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-invalid-double-slash-comments",
     "level" : "Error",
@@ -1006,7 +1252,9 @@
     "parameters" : [ {
       "name" : "no-invalid-double-slash-comments",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-missing-end-of-source-newline",
     "level" : "Error",
@@ -1014,7 +1262,9 @@
     "parameters" : [ {
       "name" : "no-missing-end-of-source-newline",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "no-unknown-animations",
     "level" : "Error",
@@ -1022,7 +1272,9 @@
     "parameters" : [ {
       "name" : "no-unknown-animations",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "number-leading-zero",
     "level" : "Error",
@@ -1030,7 +1282,9 @@
     "parameters" : [ {
       "name" : "number-leading-zero",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "number-max-precision",
     "level" : "Error",
@@ -1038,7 +1292,9 @@
     "parameters" : [ {
       "name" : "number-max-precision",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "number-no-trailing-zeros",
     "level" : "Error",
@@ -1046,7 +1302,9 @@
     "parameters" : [ {
       "name" : "number-no-trailing-zeros",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "property-allowed-list",
     "level" : "Error",
@@ -1054,7 +1312,9 @@
     "parameters" : [ {
       "name" : "property-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "property-blacklist",
     "level" : "Error",
@@ -1062,7 +1322,9 @@
     "parameters" : [ {
       "name" : "property-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "property-case",
     "level" : "Error",
@@ -1070,7 +1332,9 @@
     "parameters" : [ {
       "name" : "property-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "property-disallowed-list",
     "level" : "Error",
@@ -1078,7 +1342,9 @@
     "parameters" : [ {
       "name" : "property-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "property-no-unknown",
     "level" : "Error",
@@ -1086,7 +1352,9 @@
     "parameters" : [ {
       "name" : "property-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "property-no-vendor-prefix",
     "level" : "Error",
@@ -1094,7 +1362,9 @@
     "parameters" : [ {
       "name" : "property-no-vendor-prefix",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "property-whitelist",
     "level" : "Error",
@@ -1102,7 +1372,9 @@
     "parameters" : [ {
       "name" : "property-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "rule-empty-line-before",
     "level" : "Error",
@@ -1113,7 +1385,9 @@
         "except" : [ "first-nested" ],
         "ignore" : [ "after-comment" ]
       } ]
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-attribute-brackets-space-inside",
     "level" : "Error",
@@ -1121,7 +1395,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-brackets-space-inside",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-attribute-operator-allowed-list",
     "level" : "Error",
@@ -1129,7 +1405,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-attribute-operator-blacklist",
     "level" : "Error",
@@ -1137,7 +1415,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-attribute-operator-disallowed-list",
     "level" : "Error",
@@ -1145,7 +1425,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-attribute-operator-space-after",
     "level" : "Error",
@@ -1153,7 +1435,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-space-after",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-attribute-operator-space-before",
     "level" : "Error",
@@ -1161,7 +1445,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-attribute-operator-whitelist",
     "level" : "Error",
@@ -1169,7 +1455,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-operator-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-attribute-quotes",
     "level" : "Error",
@@ -1177,7 +1465,9 @@
     "parameters" : [ {
       "name" : "selector-attribute-quotes",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-class-pattern",
     "level" : "Error",
@@ -1185,7 +1475,9 @@
     "parameters" : [ {
       "name" : "selector-class-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-combinator-allowed-list",
     "level" : "Error",
@@ -1193,7 +1485,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-combinator-blacklist",
     "level" : "Error",
@@ -1201,7 +1495,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-combinator-disallowed-list",
     "level" : "Error",
@@ -1209,7 +1505,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-combinator-space-after",
     "level" : "Error",
@@ -1217,7 +1515,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-space-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-combinator-space-before",
     "level" : "Error",
@@ -1225,7 +1525,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-space-before",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-combinator-whitelist",
     "level" : "Error",
@@ -1233,7 +1535,9 @@
     "parameters" : [ {
       "name" : "selector-combinator-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-descendant-combinator-no-non-space",
     "level" : "Error",
@@ -1241,7 +1545,9 @@
     "parameters" : [ {
       "name" : "selector-descendant-combinator-no-non-space",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-id-pattern",
     "level" : "Error",
@@ -1249,7 +1555,9 @@
     "parameters" : [ {
       "name" : "selector-id-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-list-comma-newline-after",
     "level" : "Error",
@@ -1257,7 +1565,9 @@
     "parameters" : [ {
       "name" : "selector-list-comma-newline-after",
       "default" : "always"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-list-comma-newline-before",
     "level" : "Error",
@@ -1265,7 +1575,9 @@
     "parameters" : [ {
       "name" : "selector-list-comma-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-list-comma-space-after",
     "level" : "Error",
@@ -1273,7 +1585,9 @@
     "parameters" : [ {
       "name" : "selector-list-comma-space-after",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-list-comma-space-before",
     "level" : "Error",
@@ -1281,7 +1595,9 @@
     "parameters" : [ {
       "name" : "selector-list-comma-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-max-attribute",
     "level" : "Error",
@@ -1289,7 +1605,9 @@
     "parameters" : [ {
       "name" : "selector-max-attribute",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-class",
     "level" : "Error",
@@ -1297,7 +1615,9 @@
     "parameters" : [ {
       "name" : "selector-max-class",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-combinators",
     "level" : "Error",
@@ -1305,7 +1625,9 @@
     "parameters" : [ {
       "name" : "selector-max-combinators",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-compound-selectors",
     "level" : "Error",
@@ -1313,7 +1635,9 @@
     "parameters" : [ {
       "name" : "selector-max-compound-selectors",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-empty-lines",
     "level" : "Error",
@@ -1321,7 +1645,9 @@
     "parameters" : [ {
       "name" : "selector-max-empty-lines",
       "default" : 0
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-max-id",
     "level" : "Error",
@@ -1329,7 +1655,9 @@
     "parameters" : [ {
       "name" : "selector-max-id",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-pseudo-class",
     "level" : "Error",
@@ -1337,7 +1665,9 @@
     "parameters" : [ {
       "name" : "selector-max-pseudo-class",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-specificity",
     "level" : "Error",
@@ -1345,7 +1675,9 @@
     "parameters" : [ {
       "name" : "selector-max-specificity",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-type",
     "level" : "Error",
@@ -1353,7 +1685,9 @@
     "parameters" : [ {
       "name" : "selector-max-type",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-max-universal",
     "level" : "Error",
@@ -1361,7 +1695,9 @@
     "parameters" : [ {
       "name" : "selector-max-universal",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-nested-pattern",
     "level" : "Error",
@@ -1369,7 +1705,9 @@
     "parameters" : [ {
       "name" : "selector-nested-pattern",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-no-qualifying-type",
     "level" : "Error",
@@ -1377,7 +1715,9 @@
     "parameters" : [ {
       "name" : "selector-no-qualifying-type",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-no-vendor-prefix",
     "level" : "Error",
@@ -1385,7 +1725,9 @@
     "parameters" : [ {
       "name" : "selector-no-vendor-prefix",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-class-allowed-list",
     "level" : "Error",
@@ -1393,7 +1735,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-class-blacklist",
     "level" : "Error",
@@ -1401,7 +1745,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-class-case",
     "level" : "Error",
@@ -1409,7 +1755,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-disallowed-list",
     "level" : "Error",
@@ -1417,7 +1765,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-class-no-unknown",
     "level" : "Error",
@@ -1425,7 +1775,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-parentheses-space-inside",
     "level" : "Error",
@@ -1433,7 +1785,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-parentheses-space-inside",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-whitelist",
     "level" : "Error",
@@ -1441,7 +1795,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-class-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-allowed-list",
     "level" : "Error",
@@ -1449,7 +1805,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-blacklist",
     "level" : "Error",
@@ -1457,7 +1815,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-case",
     "level" : "Error",
@@ -1465,7 +1825,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-colon-notation",
     "level" : "Error",
@@ -1473,7 +1835,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-colon-notation",
       "default" : "double"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-disallowed-list",
     "level" : "Error",
@@ -1481,7 +1845,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-no-unknown",
     "level" : "Error",
@@ -1489,7 +1855,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-whitelist",
     "level" : "Error",
@@ -1497,7 +1865,9 @@
     "parameters" : [ {
       "name" : "selector-pseudo-element-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-type-case",
     "level" : "Error",
@@ -1505,7 +1875,9 @@
     "parameters" : [ {
       "name" : "selector-type-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "selector-type-no-unknown",
     "level" : "Error",
@@ -1513,7 +1885,9 @@
     "parameters" : [ {
       "name" : "selector-type-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "shorthand-property-no-redundant-values",
     "level" : "Error",
@@ -1521,7 +1895,9 @@
     "parameters" : [ {
       "name" : "shorthand-property-no-redundant-values",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "string-no-newline",
     "level" : "Error",
@@ -1529,7 +1905,9 @@
     "parameters" : [ {
       "name" : "string-no-newline",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "string-quotes",
     "level" : "Error",
@@ -1537,7 +1915,9 @@
     "parameters" : [ {
       "name" : "string-quotes",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "time-min-milliseconds",
     "level" : "Error",
@@ -1545,7 +1925,9 @@
     "parameters" : [ {
       "name" : "time-min-milliseconds",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "unicode-bom",
     "level" : "Error",
@@ -1553,7 +1935,9 @@
     "parameters" : [ {
       "name" : "unicode-bom",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "unit-allowed-list",
     "level" : "Error",
@@ -1561,7 +1945,9 @@
     "parameters" : [ {
       "name" : "unit-allowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "unit-blacklist",
     "level" : "Error",
@@ -1569,7 +1955,9 @@
     "parameters" : [ {
       "name" : "unit-blacklist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "unit-case",
     "level" : "Error",
@@ -1577,7 +1965,9 @@
     "parameters" : [ {
       "name" : "unit-case",
       "default" : "lower"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "unit-disallowed-list",
     "level" : "Error",
@@ -1585,7 +1975,9 @@
     "parameters" : [ {
       "name" : "unit-disallowed-list",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "unit-no-unknown",
     "level" : "Error",
@@ -1593,7 +1985,9 @@
     "parameters" : [ {
       "name" : "unit-no-unknown",
       "default" : true
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "unit-whitelist",
     "level" : "Error",
@@ -1601,7 +1995,9 @@
     "parameters" : [ {
       "name" : "unit-whitelist",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "value-keyword-case",
     "level" : "Error",
@@ -1609,7 +2005,9 @@
     "parameters" : [ {
       "name" : "value-keyword-case",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "value-list-comma-newline-after",
     "level" : "Error",
@@ -1617,7 +2015,9 @@
     "parameters" : [ {
       "name" : "value-list-comma-newline-after",
       "default" : "always-multi-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "value-list-comma-newline-before",
     "level" : "Error",
@@ -1625,7 +2025,9 @@
     "parameters" : [ {
       "name" : "value-list-comma-newline-before",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "value-list-comma-space-after",
     "level" : "Error",
@@ -1633,7 +2035,9 @@
     "parameters" : [ {
       "name" : "value-list-comma-space-after",
       "default" : "always-single-line"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "value-list-comma-space-before",
     "level" : "Error",
@@ -1641,7 +2045,9 @@
     "parameters" : [ {
       "name" : "value-list-comma-space-before",
       "default" : "never"
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "value-list-max-empty-lines",
     "level" : "Error",
@@ -1649,7 +2055,9 @@
     "parameters" : [ {
       "name" : "value-list-max-empty-lines",
       "default" : 0
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
   }, {
     "patternId" : "value-no-vendor-prefix",
     "level" : "Error",
@@ -1657,6 +2065,8 @@
     "parameters" : [ {
       "name" : "value-no-vendor-prefix",
       "default" : null
-    } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   } ]
 }

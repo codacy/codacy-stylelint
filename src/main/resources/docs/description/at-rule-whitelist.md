@@ -1,6 +1,6 @@
 # at-rule-whitelist
 
-**_Deprecated: Instead use the [`at-rule-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/at-rule-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`at-rule-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/at-rule-allowed-list/README.md) rule._**
 
 Specify a list of allowed at-rules.
 

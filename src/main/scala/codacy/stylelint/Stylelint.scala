@@ -54,12 +54,10 @@ object Stylelint extends Tool {
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
     configuration.map { config =>
       val patterns = config.map { pattern =>
-        val parameter = pattern.parameters
-          .flatMap(_.headOption.map { param =>
-            val parameterValue: JsValue = param.value
-            parameterValue
-          })
-          .getOrElse(JsNull)
+        val parameter = pattern.parameters.headOption.map { param =>
+          val parameterValue: JsValue = param.value
+          parameterValue
+        }.getOrElse(JsNull)
 
         (pattern.patternId.value, parameter)
       }

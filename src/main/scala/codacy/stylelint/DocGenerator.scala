@@ -47,9 +47,15 @@ object DocGenerator {
   }
 
   def addNewPattern(patternName: String, default: Parameter.Value): Pattern.Specification = {
-    val param = Option(Set(Parameter.Specification(Parameter.Name(patternName), default)))
-
-    Pattern.Specification(Pattern.Id(patternName), Result.Level.Err, Pattern.Category.CodeStyle, None, param)
+    val param = Set(Parameter.Specification(Parameter.Name(patternName), default))
+    val enabled = DefaultPatterns.patterns.contains(patternName)
+    Pattern.Specification(
+      Pattern.Id(patternName),
+      Result.Level.Err,
+      Pattern.Category.CodeStyle,
+      None,
+      param,
+      enabled = enabled)
   }
 
   def PatternsFromDefaultConfig(): Map[String, Parameter.Value] = {
@@ -73,7 +79,7 @@ object DocGenerator {
   }
 
   def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
-    val param = Option(Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName))))
+    val param = Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
 
     Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None, param)
   }
