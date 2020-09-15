@@ -1,6 +1,6 @@
 # media-feature-name-value-whitelist
 
-**_Deprecated: Instead use the [`media-feature-name-value-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/media-feature-name-value-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`media-feature-name-value-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/media-feature-name-value-allowed-list/README.md) rule._**
 
 Specify a list of allowed media feature name and value pairs.
 

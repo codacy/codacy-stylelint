@@ -1,6 +1,6 @@
 # selector-attribute-operator-whitelist
 
-**_Deprecated: Instead use the [`selector-attribute-operator-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-attribute-operator-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`selector-attribute-operator-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/selector-attribute-operator-allowed-list/README.md) rule._**
 
 Specify a list of allowed attribute operators.
 

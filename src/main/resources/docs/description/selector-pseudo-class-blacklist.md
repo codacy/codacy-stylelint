@@ -1,6 +1,6 @@
 # selector-pseudo-class-blacklist
 
-**_Deprecated: Instead use the [`selector-pseudo-class-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.0/lib/rules/selector-pseudo-class-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`selector-pseudo-class-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/selector-pseudo-class-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed pseudo-class selectors.
 
