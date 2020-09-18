@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "postcss": "^8.0.4",
+    "postcss": "^8.0.5",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.1",
     "stylelint-a11y": "^1.2.3",
