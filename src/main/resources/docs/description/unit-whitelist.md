@@ -1,6 +1,6 @@
 # unit-whitelist
 
-**_Deprecated: Instead use the [`unit-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/unit-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`unit-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.2/lib/rules/unit-allowed-list/README.md) rule._**
 
 Specify a list of allowed units.
 

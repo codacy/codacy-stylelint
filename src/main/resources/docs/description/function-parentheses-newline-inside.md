@@ -14,7 +14,7 @@ Require a newline or disallow whitespace on the inside of the parentheses of fun
  * The newline inside these two parentheses */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.2/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

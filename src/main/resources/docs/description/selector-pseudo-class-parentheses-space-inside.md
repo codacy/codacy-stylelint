@@ -9,7 +9,7 @@ input:not( [type="submit"] ) {}
  * The space inside these two parentheses */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.1/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.2/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
 
 ## Options
 

@@ -1,6 +1,6 @@
 # media-feature-name-blacklist
 
-**_Deprecated: Instead use the [`media-feature-name-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/media-feature-name-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`media-feature-name-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.2/lib/rules/media-feature-name-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed media feature names.
 

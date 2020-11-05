@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "13.7.1",
+  "version" : "13.7.2",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Error",
@@ -561,7 +561,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-no-important",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false

@@ -10,9 +10,9 @@ Disallow empty first lines.
     a { color: pink; }
 ```
 
-This rule ignores empty sources. Use the [`no-empty-source`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/no-empty-source/README.md) rule to disallow these.
+This rule ignores empty sources. Use the [`no-empty-source`](https://github.com/stylelint/stylelint/tree/13.7.2/lib/rules/no-empty-source/README.md) rule to disallow these.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.2/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

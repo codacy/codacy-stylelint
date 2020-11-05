@@ -1,6 +1,6 @@
 # selector-combinator-whitelist
 
-**_Deprecated: Instead use the [`selector-combinator-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/selector-combinator-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`selector-combinator-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.2/lib/rules/selector-combinator-allowed-list/README.md) rule._**
 
 Specify a list of allowed combinators.
 

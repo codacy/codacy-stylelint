@@ -1,6 +1,6 @@
 # at-rule-property-requirelist
 
-**_Deprecated: Instead use the [`at-rule-property-required-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/at-rule-property-required-list/README.md) rule._**
+**_Deprecated: Instead use the [`at-rule-property-required-list`](https://github.com/stylelint/stylelint/tree/13.7.2/lib/rules/at-rule-property-required-list/README.md) rule._**
 
 Specify a list of required properties for an at-rule.
 
