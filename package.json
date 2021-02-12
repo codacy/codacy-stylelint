@@ -24,7 +24,7 @@
     "stylelint-scss": "^3.19.0",
     "stylelint-selector-bem-pattern": "^2.1.0",
     "stylelint-suitcss": "^3.0.0",
-    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-twbs-bootstrap": "^2.1.0"
   }
 }
