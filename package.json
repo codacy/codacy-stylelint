@@ -22,7 +22,7 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-rscss": "^0.4.0",
     "stylelint-scss": "^3.20.1",
-    "stylelint-selector-bem-pattern": "^2.1.0",
+    "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-suitcss": "^3.0.0",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-twbs-bootstrap": "^2.2.3"
