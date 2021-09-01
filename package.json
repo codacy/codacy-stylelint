@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@lego/stylelint-config": "^6.1.2",
+    "@lego/stylelint-config-prettier": "^6.1.2",
+    "@lego/stylelint-config-scss": "^6.1.2",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
@@ -8,11 +11,13 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-slds": "^1.0.8",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-config-suitcss": "^17.0.0",
+    "stylelint-config-twbs-bootstrap": "^2.2.3",
     "stylelint-config-wordpress": "^17.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-declaration-strict-value": "^1.7.12",
@@ -23,8 +28,6 @@
     "stylelint-rscss": "^0.4.0",
     "stylelint-scss": "^3.20.1",
     "stylelint-selector-bem-pattern": "^2.1.1",
-    "stylelint-suitcss": "^4.0.0",
-    "stylelint-config-sass-guidelines": "^8.0.0",
-    "stylelint-config-twbs-bootstrap": "^2.2.3"
+    "stylelint-suitcss": "^4.0.0"
   }
 }
