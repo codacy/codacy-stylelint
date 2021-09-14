@@ -26,7 +26,7 @@
     "stylelint-prettier": "^1.2.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-rscss": "^0.4.0",
-    "stylelint-scss": "^3.20.1",
+    "stylelint-scss": "^3.21.0",
     "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-suitcss": "^4.0.0"
   }
