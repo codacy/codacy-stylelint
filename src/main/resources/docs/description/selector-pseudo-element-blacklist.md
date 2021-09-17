@@ -1,6 +1,6 @@
 # selector-pseudo-element-blacklist
 
-**_Deprecated: Instead use the [`selector-pseudo-element-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/selector-pseudo-element-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`selector-pseudo-element-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/selector-pseudo-element-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed pseudo-element selectors.
 

@@ -9,7 +9,7 @@ Require a single space or disallow whitespace on the inside of the parentheses w
  * The space inside these two parentheses */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

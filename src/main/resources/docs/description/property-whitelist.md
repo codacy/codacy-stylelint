@@ -1,6 +1,6 @@
 # property-whitelist
 
-**_Deprecated: Instead use the [`property-allowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/property-allowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`property-allowed-list`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/property-allowed-list/README.md) rule._**
 
 Specify a list of allowed properties.
 

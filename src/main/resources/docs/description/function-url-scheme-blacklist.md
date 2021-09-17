@@ -1,6 +1,6 @@
 # function-url-scheme-blacklist
 
-**_Deprecated: Instead use the [`function-url-scheme-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/function-url-scheme-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`function-url-scheme-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/function-url-scheme-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed URL schemes.
 

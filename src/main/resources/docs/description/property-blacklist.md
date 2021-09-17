@@ -1,6 +1,6 @@
 # property-blacklist
 
-**_Deprecated: Instead use the [`property-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/property-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`property-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/property-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed properties.
 

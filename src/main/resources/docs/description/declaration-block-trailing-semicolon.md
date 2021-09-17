@@ -17,7 +17,7 @@ This rule ignores:
 - trailing `//` comments
 - declaration blocks containing nested (at-)rules
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.7.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -87,4 +87,22 @@ a { color: pink }
 <!-- prettier-ignore -->
 ```css
 a { background: orange; color: pink }
+```
+
+## Optional secondary options
+
+### `ignore: ["single-declaration"]`
+
+Ignore declaration blocks that contain a single declaration.
+
+The following patterns are _not_ considered violations:
+
+<!-- prettier-ignore -->
+```css
+a { color: pink }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: pink; }
 ```

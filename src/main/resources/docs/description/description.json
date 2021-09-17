@@ -300,6 +300,13 @@
     "description" : "no-missing-end-of-source-newline"
   } ]
 }, {
+  "patternId" : "selector-attribute-name-disallowed-list",
+  "title" : "Specify a list of disallowed attribute names.",
+  "parameters" : [ {
+    "name" : "selector-attribute-name-disallowed-list",
+    "description" : "selector-attribute-name-disallowed-list"
+  } ]
+}, {
   "patternId" : "value-list-comma-space-after",
   "title" : "Require a single space or disallow whitespace after the commas of value lists.",
   "parameters" : [ {
@@ -312,6 +319,13 @@
   "parameters" : [ {
     "name" : "selector-pseudo-class-disallowed-list",
     "description" : "selector-pseudo-class-disallowed-list"
+  } ]
+}, {
+  "patternId" : "selector-disallowed-list",
+  "title" : "Specify a list of disallowed selectors.",
+  "parameters" : [ {
+    "name" : "selector-disallowed-list",
+    "description" : "selector-disallowed-list"
   } ]
 }, {
   "patternId" : "selector-id-pattern",
@@ -592,6 +606,13 @@
   "parameters" : [ {
     "name" : "no-empty-first-line",
     "description" : "no-empty-first-line"
+  } ]
+}, {
+  "patternId" : "no-invalid-position-at-import-rule",
+  "title" : "Disallow invalid position `@import` rules within a stylesheet.",
+  "parameters" : [ {
+    "name" : "no-invalid-position-at-import-rule",
+    "description" : "no-invalid-position-at-import-rule"
   } ]
 }, {
   "patternId" : "selector-pseudo-class-no-unknown",
@@ -1014,6 +1035,13 @@
     "description" : "media-feature-name-case"
   } ]
 }, {
+  "patternId" : "no-irregular-whitespace",
+  "title" : "Disallow irregular whitespaces.",
+  "parameters" : [ {
+    "name" : "no-irregular-whitespace",
+    "description" : "no-irregular-whitespace"
+  } ]
+}, {
   "patternId" : "media-query-list-comma-space-after",
   "title" : "Require a single space or disallow whitespace after the commas of media query lists.",
   "parameters" : [ {
@@ -1028,11 +1056,25 @@
     "description" : "custom-property-empty-line-before"
   } ]
 }, {
+  "patternId" : "declaration-block-no-duplicate-custom-properties",
+  "title" : "Disallow duplicate custom properties within declaration blocks.",
+  "parameters" : [ {
+    "name" : "declaration-block-no-duplicate-custom-properties",
+    "description" : "declaration-block-no-duplicate-custom-properties"
+  } ]
+}, {
   "patternId" : "block-closing-brace-newline-before",
   "title" : "Require a newline or disallow whitespace before the closing brace of blocks.",
   "parameters" : [ {
     "name" : "block-closing-brace-newline-before",
     "description" : "block-closing-brace-newline-before"
+  } ]
+}, {
+  "patternId" : "comment-pattern",
+  "title" : "Specify a pattern for comments.",
+  "parameters" : [ {
+    "name" : "comment-pattern",
+    "description" : "comment-pattern"
   } ]
 }, {
   "patternId" : "at-rule-whitelist",
@@ -1376,6 +1418,13 @@
   "parameters" : [ {
     "name" : "selector-max-empty-lines",
     "description" : "selector-max-empty-lines"
+  } ]
+}, {
+  "patternId" : "named-grid-areas-no-invalid",
+  "title" : "Disallow invalid named grid areas.",
+  "parameters" : [ {
+    "name" : "named-grid-areas-no-invalid",
+    "description" : "named-grid-areas-no-invalid"
   } ]
 }, {
   "patternId" : "at-rule-name-space-after",
