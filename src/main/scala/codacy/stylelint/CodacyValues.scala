@@ -1,8 +1,8 @@
 package codacy.stylelint
 
-object DefaultPatterns {
+object CodacyValues {
 
-  val patterns = Set(
+  val patternsEnabled = Set(
     "at-rule-empty-line-before",
     "at-rule-name-case",
     "at-rule-name-space-after",
@@ -99,4 +99,35 @@ object DefaultPatterns {
     "value-list-comma-space-after",
     "value-list-comma-space-before",
     "value-list-max-empty-lines")
+
+  //Gathered the rules within the category of "Possible errors" of the tool https://stylelint.io/user-guide/rules/list/#possible-errors
+  val possibleErrorsPatterns = Set(
+    "at-rule-no-unknown",
+    "block-no-empty",
+    "color-no-invalid-hex",
+    "comment-no-empty",
+    "declaration-block-no-duplicate-custom-properties",
+    "declaration-block-no-duplicate-properties",
+    "declaration-block-no-shorthand-property-overrides",
+    "font-family-no-duplicate-names",
+    "font-family-no-missing-generic-family-keyword",
+    "function-calc-no-invalid",
+    "function-calc-no-unspaced-operator",
+    "function-linear-gradient-no-nonstandard-direction",
+    "keyframe-declaration-no-important",
+    "media-feature-name-no-unknown",
+    "named-grid-areas-no-invalid",
+    "no-descending-specificity",
+    "no-duplicate-at-import-rules",
+    "no-duplicate-selectors",
+    "no-empty-source",
+    "no-extra-semicolons",
+    "no-invalid-double-slash-comments",
+    "no-invalid-position-at-import-rule",
+    "property-no-unknown",
+    "selector-pseudo-class-no-unknown",
+    "selector-pseudo-element-no-unknown",
+    "selector-type-no-unknown",
+    "string-no-newline",
+    "unit-no-unknown")
 }
