@@ -2,7 +2,7 @@
 
 a {
     color: pink;
-    /*#Err: block-closing-brace-newline-after*/
+    /*#Info: block-closing-brace-newline-after*/
 }  b {
     color: red;
 }
