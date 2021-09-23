@@ -11,7 +11,7 @@ a { text-transform: uppercase; }
 
 ## Options
 
-`object`: `{ "unprefixed-property-name": ["array", "of", "values"], "unprefixed-property-name": ["/regex/", "non-regex"] }`
+`object`: `{ "unprefixed-property-name": ["array", "of", "values"], "unprefixed-property-name": ["/regex/", "non-regex", /regex/] }`
 
 If a property name is found in the object, only the listed property values are allowed. This rule complains about all non-matching values. (If the property name is not included in the object, anything goes.)
 
@@ -62,11 +62,6 @@ The following patterns are _not_ considered violations:
 
 <!-- prettier-ignore -->
 ```css
-a { color: pink; }
-```
-
-<!-- prettier-ignore -->
-```css
 a { whitespace: nowrap; }
 ```
 
@@ -88,9 +83,4 @@ a { color: green; }
 <!-- prettier-ignore -->
 ```css
 a { background-color: green; }
-```
-
-<!-- prettier-ignore -->
-```css
-a { background: pink; }
 ```

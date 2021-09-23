@@ -9,6 +9,8 @@ Require or disallow quotes for attribute values.
  * These quotes */
 ```
 
+The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule.
+
 ## Options
 
 `string`: `"always"|"never"`

@@ -1,6 +1,6 @@
 # at-rule-blacklist
 
-**_Deprecated: Instead use the [`at-rule-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.7.1/lib/rules/at-rule-disallowed-list/README.md) rule._**
+**_Deprecated: Instead use the [`at-rule-disallowed-list`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/at-rule-disallowed-list/README.md) rule._**
 
 Specify a list of disallowed at-rules.
 
