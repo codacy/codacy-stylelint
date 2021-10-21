@@ -1,4 +1,4 @@
-FROM library/openjdk:8-jre-alpine
+FROM amazoncorretto:8-alpine3.14-jre
 
 WORKDIR /opt/docker
 
