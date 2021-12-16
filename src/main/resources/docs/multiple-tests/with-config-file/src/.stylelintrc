@@ -13,7 +13,7 @@
     "function-name-case": "lower",
     "function-parentheses-newline-inside": "never-multi-line",
     "function-parentheses-space-inside": "never",
-    "function-url-scheme-blacklist": "data",
+    "function-url-scheme-disallowed-list": "data",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "function-whitespace-after": "always",
@@ -45,5 +45,15 @@
     "block-no-empty": true,
     "block-opening-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.less"],
+      "customSyntax": "postcss-less"
+    }
+  ]
 }
