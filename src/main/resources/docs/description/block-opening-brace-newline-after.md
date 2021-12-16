@@ -19,9 +19,9 @@ a { /* end-of-line comment */
 }
 ```
 
-Refer to [combining rules](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/rules/combine.md) for more information on using this rule with [`block-opening-brace-newline-before`](https://github.com/stylelint/stylelint/tree/13.13.1/lib/rules/block-opening-brace-newline-before/README.md) to disallow single-line rules.
+Refer to [combining rules](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guiderulescombine.md) for more information on using this rule with [`block-opening-brace-newline-before`](https://github.com/stylelint/stylelint/tree/14.1.0/librulesblock-opening-brace-newline-beforeREADME.md) to disallow single-line rules.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -31,7 +31,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 There _must always_ be a newline after the opening brace.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -52,7 +52,7 @@ a{ /* end-of-line comment
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -78,7 +78,7 @@ a { /* end-of-line comment */
 
 There _must always_ be a newline after the opening brace in multi-line blocks.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -86,7 +86,7 @@ a{color: pink;
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -103,7 +103,7 @@ color: pink; }
 
 There _must never_ be whitespace after the opening brace in multi-line blocks.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -111,7 +111,7 @@ a { color: pink;
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

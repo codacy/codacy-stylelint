@@ -11,7 +11,7 @@ a { width: calc(5% - 10em); }
 
 Camel case function names, e.g. `translateX`, are accounted for when the `lower` option is used.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -19,7 +19,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 ### `"lower"`
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -49,7 +49,7 @@ a {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -67,7 +67,7 @@ a {
 
 ### `"upper"`
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -97,7 +97,7 @@ a {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -123,11 +123,11 @@ For example, with `"lower"`.
 
 Given:
 
-```
+```json
 ["some-function", "/^get.*$/"]
 ```
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -157,7 +157,7 @@ a {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

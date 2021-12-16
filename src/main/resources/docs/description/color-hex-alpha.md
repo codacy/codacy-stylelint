@@ -1,27 +1,51 @@
-# color-hex-length
+# color-hex-alpha
 
-Specify short or long notation for hex colors.
+Require or disallow alpha channel for hex colors.
 
 <!-- prettier-ignore -->
 ```css
-a { color: #fff }
-/**        ↑
- * This hex color */
+a { color: #fffa }
+/**            ↑
+ * This alpha channel */
 ```
-
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
-`string`: `"short"|"long"`
+`string`: `"always"|"never"`
 
-### `"short"`
+### `"always"`
 
 The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
+a { color: #fff; }
+```
+
+<!-- prettier-ignore -->
+```css
 a { color: #ffffff; }
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: #fffa; }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: #ffffffaa; }
+```
+
+### `"never"`
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: #fffa; }
 ```
 
 <!-- prettier-ignore -->
@@ -38,36 +62,5 @@ a { color: #fff; }
 
 <!-- prettier-ignore -->
 ```css
-a { color: #fffa; }
-```
-
-<!-- prettier-ignore -->
-```css
-a { color: #a4a4a4; }
-```
-
-### `"long"`
-
-The following patterns are considered problems:
-
-<!-- prettier-ignore -->
-```css
-a { color: #fff; }
-```
-
-<!-- prettier-ignore -->
-```css
-a { color: #fffa; }
-```
-
-The following patterns are _not_ considered problems:
-
-<!-- prettier-ignore -->
-```css
 a { color: #ffffff; }
-```
-
-<!-- prettier-ignore -->
-```css
-a { color: #ffffffaa; }
 ```

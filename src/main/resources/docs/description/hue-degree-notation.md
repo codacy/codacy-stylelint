@@ -11,7 +11,7 @@ Specify number or angle notation for degree hues.
 
 Because hues are so often given in degrees, a hue can also be given as a number, which is interpreted as a number of degrees.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -21,7 +21,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 Degree hues _must always_ use angle notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -33,7 +33,7 @@ a { color: hsl(198 28% 50%) }
 a { color: lch(56.29% 19.86 10 / 15%) }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -49,7 +49,7 @@ a { color: lch(56.29% 19.86 10deg / 15%) }
 
 Degree hues _must always_ use the number notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -61,7 +61,7 @@ a { color: hsl(198deg 28% 50%) }
 a { color: lch(56.29% 19.86 10deg / 15%) }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

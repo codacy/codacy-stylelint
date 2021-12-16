@@ -9,7 +9,7 @@ Require a single space or disallow whitespace on the inside of the brackets with
  * The space inside these two brackets */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -19,7 +19,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 There _must always_ be a single space inside the brackets.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -51,7 +51,7 @@ The following patterns are considered violations:
 [target=_blank ] {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -67,7 +67,7 @@ The following patterns are _not_ considered violations:
 
 There _must never_ be whitespace on the inside the brackets.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -99,7 +99,7 @@ The following patterns are considered violations:
 [ target=_blank ] {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

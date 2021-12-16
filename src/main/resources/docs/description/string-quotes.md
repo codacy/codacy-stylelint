@@ -25,7 +25,7 @@ Single quotes in a charset @-rule are ignored as using single quotes in this con
 /* fine regardless of configuration */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 
@@ -35,7 +35,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 Strings _must always_ be wrapped with single quotes.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -47,7 +47,7 @@ a { content: "x"; }
 a[id="foo"] {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -68,7 +68,7 @@ a { content: "x'y'z"; }
 
 Strings _must always_ be wrapped with double quotes.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -80,7 +80,7 @@ a { content: 'x'; }
 a[id='foo'] {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -105,7 +105,7 @@ Allows strings to use single-quotes or double-quotes so long as the string conta
 
 For example, with `"single", { "avoidEscape" : false }`.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -117,7 +117,7 @@ a { content: "x'y'z"; }
 a[id="foo'bar'baz"] {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

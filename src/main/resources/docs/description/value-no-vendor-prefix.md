@@ -9,15 +9,15 @@ a { display: -webkit-flex; }
  *  These prefixes */
 ```
 
-This rule will only complain for prefixed _standard_ values, and not for prefixed _proprietary_ or _unknown_ ones.
+This rule ignores non-standard vendor-prefixed values that aren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
 ### `true`
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -34,7 +34,7 @@ a { max-width: -moz-max-content; }
 a { background: -webkit-linear-gradient(bottom, #000, #fff); }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -57,11 +57,11 @@ a { background: linear-gradient(bottom, #000, #fff); }
 
 Given:
 
-```
+```json
 ["grab", "max-content"]
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

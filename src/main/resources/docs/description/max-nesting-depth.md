@@ -45,7 +45,7 @@ a {
 }
 ```
 
-This rule integrates into stylelint's core the functionality of the (now deprecated) plugin [`stylelint-statement-max-nesting-depth`](https://github.com/davidtheclark/stylelint-statement-max-nesting-depth).
+This rule integrates into Stylelint's core the functionality of the (now deprecated) plugin [`stylelint-statement-max-nesting-depth`](https://github.com/davidtheclark/stylelint-statement-max-nesting-depth).
 
 ## Options
 
@@ -53,7 +53,7 @@ This rule integrates into stylelint's core the functionality of the (now depreca
 
 For example, with `2`:
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -77,7 +77,7 @@ a {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -109,7 +109,7 @@ Ignore at-rules that only wrap other rules, and do not themselves have declarati
 
 For example, with `1`:
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 As the at-rules have a declarations blocks.
 
@@ -131,7 +131,7 @@ a {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 As all of the following `.foo` rules would have a nesting depth of just 1.
 
@@ -166,12 +166,12 @@ Ignore rules where the first selector in each selector list item is a pseudo-cla
 
 For example, with `1`:
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     .c { /* 2 */
       top: 0;
     }
@@ -181,9 +181,9 @@ The following patterns are considered violations:
 
 <!-- prettier-ignore -->
 ```css
-.a {
+a {
   &:hover { /* ignored */
-    .b { /* 1 */
+    b { /* 1 */
       .c { /* 2 */
         top: 0;
       }
@@ -194,8 +194,8 @@ The following patterns are considered violations:
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     &::selection { /* 2 */
       color: #64FFDA;
     }
@@ -205,8 +205,8 @@ The following patterns are considered violations:
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     &:hover, .c { /* 2 */
       top: 0;
     }
@@ -214,14 +214,14 @@ The following patterns are considered violations:
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
-As all of the following pseudoclasses rules would have a nesting depth of just 1.
+As all of the following pseudo-classes rules would have a nesting depth of just 1.
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     &:hover { /* ignored */
       top: 0;
     }
@@ -231,8 +231,8 @@ As all of the following pseudoclasses rules would have a nesting depth of just 1
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     &:nest {
       &:nest-lvl2 {  /* ignored */
         top: 0;
@@ -244,9 +244,9 @@ As all of the following pseudoclasses rules would have a nesting depth of just 1
 
 <!-- prettier-ignore -->
 ```css
-.a {
+a {
   &:hover {  /* ignored */
-    .b { /* 1 */
+    b { /* 1 */
       top: 0;
     }
   }
@@ -255,11 +255,11 @@ As all of the following pseudoclasses rules would have a nesting depth of just 1
 
 <!-- prettier-ignore -->
 ```css
-.a {
+a {
   &:nest {  /* ignored */
     &:nest-lvl2 {  /* ignored */
       top: 0;
-      .b { /* 1 */
+      b { /* 1 */
         bottom: 0;
       }
     }
@@ -269,8 +269,8 @@ As all of the following pseudoclasses rules would have a nesting depth of just 1
 
 <!-- prettier-ignore -->
 ```css
-.a {
-  .b { /* 1 */
+a {
+  b { /* 1 */
     &:hover, &:focus {  /* ignored */
       top: 0;
     }
@@ -284,11 +284,11 @@ Ignore the specified at-rules.
 
 For example, with `1` and given:
 
-```
-["/^my-/", "media"]
+```json
+["/^--my-/", "media"]
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -315,7 +315,7 @@ a {
 <!-- prettier-ignore -->
 ```css
 a {
-  @my-at-rule print {  /* 1 */
+  @--my-at-rule print {  /* 1 */
     b {                /* 2 */
       c { top: 0; }    /* 3 */
     }
@@ -326,7 +326,7 @@ a {
 <!-- prettier-ignore -->
 ```css
 a {
-  @my-other-at-rule print {  /* 1 */
+  @--my-other-at-rule print {  /* 1 */
     b {                      /* 2 */
       c { top: 0; }          /* 3 */
     }
@@ -334,7 +334,7 @@ a {
 }
 ```
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -348,8 +348,66 @@ a {
 <!-- prettier-ignore -->
 ```css
 a {
-  @not-my-at-rule print {   /* 1 */
+  @--not-my-at-rule print {   /* 1 */
     b { top: 0; }       /* 2 */
+  }
+}
+```
+
+### `ignorePseudoClasses: ["/regex/", /regex/, "string"]`
+
+Ignore the specified pseudo-classes.
+
+For example, with `1` and given:
+
+```json
+["hover", "^focus-"]
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  &:hover {   /* ignored */
+    b {      /* 1 */
+      top: 0;
+    }
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  &:hover, &:active { /* ignored */
+    b {              /* 1 */
+      top: 0;
+    }
+  }
+}
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  &:visited { /* 1 */
+    b {      /* 2 */
+      top: 0;
+    }
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  &:hover, &:visited { /* 1 */
+    b {               /* 2 */
+      top: 0;
+    }
   }
 }
 ```

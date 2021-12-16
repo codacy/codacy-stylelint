@@ -15,7 +15,7 @@ This rule ignores variables (`$sass`, `@less`, `--custom-property`).
 
 ### `true`
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -27,7 +27,7 @@ a { color: pink; color: orange; }
 a { color: pink; background: orange; color: orange }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -47,7 +47,7 @@ Ignore consecutive duplicated properties.
 
 They can prove to be useful fallbacks for older browsers.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -58,7 +58,7 @@ p {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -75,7 +75,7 @@ Ignore consecutive duplicated properties with different values.
 
 Including duplicate properties (fallbacks) is useful to deal with older browsers support for CSS properties. E.g. using `px` units when `rem` isn't available.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -97,7 +97,7 @@ p {
 }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -108,17 +108,54 @@ p {
 }
 ```
 
+### `ignore: ["consecutive-duplicates-with-same-prefixless-values"]`
+
+Ignore consecutive duplicated properties with identical values, when ignoring their prefix.
+
+This option is useful to deal with draft CSS values while still being future proof. E.g. using `fit-content` and `-moz-fit-content`.
+
+The following patterns are considered violations:
+
+<!-- prettier-ignore -->
+```css
+/* nonconsecutive duplicates */
+p {
+  width: fit-content;
+  height: 32px;
+  width: -moz-fit-content;
+}
+```
+
+<!-- prettier-ignore -->
+```css
+/* properties with different prefixless values */
+p {
+  width: -moz-fit-content;
+  width: 100%;
+}
+```
+
+The following patterns are _not_ considered violations:
+
+<!-- prettier-ignore -->
+```css
+p {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+```
+
 ### `ignoreProperties: ["/regex/", "non-regex"]`
 
 Ignore duplicates of specific properties.
 
 Given:
 
-```
+```json
 ["color", "/background-/"]
 ```
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -130,7 +167,7 @@ a { color: pink; background: orange; background: white; }
 a { background: orange; color: pink; background: white; }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

@@ -13,7 +13,7 @@ Modern color-functions use a comma-free syntax because functions in CSS are used
 
 For legacy reasons, `rgb()` and `hsl()` also supports an alternate syntax that separates all of its arguments with commas. Also for legacy reasons, the `rgba()` and `hsla()` functions exist using the same comma-based syntax.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix some of the problems reported by this rule when the primary option is `"modern"`.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix some of the problems reported by this rule when the primary option is `"modern"`.
 
 ## Options
 
@@ -23,7 +23,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 Applicable color-functions _must always_ use modern notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -45,7 +45,7 @@ a { color: hsla(270, 60%, 50%, 15%) }
 a { color: hsl(.75turn, 60%, 70%) }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -71,7 +71,7 @@ a { color: hsl(.75turn 60% 70%) }
 
 Applicable color-functions _must always_ use the legacy notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -93,7 +93,7 @@ a { color: hsl(270 60% 50% / 15%) }
 a { color: hsl(.75turn 60% 70%) }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

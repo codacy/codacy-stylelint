@@ -41,13 +41,6 @@
     "description" : "font-family-no-missing-generic-family-keyword"
   } ]
 }, {
-  "patternId" : "at-rule-blacklist",
-  "title" : "**_Deprecated: Instead use the `at-rule-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "at-rule-blacklist",
-    "description" : "at-rule-blacklist"
-  } ]
-}, {
   "patternId" : "no-extra-semicolons",
   "title" : "Disallow extra semicolons.",
   "parameters" : [ {
@@ -111,11 +104,11 @@
     "description" : "declaration-bang-space-after"
   } ]
 }, {
-  "patternId" : "function-blacklist",
-  "title" : "**_Deprecated: Instead use the `function-disallowed-list` rule._**",
+  "patternId" : "custom-property-no-missing-var-function",
+  "title" : "Disallow missing `var` function for custom properties.",
   "parameters" : [ {
-    "name" : "function-blacklist",
-    "description" : "function-blacklist"
+    "name" : "custom-property-no-missing-var-function",
+    "description" : "custom-property-no-missing-var-function"
   } ]
 }, {
   "patternId" : "selector-no-qualifying-type",
@@ -181,20 +174,6 @@
     "description" : "selector-type-no-unknown"
   } ]
 }, {
-  "patternId" : "at-rule-property-requirelist",
-  "title" : "**_Deprecated: Instead use the `at-rule-property-required-list` rule._**",
-  "parameters" : [ {
-    "name" : "at-rule-property-requirelist",
-    "description" : "at-rule-property-requirelist"
-  } ]
-}, {
-  "patternId" : "declaration-property-unit-blacklist",
-  "title" : "**_Deprecated: Instead use the `declaration-property-unit-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "declaration-property-unit-blacklist",
-    "description" : "declaration-property-unit-blacklist"
-  } ]
-}, {
   "patternId" : "selector-list-comma-newline-before",
   "title" : "Require a newline or disallow whitespace before the commas of selector lists.",
   "parameters" : [ {
@@ -221,13 +200,6 @@
   "parameters" : [ {
     "name" : "number-max-precision",
     "description" : "number-max-precision"
-  } ]
-}, {
-  "patternId" : "media-feature-name-whitelist",
-  "title" : "**_Deprecated: Instead use the `media-feature-name-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "media-feature-name-whitelist",
-    "description" : "media-feature-name-whitelist"
   } ]
 }, {
   "patternId" : "no-eol-whitespace",
@@ -270,13 +242,6 @@
   "parameters" : [ {
     "name" : "function-name-case",
     "description" : "function-name-case"
-  } ]
-}, {
-  "patternId" : "function-calc-no-invalid",
-  "title" : "Disallow an invalid expression within `calc` functions.",
-  "parameters" : [ {
-    "name" : "function-calc-no-invalid",
-    "description" : "function-calc-no-invalid"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-disallowed-list",
@@ -391,13 +356,6 @@
     "description" : "selector-pseudo-element-allowed-list"
   } ]
 }, {
-  "patternId" : "unit-whitelist",
-  "title" : "**_Deprecated: Instead use the `unit-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "unit-whitelist",
-    "description" : "unit-whitelist"
-  } ]
-}, {
   "patternId" : "declaration-bang-space-before",
   "title" : "Require a single space or disallow whitespace before the bang of declarations.",
   "parameters" : [ {
@@ -417,6 +375,13 @@
   "parameters" : [ {
     "name" : "color-named",
     "description" : "color-named"
+  } ]
+}, {
+  "patternId" : "rule-selector-property-disallowed-list",
+  "title" : "Specify a list of disallowed properties for selectors within rules.",
+  "parameters" : [ {
+    "name" : "rule-selector-property-disallowed-list",
+    "description" : "rule-selector-property-disallowed-list"
   } ]
 }, {
   "patternId" : "function-url-no-scheme-relative",
@@ -445,13 +410,6 @@
   "parameters" : [ {
     "name" : "declaration-block-semicolon-newline-before",
     "description" : "declaration-block-semicolon-newline-before"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-blacklist",
-  "title" : "**_Deprecated: Instead use the `selector-pseudo-class-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-blacklist",
-    "description" : "selector-pseudo-class-blacklist"
   } ]
 }, {
   "patternId" : "at-rule-name-case",
@@ -587,13 +545,6 @@
     "description" : "selector-attribute-operator-space-after"
   } ]
 }, {
-  "patternId" : "selector-attribute-operator-blacklist",
-  "title" : "**_Deprecated: Instead use the `selector-attribute-operator-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-blacklist",
-    "description" : "selector-attribute-operator-blacklist"
-  } ]
-}, {
   "patternId" : "unit-case",
   "title" : "Specify lowercase or uppercase for units.",
   "parameters" : [ {
@@ -641,13 +592,6 @@
   "parameters" : [ {
     "name" : "selector-pseudo-class-allowed-list",
     "description" : "selector-pseudo-class-allowed-list"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-blacklist",
-  "title" : "**_Deprecated: Instead use the `declaration-property-value-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "declaration-property-value-blacklist",
-    "description" : "declaration-property-value-blacklist"
   } ]
 }, {
   "patternId" : "unicode-bom",
@@ -706,13 +650,6 @@
     "description" : "no-unknown-animations"
   } ]
 }, {
-  "patternId" : "declaration-property-unit-whitelist",
-  "title" : "**_Deprecated: Instead use the `declaration-property-unit-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "declaration-property-unit-whitelist",
-    "description" : "declaration-property-unit-whitelist"
-  } ]
-}, {
   "patternId" : "media-query-list-comma-newline-before",
   "title" : "Require a newline or disallow whitespace before the commas of media query lists.",
   "parameters" : [ {
@@ -725,13 +662,6 @@
   "parameters" : [ {
     "name" : "at-rule-no-vendor-prefix",
     "description" : "at-rule-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-blacklist",
-  "title" : "**_Deprecated: Instead use the `selector-pseudo-element-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-blacklist",
-    "description" : "selector-pseudo-element-blacklist"
   } ]
 }, {
   "patternId" : "function-calc-no-unspaced-operator",
@@ -804,13 +734,6 @@
     "description" : "function-whitespace-after"
   } ]
 }, {
-  "patternId" : "function-url-scheme-blacklist",
-  "title" : "**_Deprecated: Instead use the `function-url-scheme-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "function-url-scheme-blacklist",
-    "description" : "function-url-scheme-blacklist"
-  } ]
-}, {
   "patternId" : "function-comma-newline-before",
   "title" : "Require a newline or disallow whitespace before the commas of functions.",
   "parameters" : [ {
@@ -839,13 +762,6 @@
     "description" : "no-invalid-double-slash-comments"
   } ]
 }, {
-  "patternId" : "selector-pseudo-class-whitelist",
-  "title" : "**_Deprecated: Instead use the `selector-pseudo-class-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-whitelist",
-    "description" : "selector-pseudo-class-whitelist"
-  } ]
-}, {
   "patternId" : "declaration-colon-space-before",
   "title" : "Require a single space or disallow whitespace before the colon of declarations.",
   "parameters" : [ {
@@ -860,13 +776,6 @@
     "description" : "unit-disallowed-list"
   } ]
 }, {
-  "patternId" : "selector-attribute-operator-whitelist",
-  "title" : "**_Deprecated: Instead use the `selector-attribute-operator-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-whitelist",
-    "description" : "selector-attribute-operator-whitelist"
-  } ]
-}, {
   "patternId" : "declaration-property-value-allowed-list",
   "title" : "Specify a list of allowed property and value pairs within declarations.",
   "parameters" : [ {
@@ -879,13 +788,6 @@
   "parameters" : [ {
     "name" : "media-query-list-comma-newline-after",
     "description" : "media-query-list-comma-newline-after"
-  } ]
-}, {
-  "patternId" : "unit-blacklist",
-  "title" : "**_Deprecated: Instead use the `unit-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "unit-blacklist",
-    "description" : "unit-blacklist"
   } ]
 }, {
   "patternId" : "selector-max-pseudo-class",
@@ -1077,13 +979,6 @@
     "description" : "comment-pattern"
   } ]
 }, {
-  "patternId" : "at-rule-whitelist",
-  "title" : "**_Deprecated: Instead use the `at-rule-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "at-rule-whitelist",
-    "description" : "at-rule-whitelist"
-  } ]
-}, {
   "patternId" : "no-descending-specificity",
   "title" : "Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.",
   "parameters" : [ {
@@ -1126,32 +1021,11 @@
     "description" : "block-opening-brace-newline-before"
   } ]
 }, {
-  "patternId" : "function-url-scheme-whitelist",
-  "title" : "**_Deprecated: Instead use the `function-url-scheme-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "function-url-scheme-whitelist",
-    "description" : "function-url-scheme-whitelist"
-  } ]
-}, {
-  "patternId" : "media-feature-name-value-whitelist",
-  "title" : "**_Deprecated: Instead use the `media-feature-name-value-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "media-feature-name-value-whitelist",
-    "description" : "media-feature-name-value-whitelist"
-  } ]
-}, {
   "patternId" : "block-opening-brace-space-after",
   "title" : "Require a single space or disallow whitespace after the opening brace of blocks.",
   "parameters" : [ {
     "name" : "block-opening-brace-space-after",
     "description" : "block-opening-brace-space-after"
-  } ]
-}, {
-  "patternId" : "property-blacklist",
-  "title" : "**_Deprecated: Instead use the `property-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "property-blacklist",
-    "description" : "property-blacklist"
   } ]
 }, {
   "patternId" : "value-list-comma-space-before",
@@ -1189,13 +1063,6 @@
     "description" : "selector-max-attribute"
   } ]
 }, {
-  "patternId" : "selector-pseudo-element-whitelist",
-  "title" : "**_Deprecated: Instead use the `selector-pseudo-element-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-whitelist",
-    "description" : "selector-pseudo-element-whitelist"
-  } ]
-}, {
   "patternId" : "selector-list-comma-newline-after",
   "title" : "Require a newline or disallow whitespace after the commas of selector lists.",
   "parameters" : [ {
@@ -1203,25 +1070,11 @@
     "description" : "selector-list-comma-newline-after"
   } ]
 }, {
-  "patternId" : "media-feature-name-blacklist",
-  "title" : "**_Deprecated: Instead use the `media-feature-name-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "media-feature-name-blacklist",
-    "description" : "media-feature-name-blacklist"
-  } ]
-}, {
   "patternId" : "declaration-block-trailing-semicolon",
   "title" : "Require or disallow a trailing semicolon within declaration blocks.",
   "parameters" : [ {
     "name" : "declaration-block-trailing-semicolon",
     "description" : "declaration-block-trailing-semicolon"
-  } ]
-}, {
-  "patternId" : "selector-combinator-whitelist",
-  "title" : "**_Deprecated: Instead use the `selector-combinator-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-combinator-whitelist",
-    "description" : "selector-combinator-whitelist"
   } ]
 }, {
   "patternId" : "property-no-vendor-prefix",
@@ -1250,13 +1103,6 @@
   "parameters" : [ {
     "name" : "string-no-newline",
     "description" : "string-no-newline"
-  } ]
-}, {
-  "patternId" : "selector-combinator-blacklist",
-  "title" : "**_Deprecated: Instead use the `selector-combinator-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "selector-combinator-blacklist",
-    "description" : "selector-combinator-blacklist"
   } ]
 }, {
   "patternId" : "function-url-quotes",
@@ -1371,20 +1217,6 @@
     "description" : "at-rule-disallowed-list"
   } ]
 }, {
-  "patternId" : "property-whitelist",
-  "title" : "**_Deprecated: Instead use the `property-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "property-whitelist",
-    "description" : "property-whitelist"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-whitelist",
-  "title" : "**_Deprecated: Instead use the `declaration-property-value-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "declaration-property-value-whitelist",
-    "description" : "declaration-property-value-whitelist"
-  } ]
-}, {
   "patternId" : "media-feature-range-operator-space-after",
   "title" : "Require a single space or disallow whitespace after the range operator in media features.",
   "parameters" : [ {
@@ -1392,25 +1224,11 @@
     "description" : "media-feature-range-operator-space-after"
   } ]
 }, {
-  "patternId" : "comment-word-blacklist",
-  "title" : "**_Deprecated: Instead use the `comment-word-disallowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "comment-word-blacklist",
-    "description" : "comment-word-blacklist"
-  } ]
-}, {
   "patternId" : "declaration-empty-line-before",
   "title" : "Require or disallow an empty line before declarations.",
   "parameters" : [ {
     "name" : "declaration-empty-line-before",
     "description" : "declaration-empty-line-before"
-  } ]
-}, {
-  "patternId" : "function-whitelist",
-  "title" : "**_Deprecated: Instead use the `function-allowed-list` rule._**",
-  "parameters" : [ {
-    "name" : "function-whitelist",
-    "description" : "function-whitelist"
   } ]
 }, {
   "patternId" : "selector-max-empty-lines",
@@ -1474,6 +1292,13 @@
   "parameters" : [ {
     "name" : "declaration-no-important",
     "description" : "declaration-no-important"
+  } ]
+}, {
+  "patternId" : "color-hex-alpha",
+  "title" : "Require or disallow alpha channel for hex colors.",
+  "parameters" : [ {
+    "name" : "color-hex-alpha",
+    "description" : "color-hex-alpha"
   } ]
 }, {
   "patternId" : "selector-max-universal",

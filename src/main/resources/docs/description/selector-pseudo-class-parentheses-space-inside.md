@@ -9,7 +9,7 @@ input:not( [type="submit"] ) {}
  * The space inside these two parentheses */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
 
 ## Options
 
@@ -19,7 +19,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 There _must always_ be a single space inside the parentheses.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -31,7 +31,7 @@ input:not([type="submit"]) {}
 input:not([type="submit"] ) {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -42,7 +42,7 @@ input:not( [type="submit"] ) {}
 
 There _must never_ be whitespace on the inside the parentheses.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -54,7 +54,7 @@ input:not( [type="submit"] ) {}
 input:not( [type="submit"]) {}
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css

@@ -13,7 +13,7 @@ The `::` notation was chosen for _pseudo-elements_ to establish a discrimination
 
 However, for compatibility with existing style sheets, user agents also accept the previous one-colon notation for _pseudo-elements_ introduced in CSS levels 1 and 2 (namely, `:first-line`, `:first-letter`, `:before` and `:after`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docsuser-guideusageoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -23,7 +23,7 @@ The [`fix` option](https://github.com/stylelint/stylelint/tree/13.13.1/docs/user
 
 Applicable pseudo-elements _must always_ use the single colon notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -45,7 +45,7 @@ a::first-letter { color: pink; }
 a::first-line { color: pink; }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -81,7 +81,7 @@ li::marker { font-variant-numeric: tabular-nums; }
 
 Applicable pseudo-elements _must always_ use the double colon notation.
 
-The following patterns are considered violations:
+The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
@@ -103,7 +103,7 @@ a:first-letter { color: pink; }
 a:first-line { color: pink; }
 ```
 
-The following patterns are _not_ considered violations:
+The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
