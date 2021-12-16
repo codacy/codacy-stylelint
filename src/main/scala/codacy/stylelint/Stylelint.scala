@@ -52,6 +52,12 @@ object Stylelint extends Tool {
   }
 
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
+    val scssOverride = JsObject(
+      Seq(("files", JsArray(Seq(JsString("**/*.scss")))), ("customSyntax", JsString("postcss-scss"))))
+    val lessOverride = JsObject(
+      Seq(("files", JsArray(Seq(JsString("**/*.less")))), ("customSyntax", JsString("postcss-less"))))
+    val overrides = ("overrides", JsArray(Seq(scssOverride, lessOverride)))
+
     configuration.map { config =>
       val patterns = config.map { pattern =>
         val parameter = pattern.parameters.headOption.map { param =>
@@ -63,14 +69,15 @@ object Stylelint extends Tool {
       }
       File
         .newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
+        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)), overrides)))))
         .path
     }.orElse {
       checkForExistingConfigFile(source)
     }.getOrElse {
       File
         .newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("extends", JsString("stylelint-config-standard")))))))
+        .write(
+          Json.prettyPrint(Json.toJson(JsObject(Seq(("extends", JsString("stylelint-config-standard")), overrides)))))
         .path
     }
   }
