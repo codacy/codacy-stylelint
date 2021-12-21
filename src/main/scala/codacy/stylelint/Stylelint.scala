@@ -37,8 +37,6 @@ object Stylelint extends Tool {
         commandResult match {
           case Failure(err) =>
             Failure(new Exception(s"Could not run stylelint: ${err.getCause}"))
-          case Success(result) if result.stderr.nonEmpty =>
-            Failure(new Exception(s"Stylelint failed with: ${result.stderr.headOption.getOrElse("")}"))
           case _ =>
             val parsedResults = parseJson(commandResult)
 
@@ -77,13 +75,13 @@ object Stylelint extends Tool {
 
   def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
-    val basedir = sys.env.getOrElse("STYLELINT_CONFIG_BASEDIR", "/usr/local/lib/node_modules")
-    val configurationBaseDirectory = List("--config-basedir", basedir)
+    val node_modules = "/workdir/node_modules"
+    val configurationBaseDir = List("--config-basedir", node_modules)
     val configurationFile = List("--config", configFilePath.toString)
-    val configuration = configurationFile ++ configurationBaseDirectory
+    val configuration = configurationFile ++ configurationBaseDir
     val formatter = List("--formatter", "json")
 
-    val command = List("stylelint") ++ fileArgument ++ configuration ++ formatter
+    val command = List(s"$node_modules/stylelint/bin/stylelint.js") ++ fileArgument ++ configuration ++ formatter
 
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }

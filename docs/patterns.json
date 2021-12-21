@@ -1,0 +1,1892 @@
+{
+  "name" : "stylelint",
+  "version" : "14.1.0",
+  "patterns" : [ {
+    "patternId" : "alpha-value-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "alpha-value-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-empty-line-before",
+      "default" : [ "always", {
+        "except" : [ "blockless-after-same-name-blockless", "first-nested" ],
+        "ignore" : [ "after-comment" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "at-rule-name-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-name-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "at-rule-name-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-name-newline-after",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-name-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-name-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "at-rule-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "at-rule-no-vendor-prefix",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-no-vendor-prefix",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-property-required-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-property-required-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "at-rule-semicolon-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-semicolon-newline-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "at-rule-semicolon-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "at-rule-semicolon-space-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "block-closing-brace-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-closing-brace-empty-line-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-closing-brace-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-closing-brace-newline-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-closing-brace-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-closing-brace-newline-before",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-closing-brace-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-closing-brace-space-after",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "block-closing-brace-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-closing-brace-space-before",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-no-empty",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-no-empty",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-opening-brace-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-opening-brace-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-opening-brace-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-opening-brace-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "block-opening-brace-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-opening-brace-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "block-opening-brace-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "block-opening-brace-space-before",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "color-function-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-function-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "color-hex-alpha",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-hex-alpha",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "color-hex-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-hex-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "color-hex-length",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-hex-length",
+      "default" : "short"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "color-named",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-named",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "color-no-hex",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-no-hex",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "color-no-invalid-hex",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "color-no-invalid-hex",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "comment-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "comment-empty-line-before",
+      "default" : [ "always", {
+        "except" : [ "first-nested" ],
+        "ignore" : [ "stylelint-commands" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "comment-no-empty",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "comment-no-empty",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "comment-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "comment-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "comment-whitespace-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "comment-whitespace-inside",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "comment-word-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "comment-word-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "custom-media-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "custom-media-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "custom-property-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "custom-property-empty-line-before",
+      "default" : [ "always", {
+        "except" : [ "after-custom-property", "first-nested" ],
+        "ignore" : [ "after-comment", "inside-single-line-block" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "custom-property-no-missing-var-function",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "custom-property-no-missing-var-function",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "custom-property-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "custom-property-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-bang-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-bang-space-after",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-bang-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-bang-space-before",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-no-duplicate-custom-properties",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-no-duplicate-custom-properties",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-block-no-duplicate-properties",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-no-duplicate-properties",
+      "default" : [ true, {
+        "ignore" : [ "consecutive-duplicates-with-different-values" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-no-redundant-longhand-properties",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-no-redundant-longhand-properties",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-block-no-shorthand-property-overrides",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-no-shorthand-property-overrides",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-semicolon-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-semicolon-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-semicolon-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-semicolon-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-block-semicolon-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-semicolon-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-semicolon-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-semicolon-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-single-line-max-declarations",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-single-line-max-declarations",
+      "default" : 1
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-block-trailing-semicolon",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-block-trailing-semicolon",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-colon-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-colon-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-colon-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-colon-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-colon-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-colon-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-empty-line-before",
+      "default" : [ "always", {
+        "except" : [ "after-declaration", "first-nested" ],
+        "ignore" : [ "after-comment", "inside-single-line-block" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "declaration-no-important",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-no-important",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-property-unit-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-unit-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-property-unit-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-unit-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-property-value-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-value-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "declaration-property-value-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-value-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "font-family-name-quotes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "font-family-name-quotes",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "font-family-no-duplicate-names",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "font-family-no-duplicate-names",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "font-family-no-missing-generic-family-keyword",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "font-family-no-missing-generic-family-keyword",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "font-weight-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "font-weight-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-calc-no-unspaced-operator",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-calc-no-unspaced-operator",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-comma-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-comma-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-comma-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-comma-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-comma-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-comma-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-comma-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-comma-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-linear-gradient-no-nonstandard-direction",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-linear-gradient-no-nonstandard-direction",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-max-empty-lines",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-max-empty-lines",
+      "default" : 0
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-name-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-name-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-parentheses-newline-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-parentheses-newline-inside",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-parentheses-space-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-parentheses-space-inside",
+      "default" : "never-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "function-url-no-scheme-relative",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-url-no-scheme-relative",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-url-quotes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-url-quotes",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-url-scheme-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-url-scheme-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-url-scheme-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-url-scheme-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "function-whitespace-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-whitespace-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "hue-degree-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "hue-degree-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "indentation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "indentation",
+      "default" : 2
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "keyframe-declaration-no-important",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "keyframe-declaration-no-important",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "keyframes-name-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "keyframes-name-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "length-zero-no-unit",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "length-zero-no-unit",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "linebreaks",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "linebreaks",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "max-empty-lines",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "max-empty-lines",
+      "default" : 1
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "max-line-length",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "max-line-length",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "max-nesting-depth",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "max-nesting-depth",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-colon-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-colon-space-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-colon-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-colon-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-name-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-name-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-name-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-name-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-name-no-vendor-prefix",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-no-vendor-prefix",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-name-value-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-value-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-parentheses-space-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-parentheses-space-inside",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-range-operator-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-range-operator-space-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-feature-range-operator-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-range-operator-space-before",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-query-list-comma-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-query-list-comma-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-query-list-comma-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-query-list-comma-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-query-list-comma-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-query-list-comma-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "media-query-list-comma-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-query-list-comma-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "named-grid-areas-no-invalid",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "named-grid-areas-no-invalid",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "no-descending-specificity",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-descending-specificity",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-duplicate-at-import-rules",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-duplicate-at-import-rules",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-duplicate-selectors",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-duplicate-selectors",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-empty-first-line",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-empty-first-line",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "no-empty-source",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-empty-source",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-eol-whitespace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-eol-whitespace",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-extra-semicolons",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-extra-semicolons",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-invalid-double-slash-comments",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-invalid-double-slash-comments",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-invalid-position-at-import-rule",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-invalid-position-at-import-rule",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "no-irregular-whitespace",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-irregular-whitespace",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "no-missing-end-of-source-newline",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-missing-end-of-source-newline",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "no-unknown-animations",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-unknown-animations",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "number-leading-zero",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "number-leading-zero",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "number-max-precision",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "number-max-precision",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "number-no-trailing-zeros",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "number-no-trailing-zeros",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "property-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "property-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "property-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "property-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "property-no-vendor-prefix",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-no-vendor-prefix",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "rule-empty-line-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "rule-empty-line-before",
+      "default" : [ "always-multi-line", {
+        "except" : [ "first-nested" ],
+        "ignore" : [ "after-comment" ]
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "rule-selector-property-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "rule-selector-property-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-attribute-brackets-space-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-brackets-space-inside",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-attribute-name-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-name-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-attribute-operator-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-operator-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-attribute-operator-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-operator-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-attribute-operator-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-operator-space-after",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-attribute-operator-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-operator-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-attribute-quotes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-attribute-quotes",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-class-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-class-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-combinator-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-combinator-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-combinator-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-combinator-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-combinator-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-combinator-space-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-combinator-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-combinator-space-before",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-descendant-combinator-no-non-space",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-descendant-combinator-no-non-space",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-id-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-id-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-list-comma-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-list-comma-newline-after",
+      "default" : "always"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-list-comma-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-list-comma-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-list-comma-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-list-comma-space-after",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-list-comma-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-list-comma-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-max-attribute",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-attribute",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-class",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-class",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-combinators",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-combinators",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-compound-selectors",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-compound-selectors",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-empty-lines",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-empty-lines",
+      "default" : 0
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-max-id",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-id",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-pseudo-class",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-pseudo-class",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-specificity",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-specificity",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-type",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-type",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-max-universal",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-max-universal",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-nested-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-nested-pattern",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-no-qualifying-type",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-qualifying-type",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-no-vendor-prefix",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-vendor-prefix",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-pseudo-class-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-class-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-pseudo-class-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-class-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-pseudo-class-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-class-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-pseudo-class-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-class-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-pseudo-class-parentheses-space-inside",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-class-parentheses-space-inside",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-pseudo-element-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-element-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-pseudo-element-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-element-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-pseudo-element-colon-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-element-colon-notation",
+      "default" : "double"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-pseudo-element-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-element-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-pseudo-element-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-pseudo-element-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-type-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-type-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "selector-type-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-type-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "shorthand-property-no-redundant-values",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "shorthand-property-no-redundant-values",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "string-no-newline",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "string-no-newline",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "string-quotes",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "string-quotes",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "time-min-milliseconds",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "time-min-milliseconds",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "unicode-bom",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unicode-bom",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "unit-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "unit-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-case",
+      "default" : "lower"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "unit-disallowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "unit-no-unknown",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-no-unknown",
+      "default" : true
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "value-keyword-case",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-keyword-case",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "value-list-comma-newline-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-list-comma-newline-after",
+      "default" : "always-multi-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "value-list-comma-newline-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-list-comma-newline-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "value-list-comma-space-after",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-list-comma-space-after",
+      "default" : "always-single-line"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "value-list-comma-space-before",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-list-comma-space-before",
+      "default" : "never"
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "value-list-max-empty-lines",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-list-max-empty-lines",
+      "default" : 0
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
+    "patternId" : "value-no-vendor-prefix",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-no-vendor-prefix",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  } ]
+}
