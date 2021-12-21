@@ -1,0 +1,8 @@
+/*#Patterns: block-closing-brace-newline-after: {"block-closing-brace-newline-after" : "always"}*/
+
+a {
+    color: pink;
+    /*#Error: block-closing-brace-newline-after*/
+}  b {
+    color: red;
+}

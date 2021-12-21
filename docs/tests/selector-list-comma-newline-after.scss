@@ -1,0 +1,6 @@
+/*#Patterns: selector-list-comma-newline-after : {"selector-list-comma-newline-after" : "always"}*/
+
+/*#Error: selector-list-comma-newline-after*/
+a, b {
+  color: pink;
+}

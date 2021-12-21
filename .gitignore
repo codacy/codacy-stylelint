@@ -3,7 +3,8 @@
 /project/*-shim.sbt
 /project/project/
 /project/target/
-/target/
+target
+/.bsp
 .idea
 .metals
 .bloop
