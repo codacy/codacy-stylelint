@@ -10,9 +10,9 @@ Require a newline or disallow whitespace before the opening brace of blocks.
  * The newline before this brace */
 ```
 
-Refer to [combining rules](https://github.com/stylelint/stylelint/tree/14.1.0/docs/user-guide/rules/combine.md) for more information on using this rule with [`block-opening-brace-newline-after`](https://github.com/stylelint/stylelint/tree/14.1.0/lib/rules/block-opening-brace-newline-after/README.md) to disallow single-line rules.
+Refer to [combining rules](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/rules/combine.md) for more information on using this rule with [`block-opening-brace-newline-after`](https://github.com/stylelint/stylelint/tree/14.2.0/lib/rules/block-opening-brace-newline-after/README.md) to disallow single-line rules.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

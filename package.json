@@ -31,5 +31,8 @@
     "stylelint-scss": "^4.1.0",
     "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-suitcss": "^5.0.0"
+  },
+  "devDependencies": {
+    "stylelint-config-idiomatic-order": "^8.1.0"
   }
 }
