@@ -45,7 +45,7 @@ The tool is dependabot friendly, so it is automatically updated.
 ## Generate Docs
 
 ```sh
-sbt "runMain codacy.stylelint.DocGenerator"
+sbt "doc-generator/run"
 ```
 
 ## What is Codacy
