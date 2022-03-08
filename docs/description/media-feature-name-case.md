@@ -9,7 +9,7 @@ Specify lowercase or uppercase for media feature names.
  * This media feature name */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

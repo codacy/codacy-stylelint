@@ -15,7 +15,7 @@ The descendant combinator is _not_ checked by this rule.
 
 Also, `+` and `-` signs within `:nth-*()` arguments are not checked (e.g. `a:nth-child(2n+1)`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

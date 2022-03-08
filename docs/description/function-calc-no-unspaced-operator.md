@@ -11,7 +11,7 @@ a { top: calc(1px + 2px); }
 
 Before the operator, there must be a single whitespace or a newline plus indentation. After the operator, there must be a single whitespace or a newline.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.1.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
