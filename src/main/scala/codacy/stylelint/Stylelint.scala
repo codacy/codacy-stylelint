@@ -22,6 +22,14 @@ object Stylelint extends Tool {
     ".stylelintrc.js",
     "stylelint.config.js")
 
+  //from https://stylelint.io/user-guide/usage/cli/#exit-codes
+  private object ExitCodes {
+    val NO_ISSUES = 0
+    val EXECUTION_ERROR = 1
+    val DETECTED_ISSUES = 2
+    val CONFIGURATION_ERROR = 78
+  }
+
   override def apply(
     source: Source.Directory,
     configuration: Option[List[Pattern.Definition]],
@@ -38,7 +46,8 @@ object Stylelint extends Tool {
           case Failure(err) =>
             Failure(new Exception(s"Could not run stylelint: ${err.getCause}"))
           case _ =>
-            val parsedResults = parseJson(commandResult)
+            val filesArgument = files.fold(List("All"))(_.map(_.path).toList)
+            val parsedResults = parseCommandResult(commandResult, filesArgument)
 
             convertToResult(parsedResults)
         }
@@ -89,17 +98,42 @@ object Stylelint extends Tool {
   implicit val warningResultFmt: Format[StylelintPatternResult] = Json.format[StylelintPatternResult]
   implicit val resultFmt: Format[StylelintResult] = Json.format[StylelintResult]
 
-  def parseJson(commandResult: Try[CommandResult]): Try[List[StylelintResult]] = {
-    commandResult.flatMap { result =>
-      val jsonString = result.stdout.mkString("\n")
-      Try(Json.parse(jsonString).as[List[StylelintResult]]).recoverWith {
-        case err =>
-          Failure(new Exception(s"""|Could not parse results json: ${err.getMessage}
-                  |
-                  |Json:
-                  |$jsonString
-              """.stripMargin))
-      }
+  def parseCommandResult(commandResult: Try[CommandResult], targetFiles: List[String]): Try[List[StylelintResult]] = {
+    commandResult.flatMap {
+      case CommandResult(ExitCodes.NO_ISSUES | ExitCodes.DETECTED_ISSUES, stdOut, _) => parseJson(stdOut)
+      case CommandResult(exitCode, stdOut, stdErr) =>
+        val toolErrorMessage =
+          s"""Stylelint exited with code ${printExitCode(exitCode)}
+             |  - targeting files: $targetFiles
+             |  - stderr: $stdErr
+             |  - stdout: $stdOut
+             |""".stripMargin
+        scala.util.Failure(new Exception(toolErrorMessage))
+    }
+  }
+
+  def printExitCode(value: Int) = value match {
+    case ExitCodes.EXECUTION_ERROR =>
+      s"$value - something unknown went wrong when executing the tool"
+    case ExitCodes.CONFIGURATION_ERROR =>
+      s"$value - there was some problem with the configuration file"
+    case _ =>
+      s"$value - unknown error"
+  }
+
+  def parseJson(jsonLines: List[String]): Try[List[StylelintResult]] = {
+    val jsonString = jsonLines.mkString("\n")
+    Try(Json.parse(jsonString).as[List[StylelintResult]]).recoverWith {
+      case err =>
+        val errorString =
+          s"""Could not parse results json:
+            |
+            |Exception: ${err.getMessage}
+            |
+            |Json:
+            |$jsonString
+              """.stripMargin
+        Failure(new Exception(errorString))
     }
   }
 
