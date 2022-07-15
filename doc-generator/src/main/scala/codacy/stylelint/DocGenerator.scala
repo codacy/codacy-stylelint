@@ -30,7 +30,7 @@ object DocGenerator {
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
-    Process(Seq("git", "clone", "git://github.com/stylelint/stylelint.git", tmpDirectory.pathAsString)).!
+    Process(Seq("git", "clone", "https://github.com/stylelint/stylelint.git", tmpDirectory.pathAsString)).!
     Process(Seq("git", "reset", "--hard", version), tmpDirectory.toJava).!
   }
 
