@@ -6,7 +6,7 @@
     "postcss": "^8.4.19",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.6",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.0",
     "stylelint": "^14.2.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-css-modules": "^4.1.0",
