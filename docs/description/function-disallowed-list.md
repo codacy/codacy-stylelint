@@ -9,9 +9,11 @@ a { transform: scale(1); }
  * This function */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string`: `["array", "of", "unprefixed", /functions/ or "regex"]|"function"|"/regex/"`
+`array|string|regex`: `["array", "of", "unprefixed", /functions/, "regex"]|"function"|"/regex/"|/regex/`
 
 If a string is surrounded with `"/"` (e.g. `"/^rgb/"`), it is interpreted as a regular expression.
 

@@ -36,7 +36,13 @@ object DocGenerator {
 
   def getListOfSubDirectories(directoryName: String): List[String] = {
     val directory = File(directoryName)
-    directory.walk(maxDepth = 1).filter(_.isDirectory).filterNot(_.isSamePathAs(directory)).map(_.name).toList
+    directory
+      .walk(maxDepth = 1)
+      .filter(_.isDirectory)
+      .filterNot(_.isSamePathAs(directory))
+      .filterNot(_.name.contains("__tests__"))
+      .map(_.name)
+      .toList
   }
 
   def initializePatternsFile(patterns: List[String], version: String, filePathForDocs: String): File = {

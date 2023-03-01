@@ -9,6 +9,8 @@ Specify a list of disallowed at-rules.
  * At-rules like this */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `array|string`: `["array", "of", "unprefixed", "at-rules"]|"at-rule"`

@@ -9,7 +9,7 @@ Specify lowercase or uppercase for type selectors.
  * This is type selector */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -69,7 +69,7 @@ LI {}
 
 ## Optional secondary options
 
-### `ignoreTypes: ["/regex/", "non-regex"]`
+### `ignoreTypes: ["/regex/", /regex/, "non-regex"]`
 
 Given:
 

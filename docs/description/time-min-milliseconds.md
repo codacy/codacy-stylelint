@@ -1,6 +1,6 @@
 # time-min-milliseconds
 
-Specify the minimum number of milliseconds for time values.
+Limit the minimum number of milliseconds for time values.
 
 <!-- prettier-ignore -->
 ```css
@@ -69,7 +69,7 @@ Ignore time values for an animation or transition delay.
 
 For example, with a minimum of `200` milliseconds.
 
-The following is _not_ considered a problem:
+The following pattern is _not_ considered a problem:
 
 <!-- prettier-ignore -->
 ```css

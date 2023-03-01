@@ -9,7 +9,7 @@ Specify lowercase or uppercase for properties.
  * This property */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -164,5 +164,29 @@ a {
 ```css
 @media screen and (orientation: landscape) {
   WIDTH: 500px;
+}
+```
+
+## Optional secondary options
+
+### `ignoreSelectors: ["/regex/", /regex/, "string"]`
+
+Given:
+
+```json
+[
+  "lower",
+  {
+    "ignoreSelectors": [":export"]
+  }
+]
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+:export {
+  camelCase: value;
 }
 ```

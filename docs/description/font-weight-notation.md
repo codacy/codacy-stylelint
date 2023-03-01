@@ -1,21 +1,25 @@
 # font-weight-notation
 
-Require numeric or named (where possible) `font-weight` values. Also, when named values are expected, require only valid names.
+Require numeric or named (where possible) `font-weight` values.
 
 <!-- prettier-ignore -->
 ```css
-a { font-weight: bold }
+a { font-weight: bold; }
 /**              ↑
- *   This notation */
+ *               This notation */
 
 a { font: italic small-caps 600 16px/3 cursive; }
 /**                         ↑
-*      And this notation, too */
+ *                          And this notation, too */
+
+@font-face { font-weight: normal bold; }
+/**                       ↑
+ *                        Multiple notations are available in @font-face */
 ```
 
-Valid font-weight names are `normal`, `bold`, `bolder`, and `lighter`.
-
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
+
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -37,6 +41,11 @@ a { font-weight: bold; }
 a { font: italic normal 20px sans-serif; }
 ```
 
+<!-- prettier-ignore -->
+```css
+@font-face { font-weight: normal bold; }
+```
+
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
@@ -47,6 +56,11 @@ a { font-weight: 700; }
 <!-- prettier-ignore -->
 ```css
 a { font: italic 400 20px; }
+```
+
+<!-- prettier-ignore -->
+```css
+@font-face { font-weight: 400 700; }
 ```
 
 ### `"named-where-possible"`
