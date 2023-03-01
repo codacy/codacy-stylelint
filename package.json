@@ -19,7 +19,6 @@
     "stylelint-config-standard-scss": "^7.0.1",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-config-suitcss": "^18.0.0",
-    "stylelint-config-twbs-bootstrap": "^7.0.0",
     "stylelint-config-wordpress": "^17.0.0",
     "stylelint-csstree-validator": "^2.1.0",
     "stylelint-declaration-strict-value": "^1.9.2",
