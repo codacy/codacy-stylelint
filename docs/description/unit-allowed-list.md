@@ -9,8 +9,6 @@ a { width: 100px; }
  *  These units */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 `array|string`: `["array", "of", "units"]|"unit"`
@@ -125,7 +123,9 @@ For example, with `["px", "em"]`.
 Given:
 
 ```json
-["/^hsl/", "calc"]
+{
+  "ignoreFunctions": ["/^hsl/", "calc"]
+}
 ```
 
 The following patterns are _not_ considered problems:

@@ -1,7 +1,5 @@
 # media-query-list-comma-space-after
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.2.0/docs/migration-guide/to-15.md).
-
 Require a single space or disallow whitespace after the commas of media query lists.
 
 <!-- prettier-ignore -->
@@ -11,7 +9,7 @@ Require a single space or disallow whitespace after the commas of media query li
  * The space after this comma */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

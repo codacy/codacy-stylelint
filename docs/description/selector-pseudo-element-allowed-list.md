@@ -14,8 +14,6 @@ This rule ignores:
 - CSS2 pseudo-elements i.e. those prefixed with a single colon
 - selectors that use variable interpolation e.g. `::#{$variable} {}`
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 `array|string|regex`: `["array", "of", "unprefixed", /pseudo-elements/, "/regex/"]|"pseudo-element"|"/regex/"|/regex/`

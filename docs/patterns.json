@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "15.2.0",
+  "version" : "14.16.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -636,16 +636,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "declaration-property-value-no-unknown",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-property-value-no-unknown",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "font-family-name-quotes",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1056,16 +1046,6 @@
     "parameters" : [ {
       "name" : "media-feature-name-no-vendor-prefix",
       "default" : true
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-feature-name-unit-allowed-list",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-name-unit-allowed-list",
-      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false

@@ -9,8 +9,6 @@ a { background: url("x.jpg") }
  *             These quotes */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
-
 ## Options
 
 `string`: `"always"|"never"`

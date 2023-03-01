@@ -13,8 +13,6 @@ This rule resolves nested selectors before counting the number of type selectors
 
 The `:not()` pseudo-class is also evaluated separately. The rule processes the argument as if it were an independent selector, and the result does not count toward the total for the entire selector.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 `int`: Maximum type selectors allowed.
@@ -79,7 +77,7 @@ div a .foo:not(span) {}
 
 ## Optional secondary options
 
-### `ignore: ["child", "compounded", "custom-elements", "descendant", "next-sibling"]`
+### `ignore: ["child", "compounded", "descendant", "next-sibling"]`
 
 #### `"child"`
 
@@ -115,19 +113,6 @@ div span a.foo {}
 <!-- prettier-ignore -->
 ```css
 div span a#bar {}
-```
-
-#### `"custom-elements"`
-
-Discount custom elements.
-
-For example, with `2`:
-
-The following pattern is _not_ considered a problem:
-
-<!-- prettier-ignore -->
-```css
-div a foo-bar {}
 ```
 
 #### `"descendant"`

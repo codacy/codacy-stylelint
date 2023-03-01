@@ -9,8 +9,6 @@ Specify a list of allowed media feature name and value pairs.
  *    These features and values */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 `object`: `{ "unprefixed-media-feature-name": ["array", "of", "values", "/regex/", /regex/]|"value"|"/regex/"|/regex/ }`

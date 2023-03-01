@@ -1,7 +1,5 @@
 # block-opening-brace-newline-after
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.2.0/docs/migration-guide/to-15.md).
-
 Require a newline after the opening brace of blocks.
 
 <!-- prettier-ignore -->
@@ -21,7 +19,9 @@ a { /* end-of-line comment */
 }
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+Refer to [combining rules](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/combine.md) for more information on using this rule with [`block-opening-brace-newline-before`](https://github.com/stylelint/stylelint/tree/14.16.1/lib/rules/block-opening-brace-newline-before/README.md) to disallow single-line rules.
+
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

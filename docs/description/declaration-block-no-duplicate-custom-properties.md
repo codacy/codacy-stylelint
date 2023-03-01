@@ -11,8 +11,6 @@ a { --custom-property: pink; --custom-property: orange; }
 
 This rule is case-sensitive.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 ### `true`

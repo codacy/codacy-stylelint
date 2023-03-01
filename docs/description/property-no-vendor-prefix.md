@@ -11,9 +11,7 @@ a { -webkit-transform: scale(1); }
 
 This rule ignores non-standard vendor-prefixed properties that aren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate properties produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate properties produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
 
 ## Options
 
