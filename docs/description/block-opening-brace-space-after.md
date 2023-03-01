@@ -1,5 +1,7 @@
 # block-opening-brace-space-after
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.2.0/docs/migration-guide/to-15.md).
+
 Require a single space or disallow whitespace after the opening brace of blocks.
 
 <!-- prettier-ignore -->
@@ -9,7 +11,7 @@ Require a single space or disallow whitespace after the opening brace of blocks.
  * The space after this brace */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -170,5 +172,22 @@ a { color: pink; }
 <!-- prettier-ignore -->
 ```css
 a {color: pink;
+}
+```
+
+## Optional secondary options
+
+### `ignore: ["at-rules"]`
+
+Ignore the opening brace of at-rules.
+
+For example, with `"always"`:
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+@media print {
+  a { color: pink; }
 }
 ```

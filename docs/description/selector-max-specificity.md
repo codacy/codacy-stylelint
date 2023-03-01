@@ -15,6 +15,8 @@ This rule ignores selectors with variable interpolation (`#{$var}`, `@{var}`, `$
 
 This rule resolves nested selectors before counting the specificity of a selector. Each selector in a [selector list](https://www.w3.org/TR/selectors4/#selector-list) is evaluated separately.
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `string`: Maximum specificity allowed.
@@ -90,7 +92,7 @@ div {}
 
 ## Optional secondary options
 
-### `ignoreSelectors: ["/regex/", /regex/, "string"]`
+### `ignoreSelectors: ["/regex/", /regex/, "non-regex"]`
 
 Given:
 
@@ -98,7 +100,7 @@ Given:
 [
   "0,2,0",
   {
-    "ignoreSelectors": [":global", ":local", "/my-/"]
+    "ignoreSelectors": [":global", ":local", "/^my-/"]
   }
 ]
 ```
@@ -112,12 +114,17 @@ The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo.bar)
+:local(.foo.bar) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo, :global(.bar).baz)
+:local(.foo, :global(.bar).baz) {}
+```
+
+<!-- prettier-ignore -->
+```css
+my-element.foo.bar {}
 ```
 
 The following patterns are considered problems:
@@ -129,10 +136,15 @@ The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo.bar.baz)
+:local(.foo.bar.baz) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo, :global(.bar), .foo.bar.baz)
+:local(.foo, :global(.bar), .foo.bar.baz) {}
+```
+
+<!-- prettier-ignore -->
+```css
+my-element.foo.bar.baz {}
 ```

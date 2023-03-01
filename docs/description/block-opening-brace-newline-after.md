@@ -1,5 +1,7 @@
 # block-opening-brace-newline-after
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.2.0/docs/migration-guide/to-15.md).
+
 Require a newline after the opening brace of blocks.
 
 <!-- prettier-ignore -->
@@ -19,9 +21,7 @@ a { /* end-of-line comment */
 }
 ```
 
-Refer to [combining rules](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/rules/combine.md) for more information on using this rule with [`block-opening-brace-newline-before`](https://github.com/stylelint/stylelint/tree/14.2.0/lib/rules/block-opening-brace-newline-before/README.md) to disallow single-line rules.
-
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -122,4 +122,19 @@ a { color: pink; }
 ```css
 a {color: pink;
 }
+```
+
+## Optional secondary options
+
+### `ignore: ["rules"]`
+
+Ignore the opening brace of rules.
+
+For example, with `"always"`:
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+a { color: pink; }
 ```

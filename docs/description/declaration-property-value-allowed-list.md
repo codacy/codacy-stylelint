@@ -9,9 +9,11 @@ a { text-transform: uppercase; }
  * These properties and these values */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`object`: `{ "unprefixed-property-name": ["array", "of", "values"], "unprefixed-property-name": ["/regex/", "non-regex", /regex/] }`
+`object`: `{ "unprefixed-property-name": ["array", "of", "values", "/regex/", /regex/]|"value"|"/regex/"|/regex/ }`
 
 If a property name is found in the object, only the listed property values are allowed. This rule complains about all non-matching values. (If the property name is not included in the object, anything goes.)
 
@@ -26,7 +28,7 @@ Given:
 ```json
 {
   "transform": ["/scale/"],
-  "whitespace": ["nowrap"],
+  "whitespace": "nowrap",
   "/color/": ["/^green/"]
 }
 ```

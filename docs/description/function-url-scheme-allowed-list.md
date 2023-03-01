@@ -16,9 +16,11 @@ This rule ignores:
 - URL arguments without an existing URL scheme
 - URL arguments with variables or variable interpolation (`$sass`, `@less`, `--custom-property`, `#{$var}`, `@{var}`, `$(var)`)
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regex`: `["array", "of", /schemes/ or "/regex/"]|"scheme"|/regex/`
+`array|string|regex`: `["array", "of", /schemes/, "/regex/"]|"scheme"|"/regex/"|/regex/`
 
 Given:
 

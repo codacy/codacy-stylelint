@@ -9,9 +9,11 @@ Specify a list of disallowed media feature names.
  * This media feature name */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regex`: `["array", "of", "unprefixed", /media-features/ or "regex"]|"media-feature"|/regex/`
+`array|string|regex`: `["array", "of", "unprefixed", /media-features/, "regex"]|"media-feature"|"/regex/"|/regex/`
 
 Given:
 

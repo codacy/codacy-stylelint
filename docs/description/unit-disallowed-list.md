@@ -9,6 +9,8 @@ a { width: 100px; }
  *  These units */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `array|string`: `["array", "of", "units"]|"unit"`
@@ -60,7 +62,7 @@ a { animation: animation-name 5s ease; }
 
 ## Optional secondary options
 
-### `ignoreProperties: { unit: ["property", "/regex/", /regex/] }`
+### `ignoreProperties: { "unit": ["property", "/regex/", /regex/]|"property"|"/regex/"|/regex/ }`
 
 Ignore units in the values of declarations with the specified properties.
 
@@ -71,7 +73,7 @@ Given:
 ```json
 {
   "px": ["font-size", "/^border/"],
-  "vmin": ["width"]
+  "vmin": "width"
 }
 ```
 
@@ -109,7 +111,7 @@ a { -moz-border-radius-topright: 40px; }
 a { height: 100vmin; }
 ```
 
-### `ignoreMediaFeatureNames: { unit: ["property", "/regex/", /regex/] }`
+### `ignoreMediaFeatureNames: { "unit": ["property", "/regex/", /regex/]|"property"|"/regex/"|/regex/ }`
 
 Ignore units for specific feature names.
 
@@ -120,7 +122,7 @@ Given:
 ```json
 {
   "px": ["min-width", "/height$/"],
-  "dpi": ["resolution"]
+  "dpi": "resolution"
 }
 ```
 
@@ -156,4 +158,28 @@ The following patterns are considered problems:
 <!-- prettier-ignore -->
 ```css
 @media print and (max-resolution: 100dpi) {}
+```
+
+### `ignoreFunctions: ["function", "/regex/", /regex/]|"function"|"/regex/"|/regex/`
+
+Ignore units that are inside of the specified functions.
+
+For example, with `["px"]`.
+
+Given:
+
+```json
+["calc", "/^translate/"]
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { margin: calc(50% - 100px) }
+```
+
+<!-- prettier-ignore -->
+```css
+a { transform: translateX(100px) }
 ```

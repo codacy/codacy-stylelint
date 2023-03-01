@@ -1,6 +1,6 @@
 # shorthand-property-no-redundant-values
 
-Disallow redundant values in shorthand properties.
+Disallow redundant values within shorthand properties.
 
 <!-- prettier-ignore -->
 ```css
@@ -9,7 +9,11 @@ a { margin: 1px 1px 1px 1px; }
  *           These values */
 ```
 
-This rule alerts you when you use redundant values in the following shorthand properties:
+You can use [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to set multiple values at once. For example, you can use the `margin` property to set the `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties at once.
+
+For some shorthand properties, e.g. those related to the [edges of a box](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#edges_of_a_box), you can safely omitted some values.
+
+This rule checks the following shorthand properties:
 
 - `margin`
 - `padding`
@@ -19,7 +23,9 @@ This rule alerts you when you use redundant values in the following shorthand pr
 - `border-width`
 - `grid-gap`
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

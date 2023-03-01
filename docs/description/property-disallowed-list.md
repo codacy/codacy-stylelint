@@ -9,9 +9,11 @@ a { text-rendering: optimizeLegibility; }
  * This property */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string`: `["array", "of", "unprefixed", /properties/ or "regex"]|"property"|"/regex/"`|/regex/
+`array|string|regex`: `["array", "of", /properties/, "regex"]|"property"|"/regex/"|/regex/`
 
 If a string is surrounded with `"/"` (e.g. `"/^background/"`), it is interpreted as a regular expression. This allows, for example, easy targeting of shorthands: `/^background/` will match `background`, `background-size`, `background-color`, etc.
 

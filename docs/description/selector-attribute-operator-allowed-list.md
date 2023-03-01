@@ -9,6 +9,8 @@ Specify a list of allowed attribute operators.
  * This operator */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `array|string`: `["array", "of", "operators"]|"operator"`

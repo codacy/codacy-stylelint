@@ -11,9 +11,11 @@ Specify a list of allowed pseudo-class selectors.
 
 This rule ignores selectors that use variable interpolation e.g. `:#{$variable} {}`.
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regex`: `["array", "of", "unprefixed", /pseudo-classes/ or "/regex/"]|"pseudo-class"|/regex/`
+`array|string|regex`: `["array", "of", "unprefixed", /pseudo-classes/, "/regex/"]|"pseudo-class"|"/regex/"|/regex/`
 
 If a string is surrounded with `"/"` (e.g. `"/^nth-/"`), it is interpreted as a regular expression. This allows, for example, easy targeting of shorthands: `/^nth-/` will match `nth-child`, `nth-last-child`, `nth-of-type`, etc.
 

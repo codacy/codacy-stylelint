@@ -1,6 +1,6 @@
 # no-duplicate-at-import-rules
 
-Disallow duplicate `@import` rules within a stylesheet.
+Disallow duplicate `@import` rules.
 
 <!-- prettier-ignore -->
 ```css
@@ -9,6 +9,8 @@ Disallow duplicate `@import` rules within a stylesheet.
 /** ↑
  * These are duplicates */
 ```
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

@@ -1,5 +1,7 @@
 # declaration-block-semicolon-newline-before
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.2.0/docs/migration-guide/to-15.md).
+
 Require a newline or disallow whitespace before the semicolons of declaration blocks.
 
 <!-- prettier-ignore -->

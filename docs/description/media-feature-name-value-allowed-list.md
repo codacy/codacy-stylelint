@@ -9,28 +9,24 @@ Specify a list of allowed media feature name and value pairs.
  *    These features and values */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-```js
-{
-  "unprefixed-media-feature-name": ["array", "of", "values"],
-  "/unprefixed-media-feature-name/": ["/regex/", "non-regex", /real-regex/]
-}
-```
+`object`: `{ "unprefixed-media-feature-name": ["array", "of", "values", "/regex/", /regex/]|"value"|"/regex/"|/regex/ }`
 
 If a media feature name is found in the object, only its allowed-listed values are
 allowed. If the media feature name is not included in the object, anything goes.
 
 If a name or value is surrounded with `/` (e.g. `"/width$/"`), it is interpreted
-as a regular expression. For example, `/width$/` will match `max-width` and
-`min-width`.
+as a regular expression. For example, `/width$/` will match `max-width` and `min-width`.
 
 Given:
 
 ```json
 {
   "min-width": ["768px", "1024px"],
-  "/resolution/": ["/dpcm$/"]
+  "/resolution/": "/dpcm$/"
 }
 ```
 

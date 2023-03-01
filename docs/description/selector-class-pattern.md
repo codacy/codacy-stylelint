@@ -13,18 +13,20 @@ This rule ignores non-outputting Less mixin definitions and called Less mixins.
 
 Escaped selectors (e.g. `.u-size-11\/12\@sm`) are parsed as escaped twice (e.g. `.u-size-11\\/12\\@sm`). Your RegExp should account for that.
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `regex|string`
 
-A string will be translated into a RegExp like so `new RegExp(yourString)` — so be sure to escape properly.
+A string will be translated into a RegExp like so `new RegExp(yourString)` — so be sure to escape properly.
 
 The selector value _after `.`_ will be checked. No need to include `.` in your pattern.
 
 Given the string:
 
-```js
-"foo-[a-z]+";
+```json
+"foo-[a-z]+"
 ```
 
 The following patterns are considered problems:

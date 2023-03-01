@@ -9,9 +9,11 @@ Specify a list of disallowed properties for selectors within rules.
  * Selector and property name */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`object`: `{ "selector": ["array", "of", "properties"]`
+`object`: `{ "selector": ["array", "of", "properties", "/regex/", /regex/]|"property"|"/regex/"|/regex/`
 
 If a selector name is surrounded with `"/"` (e.g. `"/anchor/"`), it is interpreted as a regular expression. This allows, for example, easy targeting of all the potential anchors: `/anchor/` will match `.anchor`, `[data-anchor]`, etc.
 
@@ -22,7 +24,7 @@ Given:
 ```json
 {
   "a": ["color", "/margin/"],
-  "/foo/": ["/size/"]
+  "/foo/": "/size/"
 }
 ```
 

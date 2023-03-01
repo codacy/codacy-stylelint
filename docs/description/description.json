@@ -1,4 +1,11 @@
 [ {
+  "patternId" : "declaration-colon-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "declaration-colon-space-before",
+    "description" : "declaration-colon-space-before"
+  } ]
+}, {
   "patternId" : "property-no-unknown",
   "title" : "Disallow unknown properties.",
   "parameters" : [ {
@@ -13,13 +20,6 @@
     "description" : "no-irregular-whitespace"
   } ]
 }, {
-  "patternId" : "max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines.",
-  "parameters" : [ {
-    "name" : "max-empty-lines",
-    "description" : "max-empty-lines"
-  } ]
-}, {
   "patternId" : "at-rule-disallowed-list",
   "title" : "Specify a list of disallowed at-rules.",
   "parameters" : [ {
@@ -27,18 +27,18 @@
     "description" : "at-rule-disallowed-list"
   } ]
 }, {
-  "patternId" : "declaration-block-semicolon-space-after",
-  "title" : "Require a single space or disallow whitespace after the semicolons of declaration blocks.",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-space-after",
-    "description" : "declaration-block-semicolon-space-after"
-  } ]
-}, {
   "patternId" : "selector-class-pattern",
   "title" : "Specify a pattern for class selectors.",
   "parameters" : [ {
     "name" : "selector-class-pattern",
     "description" : "selector-class-pattern"
+  } ]
+}, {
+  "patternId" : "no-invalid-double-slash-comments",
+  "title" : "Disallow invalid double-slash comments.",
+  "parameters" : [ {
+    "name" : "no-invalid-double-slash-comments",
+    "description" : "no-invalid-double-slash-comments"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-disallowed-list",
@@ -55,18 +55,32 @@
     "description" : "comment-word-disallowed-list"
   } ]
 }, {
+  "patternId" : "property-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "property-case",
+    "description" : "property-case"
+  } ]
+}, {
+  "patternId" : "linebreaks",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "linebreaks",
+    "description" : "linebreaks"
+  } ]
+}, {
+  "patternId" : "font-family-no-missing-generic-family-keyword",
+  "title" : "Disallow a missing generic family keyword within font families.",
+  "parameters" : [ {
+    "name" : "font-family-no-missing-generic-family-keyword",
+    "description" : "font-family-no-missing-generic-family-keyword"
+  } ]
+}, {
   "patternId" : "selector-attribute-operator-disallowed-list",
   "title" : "Specify a list of disallowed attribute operators.",
   "parameters" : [ {
     "name" : "selector-attribute-operator-disallowed-list",
     "description" : "selector-attribute-operator-disallowed-list"
-  } ]
-}, {
-  "patternId" : "block-opening-brace-newline-before",
-  "title" : "Require a newline or disallow whitespace before the opening brace of blocks.",
-  "parameters" : [ {
-    "name" : "block-opening-brace-newline-before",
-    "description" : "block-opening-brace-newline-before"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-no-unknown",
@@ -90,25 +104,18 @@
     "description" : "keyframes-name-pattern"
   } ]
 }, {
-  "patternId" : "declaration-block-semicolon-newline-after",
-  "title" : "Require a newline or disallow whitespace after the semicolons of declaration blocks.",
+  "patternId" : "selector-combinator-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-block-semicolon-newline-after",
-    "description" : "declaration-block-semicolon-newline-after"
+    "name" : "selector-combinator-space-after",
+    "description" : "selector-combinator-space-after"
   } ]
 }, {
-  "patternId" : "indentation",
-  "title" : "Specify indentation.",
+  "patternId" : "declaration-block-semicolon-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "indentation",
-    "description" : "indentation"
-  } ]
-}, {
-  "patternId" : "font-family-name-quotes",
-  "title" : "Specify whether or not quotation marks should be used around font family names.",
-  "parameters" : [ {
-    "name" : "font-family-name-quotes",
-    "description" : "font-family-name-quotes"
+    "name" : "declaration-block-semicolon-space-before",
+    "description" : "declaration-block-semicolon-space-before"
   } ]
 }, {
   "patternId" : "declaration-block-no-duplicate-custom-properties",
@@ -125,13 +132,6 @@
     "description" : "function-disallowed-list"
   } ]
 }, {
-  "patternId" : "selector-combinator-allowed-list",
-  "title" : "Specify a list of allowed combinators.",
-  "parameters" : [ {
-    "name" : "selector-combinator-allowed-list",
-    "description" : "selector-combinator-allowed-list"
-  } ]
-}, {
   "patternId" : "selector-attribute-quotes",
   "title" : "Require or disallow quotes for attribute values.",
   "parameters" : [ {
@@ -139,39 +139,53 @@
     "description" : "selector-attribute-quotes"
   } ]
 }, {
-  "patternId" : "selector-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of selector lists.",
+  "patternId" : "import-notation",
+  "title" : "Specify string or URL notation for `@import` rules.",
   "parameters" : [ {
-    "name" : "selector-list-comma-newline-before",
-    "description" : "selector-list-comma-newline-before"
+    "name" : "import-notation",
+    "description" : "import-notation"
   } ]
 }, {
-  "patternId" : "color-hex-case",
-  "title" : "Specify lowercase or uppercase for hex colors.",
+  "patternId" : "selector-combinator-allowed-list",
+  "title" : "Specify a list of allowed combinators.",
   "parameters" : [ {
-    "name" : "color-hex-case",
-    "description" : "color-hex-case"
+    "name" : "selector-combinator-allowed-list",
+    "description" : "selector-combinator-allowed-list"
   } ]
 }, {
-  "patternId" : "unicode-bom",
-  "title" : "Require or disallow the Unicode Byte Order Mark.",
+  "patternId" : "media-feature-range-operator-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "unicode-bom",
-    "description" : "unicode-bom"
-  } ]
-}, {
-  "patternId" : "no-invalid-position-at-import-rule",
-  "title" : "Disallow invalid position `@import` rules within a stylesheet.",
-  "parameters" : [ {
-    "name" : "no-invalid-position-at-import-rule",
-    "description" : "no-invalid-position-at-import-rule"
+    "name" : "media-feature-range-operator-space-before",
+    "description" : "media-feature-range-operator-space-before"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-space-before",
-  "title" : "Require a single space or disallow whitespace before operators within attribute selectors.",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
     "name" : "selector-attribute-operator-space-before",
     "description" : "selector-attribute-operator-space-before"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-space-after",
+    "description" : "selector-attribute-operator-space-after"
+  } ]
+}, {
+  "patternId" : "shorthand-property-no-redundant-values",
+  "title" : "Disallow redundant values within shorthand properties.",
+  "parameters" : [ {
+    "name" : "shorthand-property-no-redundant-values",
+    "description" : "shorthand-property-no-redundant-values"
+  } ]
+}, {
+  "patternId" : "function-comma-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "function-comma-space-after",
+    "description" : "function-comma-space-after"
   } ]
 }, {
   "patternId" : "selector-max-id",
@@ -181,18 +195,25 @@
     "description" : "selector-max-id"
   } ]
 }, {
-  "patternId" : "property-disallowed-list",
-  "title" : "Specify a list of disallowed properties.",
+  "patternId" : "selector-pseudo-class-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "property-disallowed-list",
-    "description" : "property-disallowed-list"
+    "name" : "selector-pseudo-class-case",
+    "description" : "selector-pseudo-class-case"
   } ]
 }, {
-  "patternId" : "max-nesting-depth",
-  "title" : "Limit the depth of nesting.",
+  "patternId" : "value-list-comma-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "max-nesting-depth",
-    "description" : "max-nesting-depth"
+    "name" : "value-list-comma-newline-before",
+    "description" : "value-list-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "no-invalid-position-at-import-rule",
+  "title" : "Disallow invalid position `@import` rules.",
+  "parameters" : [ {
+    "name" : "no-invalid-position-at-import-rule",
+    "description" : "no-invalid-position-at-import-rule"
   } ]
 }, {
   "patternId" : "custom-property-no-missing-var-function",
@@ -202,18 +223,46 @@
     "description" : "custom-property-no-missing-var-function"
   } ]
 }, {
-  "patternId" : "media-feature-colon-space-before",
-  "title" : "Require a single space or disallow whitespace before the colon in media features.",
+  "patternId" : "media-feature-colon-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "media-feature-colon-space-before",
-    "description" : "media-feature-colon-space-before"
+    "name" : "media-feature-colon-space-after",
+    "description" : "media-feature-colon-space-after"
   } ]
 }, {
-  "patternId" : "shorthand-property-no-redundant-values",
-  "title" : "Disallow redundant values in shorthand properties.",
+  "patternId" : "selector-list-comma-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "shorthand-property-no-redundant-values",
-    "description" : "shorthand-property-no-redundant-values"
+    "name" : "selector-list-comma-newline-before",
+    "description" : "selector-list-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "property-disallowed-list",
+  "title" : "Specify a list of disallowed properties.",
+  "parameters" : [ {
+    "name" : "property-disallowed-list",
+    "description" : "property-disallowed-list"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-empty-line-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-empty-line-before",
+    "description" : "block-closing-brace-empty-line-before"
+  } ]
+}, {
+  "patternId" : "max-nesting-depth",
+  "title" : "Limit the depth of nesting.",
+  "parameters" : [ {
+    "name" : "max-nesting-depth",
+    "description" : "max-nesting-depth"
+  } ]
+}, {
+  "patternId" : "declaration-block-semicolon-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "declaration-block-semicolon-newline-after",
+    "description" : "declaration-block-semicolon-newline-after"
   } ]
 }, {
   "patternId" : "at-rule-allowed-list",
@@ -223,39 +272,11 @@
     "description" : "at-rule-allowed-list"
   } ]
 }, {
-  "patternId" : "string-no-newline",
-  "title" : "Disallow (unescaped) newlines in strings.",
+  "patternId" : "selector-attribute-brackets-space-inside",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "string-no-newline",
-    "description" : "string-no-newline"
-  } ]
-}, {
-  "patternId" : "selector-max-specificity",
-  "title" : "Limit the specificity of selectors.",
-  "parameters" : [ {
-    "name" : "selector-max-specificity",
-    "description" : "selector-max-specificity"
-  } ]
-}, {
-  "patternId" : "keyframe-declaration-no-important",
-  "title" : "Disallow `!important` within keyframe declarations.",
-  "parameters" : [ {
-    "name" : "keyframe-declaration-no-important",
-    "description" : "keyframe-declaration-no-important"
-  } ]
-}, {
-  "patternId" : "color-function-notation",
-  "title" : "Specify modern or legacy notation for applicable color-functions.",
-  "parameters" : [ {
-    "name" : "color-function-notation",
-    "description" : "color-function-notation"
-  } ]
-}, {
-  "patternId" : "block-closing-brace-newline-before",
-  "title" : "Require a newline or disallow whitespace before the closing brace of blocks.",
-  "parameters" : [ {
-    "name" : "block-closing-brace-newline-before",
-    "description" : "block-closing-brace-newline-before"
+    "name" : "selector-attribute-brackets-space-inside",
+    "description" : "selector-attribute-brackets-space-inside"
   } ]
 }, {
   "patternId" : "declaration-block-single-line-max-declarations",
@@ -265,18 +286,46 @@
     "description" : "declaration-block-single-line-max-declarations"
   } ]
 }, {
-  "patternId" : "declaration-colon-space-before",
-  "title" : "Require a single space or disallow whitespace before the colon of declarations.",
+  "patternId" : "selector-max-specificity",
+  "title" : "Limit the specificity of selectors.",
   "parameters" : [ {
-    "name" : "declaration-colon-space-before",
-    "description" : "declaration-colon-space-before"
+    "name" : "selector-max-specificity",
+    "description" : "selector-max-specificity"
   } ]
 }, {
-  "patternId" : "selector-descendant-combinator-no-non-space",
-  "title" : "Disallow non-space characters for descendant combinators of selectors.",
+  "patternId" : "block-opening-brace-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "selector-descendant-combinator-no-non-space",
-    "description" : "selector-descendant-combinator-no-non-space"
+    "name" : "block-opening-brace-space-before",
+    "description" : "block-opening-brace-space-before"
+  } ]
+}, {
+  "patternId" : "no-missing-end-of-source-newline",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "no-missing-end-of-source-newline",
+    "description" : "no-missing-end-of-source-newline"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-parentheses-space-inside",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-parentheses-space-inside",
+    "description" : "selector-pseudo-class-parentheses-space-inside"
+  } ]
+}, {
+  "patternId" : "indentation",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "indentation",
+    "description" : "indentation"
+  } ]
+}, {
+  "patternId" : "declaration-property-max-values",
+  "title" : "Limit the number of values for a list of properties within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-max-values",
+    "description" : "declaration-property-max-values"
   } ]
 }, {
   "patternId" : "media-feature-name-no-unknown",
@@ -293,25 +342,11 @@
     "description" : "rule-selector-property-disallowed-list"
   } ]
 }, {
-  "patternId" : "no-eol-whitespace",
-  "title" : "Disallow end-of-line whitespace.",
-  "parameters" : [ {
-    "name" : "no-eol-whitespace",
-    "description" : "no-eol-whitespace"
-  } ]
-}, {
   "patternId" : "media-feature-name-disallowed-list",
   "title" : "Specify a list of disallowed media feature names.",
   "parameters" : [ {
     "name" : "media-feature-name-disallowed-list",
     "description" : "media-feature-name-disallowed-list"
-  } ]
-}, {
-  "patternId" : "font-family-no-missing-generic-family-keyword",
-  "title" : "Disallow missing generic families in lists of font family names.",
-  "parameters" : [ {
-    "name" : "font-family-no-missing-generic-family-keyword",
-    "description" : "font-family-no-missing-generic-family-keyword"
   } ]
 }, {
   "patternId" : "color-hex-length",
@@ -328,18 +363,46 @@
     "description" : "media-feature-name-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "value-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of value lists.",
+  "patternId" : "declaration-block-no-redundant-longhand-properties",
+  "title" : "Disallow redundant longhand properties within declaration-block.",
   "parameters" : [ {
-    "name" : "value-list-comma-space-after",
-    "description" : "value-list-comma-space-after"
+    "name" : "declaration-block-no-redundant-longhand-properties",
+    "description" : "declaration-block-no-redundant-longhand-properties"
   } ]
 }, {
-  "patternId" : "number-leading-zero",
-  "title" : "Require or disallow a leading zero for fractional numbers less than 1.",
+  "patternId" : "font-family-name-quotes",
+  "title" : "Require or disallow quotes for font family names.",
   "parameters" : [ {
-    "name" : "number-leading-zero",
-    "description" : "number-leading-zero"
+    "name" : "font-family-name-quotes",
+    "description" : "font-family-name-quotes"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-colon-notation",
+  "title" : "Specify single or double colon notation for applicable pseudo-element selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-colon-notation",
+    "description" : "selector-pseudo-element-colon-notation"
+  } ]
+}, {
+  "patternId" : "no-duplicate-at-import-rules",
+  "title" : "Disallow duplicate `@import` rules.",
+  "parameters" : [ {
+    "name" : "no-duplicate-at-import-rules",
+    "description" : "no-duplicate-at-import-rules"
+  } ]
+}, {
+  "patternId" : "media-feature-name-unit-allowed-list",
+  "title" : "Specify a list of allowed name and unit pairs within media features.",
+  "parameters" : [ {
+    "name" : "media-feature-name-unit-allowed-list",
+    "description" : "media-feature-name-unit-allowed-list"
+  } ]
+}, {
+  "patternId" : "max-line-length",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "max-line-length",
+    "description" : "max-line-length"
   } ]
 }, {
   "patternId" : "selector-type-no-unknown",
@@ -356,11 +419,32 @@
     "description" : "property-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "function-calc-no-unspaced-operator",
-  "title" : "Disallow an unspaced operator within `calc` functions.",
+  "patternId" : "block-closing-brace-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "function-calc-no-unspaced-operator",
-    "description" : "function-calc-no-unspaced-operator"
+    "name" : "block-closing-brace-space-before",
+    "description" : "block-closing-brace-space-before"
+  } ]
+}, {
+  "patternId" : "selector-descendant-combinator-no-non-space",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-descendant-combinator-no-non-space",
+    "description" : "selector-descendant-combinator-no-non-space"
+  } ]
+}, {
+  "patternId" : "unit-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "unit-case",
+    "description" : "unit-case"
+  } ]
+}, {
+  "patternId" : "keyframe-declaration-no-important",
+  "title" : "Disallow invalid `!important` within keyframe declarations.",
+  "parameters" : [ {
+    "name" : "keyframe-declaration-no-important",
+    "description" : "keyframe-declaration-no-important"
   } ]
 }, {
   "patternId" : "property-allowed-list",
@@ -370,18 +454,18 @@
     "description" : "property-allowed-list"
   } ]
 }, {
-  "patternId" : "at-rule-semicolon-space-before",
-  "title" : "Require a single space or disallow whitespace before the semicolons of at-rules.",
+  "patternId" : "block-closing-brace-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "at-rule-semicolon-space-before",
-    "description" : "at-rule-semicolon-space-before"
+    "name" : "block-closing-brace-newline-before",
+    "description" : "block-closing-brace-newline-before"
   } ]
 }, {
-  "patternId" : "selector-pseudo-element-case",
-  "title" : "Specify lowercase or uppercase for pseudo-element selectors.",
+  "patternId" : "number-no-trailing-zeros",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "selector-pseudo-element-case",
-    "description" : "selector-pseudo-element-case"
+    "name" : "number-no-trailing-zeros",
+    "description" : "number-no-trailing-zeros"
   } ]
 }, {
   "patternId" : "rule-empty-line-before",
@@ -391,18 +475,11 @@
     "description" : "rule-empty-line-before"
   } ]
 }, {
-  "patternId" : "at-rule-name-space-after",
-  "title" : "Require a single space after at-rule names.",
+  "patternId" : "function-max-empty-lines",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "at-rule-name-space-after",
-    "description" : "at-rule-name-space-after"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of media query lists.",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-space-before",
-    "description" : "media-query-list-comma-space-before"
+    "name" : "function-max-empty-lines",
+    "description" : "function-max-empty-lines"
   } ]
 }, {
   "patternId" : "color-hex-alpha",
@@ -419,13 +496,6 @@
     "description" : "selector-pseudo-class-no-unknown"
   } ]
 }, {
-  "patternId" : "value-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of value lists.",
-  "parameters" : [ {
-    "name" : "value-list-comma-space-before",
-    "description" : "value-list-comma-space-before"
-  } ]
-}, {
   "patternId" : "number-max-precision",
   "title" : "Limit the number of decimal places allowed in numbers.",
   "parameters" : [ {
@@ -440,13 +510,6 @@
     "description" : "function-url-no-scheme-relative"
   } ]
 }, {
-  "patternId" : "selector-id-pattern",
-  "title" : "Specify a pattern for ID selectors.",
-  "parameters" : [ {
-    "name" : "selector-id-pattern",
-    "description" : "selector-id-pattern"
-  } ]
-}, {
   "patternId" : "selector-nested-pattern",
   "title" : "Specify a pattern for the selectors of rules nested within rules.",
   "parameters" : [ {
@@ -454,53 +517,53 @@
     "description" : "selector-nested-pattern"
   } ]
 }, {
+  "patternId" : "block-opening-brace-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "block-opening-brace-newline-after",
+    "description" : "block-opening-brace-newline-after"
+  } ]
+}, {
+  "patternId" : "value-list-comma-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "value-list-comma-newline-after",
+    "description" : "value-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "selector-id-pattern",
+  "title" : "Specify a pattern for ID selectors.",
+  "parameters" : [ {
+    "name" : "selector-id-pattern",
+    "description" : "selector-id-pattern"
+  } ]
+}, {
+  "patternId" : "block-opening-brace-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "block-opening-brace-space-after",
+    "description" : "block-opening-brace-space-after"
+  } ]
+}, {
+  "patternId" : "no-empty-first-line",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "no-empty-first-line",
+    "description" : "no-empty-first-line"
+  } ]
+}, {
+  "patternId" : "media-feature-range-operator-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "media-feature-range-operator-space-after",
+    "description" : "media-feature-range-operator-space-after"
+  } ]
+}, {
   "patternId" : "declaration-bang-space-before",
-  "title" : "Require a single space or disallow whitespace before the bang of declarations.",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
     "name" : "declaration-bang-space-before",
     "description" : "declaration-bang-space-before"
-  } ]
-}, {
-  "patternId" : "linebreaks",
-  "title" : "Specify unix or windows linebreaks.",
-  "parameters" : [ {
-    "name" : "linebreaks",
-    "description" : "linebreaks"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-element-colon-notation",
-  "title" : "Specify single or double colon notation for applicable pseudo-elements.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-colon-notation",
-    "description" : "selector-pseudo-element-colon-notation"
-  } ]
-}, {
-  "patternId" : "block-closing-brace-newline-after",
-  "title" : "Require a newline or disallow whitespace after the closing brace of blocks.",
-  "parameters" : [ {
-    "name" : "block-closing-brace-newline-after",
-    "description" : "block-closing-brace-newline-after"
-  } ]
-}, {
-  "patternId" : "function-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of functions.",
-  "parameters" : [ {
-    "name" : "function-comma-space-before",
-    "description" : "function-comma-space-before"
-  } ]
-}, {
-  "patternId" : "value-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of value lists.",
-  "parameters" : [ {
-    "name" : "value-list-comma-newline-before",
-    "description" : "value-list-comma-newline-before"
-  } ]
-}, {
-  "patternId" : "media-feature-colon-space-after",
-  "title" : "Require a single space or disallow whitespace after the colon in media features.",
-  "parameters" : [ {
-    "name" : "media-feature-colon-space-after",
-    "description" : "media-feature-colon-space-after"
   } ]
 }, {
   "patternId" : "selector-max-combinators",
@@ -524,6 +587,13 @@
     "description" : "selector-max-type"
   } ]
 }, {
+  "patternId" : "selector-list-comma-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-space-before",
+    "description" : "selector-list-comma-space-before"
+  } ]
+}, {
   "patternId" : "at-rule-empty-line-before",
   "title" : "Require or disallow an empty line before at-rules.",
   "parameters" : [ {
@@ -545,25 +615,25 @@
     "description" : "selector-max-attribute"
   } ]
 }, {
-  "patternId" : "block-opening-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the opening brace of blocks.",
+  "patternId" : "color-no-hex",
+  "title" : "Disallow hex colors.",
   "parameters" : [ {
-    "name" : "block-opening-brace-space-after",
-    "description" : "block-opening-brace-space-after"
+    "name" : "color-no-hex",
+    "description" : "color-no-hex"
   } ]
 }, {
-  "patternId" : "function-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within functions.",
+  "patternId" : "function-no-unknown",
+  "title" : "Disallow unknown functions.",
   "parameters" : [ {
-    "name" : "function-max-empty-lines",
-    "description" : "function-max-empty-lines"
+    "name" : "function-no-unknown",
+    "description" : "function-no-unknown"
   } ]
 }, {
-  "patternId" : "media-feature-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within media features.",
+  "patternId" : "block-opening-brace-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "media-feature-parentheses-space-inside",
-    "description" : "media-feature-parentheses-space-inside"
+    "name" : "block-opening-brace-newline-before",
+    "description" : "block-opening-brace-newline-before"
   } ]
 }, {
   "patternId" : "color-no-invalid-hex",
@@ -573,39 +643,32 @@
     "description" : "color-no-invalid-hex"
   } ]
 }, {
-  "patternId" : "block-closing-brace-empty-line-before",
-  "title" : "Require or disallow an empty line before the closing brace of blocks.",
+  "patternId" : "selector-pseudo-element-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "block-closing-brace-empty-line-before",
-    "description" : "block-closing-brace-empty-line-before"
+    "name" : "selector-pseudo-element-case",
+    "description" : "selector-pseudo-element-case"
   } ]
 }, {
-  "patternId" : "color-no-hex",
-  "title" : "Disallow hex colors.",
+  "patternId" : "at-rule-name-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "color-no-hex",
-    "description" : "color-no-hex"
+    "name" : "at-rule-name-newline-after",
+    "description" : "at-rule-name-newline-after"
   } ]
 }, {
-  "patternId" : "block-opening-brace-newline-after",
-  "title" : "Require a newline after the opening brace of blocks.",
+  "patternId" : "media-query-list-comma-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "block-opening-brace-newline-after",
-    "description" : "block-opening-brace-newline-after"
+    "name" : "media-query-list-comma-space-after",
+    "description" : "media-query-list-comma-space-after"
   } ]
 }, {
-  "patternId" : "no-missing-end-of-source-newline",
-  "title" : "Disallow missing end-of-source newlines.",
+  "patternId" : "value-list-max-empty-lines",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "no-missing-end-of-source-newline",
-    "description" : "no-missing-end-of-source-newline"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-parentheses-space-inside",
-    "description" : "selector-pseudo-class-parentheses-space-inside"
+    "name" : "value-list-max-empty-lines",
+    "description" : "value-list-max-empty-lines"
   } ]
 }, {
   "patternId" : "selector-type-case",
@@ -615,11 +678,11 @@
     "description" : "selector-type-case"
   } ]
 }, {
-  "patternId" : "no-invalid-double-slash-comments",
-  "title" : "Disallow double-slash comments (`//...`) which are not supported by CSS and could lead to unexpected results.",
+  "patternId" : "no-extra-semicolons",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "no-invalid-double-slash-comments",
-    "description" : "no-invalid-double-slash-comments"
+    "name" : "no-extra-semicolons",
+    "description" : "no-extra-semicolons"
   } ]
 }, {
   "patternId" : "selector-disallowed-list",
@@ -636,11 +699,11 @@
     "description" : "unit-disallowed-list"
   } ]
 }, {
-  "patternId" : "function-parentheses-newline-inside",
-  "title" : "Require a newline or disallow whitespace on the inside of the parentheses of functions.",
+  "patternId" : "function-whitespace-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "function-parentheses-newline-inside",
-    "description" : "function-parentheses-newline-inside"
+    "name" : "function-whitespace-after",
+    "description" : "function-whitespace-after"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-allowed-list",
@@ -650,18 +713,25 @@
     "description" : "selector-attribute-operator-allowed-list"
   } ]
 }, {
+  "patternId" : "media-feature-range-notation",
+  "title" : "Specify context or prefix notation for media feature ranges.",
+  "parameters" : [ {
+    "name" : "media-feature-range-notation",
+    "description" : "media-feature-range-notation"
+  } ]
+}, {
+  "patternId" : "string-no-newline",
+  "title" : "Disallow invalid newlines within strings.",
+  "parameters" : [ {
+    "name" : "string-no-newline",
+    "description" : "string-no-newline"
+  } ]
+}, {
   "patternId" : "comment-no-empty",
   "title" : "Disallow empty comments.",
   "parameters" : [ {
     "name" : "comment-no-empty",
     "description" : "comment-no-empty"
-  } ]
-}, {
-  "patternId" : "selector-combinator-space-after",
-  "title" : "Require a single space or disallow whitespace after the combinators of selectors.",
-  "parameters" : [ {
-    "name" : "selector-combinator-space-after",
-    "description" : "selector-combinator-space-after"
   } ]
 }, {
   "patternId" : "selector-max-class",
@@ -671,11 +741,11 @@
     "description" : "selector-max-class"
   } ]
 }, {
-  "patternId" : "no-duplicate-selectors",
-  "title" : "Disallow duplicate selectors within a stylesheet.",
+  "patternId" : "function-parentheses-newline-inside",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "no-duplicate-selectors",
-    "description" : "no-duplicate-selectors"
+    "name" : "function-parentheses-newline-inside",
+    "description" : "function-parentheses-newline-inside"
   } ]
 }, {
   "patternId" : "declaration-property-value-disallowed-list",
@@ -685,11 +755,11 @@
     "description" : "declaration-property-value-disallowed-list"
   } ]
 }, {
-  "patternId" : "block-closing-brace-space-before",
-  "title" : "Require a single space or disallow whitespace before the closing brace of blocks.",
+  "patternId" : "media-query-list-comma-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "block-closing-brace-space-before",
-    "description" : "block-closing-brace-space-before"
+    "name" : "media-query-list-comma-newline-after",
+    "description" : "media-query-list-comma-newline-after"
   } ]
 }, {
   "patternId" : "selector-max-compound-selectors",
@@ -699,11 +769,11 @@
     "description" : "selector-max-compound-selectors"
   } ]
 }, {
-  "patternId" : "declaration-block-semicolon-newline-before",
-  "title" : "Require a newline or disallow whitespace before the semicolons of declaration blocks.",
+  "patternId" : "value-list-comma-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-block-semicolon-newline-before",
-    "description" : "declaration-block-semicolon-newline-before"
+    "name" : "value-list-comma-space-after",
+    "description" : "value-list-comma-space-after"
   } ]
 }, {
   "patternId" : "function-url-scheme-allowed-list",
@@ -713,53 +783,32 @@
     "description" : "function-url-scheme-allowed-list"
   } ]
 }, {
-  "patternId" : "selector-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of selector lists.",
-  "parameters" : [ {
-    "name" : "selector-list-comma-newline-after",
-    "description" : "selector-list-comma-newline-after"
-  } ]
-}, {
-  "patternId" : "selector-combinator-space-before",
-  "title" : "Require a single space or disallow whitespace before the combinators of selectors.",
-  "parameters" : [ {
-    "name" : "selector-combinator-space-before",
-    "description" : "selector-combinator-space-before"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of media query lists.",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-space-after",
-    "description" : "media-query-list-comma-space-after"
-  } ]
-}, {
-  "patternId" : "declaration-block-semicolon-space-before",
-  "title" : "Require a single space or disallow whitespace before the semicolons of declaration blocks.",
-  "parameters" : [ {
-    "name" : "declaration-block-semicolon-space-before",
-    "description" : "declaration-block-semicolon-space-before"
-  } ]
-}, {
-  "patternId" : "max-line-length",
-  "title" : "Limit the length of a line.",
-  "parameters" : [ {
-    "name" : "max-line-length",
-    "description" : "max-line-length"
-  } ]
-}, {
-  "patternId" : "at-rule-semicolon-newline-after",
-  "title" : "Require a newline after the semicolon of at-rules.",
-  "parameters" : [ {
-    "name" : "at-rule-semicolon-newline-after",
-    "description" : "at-rule-semicolon-newline-after"
-  } ]
-}, {
   "patternId" : "at-rule-property-required-list",
   "title" : "Specify a list of required properties for an at-rule.",
   "parameters" : [ {
     "name" : "at-rule-property-required-list",
     "description" : "at-rule-property-required-list"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-no-unknown",
+  "title" : "Disallow unknown values for properties within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-value-no-unknown",
+    "description" : "declaration-property-value-no-unknown"
+  } ]
+}, {
+  "patternId" : "media-feature-name-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "media-feature-name-case",
+    "description" : "media-feature-name-case"
+  } ]
+}, {
+  "patternId" : "no-eol-whitespace",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "no-eol-whitespace",
+    "description" : "no-eol-whitespace"
   } ]
 }, {
   "patternId" : "hue-degree-notation",
@@ -783,39 +832,25 @@
     "description" : "unit-allowed-list"
   } ]
 }, {
+  "patternId" : "declaration-block-trailing-semicolon",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "declaration-block-trailing-semicolon",
+    "description" : "declaration-block-trailing-semicolon"
+  } ]
+}, {
+  "patternId" : "color-hex-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "color-hex-case",
+    "description" : "color-hex-case"
+  } ]
+}, {
   "patternId" : "function-name-case",
   "title" : "Specify lowercase or uppercase for function names.",
   "parameters" : [ {
     "name" : "function-name-case",
     "description" : "function-name-case"
-  } ]
-}, {
-  "patternId" : "function-parentheses-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the parentheses of functions.",
-  "parameters" : [ {
-    "name" : "function-parentheses-space-inside",
-    "description" : "function-parentheses-space-inside"
-  } ]
-}, {
-  "patternId" : "length-zero-no-unit",
-  "title" : "Disallow units for zero lengths.",
-  "parameters" : [ {
-    "name" : "length-zero-no-unit",
-    "description" : "length-zero-no-unit"
-  } ]
-}, {
-  "patternId" : "selector-attribute-operator-space-after",
-  "title" : "Require a single space or disallow whitespace after operators within attribute selectors.",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-space-after",
-    "description" : "selector-attribute-operator-space-after"
-  } ]
-}, {
-  "patternId" : "selector-list-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of selector lists.",
-  "parameters" : [ {
-    "name" : "selector-list-comma-space-after",
-    "description" : "selector-list-comma-space-after"
   } ]
 }, {
   "patternId" : "function-url-scheme-disallowed-list",
@@ -825,32 +860,25 @@
     "description" : "function-url-scheme-disallowed-list"
   } ]
 }, {
-  "patternId" : "declaration-colon-newline-after",
-  "title" : "Require a newline or disallow whitespace after the colon of declarations.",
+  "patternId" : "at-rule-name-case",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-colon-newline-after",
-    "description" : "declaration-colon-newline-after"
+    "name" : "at-rule-name-case",
+    "description" : "at-rule-name-case"
   } ]
 }, {
-  "patternId" : "no-extra-semicolons",
-  "title" : "Disallow extra semicolons.",
+  "patternId" : "length-zero-no-unit",
+  "title" : "Disallow units for zero lengths.",
   "parameters" : [ {
-    "name" : "no-extra-semicolons",
-    "description" : "no-extra-semicolons"
+    "name" : "length-zero-no-unit",
+    "description" : "length-zero-no-unit"
   } ]
 }, {
-  "patternId" : "font-family-no-duplicate-names",
-  "title" : "Disallow duplicate font family names.",
+  "patternId" : "declaration-colon-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "font-family-no-duplicate-names",
-    "description" : "font-family-no-duplicate-names"
-  } ]
-}, {
-  "patternId" : "function-whitespace-after",
-  "title" : "Require or disallow whitespace after functions.",
-  "parameters" : [ {
-    "name" : "function-whitespace-after",
-    "description" : "function-whitespace-after"
+    "name" : "declaration-colon-space-after",
+    "description" : "declaration-colon-space-after"
   } ]
 }, {
   "patternId" : "value-keyword-case",
@@ -860,6 +888,20 @@
     "description" : "value-keyword-case"
   } ]
 }, {
+  "patternId" : "media-feature-parentheses-space-inside",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "media-feature-parentheses-space-inside",
+    "description" : "media-feature-parentheses-space-inside"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-space-after",
+    "description" : "block-closing-brace-space-after"
+  } ]
+}, {
   "patternId" : "media-feature-name-value-allowed-list",
   "title" : "Specify a list of allowed media feature name and value pairs.",
   "parameters" : [ {
@@ -867,11 +909,11 @@
     "description" : "media-feature-name-value-allowed-list"
   } ]
 }, {
-  "patternId" : "declaration-block-trailing-semicolon",
-  "title" : "Require or disallow a trailing semicolon within declaration blocks.",
+  "patternId" : "function-calc-no-unspaced-operator",
+  "title" : "Disallow invalid unspaced operator within `calc` functions.",
   "parameters" : [ {
-    "name" : "declaration-block-trailing-semicolon",
-    "description" : "declaration-block-trailing-semicolon"
+    "name" : "function-calc-no-unspaced-operator",
+    "description" : "function-calc-no-unspaced-operator"
   } ]
 }, {
   "patternId" : "no-descending-specificity",
@@ -881,18 +923,25 @@
     "description" : "no-descending-specificity"
   } ]
 }, {
-  "patternId" : "media-feature-range-operator-space-after",
-  "title" : "Require a single space or disallow whitespace after the range operator in media features.",
+  "patternId" : "media-query-list-comma-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "media-feature-range-operator-space-after",
-    "description" : "media-feature-range-operator-space-after"
+    "name" : "media-query-list-comma-newline-before",
+    "description" : "media-query-list-comma-newline-before"
   } ]
 }, {
-  "patternId" : "block-opening-brace-space-before",
-  "title" : "Require a single space or disallow whitespace before the opening brace of blocks.",
+  "patternId" : "at-rule-semicolon-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "block-opening-brace-space-before",
-    "description" : "block-opening-brace-space-before"
+    "name" : "at-rule-semicolon-space-before",
+    "description" : "at-rule-semicolon-space-before"
+  } ]
+}, {
+  "patternId" : "unicode-bom",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "unicode-bom",
+    "description" : "unicode-bom"
   } ]
 }, {
   "patternId" : "comment-pattern",
@@ -900,6 +949,13 @@
   "parameters" : [ {
     "name" : "comment-pattern",
     "description" : "comment-pattern"
+  } ]
+}, {
+  "patternId" : "max-empty-lines",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "max-empty-lines",
+    "description" : "max-empty-lines"
   } ]
 }, {
   "patternId" : "selector-attribute-name-disallowed-list",
@@ -916,11 +972,32 @@
     "description" : "custom-property-pattern"
   } ]
 }, {
-  "patternId" : "font-weight-notation",
-  "title" : "Require numeric or named (where possible) `font-weight` values. Also, when named values are expected, require only valid names.",
+  "patternId" : "declaration-colon-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "font-weight-notation",
-    "description" : "font-weight-notation"
+    "name" : "declaration-colon-newline-after",
+    "description" : "declaration-colon-newline-after"
+  } ]
+}, {
+  "patternId" : "color-function-notation",
+  "title" : "Specify modern or legacy notation for color-functions.",
+  "parameters" : [ {
+    "name" : "color-function-notation",
+    "description" : "color-function-notation"
+  } ]
+}, {
+  "patternId" : "no-duplicate-selectors",
+  "title" : "Disallow duplicate selectors.",
+  "parameters" : [ {
+    "name" : "no-duplicate-selectors",
+    "description" : "no-duplicate-selectors"
+  } ]
+}, {
+  "patternId" : "selector-list-comma-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-list-comma-space-after",
+    "description" : "selector-list-comma-space-after"
   } ]
 }, {
   "patternId" : "declaration-no-important",
@@ -930,13 +1007,6 @@
     "description" : "declaration-no-important"
   } ]
 }, {
-  "patternId" : "time-min-milliseconds",
-  "title" : "Specify the minimum number of milliseconds for time values.",
-  "parameters" : [ {
-    "name" : "time-min-milliseconds",
-    "description" : "time-min-milliseconds"
-  } ]
-}, {
   "patternId" : "selector-pseudo-class-disallowed-list",
   "title" : "Specify a list of disallowed pseudo-class selectors.",
   "parameters" : [ {
@@ -944,11 +1014,25 @@
     "description" : "selector-pseudo-class-disallowed-list"
   } ]
 }, {
-  "patternId" : "declaration-colon-space-after",
-  "title" : "Require a single space or disallow whitespace after the colon of declarations.",
+  "patternId" : "declaration-block-semicolon-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-colon-space-after",
-    "description" : "declaration-colon-space-after"
+    "name" : "declaration-block-semicolon-newline-before",
+    "description" : "declaration-block-semicolon-newline-before"
+  } ]
+}, {
+  "patternId" : "font-family-no-duplicate-names",
+  "title" : "Disallow duplicate names within font families.",
+  "parameters" : [ {
+    "name" : "font-family-no-duplicate-names",
+    "description" : "font-family-no-duplicate-names"
+  } ]
+}, {
+  "patternId" : "function-linear-gradient-no-nonstandard-direction",
+  "title" : "Disallow non-standard direction values for linear gradient functions.",
+  "parameters" : [ {
+    "name" : "function-linear-gradient-no-nonstandard-direction",
+    "description" : "function-linear-gradient-no-nonstandard-direction"
   } ]
 }, {
   "patternId" : "named-grid-areas-no-invalid",
@@ -979,11 +1063,18 @@
     "description" : "selector-max-pseudo-class"
   } ]
 }, {
-  "patternId" : "function-comma-space-after",
-  "title" : "Require a single space or disallow whitespace after the commas of functions.",
+  "patternId" : "selector-list-comma-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "function-comma-space-after",
-    "description" : "function-comma-space-after"
+    "name" : "selector-list-comma-newline-after",
+    "description" : "selector-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "alpha-value-notation",
+  "title" : "Specify percentage or number notation for alpha-values.",
+  "parameters" : [ {
+    "name" : "alpha-value-notation",
+    "description" : "alpha-value-notation"
   } ]
 }, {
   "patternId" : "comment-whitespace-inside",
@@ -993,11 +1084,32 @@
     "description" : "comment-whitespace-inside"
   } ]
 }, {
+  "patternId" : "selector-combinator-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "selector-combinator-space-before",
+    "description" : "selector-combinator-space-before"
+  } ]
+}, {
   "patternId" : "no-unknown-animations",
   "title" : "Disallow unknown animations.",
   "parameters" : [ {
     "name" : "no-unknown-animations",
     "description" : "no-unknown-animations"
+  } ]
+}, {
+  "patternId" : "at-rule-name-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "at-rule-name-space-after",
+    "description" : "at-rule-name-space-after"
+  } ]
+}, {
+  "patternId" : "block-closing-brace-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "block-closing-brace-newline-after",
+    "description" : "block-closing-brace-newline-after"
   } ]
 }, {
   "patternId" : "comment-empty-line-before",
@@ -1014,53 +1126,32 @@
     "description" : "selector-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "declaration-bang-space-after",
-  "title" : "Require a single space or disallow whitespace after the bang of declarations.",
+  "patternId" : "declaration-block-semicolon-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-bang-space-after",
-    "description" : "declaration-bang-space-after"
+    "name" : "declaration-block-semicolon-space-after",
+    "description" : "declaration-block-semicolon-space-after"
   } ]
 }, {
-  "patternId" : "alpha-value-notation",
-  "title" : "Specify percentage or number notation for alpha-values.",
+  "patternId" : "media-feature-colon-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "alpha-value-notation",
-    "description" : "alpha-value-notation"
+    "name" : "media-feature-colon-space-before",
+    "description" : "media-feature-colon-space-before"
   } ]
 }, {
-  "patternId" : "at-rule-name-case",
-  "title" : "Specify lowercase or uppercase for at-rules names.",
+  "patternId" : "selector-max-empty-lines",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "at-rule-name-case",
-    "description" : "at-rule-name-case"
+    "name" : "selector-max-empty-lines",
+    "description" : "selector-max-empty-lines"
   } ]
 }, {
-  "patternId" : "block-closing-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the closing brace of blocks.",
+  "patternId" : "function-comma-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "block-closing-brace-space-after",
-    "description" : "block-closing-brace-space-after"
-  } ]
-}, {
-  "patternId" : "string-quotes",
-  "title" : "Specify single or double quotes around strings.",
-  "parameters" : [ {
-    "name" : "string-quotes",
-    "description" : "string-quotes"
-  } ]
-}, {
-  "patternId" : "unit-case",
-  "title" : "Specify lowercase or uppercase for units.",
-  "parameters" : [ {
-    "name" : "unit-case",
-    "description" : "unit-case"
-  } ]
-}, {
-  "patternId" : "function-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of functions.",
-  "parameters" : [ {
-    "name" : "function-comma-newline-after",
-    "description" : "function-comma-newline-after"
+    "name" : "function-comma-space-before",
+    "description" : "function-comma-space-before"
   } ]
 }, {
   "patternId" : "selector-combinator-disallowed-list",
@@ -1070,18 +1161,18 @@
     "description" : "selector-combinator-disallowed-list"
   } ]
 }, {
-  "patternId" : "selector-list-comma-space-before",
-  "title" : "Require a single space or disallow whitespace before the commas of selector lists.",
-  "parameters" : [ {
-    "name" : "selector-list-comma-space-before",
-    "description" : "selector-list-comma-space-before"
-  } ]
-}, {
   "patternId" : "selector-no-qualifying-type",
   "title" : "Disallow qualifying a selector by type.",
   "parameters" : [ {
     "name" : "selector-no-qualifying-type",
     "description" : "selector-no-qualifying-type"
+  } ]
+}, {
+  "patternId" : "font-weight-notation",
+  "title" : "Require numeric or named (where possible) `font-weight` values.",
+  "parameters" : [ {
+    "name" : "font-weight-notation",
+    "description" : "font-weight-notation"
   } ]
 }, {
   "patternId" : "declaration-block-no-shorthand-property-overrides",
@@ -1091,25 +1182,18 @@
     "description" : "declaration-block-no-shorthand-property-overrides"
   } ]
 }, {
+  "patternId" : "keyframe-selector-notation",
+  "title" : "Specify keyword or percentage notation for keyframe selectors.",
+  "parameters" : [ {
+    "name" : "keyframe-selector-notation",
+    "description" : "keyframe-selector-notation"
+  } ]
+}, {
   "patternId" : "selector-pseudo-element-allowed-list",
   "title" : "Specify a list of allowed pseudo-element selectors.",
   "parameters" : [ {
     "name" : "selector-pseudo-element-allowed-list",
     "description" : "selector-pseudo-element-allowed-list"
-  } ]
-}, {
-  "patternId" : "selector-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within selectors.",
-  "parameters" : [ {
-    "name" : "selector-max-empty-lines",
-    "description" : "selector-max-empty-lines"
-  } ]
-}, {
-  "patternId" : "function-linear-gradient-no-nonstandard-direction",
-  "title" : "Disallow direction values in `linear-gradient()` calls that are not valid according to the\nstandard syntax.",
-  "parameters" : [ {
-    "name" : "function-linear-gradient-no-nonstandard-direction",
-    "description" : "function-linear-gradient-no-nonstandard-direction"
   } ]
 }, {
   "patternId" : "custom-media-pattern",
@@ -1133,25 +1217,18 @@
     "description" : "declaration-property-value-allowed-list"
   } ]
 }, {
+  "patternId" : "string-quotes",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "string-quotes",
+    "description" : "string-quotes"
+  } ]
+}, {
   "patternId" : "selector-pseudo-class-allowed-list",
   "title" : "Specify a list of allowed pseudo-class selectors.",
   "parameters" : [ {
     "name" : "selector-pseudo-class-allowed-list",
     "description" : "selector-pseudo-class-allowed-list"
-  } ]
-}, {
-  "patternId" : "no-duplicate-at-import-rules",
-  "title" : "Disallow duplicate `@import` rules within a stylesheet.",
-  "parameters" : [ {
-    "name" : "no-duplicate-at-import-rules",
-    "description" : "no-duplicate-at-import-rules"
-  } ]
-}, {
-  "patternId" : "at-rule-name-newline-after",
-  "title" : "Require a newline after at-rule names.",
-  "parameters" : [ {
-    "name" : "at-rule-name-newline-after",
-    "description" : "at-rule-name-newline-after"
   } ]
 }, {
   "patternId" : "selector-max-universal",
@@ -1161,32 +1238,39 @@
     "description" : "selector-max-universal"
   } ]
 }, {
-  "patternId" : "number-no-trailing-zeros",
-  "title" : "Disallow trailing zeros in numbers.",
+  "patternId" : "keyframe-block-no-duplicate-selectors",
+  "title" : "Disallow duplicate selectors within keyframe blocks.",
   "parameters" : [ {
-    "name" : "number-no-trailing-zeros",
-    "description" : "number-no-trailing-zeros"
+    "name" : "keyframe-block-no-duplicate-selectors",
+    "description" : "keyframe-block-no-duplicate-selectors"
   } ]
 }, {
-  "patternId" : "value-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of value lists.",
+  "patternId" : "declaration-bang-space-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "value-list-comma-newline-after",
-    "description" : "value-list-comma-newline-after"
+    "name" : "declaration-bang-space-after",
+    "description" : "declaration-bang-space-after"
   } ]
 }, {
-  "patternId" : "media-feature-name-case",
-  "title" : "Specify lowercase or uppercase for media feature names.",
+  "patternId" : "function-parentheses-space-inside",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "media-feature-name-case",
-    "description" : "media-feature-name-case"
+    "name" : "function-parentheses-space-inside",
+    "description" : "function-parentheses-space-inside"
   } ]
 }, {
-  "patternId" : "value-list-max-empty-lines",
-  "title" : "Limit the number of adjacent empty lines within value lists.",
+  "patternId" : "function-comma-newline-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "value-list-max-empty-lines",
-    "description" : "value-list-max-empty-lines"
+    "name" : "function-comma-newline-before",
+    "description" : "function-comma-newline-before"
+  } ]
+}, {
+  "patternId" : "value-list-comma-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "value-list-comma-space-before",
+    "description" : "value-list-comma-space-before"
   } ]
 }, {
   "patternId" : "custom-property-empty-line-before",
@@ -1203,18 +1287,11 @@
     "description" : "declaration-property-unit-allowed-list"
   } ]
 }, {
-  "patternId" : "selector-pseudo-class-case",
-  "title" : "Specify lowercase or uppercase for pseudo-class selectors.",
+  "patternId" : "number-leading-zero",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "selector-pseudo-class-case",
-    "description" : "selector-pseudo-class-case"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of media query lists.",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-newline-after",
-    "description" : "media-query-list-comma-newline-after"
+    "name" : "number-leading-zero",
+    "description" : "number-leading-zero"
   } ]
 }, {
   "patternId" : "unit-no-unknown",
@@ -1224,39 +1301,25 @@
     "description" : "unit-no-unknown"
   } ]
 }, {
-  "patternId" : "property-case",
-  "title" : "Specify lowercase or uppercase for properties.",
+  "patternId" : "annotation-no-unknown",
+  "title" : "Disallow unknown annotations.",
   "parameters" : [ {
-    "name" : "property-case",
-    "description" : "property-case"
+    "name" : "annotation-no-unknown",
+    "description" : "annotation-no-unknown"
   } ]
 }, {
-  "patternId" : "no-empty-first-line",
-  "title" : "Disallow empty first lines.",
+  "patternId" : "function-comma-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "no-empty-first-line",
-    "description" : "no-empty-first-line"
+    "name" : "function-comma-newline-after",
+    "description" : "function-comma-newline-after"
   } ]
 }, {
-  "patternId" : "declaration-block-no-redundant-longhand-properties",
-  "title" : "Disallow longhand properties that can be combined into one shorthand property.",
+  "patternId" : "declaration-block-no-duplicate-properties",
+  "title" : "Disallow duplicate properties within declaration blocks.",
   "parameters" : [ {
-    "name" : "declaration-block-no-redundant-longhand-properties",
-    "description" : "declaration-block-no-redundant-longhand-properties"
-  } ]
-}, {
-  "patternId" : "selector-attribute-brackets-space-inside",
-  "title" : "Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.",
-  "parameters" : [ {
-    "name" : "selector-attribute-brackets-space-inside",
-    "description" : "selector-attribute-brackets-space-inside"
-  } ]
-}, {
-  "patternId" : "function-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of functions.",
-  "parameters" : [ {
-    "name" : "function-comma-newline-before",
-    "description" : "function-comma-newline-before"
+    "name" : "declaration-block-no-duplicate-properties",
+    "description" : "declaration-block-no-duplicate-properties"
   } ]
 }, {
   "patternId" : "at-rule-no-vendor-prefix",
@@ -1264,13 +1327,6 @@
   "parameters" : [ {
     "name" : "at-rule-no-vendor-prefix",
     "description" : "at-rule-no-vendor-prefix"
-  } ]
-}, {
-  "patternId" : "media-query-list-comma-newline-before",
-  "title" : "Require a newline or disallow whitespace before the commas of media query lists.",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-newline-before",
-    "description" : "media-query-list-comma-newline-before"
   } ]
 }, {
   "patternId" : "function-allowed-list",
@@ -1294,17 +1350,31 @@
     "description" : "color-named"
   } ]
 }, {
-  "patternId" : "declaration-block-no-duplicate-properties",
-  "title" : "Disallow duplicate properties within declaration blocks.",
+  "patternId" : "media-query-list-comma-space-before",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
   "parameters" : [ {
-    "name" : "declaration-block-no-duplicate-properties",
-    "description" : "declaration-block-no-duplicate-properties"
+    "name" : "media-query-list-comma-space-before",
+    "description" : "media-query-list-comma-space-before"
   } ]
 }, {
-  "patternId" : "media-feature-range-operator-space-before",
-  "title" : "Require a single space or disallow whitespace before the range operator in media features.",
+  "patternId" : "selector-not-notation",
+  "title" : "Specify simple or complex notation for `:not()` pseudo-class selectors.",
   "parameters" : [ {
-    "name" : "media-feature-range-operator-space-before",
-    "description" : "media-feature-range-operator-space-before"
+    "name" : "selector-not-notation",
+    "description" : "selector-not-notation"
+  } ]
+}, {
+  "patternId" : "time-min-milliseconds",
+  "title" : "Limit the minimum number of milliseconds for time values.",
+  "parameters" : [ {
+    "name" : "time-min-milliseconds",
+    "description" : "time-min-milliseconds"
+  } ]
+}, {
+  "patternId" : "at-rule-semicolon-newline-after",
+  "title" : "> **Warning** This rule is deprecated and will be removed in the future. See the migration guide.",
+  "parameters" : [ {
+    "name" : "at-rule-semicolon-newline-after",
+    "description" : "at-rule-semicolon-newline-after"
   } ]
 } ]

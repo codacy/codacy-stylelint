@@ -9,9 +9,11 @@ Specify a list of disallowed selectors.
  * This is selector */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regexp`: `["array", "of", "selectors", /or/, "/regex/"]|"selector"|"/regex/"`
+`array|string|regexp`: `["array", "of", "selectors", /or/, "/regex/"]|"selector"|"/regex/"|/regex/`
 
 If a string is surrounded with `"/"` (e.g. `"/\.foo/"`), it is interpreted as a regular expression.
 
@@ -65,4 +67,51 @@ a
 <!-- prettier-ignore -->
 ```css
 a[href] {}
+```
+
+## Optional secondary options
+
+### `splitList: true | false` (default: `false`)
+
+Split selector lists into individual selectors.
+
+For example, with `true`.
+
+Given:
+
+```json
+[".foo"]
+```
+
+The following pattern is considered a problem:
+
+<!-- prettier-ignore -->
+```css
+.bar, .foo {}
+```
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+.bar .foo {}
+```
+
+### `ignore: ["inside-block"]`
+
+Ignore selectors that are inside a block.
+
+Given:
+
+```json
+[".foo"]
+```
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+.bar {
+  .foo {}
+}
 ```

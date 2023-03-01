@@ -13,6 +13,8 @@ This rule considers pseudo-element selectors defined in the CSS Specifications, 
 
 This rule ignores vendor-prefixed pseudo-element selectors.
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 ### `true`
@@ -58,27 +60,27 @@ input::-moz-placeholder {}
 
 ## Optional secondary options
 
-### `ignorePseudoElements: ["/regex/", "string"]`
+### `ignorePseudoElements: ["/regex/", /regex/, "non-regex"]`
 
 Given:
 
 ```json
-["/^my-/", "pseudo-element"]
+["/^--my-/", "--pseudo-element"]
 ```
 
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-a::pseudo-element {}
+a::--my-pseudo {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-a::my-pseudo {}
+a::--my-other-pseudo {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-a::my-other-pseudo {}
+a::--pseudo-element {}
 ```

@@ -14,14 +14,16 @@ This rule ignores:
 - CSS2 pseudo-elements i.e. those prefixed with a single colon
 - selectors that use variable interpolation e.g. `::#{$variable} {}`
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regex`: `["array", "of", "unprefixed", "pseudo-elements" or "regex"]|"pseudo-element"|/regex/`
+`array|string|regex`: `["array", "of", "unprefixed", /pseudo-elements/, "/regex/"]|"pseudo-element"|"/regex/"|/regex/`
 
 Given:
 
 ```json
-["before", "/^my-/i"]
+["before", "/^--my-/i"]
 ```
 
 The following patterns are considered problems:
@@ -33,7 +35,7 @@ a::after {}
 
 <!-- prettier-ignore -->
 ```css
-a::not-my-pseudo-element {}
+a::--not-my-pseudo-element {}
 ```
 
 The following patterns are _not_ considered problems:
@@ -45,10 +47,10 @@ a::before {}
 
 <!-- prettier-ignore -->
 ```css
-a::my-pseudo-element {}
+a::--my-pseudo-element {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-a::MY-OTHER-pseudo-element {}
+a::--MY-OTHER-pseudo-element {}
 ```

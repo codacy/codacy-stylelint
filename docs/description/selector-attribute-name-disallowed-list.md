@@ -9,9 +9,11 @@ Specify a list of disallowed attribute names.
  * This name */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`array|string|regex`: `["array", "of", /names/ or "regex"]|"name"|/regex/`
+`array|string|regex`: `["array", "of", /names/, "regex"]|"name"|"/regex/"|/regex/`
 
 Given:
 

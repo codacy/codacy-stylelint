@@ -9,9 +9,11 @@ Specify a list of required properties for an at-rule.
  *  At-rule and required property names */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`object`: `{ "at-rule-name": ["array", "of", "properties"] }`
+`object`: `{ "at-rule-name": ["array", "of", "properties"]|"property" }`
 
 Given:
 

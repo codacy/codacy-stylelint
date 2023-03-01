@@ -1,6 +1,6 @@
 # keyframe-declaration-no-important
 
-Disallow `!important` within keyframe declarations.
+Disallow invalid `!important` within keyframe declarations.
 
 <!-- prettier-ignore -->
 ```css
@@ -18,7 +18,7 @@ Using `!important` within keyframes declarations is [completely ignored in some 
 
 ### `true`
 
-The following patterns is considered a problem:
+The following pattern is considered a problem:
 
 <!-- prettier-ignore -->
 ```css

@@ -1,11 +1,11 @@
 # no-duplicate-selectors
 
-Disallow duplicate selectors within a stylesheet.
+Disallow duplicate selectors.
 
 <!-- prettier-ignore -->
 ```css
     .foo {} .bar {} .foo {}
-/** ↑              ↑
+/** ↑               ↑
  * These duplicates */
 ```
 
@@ -21,6 +21,8 @@ The same selector _is_ allowed to repeat in the following circumstances:
 - The duplicates are in rules with different parent nodes, e.g. inside and outside of a media query.
 
 This rule resolves nested selectors. So `a b {} a { & b {} }` counts as a problem, because the resolved selectors end up with a duplicate.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.2.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -128,9 +130,7 @@ The following patterns are considered problems:
 input, textarea {
   border: 2px;
 }
-
 textarea {
   border: 1px;
 }
-
 ```
