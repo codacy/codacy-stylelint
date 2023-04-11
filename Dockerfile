@@ -1,4 +1,4 @@
-FROM alpine:3.16
+FROM alpine:3.17.3
 
 WORKDIR /workdir
 COPY package*.json ./
