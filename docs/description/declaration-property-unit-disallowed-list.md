@@ -9,9 +9,11 @@ a { width: 100px; }
  * These properties and these units */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
-`object`: `{ "unprefixed-property-name": ["array", "of", "units"] }`
+`object`: `{ "unprefixed-property-name": ["array", "of", "units"]|"unit" }`
 
 If a property name is surrounded with `"/"` (e.g. `"/^animation/"`), it is interpreted as a regular expression. This allows, for example, easy targeting of shorthands: `/^animation/` will match `animation`, `animation-duration`, `animation-timing-function`, etc.
 
@@ -20,7 +22,7 @@ Given:
 ```json
 {
   "font-size": ["em", "px"],
-  "/^animation/": ["s"]
+  "/^animation/": "s"
 }
 ```
 

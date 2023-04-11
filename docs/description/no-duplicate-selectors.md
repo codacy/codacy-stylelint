@@ -1,11 +1,11 @@
 # no-duplicate-selectors
 
-Disallow duplicate selectors within a stylesheet.
+Disallow duplicate selectors.
 
 <!-- prettier-ignore -->
 ```css
     .foo {} .bar {} .foo {}
-/** ↑              ↑
+/** ↑               ↑
  * These duplicates */
 ```
 
@@ -128,9 +128,7 @@ The following patterns are considered problems:
 input, textarea {
   border: 2px;
 }
-
 textarea {
   border: 1px;
 }
-
 ```

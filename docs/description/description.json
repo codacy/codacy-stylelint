@@ -41,6 +41,13 @@
     "description" : "selector-class-pattern"
   } ]
 }, {
+  "patternId" : "no-invalid-double-slash-comments",
+  "title" : "Disallow invalid double-slash comments.",
+  "parameters" : [ {
+    "name" : "no-invalid-double-slash-comments",
+    "description" : "no-invalid-double-slash-comments"
+  } ]
+}, {
   "patternId" : "selector-pseudo-element-disallowed-list",
   "title" : "Specify a list of disallowed pseudo-element selectors.",
   "parameters" : [ {
@@ -53,6 +60,13 @@
   "parameters" : [ {
     "name" : "comment-word-disallowed-list",
     "description" : "comment-word-disallowed-list"
+  } ]
+}, {
+  "patternId" : "font-family-no-missing-generic-family-keyword",
+  "title" : "Disallow a missing generic family keyword within font families.",
+  "parameters" : [ {
+    "name" : "font-family-no-missing-generic-family-keyword",
+    "description" : "font-family-no-missing-generic-family-keyword"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-disallowed-list",
@@ -104,13 +118,6 @@
     "description" : "indentation"
   } ]
 }, {
-  "patternId" : "font-family-name-quotes",
-  "title" : "Specify whether or not quotation marks should be used around font family names.",
-  "parameters" : [ {
-    "name" : "font-family-name-quotes",
-    "description" : "font-family-name-quotes"
-  } ]
-}, {
   "patternId" : "declaration-block-no-duplicate-custom-properties",
   "title" : "Disallow duplicate custom properties within declaration blocks.",
   "parameters" : [ {
@@ -139,6 +146,13 @@
     "description" : "selector-attribute-quotes"
   } ]
 }, {
+  "patternId" : "import-notation",
+  "title" : "Specify string or URL notation for `@import` rules.",
+  "parameters" : [ {
+    "name" : "import-notation",
+    "description" : "import-notation"
+  } ]
+}, {
   "patternId" : "selector-list-comma-newline-before",
   "title" : "Require a newline or disallow whitespace before the commas of selector lists.",
   "parameters" : [ {
@@ -160,11 +174,11 @@
     "description" : "unicode-bom"
   } ]
 }, {
-  "patternId" : "no-invalid-position-at-import-rule",
-  "title" : "Disallow invalid position `@import` rules within a stylesheet.",
+  "patternId" : "shorthand-property-no-redundant-values",
+  "title" : "Disallow redundant values within shorthand properties.",
   "parameters" : [ {
-    "name" : "no-invalid-position-at-import-rule",
-    "description" : "no-invalid-position-at-import-rule"
+    "name" : "shorthand-property-no-redundant-values",
+    "description" : "shorthand-property-no-redundant-values"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-space-before",
@@ -188,6 +202,13 @@
     "description" : "property-disallowed-list"
   } ]
 }, {
+  "patternId" : "no-invalid-position-at-import-rule",
+  "title" : "Disallow invalid position `@import` rules.",
+  "parameters" : [ {
+    "name" : "no-invalid-position-at-import-rule",
+    "description" : "no-invalid-position-at-import-rule"
+  } ]
+}, {
   "patternId" : "max-nesting-depth",
   "title" : "Limit the depth of nesting.",
   "parameters" : [ {
@@ -209,13 +230,6 @@
     "description" : "media-feature-colon-space-before"
   } ]
 }, {
-  "patternId" : "shorthand-property-no-redundant-values",
-  "title" : "Disallow redundant values in shorthand properties.",
-  "parameters" : [ {
-    "name" : "shorthand-property-no-redundant-values",
-    "description" : "shorthand-property-no-redundant-values"
-  } ]
-}, {
   "patternId" : "at-rule-allowed-list",
   "title" : "Specify a list of allowed at-rules.",
   "parameters" : [ {
@@ -223,32 +237,11 @@
     "description" : "at-rule-allowed-list"
   } ]
 }, {
-  "patternId" : "string-no-newline",
-  "title" : "Disallow (unescaped) newlines in strings.",
-  "parameters" : [ {
-    "name" : "string-no-newline",
-    "description" : "string-no-newline"
-  } ]
-}, {
   "patternId" : "selector-max-specificity",
   "title" : "Limit the specificity of selectors.",
   "parameters" : [ {
     "name" : "selector-max-specificity",
     "description" : "selector-max-specificity"
-  } ]
-}, {
-  "patternId" : "keyframe-declaration-no-important",
-  "title" : "Disallow `!important` within keyframe declarations.",
-  "parameters" : [ {
-    "name" : "keyframe-declaration-no-important",
-    "description" : "keyframe-declaration-no-important"
-  } ]
-}, {
-  "patternId" : "color-function-notation",
-  "title" : "Specify modern or legacy notation for applicable color-functions.",
-  "parameters" : [ {
-    "name" : "color-function-notation",
-    "description" : "color-function-notation"
   } ]
 }, {
   "patternId" : "block-closing-brace-newline-before",
@@ -279,6 +272,13 @@
     "description" : "selector-descendant-combinator-no-non-space"
   } ]
 }, {
+  "patternId" : "declaration-property-max-values",
+  "title" : "Limit the number of values for a list of properties within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-max-values",
+    "description" : "declaration-property-max-values"
+  } ]
+}, {
   "patternId" : "media-feature-name-no-unknown",
   "title" : "Disallow unknown media feature names.",
   "parameters" : [ {
@@ -307,13 +307,6 @@
     "description" : "media-feature-name-disallowed-list"
   } ]
 }, {
-  "patternId" : "font-family-no-missing-generic-family-keyword",
-  "title" : "Disallow missing generic families in lists of font family names.",
-  "parameters" : [ {
-    "name" : "font-family-no-missing-generic-family-keyword",
-    "description" : "font-family-no-missing-generic-family-keyword"
-  } ]
-}, {
   "patternId" : "color-hex-length",
   "title" : "Specify short or long notation for hex colors.",
   "parameters" : [ {
@@ -335,11 +328,39 @@
     "description" : "value-list-comma-space-after"
   } ]
 }, {
+  "patternId" : "declaration-block-no-redundant-longhand-properties",
+  "title" : "Disallow redundant longhand properties within declaration-block.",
+  "parameters" : [ {
+    "name" : "declaration-block-no-redundant-longhand-properties",
+    "description" : "declaration-block-no-redundant-longhand-properties"
+  } ]
+}, {
+  "patternId" : "font-family-name-quotes",
+  "title" : "Require or disallow quotes for font family names.",
+  "parameters" : [ {
+    "name" : "font-family-name-quotes",
+    "description" : "font-family-name-quotes"
+  } ]
+}, {
   "patternId" : "number-leading-zero",
   "title" : "Require or disallow a leading zero for fractional numbers less than 1.",
   "parameters" : [ {
     "name" : "number-leading-zero",
     "description" : "number-leading-zero"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-element-colon-notation",
+  "title" : "Specify single or double colon notation for applicable pseudo-element selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-element-colon-notation",
+    "description" : "selector-pseudo-element-colon-notation"
+  } ]
+}, {
+  "patternId" : "no-duplicate-at-import-rules",
+  "title" : "Disallow duplicate `@import` rules.",
+  "parameters" : [ {
+    "name" : "no-duplicate-at-import-rules",
+    "description" : "no-duplicate-at-import-rules"
   } ]
 }, {
   "patternId" : "selector-type-no-unknown",
@@ -356,11 +377,11 @@
     "description" : "property-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "function-calc-no-unspaced-operator",
-  "title" : "Disallow an unspaced operator within `calc` functions.",
+  "patternId" : "keyframe-declaration-no-important",
+  "title" : "Disallow invalid `!important` within keyframe declarations.",
   "parameters" : [ {
-    "name" : "function-calc-no-unspaced-operator",
-    "description" : "function-calc-no-unspaced-operator"
+    "name" : "keyframe-declaration-no-important",
+    "description" : "keyframe-declaration-no-important"
   } ]
 }, {
   "patternId" : "property-allowed-list",
@@ -468,13 +489,6 @@
     "description" : "linebreaks"
   } ]
 }, {
-  "patternId" : "selector-pseudo-element-colon-notation",
-  "title" : "Specify single or double colon notation for applicable pseudo-elements.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-element-colon-notation",
-    "description" : "selector-pseudo-element-colon-notation"
-  } ]
-}, {
   "patternId" : "block-closing-brace-newline-after",
   "title" : "Require a newline or disallow whitespace after the closing brace of blocks.",
   "parameters" : [ {
@@ -543,6 +557,13 @@
   "parameters" : [ {
     "name" : "selector-max-attribute",
     "description" : "selector-max-attribute"
+  } ]
+}, {
+  "patternId" : "function-no-unknown",
+  "title" : "Disallow unknown functions.",
+  "parameters" : [ {
+    "name" : "function-no-unknown",
+    "description" : "function-no-unknown"
   } ]
 }, {
   "patternId" : "block-opening-brace-space-after",
@@ -615,13 +636,6 @@
     "description" : "selector-type-case"
   } ]
 }, {
-  "patternId" : "no-invalid-double-slash-comments",
-  "title" : "Disallow double-slash comments (`//...`) which are not supported by CSS and could lead to unexpected results.",
-  "parameters" : [ {
-    "name" : "no-invalid-double-slash-comments",
-    "description" : "no-invalid-double-slash-comments"
-  } ]
-}, {
   "patternId" : "selector-disallowed-list",
   "title" : "Specify a list of disallowed selectors.",
   "parameters" : [ {
@@ -650,6 +664,20 @@
     "description" : "selector-attribute-operator-allowed-list"
   } ]
 }, {
+  "patternId" : "media-feature-range-notation",
+  "title" : "Specify context or prefix notation for media feature ranges.",
+  "parameters" : [ {
+    "name" : "media-feature-range-notation",
+    "description" : "media-feature-range-notation"
+  } ]
+}, {
+  "patternId" : "string-no-newline",
+  "title" : "Disallow invalid newlines within strings.",
+  "parameters" : [ {
+    "name" : "string-no-newline",
+    "description" : "string-no-newline"
+  } ]
+}, {
   "patternId" : "comment-no-empty",
   "title" : "Disallow empty comments.",
   "parameters" : [ {
@@ -669,13 +697,6 @@
   "parameters" : [ {
     "name" : "selector-max-class",
     "description" : "selector-max-class"
-  } ]
-}, {
-  "patternId" : "no-duplicate-selectors",
-  "title" : "Disallow duplicate selectors within a stylesheet.",
-  "parameters" : [ {
-    "name" : "no-duplicate-selectors",
-    "description" : "no-duplicate-selectors"
   } ]
 }, {
   "patternId" : "declaration-property-value-disallowed-list",
@@ -839,13 +860,6 @@
     "description" : "no-extra-semicolons"
   } ]
 }, {
-  "patternId" : "font-family-no-duplicate-names",
-  "title" : "Disallow duplicate font family names.",
-  "parameters" : [ {
-    "name" : "font-family-no-duplicate-names",
-    "description" : "font-family-no-duplicate-names"
-  } ]
-}, {
   "patternId" : "function-whitespace-after",
   "title" : "Require or disallow whitespace after functions.",
   "parameters" : [ {
@@ -865,6 +879,13 @@
   "parameters" : [ {
     "name" : "media-feature-name-value-allowed-list",
     "description" : "media-feature-name-value-allowed-list"
+  } ]
+}, {
+  "patternId" : "function-calc-no-unspaced-operator",
+  "title" : "Disallow invalid unspaced operator within `calc` functions.",
+  "parameters" : [ {
+    "name" : "function-calc-no-unspaced-operator",
+    "description" : "function-calc-no-unspaced-operator"
   } ]
 }, {
   "patternId" : "declaration-block-trailing-semicolon",
@@ -916,11 +937,18 @@
     "description" : "custom-property-pattern"
   } ]
 }, {
-  "patternId" : "font-weight-notation",
-  "title" : "Require numeric or named (where possible) `font-weight` values. Also, when named values are expected, require only valid names.",
+  "patternId" : "color-function-notation",
+  "title" : "Specify modern or legacy notation for color-functions.",
   "parameters" : [ {
-    "name" : "font-weight-notation",
-    "description" : "font-weight-notation"
+    "name" : "color-function-notation",
+    "description" : "color-function-notation"
+  } ]
+}, {
+  "patternId" : "no-duplicate-selectors",
+  "title" : "Disallow duplicate selectors.",
+  "parameters" : [ {
+    "name" : "no-duplicate-selectors",
+    "description" : "no-duplicate-selectors"
   } ]
 }, {
   "patternId" : "declaration-no-important",
@@ -930,13 +958,6 @@
     "description" : "declaration-no-important"
   } ]
 }, {
-  "patternId" : "time-min-milliseconds",
-  "title" : "Specify the minimum number of milliseconds for time values.",
-  "parameters" : [ {
-    "name" : "time-min-milliseconds",
-    "description" : "time-min-milliseconds"
-  } ]
-}, {
   "patternId" : "selector-pseudo-class-disallowed-list",
   "title" : "Specify a list of disallowed pseudo-class selectors.",
   "parameters" : [ {
@@ -944,11 +965,25 @@
     "description" : "selector-pseudo-class-disallowed-list"
   } ]
 }, {
+  "patternId" : "font-family-no-duplicate-names",
+  "title" : "Disallow duplicate names within font families.",
+  "parameters" : [ {
+    "name" : "font-family-no-duplicate-names",
+    "description" : "font-family-no-duplicate-names"
+  } ]
+}, {
   "patternId" : "declaration-colon-space-after",
   "title" : "Require a single space or disallow whitespace after the colon of declarations.",
   "parameters" : [ {
     "name" : "declaration-colon-space-after",
     "description" : "declaration-colon-space-after"
+  } ]
+}, {
+  "patternId" : "function-linear-gradient-no-nonstandard-direction",
+  "title" : "Disallow non-standard direction values for linear gradient functions.",
+  "parameters" : [ {
+    "name" : "function-linear-gradient-no-nonstandard-direction",
+    "description" : "function-linear-gradient-no-nonstandard-direction"
   } ]
 }, {
   "patternId" : "named-grid-areas-no-invalid",
@@ -1084,11 +1119,25 @@
     "description" : "selector-no-qualifying-type"
   } ]
 }, {
+  "patternId" : "font-weight-notation",
+  "title" : "Require numeric or named (where possible) `font-weight` values.",
+  "parameters" : [ {
+    "name" : "font-weight-notation",
+    "description" : "font-weight-notation"
+  } ]
+}, {
   "patternId" : "declaration-block-no-shorthand-property-overrides",
   "title" : "Disallow shorthand properties that override related longhand properties.",
   "parameters" : [ {
     "name" : "declaration-block-no-shorthand-property-overrides",
     "description" : "declaration-block-no-shorthand-property-overrides"
+  } ]
+}, {
+  "patternId" : "keyframe-selector-notation",
+  "title" : "Specify keyword or percentage notation for keyframe selectors.",
+  "parameters" : [ {
+    "name" : "keyframe-selector-notation",
+    "description" : "keyframe-selector-notation"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-allowed-list",
@@ -1103,13 +1152,6 @@
   "parameters" : [ {
     "name" : "selector-max-empty-lines",
     "description" : "selector-max-empty-lines"
-  } ]
-}, {
-  "patternId" : "function-linear-gradient-no-nonstandard-direction",
-  "title" : "Disallow direction values in `linear-gradient()` calls that are not valid according to the\nstandard syntax.",
-  "parameters" : [ {
-    "name" : "function-linear-gradient-no-nonstandard-direction",
-    "description" : "function-linear-gradient-no-nonstandard-direction"
   } ]
 }, {
   "patternId" : "custom-media-pattern",
@@ -1140,11 +1182,11 @@
     "description" : "selector-pseudo-class-allowed-list"
   } ]
 }, {
-  "patternId" : "no-duplicate-at-import-rules",
-  "title" : "Disallow duplicate `@import` rules within a stylesheet.",
+  "patternId" : "keyframe-block-no-duplicate-selectors",
+  "title" : "Disallow duplicate selectors within keyframe blocks.",
   "parameters" : [ {
-    "name" : "no-duplicate-at-import-rules",
-    "description" : "no-duplicate-at-import-rules"
+    "name" : "keyframe-block-no-duplicate-selectors",
+    "description" : "keyframe-block-no-duplicate-selectors"
   } ]
 }, {
   "patternId" : "at-rule-name-newline-after",
@@ -1210,13 +1252,6 @@
     "description" : "selector-pseudo-class-case"
   } ]
 }, {
-  "patternId" : "media-query-list-comma-newline-after",
-  "title" : "Require a newline or disallow whitespace after the commas of media query lists.",
-  "parameters" : [ {
-    "name" : "media-query-list-comma-newline-after",
-    "description" : "media-query-list-comma-newline-after"
-  } ]
-}, {
   "patternId" : "unit-no-unknown",
   "title" : "Disallow unknown units.",
   "parameters" : [ {
@@ -1231,18 +1266,25 @@
     "description" : "property-case"
   } ]
 }, {
+  "patternId" : "media-query-list-comma-newline-after",
+  "title" : "Require a newline or disallow whitespace after the commas of media query lists.",
+  "parameters" : [ {
+    "name" : "media-query-list-comma-newline-after",
+    "description" : "media-query-list-comma-newline-after"
+  } ]
+}, {
+  "patternId" : "annotation-no-unknown",
+  "title" : "Disallow unknown annotations.",
+  "parameters" : [ {
+    "name" : "annotation-no-unknown",
+    "description" : "annotation-no-unknown"
+  } ]
+}, {
   "patternId" : "no-empty-first-line",
   "title" : "Disallow empty first lines.",
   "parameters" : [ {
     "name" : "no-empty-first-line",
     "description" : "no-empty-first-line"
-  } ]
-}, {
-  "patternId" : "declaration-block-no-redundant-longhand-properties",
-  "title" : "Disallow longhand properties that can be combined into one shorthand property.",
-  "parameters" : [ {
-    "name" : "declaration-block-no-redundant-longhand-properties",
-    "description" : "declaration-block-no-redundant-longhand-properties"
   } ]
 }, {
   "patternId" : "selector-attribute-brackets-space-inside",
@@ -1292,6 +1334,20 @@
   "parameters" : [ {
     "name" : "color-named",
     "description" : "color-named"
+  } ]
+}, {
+  "patternId" : "selector-not-notation",
+  "title" : "Specify simple or complex notation for `:not()` pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-not-notation",
+    "description" : "selector-not-notation"
+  } ]
+}, {
+  "patternId" : "time-min-milliseconds",
+  "title" : "Limit the minimum number of milliseconds for time values.",
+  "parameters" : [ {
+    "name" : "time-min-milliseconds",
+    "description" : "time-min-milliseconds"
   } ]
 }, {
   "patternId" : "declaration-block-no-duplicate-properties",

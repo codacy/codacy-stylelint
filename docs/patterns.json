@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "14.2.0",
+  "version" : "14.16.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -8,6 +8,16 @@
     "parameters" : [ {
       "name" : "alpha-value-notation",
       "default" : "number"
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "annotation-no-unknown",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "annotation-no-unknown",
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -568,6 +578,16 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "declaration-property-max-values",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-max-values",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "declaration-property-unit-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -758,6 +778,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "function-no-unknown",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "function-no-unknown",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "function-parentheses-newline-inside",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -840,6 +870,16 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "import-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "import-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "indentation",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -850,6 +890,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "keyframe-block-no-duplicate-selectors",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "keyframe-block-no-duplicate-selectors",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "keyframe-declaration-no-important",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -859,6 +909,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "keyframe-selector-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "keyframe-selector-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "keyframes-name-pattern",
     "level" : "Info",
@@ -1011,6 +1071,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "media-feature-range-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-range-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "media-feature-range-operator-space-after",
     "level" : "Info",
@@ -1634,6 +1704,16 @@
       "default" : [ true, {
         "ignoreSelectors" : [ ]
       } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-not-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-not-notation",
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false

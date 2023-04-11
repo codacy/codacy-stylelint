@@ -9,11 +9,13 @@ Specify a pattern for ID selectors.
  * These ID selectors */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `regex|string`
 
-A string will be translated into a RegExp like so `new RegExp(yourString)` — so be sure to escape properly.
+A string will be translated into a RegExp like so `new RegExp(yourString)` — so be sure to escape properly.
 
 The selector value _after `#`_ will be checked. No need to include `#` in your pattern.
 

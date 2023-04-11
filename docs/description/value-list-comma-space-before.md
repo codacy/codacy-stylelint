@@ -9,7 +9,7 @@ a { background-size: 0 ,0; }
  * The space before this comma */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.2.0/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 
