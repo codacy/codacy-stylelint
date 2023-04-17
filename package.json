@@ -3,7 +3,7 @@
     "@lego/stylelint-config": "^6.1.2",
     "@lego/stylelint-config-prettier": "^6.1.2",
     "@lego/stylelint-config-scss": "^6.1.2",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.22",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
