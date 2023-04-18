@@ -2,7 +2,7 @@ FROM alpine:3.17.3
 
 WORKDIR /workdir
 COPY package*.json ./
-RUN adduser -u 2004 -D docker && apk --no-cache add openjdk11-jre-headless bash nodejs npm && npm install --production && apk del npm
+RUN adduser -u 2004 -D docker && apk --no-cache add openjdk11-jre-headless bash nodejs npm && npm install --legacy-peer-deps --production && apk del npm
 COPY docs /docs
 COPY target/universal/stage/ /workdir/
 RUN chmod +x /workdir/bin/codacy-stylelint
