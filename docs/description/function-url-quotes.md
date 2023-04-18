@@ -9,6 +9,8 @@ a { background: url("x.jpg") }
  *             These quotes */
 ```
 
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+
 ## Options
 
 `string`: `"always"|"never"`
@@ -26,17 +28,7 @@ The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-@document domain(http://www.w3.org/);
-```
-
-<!-- prettier-ignore -->
-```css
 @font-face { font-family: 'foo'; src: url(foo.ttf); }
-```
-
-<!-- prettier-ignore -->
-```css
-@-moz-document url-prefix() {}
 ```
 
 The following patterns are _not_ considered problems:
@@ -53,17 +45,7 @@ a { background: url('x.jpg'); }
 
 <!-- prettier-ignore -->
 ```css
-@document domain('http://www.w3.org/');
-```
-
-<!-- prettier-ignore -->
-```css
 @font-face { font-family: "foo"; src: url("foo.ttf"); }
-```
-
-<!-- prettier-ignore -->
-```css
-@-moz-document url-prefix('') {}
 ```
 
 ### `"never"`

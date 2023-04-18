@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "14.16.1",
+  "version" : "15.5.0",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -636,6 +636,16 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "declaration-property-value-no-unknown",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "declaration-property-value-no-unknown",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "font-family-name-quotes",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1050,6 +1060,16 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "media-feature-name-unit-allowed-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-unit-allowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "media-feature-name-value-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1272,6 +1292,16 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "no-unknown-custom-properties",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-unknown-custom-properties",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "number-leading-zero",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1373,6 +1403,16 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "rule-selector-property-disallowed-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-anb-no-unmatchable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-anb-no-unmatchable",
       "default" : null
     } ],
     "languages" : [ ],

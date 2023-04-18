@@ -1,66 +1,62 @@
-# media-feature-name-allowed-list
+# selector-anb-no-unmatchable
 
-Specify a list of allowed media feature names.
+Disallow unmatchable An+B selectors.
 
 <!-- prettier-ignore -->
 ```css
-@media (min-width: 700px) {}
-/**     ↑
- * This media feature name */
+a:nth-child(0n+0) {}
+/*↑             ↑
+ * This unmatchable An+B selector */
 ```
+
+[An+B selectors](https://www.w3.org/TR/css-syntax-3/#anb-microsyntax) are one-indexed. Selectors that always evaluate to `0` will not match any elements.
 
 The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
-`array|string|regex`: `["array", "of", "unprefixed", /media-features/, "regex"]|"media-feature"|"/regex/"|/regex/`
-
-Given:
-
-```json
-["max-width", "/^my-/"]
-```
+### `true`
 
 The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-@media (min-width: 50em) {}
+a:nth-child(0) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media print and (min-resolution: 300dpi) {}
+a:nth-last-child(0n) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media (min-width < 50em) {}
+a:nth-of-type(0n+0) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media (10em < min-width < 50em) {}
+a:nth-last-of-type(0 of a) {}
 ```
 
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-@media (max-width: 50em) {}
+a:nth-child(1) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media (my-width: 50em) {}
+a:nth-last-child(1n) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media (max-width > 50em) {}
+a:nth-of-type(1n+0) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-@media (10em < my-width < 50em) {}
+a:nth-last-of-type(1 of a) {}
 ```

@@ -1,5 +1,7 @@
 # value-list-comma-newline-before
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.5.0/docs/migration-guide/to-15.md).
+
 Require a newline or disallow whitespace before the commas of value lists.
 
 <!-- prettier-ignore -->

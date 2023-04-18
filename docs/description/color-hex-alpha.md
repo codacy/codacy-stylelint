@@ -9,6 +9,8 @@ a { color: #fffa }
  * This alpha channel */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `string`: `"always"|"never"`

@@ -11,7 +11,9 @@ a { color: pink; color: orange; }
 
 This rule ignores variables (`$sass`, `@less`, `--custom-property`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -110,6 +112,33 @@ p {
 }
 ```
 
+### `ignore: ["consecutive-duplicates-with-different-syntaxes"]`
+
+Ignore consecutive duplicated properties with different value syntaxes (type and unit of value).
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+/* properties with the same value syntax */
+p {
+  font-size: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+p {
+  font-size: 16px;
+  font-size: 16rem;
+  font-weight: 400;
+}
+```
+
 ### `ignore: ["consecutive-duplicates-with-same-prefixless-values"]`
 
 Ignore consecutive duplicated properties with identical values, when ignoring their prefix.
@@ -147,7 +176,7 @@ p {
 }
 ```
 
-### `ignoreProperties: ["/regex/", "non-regex"]`
+### `ignoreProperties: ["/regex/", /regex/, "non-regex"]`
 
 Ignore duplicates of specific properties.
 
