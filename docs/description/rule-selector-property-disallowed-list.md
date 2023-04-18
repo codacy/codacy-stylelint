@@ -5,9 +5,11 @@ Specify a list of disallowed properties for selectors within rules.
 <!-- prettier-ignore -->
 ```css
     a { color: red; }
-/** ↑          ↑
+/** ↑   ↑
  * Selector and property name */
 ```
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

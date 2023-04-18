@@ -11,6 +11,8 @@ a { display: block; }
 
 This rule ignores variables (`$sass`, `@less`, `--custom-property`).
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `array|string|regex`: `["array", "of", /properties/, "regex"]|"property"|"/regex/"|/regex/`

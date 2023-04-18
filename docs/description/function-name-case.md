@@ -11,7 +11,9 @@ a { width: calc(5% - 10em); }
 
 Camel case function names, e.g. `translateX`, are accounted for when the `lower` option is used.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

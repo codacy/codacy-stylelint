@@ -1,5 +1,7 @@
 # selector-combinator-space-after
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.5.0/docs/migration-guide/to-15.md).
+
 Require a single space or disallow whitespace after the combinators of selectors.
 
 <!-- prettier-ignore -->
@@ -15,7 +17,7 @@ The descendant combinator is _not_ checked by this rule.
 
 Also, `+` and `-` signs within `:nth-*()` arguments are not checked (e.g. `a:nth-child(2n+1)`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

@@ -1,5 +1,7 @@
 # at-rule-name-case
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.5.0/docs/migration-guide/to-15.md).
+
 Specify lowercase or uppercase for at-rules names.
 
 <!-- prettier-ignore -->
@@ -11,7 +13,7 @@ Specify lowercase or uppercase for at-rules names.
 
 Only lowercase at-rule names are valid in SCSS.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix some of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
 
 ## Options
 

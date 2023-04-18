@@ -9,6 +9,8 @@ Specify a list of disallowed selectors.
  * This is selector */
 ```
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 `array|string|regexp`: `["array", "of", "selectors", /or/, "/regex/"]|"selector"|"/regex/"|/regex/`

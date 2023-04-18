@@ -16,7 +16,9 @@ Use:
 - `"complex"` to author modern Selectors Level 4 CSS
 - `"simple"` for backwards compatibility with older browsers
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) option can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) option can automatically fix most of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

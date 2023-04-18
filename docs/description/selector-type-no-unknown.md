@@ -11,6 +11,8 @@ Disallow unknown type selectors.
 
 This rule considers tags defined in the HTML, SVG, and MathML specifications to be known.
 
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+
 ## Options
 
 ### `true`

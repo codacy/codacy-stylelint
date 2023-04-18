@@ -1,5 +1,7 @@
 # block-closing-brace-empty-line-before
 
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.5.0/docs/migration-guide/to-15.md).
+
 Require or disallow an empty line before the closing brace of blocks.
 
 <!-- prettier-ignore -->
@@ -12,7 +14,7 @@ a {
  * This line */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

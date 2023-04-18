@@ -18,7 +18,7 @@ This rule ignores:
 - single-line comments with `//` (when you're using a custom syntax that supports them)
 - comments within selector and value lists
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/14.16.1/docs/user-guide/usage/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/14.16.1/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.5.0/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
 
 ## Options
 
@@ -140,7 +140,7 @@ a {
 
 #### `"stylelint-commands"`
 
-Ignore comments that deliver commands to stylelint, e.g. `/* stylelint-disable color-no-hex */`.
+Ignore configuration comments, e.g. `/* stylelint-disable color-no-hex */`.
 
 For example, with `"always"`:
 
@@ -150,7 +150,7 @@ The following patterns are considered problems:
 ```css
 a {
   background: pink;
-  /* not a Stylelint command */
+  /* not a configuration comment */
   color: #eee;
 }
 ```

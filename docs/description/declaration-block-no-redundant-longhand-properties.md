@@ -22,12 +22,13 @@ a {
 }
 ```
 
-This rule will only complain if you've used the longhand equivalent of _all_ the properties that the shorthand will set and if their values are not `inherit`.
+This rule will only complain if you've used the longhand equivalent of _all_ the properties that the shorthand will set and if their values are not [CSS-wide keywords](https://www.w3.org/TR/css-values/#common-keywords) like `initial`, `inherit` etc.
 
 This rule complains when the following shorthand properties can be used:
 
 - `margin`
 - `padding`
+- `inset`
 - `background`
 - `font`
 - `border`
@@ -65,6 +66,10 @@ This rule complains when the following shorthand properties can be used:
 **Please note** that properties are considered to be redundant if they may be written shorthand according to the specification, **regardless of the behavior of any individual browser**. For example, due to Internet Explorer's implementation of Flexbox, [it may not be possible to use the shorthand property `flex`](https://github.com/philipwalton/flexbugs#flexbug-8), but the longhand form is still considered a problem.
 
 Flexbox-related properties can be ignored using `ignoreShorthands: ["/flex/"]` (see below).
+
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
