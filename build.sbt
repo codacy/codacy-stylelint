@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion := "2.13.7"
+ThisBuild / scalaVersion := "2.13.8"
 
 ThisBuild / libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "6.1.0"
 
