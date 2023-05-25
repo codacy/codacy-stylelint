@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dockerBuild": "docker build -t codacy-stylelint-base .",
-    "generateDocs": "sbt \"doc-generator/run\""
+    "generateDocs": "sbt doc-generator/run",
+    "test": "sbt scalafmtCheckAll scalafmtSbtCheck doc-generator\/run stage"
   },
   "dependencies": {
     "postcss": "^8.4.23",

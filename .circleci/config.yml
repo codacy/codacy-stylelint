@@ -13,11 +13,10 @@ workflows:
       - codacy/sbt:
           name: publish_docker_local
           cmd: |
-            sbt "scalafmt::test;
-                 test:scalafmt::test;
-                 sbt:scalafmt::test;
-                 doc-generator/run;
-                 stage"
+            sbt "scalafmtCheckAll;
+              scalafmtSbtCheck; 
+              doc-generator/run;
+              stage"
             docker build -t $CIRCLE_PROJECT_REPONAME .
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
