@@ -1,6 +1,6 @@
 ThisBuild / scalaVersion := "2.13.8"
 
-ThisBuild / libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "6.1.0"
+ThisBuild / libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "5.0.2"
 
 name := "codacy-stylelint"
 

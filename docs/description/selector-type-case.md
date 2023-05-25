@@ -9,9 +9,9 @@ Specify lowercase or uppercase for type selectors.
  * This is type selector */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

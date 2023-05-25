@@ -9,7 +9,7 @@ a { width: 100px; }
  * These properties and these units */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

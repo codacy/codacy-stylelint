@@ -13,7 +13,7 @@ Any number of asterisks are allowed at the beginning or end of the comment. So `
 
 **Caveat:** Comments within _selector and value lists_ are currently ignored.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
