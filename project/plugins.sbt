@@ -1,7 +1,7 @@
 resolvers += Resolver.jcenterRepo
-addSbtPlugin("com.codacy" % "codacy-sbt-plugin" % "25.1.1")
+addSbtPlugin("com.codacy" % "codacy-sbt-plugin" % "20.0.2")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.8.1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.15")
 
 // Coverage
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.9.3")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.6.0")
