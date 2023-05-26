@@ -1,6 +1,6 @@
 # no-empty-first-line
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.5.0/docs/migration-guide/to-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.6.2/docs/migration-guide/to-15.md).
 
 Disallow empty first lines.
 
@@ -12,9 +12,9 @@ Disallow empty first lines.
     a { color: pink; }
 ```
 
-This rule ignores empty sources. Use the [`no-empty-source`](https://github.com/stylelint/stylelint/tree/15.5.0/lib/rules/no-empty-source/README.md) rule to disallow these.
+This rule ignores empty sources. Use the [`no-empty-source`](https://github.com/stylelint/stylelint/tree/15.6.2/lib/rules/no-empty-source/README.md) rule to disallow these.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

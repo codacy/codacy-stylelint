@@ -17,7 +17,7 @@ This rule enforces that practice _as best it can_, reporting fewer errors than i
 
 We recommend turning this rule off if you use a lot of nesting.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.5.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## How it works
 
