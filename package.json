@@ -30,7 +30,7 @@
     "stylelint-prettier": "^3.0.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-rscss": "^0.4.0",
-    "stylelint-scss": "^5.0.0",
+    "stylelint-scss": "^5.0.1",
     "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-suitcss": "^5.0.0"
   }
