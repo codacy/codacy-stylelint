@@ -70,7 +70,8 @@ object Stylelint extends Tool {
       }
       File
         .newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
+        .write(Json.prettyPrint(
+          Json.toJson(JsObject(Seq(("rules", JsObject(patterns)), ("customSyntax", JsString("postcss-less")))))))
         .path
     }.orElse {
       checkForExistingConfigFile(source)
