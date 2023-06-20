@@ -14,7 +14,7 @@ Specify a pattern for the selectors of rules nested within rules.
 
 Non-standard selectors (e.g. selectors with Sass or Less interpolation) and selectors of rules nested within at-rules are ignored.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -74,6 +74,40 @@ a {
 ```css
 a {
   &:hover {}
+  &:focus {}
+}
+```
+
+## Optional secondary options
+
+### `splitList: true | false` (default: `false`)
+
+Split selector lists into individual selectors.
+
+For example, with `true`.
+
+Given the string:
+
+```json
+"^&:(?:hover|focus)$"
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  .bar:hover,
+  &:focus {}
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  &:hover,
   &:focus {}
 }
 ```

@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "15.6.2",
+  "version" : "15.8.0",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -1078,6 +1078,16 @@
       "default" : {
         "/width$/" : [ "768px", "1024px" ]
       }
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-feature-name-value-no-unknown",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-feature-name-value-no-unknown",
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
