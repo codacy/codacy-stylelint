@@ -4,7 +4,7 @@ Disallow unknown properties.
 
 <!-- prettier-ignore -->
 ```css
-a { heigth: 100%; }
+a { height: 100%; }
 /** ↑
  * This property */
 ```
@@ -18,7 +18,7 @@ This rule ignores:
 
 Use option `checkPrefixed` described below to turn on checking of vendor-prefixed properties.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

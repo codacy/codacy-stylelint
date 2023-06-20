@@ -2,18 +2,21 @@
   "scripts": {
     "dockerBuild": "docker build -t codacy-stylelint-base .",
     "generateDocs": "sbt doc-generator/run",
-    "test": "sbt scalafmtCheckAll scalafmtSbtCheck doc-generator\/run stage"
+    "test": "sbt scalafmtCheckAll scalafmtSbtCheck doc-generator/run stage"
   },
   "dependencies": {
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "postcss-less": "^6.0.0",
+    "postcss-sass": "^0.5.0",
     "postcss-scss": "^4.0.6",
+    "postcss-styled-syntax": "^0.4.0",
     "prettier": "^2.8.8",
-    "stylelint": "^15.6.2",
+    "stylelint": "^15.8.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-config-slds": "^1.0.8",
     "stylelint-config-standard": "^33.0.0",
@@ -23,14 +26,12 @@
     "stylelint-config-tailwindcss": "^0.0.7",
     "stylelint-config-twbs-bootstrap": "^10.0.0",
     "stylelint-config-wordpress": "^17.0.0",
-    "stylelint-csstree-validator": "^2.1.0",
+    "stylelint-csstree-validator": "^3.0.0",
     "stylelint-declaration-strict-value": "^1.9.2",
     "stylelint-declaration-use-variable": "^1.7.3",
-    "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^3.0.0",
-    "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-rscss": "^0.4.0",
-    "stylelint-scss": "^5.0.0",
+    "stylelint-scss": "^5.0.1",
     "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-suitcss": "^5.0.0"
   }

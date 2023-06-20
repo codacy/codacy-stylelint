@@ -11,7 +11,7 @@ a { width: 100pixels; }
 
 This rule considers units defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.6.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -94,7 +94,7 @@ a {
 Given:
 
 ```json
-["image-set", "/^my-/", "/^YOUR-/i"]
+["foo", "/^my-/", "/^YOUR-/i"]
 ```
 
 The following patterns are _not_ considered problems:
@@ -102,32 +102,20 @@ The following patterns are _not_ considered problems:
 <!-- prettier-ignore -->
 ```css
 a {
-  background-image: image-set(
-    '/images/some-image-1x.jpg' 1x,
-    '/images/some-image-2x.jpg' 2x,
-    '/images/some-image-3x.jpg' 3x
-  );
+  width: foo(1x);
 }
 ```
 
 <!-- prettier-ignore -->
 ```css
 a {
-  background-image: my-image-set(
-    '/images/some-image-1x.jpg' 1x,
-    '/images/some-image-2x.jpg' 2x,
-    '/images/some-image-3x.jpg' 3x
-  );
+  width: my-func(1x);
 }
 ```
 
 <!-- prettier-ignore -->
 ```css
 a {
-  background-image: YoUr-image-set(
-    '/images/some-image-1x.jpg' 1x,
-    '/images/some-image-2x.jpg' 2x,
-    '/images/some-image-3x.jpg' 3x
-  );
+  width: YoUr-func(1x);
 }
 ```

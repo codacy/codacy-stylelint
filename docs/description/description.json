@@ -972,6 +972,13 @@
     "description" : "max-empty-lines"
   } ]
 }, {
+  "patternId" : "media-feature-name-value-no-unknown",
+  "title" : "Disallow unknown values for media features.",
+  "parameters" : [ {
+    "name" : "media-feature-name-value-no-unknown",
+    "description" : "media-feature-name-value-no-unknown"
+  } ]
+}, {
   "patternId" : "selector-attribute-name-disallowed-list",
   "title" : "Specify a list of disallowed attribute names.",
   "parameters" : [ {
