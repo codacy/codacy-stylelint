@@ -5,8 +5,8 @@
         <error source="color-function-notation" line="15" message="Expected modern color-function notation (color-function-notation)" severity="info" />
         <error source="color-hex-case" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaaaaa&quot; (color-hex-case)" severity="info" />
         <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
-        <error source="length-zero-no-unit" line="15" message="Unexpected unit" severity="erro (length-zero-no-unit)r" />
-        <error source="length-zero-no-unit" line="15" message="Unexpected unit" severity="error (length-zero-no-unit)" />
+        <error source="length-zero-no-unit" line="15" message=" Unexpected unit (length-zero-no-unit)" severity="info" />
+        <error source="length-zero-no-unit" line="15" message=" Unexpected unit (length-zero-no-unit)" severity="info" />
         <error source="number-leading-zero" line="15" message="Unexpected leading zero (number-leading-zero)" severity="info" />
     </file>
     <file name="test2.less">
@@ -14,8 +14,8 @@
         <error source="color-function-notation" line="14" message="Expected modern color-function notation (color-function-notation)" severity="info" />
         <error source="color-hex-case" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaaaaa&quot; (color-hex-case)" severity="info" />
         <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
-        <error source="length-zero-no-unit" line="14" message="Unexpected unit" severity="error (length-zero-no-unit)" />
-        <error source="length-zero-no-unit" line="14" message="Unexpected unit" severity="error (length-zero-no-unit)" />
+        <error source="length-zero-no-unit" line="14" message=" Unexpected unit (length-zero-no-unit)" severity="info" />
+        <error source="length-zero-no-unit" line="14" message=" Unexpected unit (length-zero-no-unit)" severity="info" />
         <error source="number-leading-zero" line="14" message="Unexpected leading zero (number-leading-zero)" severity="info" />
     </file>
     <file name="test3.scss">
@@ -23,8 +23,8 @@
         <error source="color-function-notation" line="14" message="Expected modern color-function notation (color-function-notation)" severity="info" />
         <error source="color-hex-case" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaaaaa&quot; (color-hex-case)" severity="info" />
         <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
-        <error source="length-zero-no-unit" line="14" message="Unexpected unit" severity="info" (length-zero-no-unit) />
-        <error source="length-zero-no-unit" line="14" message="Unexpected unit" severity="error (length-zero-no-unit)" />
+        <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
+        <error source="length-zero-no-unit" line="14" message=" Unexpected unit (length-zero-no-unit)" severity="info" />
         <error source="number-leading-zero" line="14" message="Unexpected leading zero (number-leading-zero)" severity="info" />
     </file>
 </checkstyle>
