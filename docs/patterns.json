@@ -7,7 +7,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "alpha-value-notation",
-      "default" : "number"
+      "default" : [ "percentage", {
+        "exceptProperties" : [ "opacity", "fill-opacity", "flood-opacity", "stop-opacity", "stroke-opacity" ]
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -17,7 +19,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "annotation-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -27,7 +29,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-allowed-list",
-      "default" : [ "import", "media", "extend", "keyframes" ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -37,7 +39,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -60,7 +62,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-name-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -70,7 +72,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-name-newline-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -80,7 +82,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-name-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -110,7 +112,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-property-required-list",
-      "default" : { }
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -120,7 +122,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-semicolon-newline-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -130,7 +132,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-semicolon-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -140,7 +142,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-closing-brace-empty-line-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -150,7 +152,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-closing-brace-newline-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -160,7 +162,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-closing-brace-newline-before",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -170,7 +172,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-closing-brace-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -180,7 +182,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-closing-brace-space-before",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -200,7 +202,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-opening-brace-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -210,7 +212,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-opening-brace-newline-before",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -220,7 +222,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-opening-brace-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -230,7 +232,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-opening-brace-space-before",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -260,7 +262,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-hex-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -280,7 +282,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-named",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -290,7 +292,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-no-hex",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -353,7 +355,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "comment-word-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -363,7 +365,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "custom-media-pattern",
-      "default" : ""
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(name) => `Expected custom media query name \"${name}\" to be kebab-case`"
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -386,7 +390,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "custom-property-no-missing-var-function",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -396,7 +400,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "custom-property-pattern",
-      "default" : ""
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(name) => `Expected custom media query name \"${name}\" to be kebab-case`"
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -406,7 +412,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-bang-space-after",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -416,7 +422,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-bang-space-before",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -426,7 +432,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-no-duplicate-custom-properties",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -437,7 +443,7 @@
     "parameters" : [ {
       "name" : "declaration-block-no-duplicate-properties",
       "default" : [ true, {
-        "ignore" : [ "consecutive-duplicates-with-different-values" ]
+        "ignore" : [ "consecutive-duplicates-with-different-syntaxes" ]
       } ]
     } ],
     "languages" : [ ],
@@ -448,9 +454,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-no-redundant-longhand-properties",
-      "default" : [ true, {
-        "ignoreShorthands" : [ ]
-      } ]
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -470,7 +474,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-semicolon-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -480,7 +484,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-semicolon-newline-before",
-      "default" : "never-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -490,7 +494,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-semicolon-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -500,7 +504,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-semicolon-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -520,7 +524,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-block-trailing-semicolon",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -530,7 +534,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-colon-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -540,7 +544,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-colon-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -550,7 +554,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-colon-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -573,7 +577,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-no-important",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -593,12 +597,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-unit-allowed-list",
-      "default" : [ {
-        "/^border/" : [ "px" ],
-        "/^font" : [ "rem" ]
-      }, {
-        "ignore" : [ "inside-function" ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -608,10 +607,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-unit-disallowed-list",
-      "default" : {
-        "font-size" : [ "em", "px" ],
-        "/^animation/" : [ "s" ]
-      }
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -621,7 +617,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-allowed-list",
-      "default" : { }
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -631,7 +627,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-disallowed-list",
-      "default" : { }
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -651,7 +647,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "font-family-name-quotes",
-      "default" : "always-unless-keyword"
+      "default" : "always-where-recommended"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -681,9 +677,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "font-weight-notation",
-      "default" : [ "named-where-possible", {
-        "ignore" : [ "relative" ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -693,7 +687,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-allowed-list",
-      "default" : [ "scale", "rgba", "linear-gradient" ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -713,7 +707,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-comma-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -723,7 +717,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-comma-newline-before",
-      "default" : "never-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -733,7 +727,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-comma-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -743,7 +737,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-comma-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -753,7 +747,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -773,7 +767,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-max-empty-lines",
-      "default" : 0
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -793,7 +787,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -803,7 +797,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-parentheses-newline-inside",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -813,7 +807,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-parentheses-space-inside",
-      "default" : "never-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -823,7 +817,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-no-scheme-relative",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -833,9 +827,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-quotes",
-      "default" : [ "always", {
-        "except" : [ "empty" ]
-      } ]
+      "default" : "always"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -845,7 +837,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-scheme-allowed-list",
-      "default" : [ "data", "/^http/" ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -855,7 +847,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-scheme-disallowed-list",
-      "default" : [ "file" ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -865,7 +857,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-whitespace-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -885,7 +877,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "import-notation",
-      "default" : null
+      "default" : "url"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -895,7 +887,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "indentation",
-      "default" : 2
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -905,7 +897,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "keyframe-block-no-duplicate-selectors",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -925,7 +917,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "keyframe-selector-notation",
-      "default" : null
+      "default" : "percentage-unless-within-keyword-only-block"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -935,7 +927,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "keyframes-name-pattern",
-      "default" : "kf-.+"
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(name) => `Expected keyframe name \"${name}\" to be kebab-case`"
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -945,7 +939,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "length-zero-no-unit",
-      "default" : true
+      "default" : [ true, {
+        "ignore" : [ "custom-properties" ]
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -955,7 +951,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "linebreaks",
-      "default" : "unix"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -965,7 +961,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "max-empty-lines",
-      "default" : 1
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -975,7 +971,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "max-line-length",
-      "default" : 80
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -985,7 +981,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "max-nesting-depth",
-      "default" : 5
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -995,7 +991,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-colon-space-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1005,7 +1001,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-colon-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1015,7 +1011,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-allowed-list",
-      "default" : [ "/^max-/", "/^min-/" ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1025,7 +1021,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1035,7 +1031,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1075,9 +1071,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-value-allowed-list",
-      "default" : {
-        "/width$/" : [ "768px", "1024px" ]
-      }
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1097,7 +1091,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-parentheses-space-inside",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1107,7 +1101,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-range-notation",
-      "default" : null
+      "default" : "context"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1117,7 +1111,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-range-operator-space-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1127,7 +1121,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-range-operator-space-before",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1137,7 +1131,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-list-comma-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1147,7 +1141,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-list-comma-newline-before",
-      "default" : "never-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1157,7 +1151,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-list-comma-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1167,7 +1161,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-list-comma-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1177,7 +1171,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "named-grid-areas-no-invalid",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1207,7 +1201,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-duplicate-selectors",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1217,7 +1211,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-empty-first-line",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1237,7 +1231,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-eol-whitespace",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1247,7 +1241,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-extra-semicolons",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1267,7 +1261,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-invalid-position-at-import-rule",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1277,7 +1271,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-irregular-whitespace",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1287,7 +1281,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-missing-end-of-source-newline",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1297,7 +1291,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unknown-animations",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1317,7 +1311,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "number-leading-zero",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1327,10 +1321,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "number-max-precision",
-      "default" : [ 3, {
-        "ignoreProperties" : [ ],
-        "ignoreUnits" : [ ]
-      } ]
+      "default" : 4
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1340,7 +1331,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "number-no-trailing-zeros",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1350,7 +1341,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1360,7 +1351,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1370,7 +1361,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1423,7 +1414,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-anb-no-unmatchable",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1433,7 +1424,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-brackets-space-inside",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1453,7 +1444,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1463,7 +1454,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1473,7 +1464,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-space-after",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1483,7 +1474,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1503,7 +1494,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-class-pattern",
-      "default" : "foo-[a-z]+"
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(selector) => `Expected class selector \"${selector}\" to be kebab-case`"
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1513,7 +1506,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1523,7 +1516,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1533,7 +1526,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-space-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1543,7 +1536,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-space-before",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1553,7 +1546,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-descendant-combinator-no-non-space",
-      "default" : true
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1573,7 +1566,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-id-pattern",
-      "default" : "foo-[a-z]+"
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(selector) => `Expected id selector \"${selector}\" to be kebab-case`"
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1583,7 +1578,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-list-comma-newline-after",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1593,7 +1588,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-list-comma-newline-before",
-      "default" : "never-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1603,7 +1598,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-list-comma-space-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1613,7 +1608,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-list-comma-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1623,9 +1618,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-attribute",
-      "default" : [ 3, {
-        "ignoreAttributes" : [ ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1635,7 +1628,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-class",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1645,7 +1638,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-combinators",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1655,7 +1648,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-compound-selectors",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1665,7 +1658,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-empty-lines",
-      "default" : 0
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1675,9 +1668,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-id",
-      "default" : [ 3, {
-        "ignoreContextFunctionalPseudoClasses" : [ ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1687,7 +1678,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-pseudo-class",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1697,9 +1688,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-specificity",
-      "default" : [ "0,2,0", {
-        "ignoreSelectors" : [ ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1709,7 +1698,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-type",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1719,7 +1708,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-universal",
-      "default" : 3
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1729,7 +1718,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-nested-pattern",
-      "default" : "foo-[a-z]+"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1739,9 +1728,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-qualifying-type",
-      "default" : [ true, {
-        "ignore" : [ ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1751,9 +1738,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-vendor-prefix",
-      "default" : [ true, {
-        "ignoreSelectors" : [ ]
-      } ]
+      "default" : true
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1763,7 +1748,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-not-notation",
-      "default" : null
+      "default" : "complex"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1773,7 +1758,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1783,7 +1768,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1793,7 +1778,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1813,7 +1798,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-parentheses-space-inside",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1823,7 +1808,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-element-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1833,7 +1818,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-element-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1853,7 +1838,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-element-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1883,7 +1868,9 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-type-no-unknown",
-      "default" : true
+      "default" : [ true, {
+        "ignore" : [ "custom-elements" ]
+      } ]
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1913,9 +1900,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "string-quotes",
-      "default" : [ "double", {
-        "avoidEscape" : true
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1925,9 +1910,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "time-min-milliseconds",
-      "default" : [ 100, {
-        "ignore" : [ ]
-      } ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1937,7 +1920,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unicode-bom",
-      "default" : "always"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1947,7 +1930,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-allowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1957,7 +1940,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-case",
-      "default" : "lower"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -1967,7 +1950,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-disallowed-list",
-      "default" : [ ]
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1987,11 +1970,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-keyword-case",
-      "default" : [ "lower", {
-        "ignoreKeywords" : [ ],
-        "ignoreProperties" : [ ],
-        "ignoreFunctions" : [ ]
-      } ]
+      "default" : "lower"
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -2001,7 +1980,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-list-comma-newline-after",
-      "default" : "always-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -2011,7 +1990,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-list-comma-newline-before",
-      "default" : "never-multi-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -2021,7 +2000,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-list-comma-space-after",
-      "default" : "always-single-line"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -2031,7 +2010,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-list-comma-space-before",
-      "default" : "never"
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -2041,7 +2020,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-list-max-empty-lines",
-      "default" : 0
+      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : true
@@ -2052,7 +2031,7 @@
     "parameters" : [ {
       "name" : "value-no-vendor-prefix",
       "default" : [ true, {
-        "ignoreValues" : [ ]
+        "ignoreValues" : [ "box", "inline-box" ]
       } ]
     } ],
     "languages" : [ ],
