@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <checkstyle version="1.5">
     <file name="noTestResults.css">
-        <error source="sh-waqar/declaration-use-variable" line="1" message="Unknown rule sh-waqar/declaration-use-variable" severity="error" />
-        <error source="scale-unlimited/declaration-strict-value" line="2" message="Expected variable or function for &quot;#aaaaaa&quot; of &quot;color&quot;" severity="info" />
-        <error source="indendation" line="2" message="Expected indentation of 2 spaces" severity="info" />
-        <error source="color-hex-length" line="2" message="Expected &quot;#aaaaaa&quot; to be &quot;#aaa&quot;" severity="info" />
+        <error source="color-hex-length" line="2" message="Expected &quot;#aaaaaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
+        <error source="indendation" line="2" message="Expected indentation of 2 spaces (indentation)" severity="info" />
+        <error source="scale-unlimited/declaration-strict-value" line="2" message="Expected variable or function for &quot;#aaaaaa&quot; of &quot;color&quot; (scale-unlimited/declaration-strict-value)" severity="info" />
+        <error source="sh-waqar/declaration-use-variable" line="1" message="Unknown rule sh-waqar/declaration-use-variable" severity="info" />
     </file>
 </checkstyle>
