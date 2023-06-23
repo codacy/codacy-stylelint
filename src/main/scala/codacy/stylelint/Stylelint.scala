@@ -83,14 +83,18 @@ object Stylelint extends Tool {
   }
 
   def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
-    val fileArgument = filesOpt.map(files => files.map(_.path)).getOrElse(List("**/**.{css,scss,less,sass}"))
-    val node_modules = "/workdir/node_modules"
-    val configurationBaseDir = List("--config-basedir", node_modules)
-    val configurationFile = List("--config", configFilePath.toString)
-    val configuration = configurationFile ++ configurationBaseDir
-    val formatter = List("--formatter", "json")
+    val nodeModulesDir = "/workdir/node_modules"
+    val executableFile = List(s"$nodeModulesDir/stylelint/bin/stylelint.js")
+    val fileArgument = filesOpt
+      .map(files => files.map(_.path))
+      .getOrElse(List("**/**.{css,scss,less,sass}", "--custom-syntax", "postcss-syntax"))
 
-    val command = List(s"$node_modules/stylelint/bin/stylelint.js") ++ fileArgument ++ configuration ++ formatter
+    val configurationBaseDir = List("--config-basedir", nodeModulesDir)
+    val configurationFile = List("--config", configFilePath.toString)
+    val formatter = List("--formatter", "json")
+    val options = List("--allow-empty-input")
+
+    val command = executableFile ++ fileArgument ++ configurationFile ++ configurationBaseDir ++ formatter ++ options
 
     CommandRunner.exec(command, Option(File(source.path).toJava)).fold(Failure(_), Success(_))
   }
