@@ -9,7 +9,7 @@ a { top: 3.245634px; }
  * This decimal place */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -132,4 +132,45 @@ a { top: 3.245my-unit; }
 a {
   width: 10.989my-other-unit;
 }
+```
+
+### `insideFunctions: {"/regex/": int, /regex/: int, "string": int}`
+
+The `insideFunctions` option can change a primary option value for specified functions.
+
+For example, with `2`.
+
+Given:
+
+```json
+{"/^(oklch|oklab|lch|lab)$/", 4}
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: rgb(127.333 0 0); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: rgb(calc(127.333 / 3) 0 0); }
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: oklch(0.333 0 0); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: lab(0.3333 0 0); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: oklab(calc(127.333 / 3) 0 0); }
 ```
