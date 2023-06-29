@@ -9,7 +9,7 @@ a { color: pink; top: 0; }
  * The number of these declarations */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

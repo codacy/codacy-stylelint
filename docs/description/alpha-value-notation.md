@@ -9,9 +9,9 @@ Specify percentage or number notation for alpha-values.
  *                         This notation */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
