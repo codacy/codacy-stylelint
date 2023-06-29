@@ -27,7 +27,7 @@
     "stylelint-no-px": "^1.0.1",
     "stylelint-prettier": "^3.0.0",
     "stylelint-scss": "^5.0.1",
-    "stylelint-selector-bem-pattern": "^2.1.1",
+    "stylelint-selector-bem-pattern": "^3.0.0",
     "stylelint-suitcss": "^5.0.0"
   }
 }
