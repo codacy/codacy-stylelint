@@ -1,6 +1,6 @@
 # selector-pseudo-class-parentheses-space-inside
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docs/migration-guide/to-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.1/docs/migration-guide/to-15.md).
 
 Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.
 
@@ -11,7 +11,7 @@ input:not( [type="submit"] ) {}
  * The space inside these two parentheses */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule. It won't fix pseudo elements containing comments.
 
 ## Options
 

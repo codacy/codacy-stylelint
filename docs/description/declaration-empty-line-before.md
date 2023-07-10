@@ -13,9 +13,9 @@ a {
  *      This line */
 ```
 
-This rule only applies to standard property declarations. Use the [`custom-property-empty-line-before`](https://github.com/stylelint/stylelint/tree/15.9.0/lib/rules/custom-property-empty-line-before/README.md) rule for custom property declarations.
+This rule only applies to standard property declarations. Use the [`custom-property-empty-line-before`](https://github.com/stylelint/stylelint/tree/15.10.1/lib/rules/custom-property-empty-line-before/README.md) rule for custom property declarations.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.9.0/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.10.1/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
 
 ## Options
 
