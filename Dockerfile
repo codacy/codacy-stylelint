@@ -1,4 +1,4 @@
-FROM alpine:lts-alpine3.18
+FROM alpine:3.18.2
 
 WORKDIR /workdir
 COPY package*.json ./
