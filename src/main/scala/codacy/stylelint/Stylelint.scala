@@ -84,7 +84,7 @@ object Stylelint extends Tool {
 
   def run(source: Source.Directory, configFilePath: Path, filesOpt: Option[Set[Source.File]]): Try[CommandResult] = {
     val nodeModulesDir = "/workdir/node_modules"
-    val executableFile = List(s"$nodeModulesDir/stylelint/bin/stylelint.js")
+    val executableFile = List(s"$nodeModulesDir/stylelint/bin/stylelint.mjs")
     val fileArgument = filesOpt
       .map(files => files.map(_.path))
       .getOrElse(List("**/**.{css,scss,less,sass}", "--custom-syntax", "postcss-syntax"))
