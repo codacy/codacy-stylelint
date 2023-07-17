@@ -13,7 +13,7 @@ This rule checks the `font` and `font-family` properties.
 
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 

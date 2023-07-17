@@ -17,10 +17,10 @@ This rule is experimental with some false negatives that we'll patch in minor re
 
 It sometimes overlaps with:
 
-- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/tree/15.9.0/librulescolor-no-invalid-hexREADME.md)
-- [`function-no-unknown`](https://github.com/stylelint/stylelint/tree/15.9.0/librulesfunction-no-unknownREADME.md)
-- [`string-no-newline`](https://github.com/stylelint/stylelint/tree/15.9.0/librulesstring-no-newlineREADME.md)
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/tree/15.9.0/librulesunit-no-unknownREADME.md)
+- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/tree/15.10.1/librulescolor-no-invalid-hexREADME.md)
+- [`function-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.1/librulesfunction-no-unknownREADME.md)
+- [`string-no-newline`](https://github.com/stylelint/stylelint/tree/15.10.1/librulesstring-no-newlineREADME.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.1/librulesunit-no-unknownREADME.md)
 
 If duplicate problems are flagged, you can turn off the corresponding rule.
 

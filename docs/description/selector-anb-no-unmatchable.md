@@ -11,7 +11,7 @@ a:nth-child(0n+0) {}
 
 [An+B selectors](https://www.w3.org/TR/css-syntax-3/#anb-microsyntax) are one-indexed. Selectors that always evaluate to `0` will not match any elements.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.9.0/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
 
 ## Options
 

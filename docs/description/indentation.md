@@ -1,6 +1,6 @@
 # indentation
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.1/docsmigration-guideto-15.md).
 
 Specify indentation.
 
@@ -16,7 +16,7 @@ Specify indentation.
  * The indentation at these three points */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
