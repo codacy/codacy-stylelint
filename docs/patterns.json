@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "15.9.0",
+  "version" : "15.10.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -1161,6 +1161,16 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-list-comma-space-before",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "media-query-no-invalid",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "media-query-no-invalid",
       "default" : null
     } ],
     "languages" : [ ],

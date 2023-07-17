@@ -867,6 +867,13 @@
     "description" : "function-name-case"
   } ]
 }, {
+  "patternId" : "media-query-no-invalid",
+  "title" : "Disallow invalid media queries.",
+  "parameters" : [ {
+    "name" : "media-query-no-invalid",
+    "description" : "media-query-no-invalid"
+  } ]
+}, {
   "patternId" : "function-url-scheme-disallowed-list",
   "title" : "Specify a list of disallowed URL schemes.",
   "parameters" : [ {
