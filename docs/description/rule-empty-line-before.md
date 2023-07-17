@@ -13,7 +13,7 @@ b {}  /* ↑ */
 
 This rule ignores rules that are the very first node in a source.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.9.0/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.9.0/librulesindentationREADME.md) rule for better autofixing results with this rule.
 
 ## Options
 

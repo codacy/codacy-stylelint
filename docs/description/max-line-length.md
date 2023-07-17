@@ -1,6 +1,6 @@
 # max-line-length
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docs/migration-guide/to-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docsmigration-guideto-15.md).
 
 Limit the length of a line.
 

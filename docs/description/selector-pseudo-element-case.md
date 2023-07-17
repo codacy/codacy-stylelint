@@ -1,6 +1,6 @@
 # selector-pseudo-element-case
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docs/migration-guide/to-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.9.0/docsmigration-guideto-15.md).
 
 Specify lowercase or uppercase for pseudo-element selectors.
 
@@ -11,7 +11,7 @@ Specify lowercase or uppercase for pseudo-element selectors.
  * This pseudo-element selector */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.9.0/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
