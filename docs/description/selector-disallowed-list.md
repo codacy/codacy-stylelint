@@ -9,7 +9,7 @@ Specify a list of disallowed selectors.
  * This is selector */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
 
 ## Options
 

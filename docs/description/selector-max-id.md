@@ -13,7 +13,7 @@ This rule resolves nested selectors before counting the number of ID selectors. 
 
 The `:not()` pseudo-class is also evaluated separately. The rule processes the argument as if it were an independent selector, and the result does not count toward the total for the entire selector.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
 
 ## Options
 

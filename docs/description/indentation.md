@@ -1,6 +1,6 @@
 # indentation
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.1/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docsmigration-guideto-15.md).
 
 Specify indentation.
 
@@ -16,7 +16,7 @@ Specify indentation.
  * The indentation at these three points */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -157,7 +157,7 @@ By default, the indent level of the CSS code block in non-CSS-like files is dete
 For example, with `[ 2, { baseIndentLevel: 1 } ]`, CSS should be indented 1 levels higher than `<style>` tag:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <style>
