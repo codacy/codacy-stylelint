@@ -12,7 +12,7 @@ Disallow missing `var` function for custom properties.
 
 This rule only reports custom properties that are defined within the same source.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
 
 ## Options
 

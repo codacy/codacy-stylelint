@@ -1,6 +1,6 @@
 # no-eol-whitespace
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.1/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docsmigration-guideto-15.md).
 
 Disallow end-of-line whitespace.
 
@@ -11,7 +11,7 @@ a { color: pink; }···
  *  This whitespace */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 

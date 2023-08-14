@@ -17,11 +17,11 @@ This rule is experimental with some false negatives that we'll patch in minor re
 
 It sometimes overlaps with:
 
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.1/librulesunit-no-unknownREADME.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.2/librulesunit-no-unknownREADME.md)
 
 If duplicate problems are flagged, you can turn off the corresponding rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
 
 ## Options
 

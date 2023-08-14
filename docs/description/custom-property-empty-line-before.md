@@ -13,7 +13,7 @@ a {
  *                   This line */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.1/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.10.1/librulesindentationREADME.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.10.2/librulesindentationREADME.md) rule for better autofixing results with this rule.
 
 ## Options
 

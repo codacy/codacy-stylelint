@@ -1,6 +1,6 @@
 # at-rule-semicolon-space-before
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.1/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docsmigration-guideto-15.md).
 
 Require a single space or disallow whitespace before the semicolons of at-rules.
 
