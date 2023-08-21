@@ -1,6 +1,6 @@
 # value-list-comma-space-before
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docs/migration-guide/to-15.md).
 
 Require a single space or disallow whitespace before the commas of value lists.
 
@@ -11,7 +11,7 @@ a { background-size: 0 ,0; }
  * The space before this comma */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 

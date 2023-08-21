@@ -22,7 +22,7 @@ The same selector _is_ allowed to repeat in the following circumstances:
 
 This rule resolves nested selectors. So `a b {} a { & b {} }` counts as a problem, because the resolved selectors end up with a duplicate.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

@@ -9,7 +9,7 @@ a { --foo-: 1px; }
  * The pattern of this */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

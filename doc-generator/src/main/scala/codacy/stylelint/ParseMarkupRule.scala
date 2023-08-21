@@ -7,9 +7,14 @@ import com.vladsch.flexmark.parser.Parser
 object ParseMarkupRule {
 
   private def findDescriptionAsString(root: Node): String = {
-    val stringBuilder = new java.lang.StringBuilder()
-    root.getChildIterator.next().getNext.getChars.appendTo(stringBuilder)
-    stringBuilder.toString
+    val firstLineOfDescription = root.getChildIterator.next().getNext.getChars.toString()
+    val secondLineOfDescription = root.getChildIterator.next().getNext.getNext.getChars.toString()
+
+    if (!isRuleDeprecationWarning(firstLineOfDescription)) {
+      firstLineOfDescription
+    } else {
+      s"[Deprecated] $secondLineOfDescription"
+    }
   }
 
   def parseForDescriptions(rule: File): String = {
@@ -17,4 +22,9 @@ object ParseMarkupRule {
     val document = parser.parse(rule.contentAsString)
     findDescriptionAsString(document)
   }
+
+  private def isRuleDeprecationWarning(description: String): Boolean = {
+    description.startsWith("> **Warning** This rule is deprecated and will be removed in the future.")
+  }
+
 }
