@@ -9,7 +9,7 @@ Specify a list of required properties for an at-rule.
  *  At-rule and required property names */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.2/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
