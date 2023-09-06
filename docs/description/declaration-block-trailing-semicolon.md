@@ -1,6 +1,6 @@
 # declaration-block-trailing-semicolon
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.2/docs/migration-guide/to-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.3/docsmigration-guideto-15.md).
 
 Require or disallow a trailing semicolon within declaration blocks.
 
@@ -19,7 +19,7 @@ This rule ignores:
 - trailing `//` comments
 - declaration blocks containing nested (at-)rules
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.2/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
