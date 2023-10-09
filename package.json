@@ -7,7 +7,7 @@
   "dependencies": {
     "postcss": "^8.4.29",
     "postcss-less": "^6.0.0",
-    "postcss-safe-parser": "^6.0.0",
+    "postcss-safe-parser": "^7.0.0",
     "postcss-sass": "^0.5.0",
     "postcss-scss": "^4.0.7",
     "postcss-styled": "^0.34.0",
