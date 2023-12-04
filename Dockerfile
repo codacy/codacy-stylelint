@@ -1,5 +1,5 @@
 FROM alpine:3.18
-
+ 
 WORKDIR /workdir
 COPY package*.json ./
 RUN adduser -u 2004 -D docker &&\
