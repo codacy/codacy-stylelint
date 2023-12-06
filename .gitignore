@@ -13,4 +13,4 @@ project/metals.sbt
 *.iml
 node_modules/
 .stylelint-version
-.vscode/
+.vscode/ 
