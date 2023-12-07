@@ -2,7 +2,7 @@
 /logs/
 /project/*-shim.sbt
 /project/project/
-/project/target/
+/project/target/ 
 target
 /.bsp
 .idea
