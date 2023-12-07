@@ -11,6 +11,6 @@ project/metals.sbt
 .bloop
 .DS_Store
 *.iml
-node_modules/
+node_modules/ 
 .stylelint-version
 .vscode/ 
