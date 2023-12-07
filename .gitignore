@@ -7,7 +7,7 @@ target
 /.bsp
 .idea
 .metals
-project/metals.sbt
+project/metals.sbt 
 .bloop
 .DS_Store
 *.iml
