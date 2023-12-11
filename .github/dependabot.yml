@@ -4,7 +4,7 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    timezone: Europe/Lisbon
+    timezone: Europe/Lisbon 
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: stylelint-config-standard
