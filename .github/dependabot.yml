@@ -12,4 +12,4 @@ updates:
     - 21.0.0
   - dependency-name: stylelint-config-recommended
     versions:
-    - 4.0.0
+    - 4.0.0 
