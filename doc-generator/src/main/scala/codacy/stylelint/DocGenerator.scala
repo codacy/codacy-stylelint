@@ -27,6 +27,7 @@ object DocGenerator {
     initializePatternsFile(patterns, version, filePathForDocs)
     initializeDescriptionFile(patterns, rulesdir, filePathForDocs)
     copyDescriptionFiles(patterns, rulesdir, tmpDirectory, filePathForDocs, version)
+//    overwriteDefaultPatterns("../../../../docs/patterns.json")
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
@@ -66,6 +67,55 @@ object DocGenerator {
     val stylelintConfigStandard =
       Resource.getAsString("default_configs/stylelint-config-recommended-standard.json")(Charset.defaultCharset())
     Json.parse(stylelintConfigStandard).as[Map[String, Parameter.Value]]
+  }
+
+  def overwriteDefaultPatterns(filePath: String): Unit = {
+
+    val disableDefaultPatternIds = List("rule-empty-line-before",
+      "declaration-empty-line-before",
+      "comment-empty-line-before",
+      "color-hex-length",
+      "length-zero-no-unit",
+      "at-rule-empty-line-before",
+      "selector-pseudo-element-colon-notation",
+      "comment-whitespace-inside",
+      "selector-class-pattern",
+      "indentation",
+      "at-rule-no-unknown",
+      "no-missing-end-of-source-newline",
+      "selector-list-comma-newline-after",
+      "no-descending-specificity",
+      "color-hex-case",
+      "no-eol-whitespace",
+      "declaration-colon-newline-after",
+      "block-opening-brace-space-before",
+      "number-leading-zero",
+      "max-empty-lines",
+      "value-list-comma-newline-after",
+      "declaration-colon-space-after",
+      "selector-type-no-unknown",
+      "declaration-block-semicolon-newline-after",
+      "font-family-no-missing-generic-family-keyword",
+      "block-closing-brace-newline-before",
+      "declaration-block-trailing-semicolon",
+      "no-empty-source",
+      "block-closing-brace-empty-line-before",
+      "selector-combinator-space-before",
+      "function-comma-space-after",
+      "block-opening-brace-space-after",
+      "block-closing-brace-space-before",
+      "declaration-bang-space-before"
+    )
+
+    val patternsJson = Resource.getAsString(filePath)(Charset.defaultCharset())
+    //val patternsJson = File(filePath).inputStream()
+    val modifiedJsonString = if (disableDefaultPatternIds.exists(id => patternsJson.contains(s""""patternId" : "$id""""))) {
+      patternsJson.replace("\"enabled\" : true", "\"enabled\" : false")
+    } else {
+      patternsJson
+    }
+
+    File(filePath).write(Json.prettyPrint(Json.toJson(modifiedJsonString)))
   }
 
   def initializeDescriptionFile(patterns: List[String], rulesdir: String, filePathForDocs: String): File = {

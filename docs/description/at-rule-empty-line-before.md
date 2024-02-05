@@ -16,7 +16,7 @@ This rule ignores:
 - at-rules that are the very first node in the source
 - `@import` in Less.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.10.3/librulesindentationREADME.md) rule for better autofixing results with this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. We recommend to enable [`indentation`](https://github.com/stylelint/stylelint/tree/15.10.3/lib/rules/indentation/README.md) rule for better autofixing results with this rule.
 
 ## Options
 
