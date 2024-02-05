@@ -1,6 +1,6 @@
 # function-whitespace-after
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.3/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.3/docs/migration-guide/to-15.md).
 
 Require or disallow whitespace after functions.
 
@@ -13,7 +13,7 @@ a { transform: translate(1, 1) scale(3); }
 
 This rule does not check for space immediately after `)` if the very next character is `,`, `)`, `/` or `}`, allowing some of the patterns exemplified below.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

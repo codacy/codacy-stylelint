@@ -1,6 +1,6 @@
 # selector-descendant-combinator-no-non-space
 
-> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.3/docsmigration-guideto-15.md).
+> **Warning** This rule is deprecated and will be removed in the future. See [the migration guide](https://github.com/stylelint/stylelint/tree/15.10.3/docs/migration-guide/to-15.md).
 
 Disallow non-space characters for descendant combinators of selectors.
 
@@ -13,7 +13,7 @@ Disallow non-space characters for descendant combinators of selectors.
 
 This rule ensures that only a single space is used and ensures no tabs, newlines, nor multiple spaces are used for descendant combinators of selectors.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 This rule currently ignores selectors containing comments.
 
