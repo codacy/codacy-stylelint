@@ -1,11 +1,10 @@
 package codacy.stylelint
 
 import java.nio.charset.Charset
-
 import better.files.{File, Resource}
 import com.codacy.plugins.api._
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
-import play.api.libs.json.{JsNull, Json}
+import play.api.libs.json._
 
 import scala.sys.process.Process
 
@@ -27,7 +26,7 @@ object DocGenerator {
     initializePatternsFile(patterns, version, filePathForDocs)
     initializeDescriptionFile(patterns, rulesdir, filePathForDocs)
     copyDescriptionFiles(patterns, rulesdir, tmpDirectory, filePathForDocs, version)
-//    overwriteDefaultPatterns("../../../../docs/patterns.json")
+    overwriteDefaultPatterns("docs/patterns.json")
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
@@ -79,43 +78,18 @@ object DocGenerator {
       "at-rule-empty-line-before",
       "selector-pseudo-element-colon-notation",
       "comment-whitespace-inside",
-      "selector-class-pattern",
-      "indentation",
-      "at-rule-no-unknown",
-      "no-missing-end-of-source-newline",
-      "selector-list-comma-newline-after",
-      "no-descending-specificity",
-      "color-hex-case",
-      "no-eol-whitespace",
-      "declaration-colon-newline-after",
-      "block-opening-brace-space-before",
-      "number-leading-zero",
-      "max-empty-lines",
-      "value-list-comma-newline-after",
-      "declaration-colon-space-after",
-      "selector-type-no-unknown",
-      "declaration-block-semicolon-newline-after",
-      "font-family-no-missing-generic-family-keyword",
-      "block-closing-brace-newline-before",
-      "declaration-block-trailing-semicolon",
-      "no-empty-source",
-      "block-closing-brace-empty-line-before",
-      "selector-combinator-space-before",
-      "function-comma-space-after",
-      "block-opening-brace-space-after",
-      "block-closing-brace-space-before",
-      "declaration-bang-space-before"
+      "selector-class-pattern"
     )
 
-    val patternsJson = Resource.getAsString(filePath)(Charset.defaultCharset())
-    //val patternsJson = File(filePath).inputStream()
+    val patternsJsonString = File(filePath).contentAsString(Charset.defaultCharset)
+    val patternsJson = Json.parse(patternsJsonString)
     val modifiedJsonString = if (disableDefaultPatternIds.exists(id => patternsJson.contains(s""""patternId" : "$id""""))) {
       patternsJson.replace("\"enabled\" : true", "\"enabled\" : false")
     } else {
       patternsJson
     }
 
-    File(filePath).write(Json.prettyPrint(Json.toJson(modifiedJsonString)))
+    File(filePath).overwrite(modifiedJsonString)
   }
 
   def initializeDescriptionFile(patterns: List[String], rulesdir: String, filePathForDocs: String): File = {
