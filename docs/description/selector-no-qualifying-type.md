@@ -11,7 +11,7 @@ Disallow qualifying a selector by type.
 
 A type selector is "qualifying" when it is compounded with (chained to) another selector (e.g. `a.foo`, `a#foo`). This rule does not regulate type selectors that are combined with other selectors via a combinator (e.g. `a > .foo`, `a #foo`).
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

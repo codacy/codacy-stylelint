@@ -15,10 +15,10 @@ This rule is only appropriate for CSS. You should not turn it on for CSS-like la
 
 It works well with other rules that validate feature names and values:
 
-- [`media-feature-name-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.3/librulesmedia-feature-name-no-unknownREADME.md)
-- [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/tree/15.10.3/librulesmedia-feature-name-value-no-unknownREADME.md)
+- [`media-feature-name-no-unknown`](https://github.com/stylelint/stylelint/tree/16.3.1/lib/rules/media-feature-name-no-unknown/README.md)
+- [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/tree/16.3.1/lib/rules/media-feature-name-value-no-unknown/README.md)
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

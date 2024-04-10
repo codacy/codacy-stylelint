@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "15.10.3",
+  "version" : "16.3.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -57,36 +57,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "at-rule-name-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-rule-name-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "at-rule-name-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-rule-name-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "at-rule-name-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-rule-name-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "at-rule-no-unknown",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -117,122 +87,12 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "at-rule-semicolon-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-rule-semicolon-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "at-rule-semicolon-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-rule-semicolon-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-closing-brace-empty-line-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-closing-brace-empty-line-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-closing-brace-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-closing-brace-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-closing-brace-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-closing-brace-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-closing-brace-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-closing-brace-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-closing-brace-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-closing-brace-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "block-no-empty",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-no-empty",
       "default" : true
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-opening-brace-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-opening-brace-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-opening-brace-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-opening-brace-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-opening-brace-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-opening-brace-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "block-opening-brace-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "block-opening-brace-space-before",
-      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -256,16 +116,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "color-hex-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "color-hex-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "color-hex-length",
     "level" : "Info",
@@ -407,26 +257,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "declaration-bang-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-bang-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-bang-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-bang-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "declaration-block-no-duplicate-custom-properties",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -469,46 +299,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "declaration-block-semicolon-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-block-semicolon-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-block-semicolon-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-block-semicolon-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-block-semicolon-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-block-semicolon-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-block-semicolon-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-block-semicolon-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "declaration-block-single-line-max-declarations",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -518,46 +308,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "declaration-block-trailing-semicolon",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-block-trailing-semicolon",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-colon-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-colon-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-colon-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-colon-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "declaration-colon-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "declaration-colon-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "declaration-empty-line-before",
     "level" : "Info",
@@ -702,46 +452,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "function-comma-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-comma-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "function-comma-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-comma-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "function-comma-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-comma-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "function-comma-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-comma-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "function-disallowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -762,16 +472,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "function-max-empty-lines",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-max-empty-lines",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "function-name-case",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -788,26 +488,6 @@
     "parameters" : [ {
       "name" : "function-no-unknown",
       "default" : true
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "function-parentheses-newline-inside",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-parentheses-newline-inside",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "function-parentheses-space-inside",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-parentheses-space-inside",
-      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -852,16 +532,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "function-whitespace-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-whitespace-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "hue-degree-notation",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -881,16 +551,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "indentation",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "indentation",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "keyframe-block-no-duplicate-selectors",
     "level" : "Warning",
@@ -946,31 +606,11 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "linebreaks",
+    "patternId" : "lightness-notation",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
-      "name" : "linebreaks",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "max-empty-lines",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "max-empty-lines",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "max-line-length",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "max-line-length",
+      "name" : "lightness-notation",
       "default" : null
     } ],
     "languages" : [ ],
@@ -986,26 +626,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "media-feature-colon-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-colon-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-feature-colon-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-colon-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "media-feature-name-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1015,16 +635,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "media-feature-name-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-name-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "media-feature-name-disallowed-list",
     "level" : "Info",
@@ -1086,16 +696,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "media-feature-parentheses-space-inside",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-parentheses-space-inside",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "media-feature-range-notation",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1105,66 +705,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "media-feature-range-operator-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-range-operator-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-feature-range-operator-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-feature-range-operator-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-query-list-comma-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-query-list-comma-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-query-list-comma-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-query-list-comma-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-query-list-comma-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-query-list-comma-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "media-query-list-comma-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-query-list-comma-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "media-query-no-invalid",
     "level" : "Info",
@@ -1216,42 +756,12 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "no-empty-first-line",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-empty-first-line",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "no-empty-source",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-empty-source",
       "default" : true
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "no-eol-whitespace",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-eol-whitespace",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "no-extra-semicolons",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-extra-semicolons",
-      "default" : null
     } ],
     "languages" : [ ],
     "enabled" : false
@@ -1286,16 +796,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "no-missing-end-of-source-newline",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-missing-end-of-source-newline",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "no-unknown-animations",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -1316,16 +816,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "number-leading-zero",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "number-leading-zero",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "number-max-precision",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1336,16 +826,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "number-no-trailing-zeros",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "number-no-trailing-zeros",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "property-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1355,16 +835,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "property-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "property-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "property-disallowed-list",
     "level" : "Info",
@@ -1429,16 +899,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "selector-attribute-brackets-space-inside",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-attribute-brackets-space-inside",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "selector-attribute-name-disallowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1468,26 +928,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "selector-attribute-operator-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-attribute-operator-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-attribute-operator-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-attribute-operator-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "selector-attribute-quotes",
     "level" : "Info",
@@ -1531,36 +971,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "selector-combinator-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-combinator-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-combinator-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-combinator-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-descendant-combinator-no-non-space",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-descendant-combinator-no-non-space",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "selector-disallowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1582,46 +992,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "selector-list-comma-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-list-comma-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-list-comma-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-list-comma-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-list-comma-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-list-comma-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "selector-list-comma-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-list-comma-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "selector-max-attribute",
     "level" : "Info",
@@ -1662,16 +1032,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "selector-max-empty-lines",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-max-empty-lines",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "selector-max-id",
     "level" : "Info",
@@ -1773,16 +1133,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "selector-pseudo-class-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-pseudo-class-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "selector-pseudo-class-disallowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1803,16 +1153,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "selector-pseudo-class-parentheses-space-inside",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-pseudo-class-parentheses-space-inside",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "selector-pseudo-element-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1822,16 +1162,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "selector-pseudo-element-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-pseudo-element-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-colon-notation",
     "level" : "Info",
@@ -1905,16 +1235,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "string-quotes",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "string-quotes",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "time-min-milliseconds",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1925,16 +1245,6 @@
     "languages" : [ ],
     "enabled" : true
   }, {
-    "patternId" : "unicode-bom",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "unicode-bom",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "unit-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1944,16 +1254,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "unit-case",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "unit-case",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "unit-disallowed-list",
     "level" : "Info",
@@ -1984,56 +1284,6 @@
     } ],
     "languages" : [ ],
     "enabled" : true
-  }, {
-    "patternId" : "value-list-comma-newline-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "value-list-comma-newline-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "value-list-comma-newline-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "value-list-comma-newline-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "value-list-comma-space-after",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "value-list-comma-space-after",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "value-list-comma-space-before",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "value-list-comma-space-before",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "value-list-max-empty-lines",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "value-list-max-empty-lines",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
   }, {
     "patternId" : "value-no-vendor-prefix",
     "level" : "Info",

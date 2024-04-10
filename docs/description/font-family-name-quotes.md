@@ -13,7 +13,7 @@ This rule checks the `font` and `font-family` properties.
 
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 
@@ -28,7 +28,8 @@ _Please read the following to understand these options_:
 
 For more on these subtleties, read ["Unquoted font family names in CSS"](https://mathiasbynens.be/notes/unquoted-font-family), by Mathias Bynens.
 
-**Caveat:** This rule does not currently understand escape sequences such as those described by Mathias. If you want to use the font family name "Hawaii 5-0" you will need to wrap it in quotes, instead of escaping it as `Hawaii \35 -0` or `Hawaii\ 5-0`.
+> [!WARNING]
+> This rule does not currently understand escape sequences such as those described by Mathias. If you want to use the font family name "Hawaii 5-0" you will need to wrap it in quotes, instead of escaping it as `Hawaii \35 -0` or `Hawaii\ 5-0`.
 
 ### `"always-unless-keyword"`
 

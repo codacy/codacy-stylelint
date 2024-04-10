@@ -13,7 +13,7 @@ This rule considers pseudo-element selectors defined in the CSS Specifications, 
 
 This rule ignores vendor-prefixed pseudo-element selectors.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

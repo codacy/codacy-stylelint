@@ -1,10 +1,10 @@
-FROM alpine:3.18
+FROM alpine:3.19
 
 WORKDIR /workdir
 COPY package*.json ./
 RUN adduser -u 2004 -D docker &&\
     apk --no-cache add openjdk11-jre-headless bash nodejs npm &&\
-    npm install --legacy-peer-deps --omit=dev &&\
+    npm install --omit=dev &&\
     apk del npm
 COPY docs /docs
 COPY target/universal/stage/ /workdir/
