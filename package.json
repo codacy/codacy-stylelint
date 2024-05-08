@@ -5,7 +5,7 @@
     "test": "sbt scalafmtCheckAll scalafmtSbtCheck doc-generator/run stage"
   },
   "dependencies": {
-    "postcss": "^8.4.29",
+    "postcss-new": "^8.4.30",
     "postcss-less": "^6.0.0",
     "postcss-safe-parser": "^6.0.0",
     "postcss-sass": "^0.5.0",
@@ -13,6 +13,7 @@
     "postcss-styled": "^0.34.0",
     "postcss-styled-syntax": "^0.4.0",
     "postcss-syntax": "^0.36.2",
+    "age": "19",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
     "stylelint-config-css-modules": "^4.3.0",
@@ -28,6 +29,7 @@
     "stylelint-prettier": "^4.0.2",
     "stylelint-scss": "^5.1.0",
     "stylelint-selector-bem-pattern": "^3.0.1",
-    "stylelint-suitcss": "^5.0.0"
+    "stylelint-suitcss": "^5.0.0",
+    "city": "delhi"
   }
 }
