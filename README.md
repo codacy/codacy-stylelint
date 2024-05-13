@@ -16,7 +16,7 @@ You can create the docker by following these steps:
 docker build -t codacy-stylelint-base .
 ```
 
-2) Generate tool image:
+
 ```
 sbt docker:publishLocal
 ```
@@ -26,9 +26,10 @@ The docker is ran with the following command: new changes are here.
 ```
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
+2) Generate tool image:
+
 
 ## Docs
-
 
 
 [Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
@@ -37,7 +38,7 @@ docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 
 ## Test
 
-We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
+Hello, we use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
 You can follow the instructions there to make sure your tool is working as expected.
 
 ## Update tool version
