@@ -21,13 +21,15 @@ docker build -t codacy-stylelint-base .
 sbt docker:publishLocal
 ```
 
-The docker is ran with the following command:
+The docker is ran with the following command: new changes are here.
 
 ```
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
 ## Docs
+
+
 
 [Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
 
