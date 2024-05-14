@@ -17,7 +17,9 @@ Random Content3
 
 
 
-1) Generate base image:
+
+
+1) Generate base image content1:
 ```
 docker build -t codacy-stylelint-base .
 ```
@@ -30,9 +32,10 @@ sbt docker:publishLocal
 The docker is ran with the following command: new changes are here.
 
 ```
+
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
-2) Generate tool image:
+2) Generate tool images:
 
 
 ## Docs
@@ -45,8 +48,7 @@ docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ## Test
 
 Hello, we use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
-You can follow the instructions there to make sure your tool is working as expected.
-
+New content
 ## Update tool version
 
 The tool is dependabot friendly, so it is automatically updated.
@@ -57,9 +59,10 @@ The tool is dependabot friendly, so it is automatically updated.
 sbt "doc-generator/run"
 ```
 
+
 ## What is Codacy
 
-[Codacy](https://www.codacy.com/) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
+[Codacy](https://www.codacy.com/content) is an Automated Code Review Tool that monitors your technical debt, helps you improve your code quality, teaches best practices to your developers, and helps you save time in Code Reviews.
 
 ### Among Codacy’s features
 
