@@ -10,5 +10,5 @@ COPY docs /docss
 COPY target/universal/stage/ /workdir/
 RUN chmod +x /workdir/bin/codacy-stylelint
 USER docker
-WORKDIR /src
+WORKDIR /src/main
 ENTRYPOINT ["/workdir/bin/codacy-stylelint"]
