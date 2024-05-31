@@ -8,5 +8,5 @@ name := "codacy-stylelint"s
 lazy val `doc-generator` = project.settings(libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.64.6")
 
 enablePlugins(JavaAppPackaging)
-
+s
 Universal / javaOptions ++= Seq("-XX:+UseG1GC", "-XX:+UseStringDeduplication", "-XX:MaxRAMPercentage=90.0")
