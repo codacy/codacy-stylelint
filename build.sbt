@@ -8,6 +8,8 @@ name := "codacy-stylelint"
 
 lazy val `doc-generator` = project.settings(libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.64.8")
 
+dockerBaseImage := "openjdk:11-jdk"
+
 enablePlugins(JavaAppPackaging)
 
 Universal / javaOptions ++= Seq("-XX:+UseG1GC", "-XX:+UseStringDeduplication", "-XX:MaxRAMPercentage=90.0")
