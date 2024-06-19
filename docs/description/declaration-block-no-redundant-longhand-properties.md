@@ -89,9 +89,9 @@ This rule complains when the following shorthand properties can be used:
 
 Flexbox-related properties can be ignored using `ignoreShorthands: ["/flex/"]` (see below).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -173,6 +173,60 @@ a {
 ```
 
 ## Optional secondary options
+
+### `ignoreLonghands: ["string"]`
+
+Given:
+
+<!-- prettier-ignore -->
+```json
+["text-decoration-thickness", "background-size", "background-origin", "background-clip"]
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: purple;
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-color: transparent;
+  background-image: none;
+  background-size: contain;
+  background-origin: border-box;
+  background-clip: text;
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  text-decoration: underline solid purple;
+  text-decoration-thickness: 1px;
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  background: none 0% 0% repeat scroll transparent;
+  background-size: contain;
+  background-origin: border-box;
+  background-clip: text;
+}
+```
 
 ### `ignoreShorthands: ["/regex/", /regex/, "string"]`
 

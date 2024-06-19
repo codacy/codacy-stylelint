@@ -9,7 +9,7 @@ Specify a list of disallowed media feature names.
  * This media feature name */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

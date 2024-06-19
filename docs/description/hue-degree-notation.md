@@ -11,9 +11,9 @@ Specify number or angle notation for degree hues.
 
 Because hues are so often given in degrees, a hue can also be given as a number, which is interpreted as a number of degrees.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

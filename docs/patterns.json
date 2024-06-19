@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "16.3.1",
+  "version" : "16.6.1",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -801,6 +801,16 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unknown-animations",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "no-unknown-custom-media",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "no-unknown-custom-media",
       "default" : null
     } ],
     "languages" : [ ],

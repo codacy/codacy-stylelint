@@ -1,7 +1,8 @@
-ThisBuild / scalaVersion := "2.13.11"
+ThisBuild / scalaVersion := "2.13.13"
 
-ThisBuild / libraryDependencies += "com.codacy" %% "codacy-engine-scala-seed" % "6.1.2"
-ThisBuild / libraryDependencies += "com.github.pathikrit" %% "better-files" % "3.9.2"
+ThisBuild / libraryDependencies ++= Seq(
+  "com.codacy" %% "codacy-engine-scala-seed" % "6.1.3",
+  "com.github.pathikrit" %% "better-files" % "3.9.2")
 
 name := "codacy-stylelint"
 

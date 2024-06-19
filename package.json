@@ -7,7 +7,7 @@
     "upgrade": "npm install --omit=dev"
   },
   "dependencies": {
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.38",
     "postcss-less": "^6.0.0",
     "postcss-safe-parser": "^7.0.0",
     "postcss-sass": "^0.5.0",
@@ -15,21 +15,21 @@
     "postcss-styled": "^0.34.0",
     "postcss-styled-syntax": "^0.6.4",
     "postcss-syntax": "^0.36.2",
-    "prettier": "^3.2.3",
-    "stylelint": "^16.1.0",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.6.1",
     "stylelint-config-css-modules": "^4.4.0",
-    "stylelint-config-sass-guidelines": "^11.0.0",
+    "stylelint-config-sass-guidelines": "^11.1.0",
     "stylelint-config-slds": "^1.0.8",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-config-tailwindcss": "^0.0.7",
-    "stylelint-config-twbs-bootstrap": "^13.0.0",
+    "stylelint-config-twbs-bootstrap": "^14.1.0",
     "stylelint-declaration-strict-value": "^1.10.4",
-    "stylelint-no-px": "^1.0.1",
+    "stylelint-no-px": "^2.0.0",
     "stylelint-prettier": "^5.0.0",
-    "stylelint-scss": "^6.0.0",
-    "stylelint-selector-bem-pattern": "^3.0.1",
+    "stylelint-scss": "^6.3.1",
+    "stylelint-selector-bem-pattern": "^4.0.0",
     "stylelint-suitcss": "^5.0.0"
   }
 }

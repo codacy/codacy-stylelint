@@ -146,6 +146,13 @@
     "description" : "selector-max-id"
   } ]
 }, {
+  "patternId" : "no-unknown-custom-media",
+  "title" : "Disallow unknown custom media queries.",
+  "parameters" : [ {
+    "name" : "no-unknown-custom-media",
+    "description" : "no-unknown-custom-media"
+  } ]
+}, {
   "patternId" : "property-disallowed-list",
   "title" : "Specify a list of disallowed properties.",
   "parameters" : [ {
@@ -319,6 +326,13 @@
   "parameters" : [ {
     "name" : "selector-pseudo-class-no-unknown",
     "description" : "selector-pseudo-class-no-unknown"
+  } ]
+}, {
+  "patternId" : "function-calc-no-unspaced-operator",
+  "title" : "Disallow invalid unspaced operator within math functions, such as `calc()` or `min()`.",
+  "parameters" : [ {
+    "name" : "function-calc-no-unspaced-operator",
+    "description" : "function-calc-no-unspaced-operator"
   } ]
 }, {
   "patternId" : "number-max-precision",
@@ -571,13 +585,6 @@
   "parameters" : [ {
     "name" : "media-feature-name-value-allowed-list",
     "description" : "media-feature-name-value-allowed-list"
-  } ]
-}, {
-  "patternId" : "function-calc-no-unspaced-operator",
-  "title" : "Disallow invalid unspaced operator within `calc` functions.",
-  "parameters" : [ {
-    "name" : "function-calc-no-unspaced-operator",
-    "description" : "function-calc-no-unspaced-operator"
   } ]
 }, {
   "patternId" : "no-descending-specificity",

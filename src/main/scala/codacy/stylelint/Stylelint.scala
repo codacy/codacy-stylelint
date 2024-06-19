@@ -131,11 +131,10 @@ object Stylelint extends Tool {
       case err =>
         val errorString =
           s"""Could not parse results json:
+            |$jsonString
+            |$jsonLines
             |
             |Exception: ${err.getMessage}
-            |
-            |Json:
-            |$jsonString
               """.stripMargin
         Failure(new Exception(errorString))
     }

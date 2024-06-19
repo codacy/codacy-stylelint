@@ -18,7 +18,7 @@ This rule ignores:
 - single-line comments with `//` (when you're using a custom syntax that supports them)
 - comments within selector and value lists
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

@@ -9,7 +9,7 @@ Specify a list of disallowed properties for selectors within rules.
  * Selector and property name */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.3.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -60,4 +60,26 @@ a { padding-top: 0px; }
 <!-- prettier-ignore -->
 ```css
 html[data-foo] { color: red; }
+```
+
+## Optional secondary options
+
+### `ignore: ["keyframe-selectors"]`
+
+Ignore keyframe selectors.
+
+Given:
+
+```json
+[{ "/^[a-z]+$/": ["opacity"] }, { "ignore": ["keyframe-selectors"] }]
+```
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 ```
