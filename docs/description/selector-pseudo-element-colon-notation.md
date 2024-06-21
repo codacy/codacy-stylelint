@@ -13,7 +13,7 @@ The `::` notation was chosen for _pseudo-elements_ to establish a discrimination
 
 However, for compatibility with existing style sheets, user agents also accept the previous one-colon notation for _pseudo-elements_ introduced in CSS levels 1 and 2 (namely, `:first-line`, `:first-letter`, `:before` and `:after`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

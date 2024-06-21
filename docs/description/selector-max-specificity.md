@@ -15,7 +15,7 @@ This rule ignores selectors with variable interpolation (`#{$var}`, `@{var}`, `$
 
 This rule resolves nested selectors before counting the specificity of a selector. Each selector in a [selector list](https://www.w3.org/TR/selectors4/#selector-list) is evaluated separately.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -100,7 +100,7 @@ Given:
 [
   "0,2,0",
   {
-    "ignoreSelectors": [":global", ":local", "/^my-/"]
+    "ignoreSelectors": [":host", ":host-context", "/^my-/"]
   }
 ]
 ```
@@ -109,17 +109,17 @@ The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-:global(.foo) .bar {}
+:host(.foo) .bar {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo.bar) {}
+:host-context(.foo.bar) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo, :global(.bar).baz) {}
+:host-context(.foo, :host(.bar).baz) {}
 ```
 
 <!-- prettier-ignore -->
@@ -131,17 +131,17 @@ The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-:global(.foo) .bar.baz {}
+:host(.foo) .bar.baz {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo.bar.baz) {}
+:host-context(.foo.bar.baz) {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-:local(.foo, :global(.bar), .foo.bar.baz) {}
+:host-context(.foo, :host(.bar), .foo.bar.baz) {}
 ```
 
 <!-- prettier-ignore -->

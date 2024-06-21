@@ -13,7 +13,7 @@ This rule resolves nested selectors before counting the number of ID selectors. 
 
 The `:not()` pseudo-class is also evaluated separately. The rule processes the argument as if it were an independent selector, and the result does not count toward the total for the entire selector.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -79,9 +79,35 @@ The following patterns are _not_ considered problems:
 
 ## Optional secondary options
 
+### `checkContextFunctionalPseudoClasses: ["/regex/", /regex/, "non-regex"]`
+
+Check selectors inside of the specified custom [functional pseudo-classes](https://drafts.csswg.org/selectors-4/#pseudo-classes) that provide [evaluation contexts](https://drafts.csswg.org/selectors-4/#specificity-rules).
+
+This option has a higher precedence than `ignoreContextFunctionalPseudoClasses`.
+
+Given:
+
+```json
+[":--foo"]
+```
+
+The following pattern is considered a problem:
+
+<!-- prettier-ignore -->
+```css
+:--foo(#foo #bar #baz) {}
+```
+
+The following pattern is _not_ considered a problem:
+
+<!-- prettier-ignore -->
+```css
+:--foo() {}
+```
+
 ### `ignoreContextFunctionalPseudoClasses: ["/regex/", /regex/, "non-regex"]`
 
-Ignore selectors inside of specified [functional pseudo-classes](https://drafts.csswg.org/selectors-4/#pseudo-classes) that provide [evaluation contexts](https://drafts.csswg.org/selectors-4/#specificity-rules).
+Ignore selectors inside of the specified [functional pseudo-classes](https://drafts.csswg.org/selectors-4/#pseudo-classes) that provide [evaluation contexts](https://drafts.csswg.org/selectors-4/#specificity-rules).
 
 Given:
 

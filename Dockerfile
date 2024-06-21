@@ -1,14 +1,19 @@
-FROM alpine:3.18
+FROM node:lts-alpine3.20
 
 WORKDIR /workdir
+
 COPY package*.json ./
-RUN adduser -u 2004 -D docker &&\
-    apk --no-cache add openjdk11-jre-headless bash nodejs npm &&\
-    npm install --legacy-peer-deps --omit=dev &&\
-    apk del npm
+
+RUN npm install
+
 COPY docs /docs
-COPY target/universal/stage/ /workdir/
+COPY target/universal/stage/ ./
+
+RUN adduser -u 2004 -D docker
 RUN chmod +x /workdir/bin/codacy-stylelint
+RUN apk --no-cache add openjdk11-jre-headless bash
+
 USER docker
+
 WORKDIR /src
 ENTRYPOINT ["/workdir/bin/codacy-stylelint"]

@@ -15,7 +15,7 @@ a { color: var(--foo, var(--bar)); }
 
 This rule considers custom properties defined within the same source to be known.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -51,7 +51,7 @@ a { --foo: #f00; color: var(--bar, var(--foo)); }
 ```
 
 <!-- prettier-ignore -->
-``` css
+```css
 @property --foo { syntax: "<color>"; inherits: false; initial-value: #f00; }
 a { color: var(--foo); }
 ```

@@ -1,6 +1,6 @@
 # function-calc-no-unspaced-operator
 
-Disallow invalid unspaced operator within `calc` functions.
+Disallow invalid unspaced operator within [math functions](https://www.w3.org/TR/css-values-4/#calc-syntax), such as `calc()` or `min()`.
 
 <!-- prettier-ignore -->
 ```css
@@ -11,7 +11,7 @@ a { top: calc(1px + 2px); }
 
 This rule checks that there is a single whitespace or a newline plus indentation before the `+` or `-` operator, and a single whitespace or a newline after that operator.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -27,6 +27,11 @@ a { top: calc(1px+2px); }
 <!-- prettier-ignore -->
 ```css
 a { top: calc(1px+ 2px); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { transform: rotate(atan(-2+1)); }
 ```
 
 The following patterns are _not_ considered problems:

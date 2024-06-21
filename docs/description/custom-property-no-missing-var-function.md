@@ -10,9 +10,12 @@ Disallow missing `var` function for custom properties.
  *             This custom property */
 ```
 
-This rule only reports custom properties that are defined within the same source.
+This rule has the following limitations:
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+- It only reports custom properties that are defined within the same source.
+- It does not check properties that can contain author-defined identifiers, e.g. `transition-property`.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -44,4 +47,10 @@ a { color: var(--foo); }
 ```css
 @property --foo {}
 a { color: var(--foo); }
+```
+
+<!-- prettier-ignore -->
+```css
+@property --foo {}
+a { transition-property: --foo; }
 ```

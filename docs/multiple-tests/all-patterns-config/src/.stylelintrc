@@ -1,17 +1,24 @@
 {
   "extends": [
+    "stylelint-config-css-modules",
     "stylelint-config-standard",
-    "stylelint-config-slds"
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-standard-scss",
+    "stylelint-config-styled-components",
+    "stylelint-config-tailwindcss",
+    "stylelint-config-twbs-bootstrap",
+    "stylelint-prettier/recommended"
   ],
   "plugins":[
-    "stylelint-order",
-    "stylelint-scss",
+    "@stylistic/stylelint-plugin",
     "stylelint-declaration-strict-value",
+    "stylelint-no-px",
+    "stylelint-scss",
+    "stylelint-selector-bem-pattern",
+    "stylelint-suitcss",
     "stylelint-selector-bem-pattern"
   ],
   "rules": {
-    "scale-unlimited/declaration-strict-value": "color",
-    "sh-waqar/declaration-use-variable": "/color/",
     "plugin/selector-bem-pattern": {
       "componentName": "[A-Z]+",
       "componentSelectors": {

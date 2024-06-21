@@ -26,7 +26,8 @@ a {
 }
 ```
 
-Note that **root-level at-rules will _not_ be included in the nesting depth calculation**, because most users would take for granted that root-level at-rules are "free" (because necessary). So both of the following `.foo` rules have a nesting depth of 2, and will therefore pass if your `max` is less than or equal to 2:
+> [!NOTE]
+> root-level at-rules will **not be included** in the nesting depth calculation, because most users would take for granted that root-level at-rules are "free" (because necessary). So both of the following `.foo` rules have a nesting depth of 2, and will therefore pass if your `max` is less than or equal to 2:
 
 <!-- prettier-ignore -->
 ```css
@@ -47,7 +48,7 @@ a {
 
 This rule integrates into Stylelint's core the functionality of the (now deprecated) plugin [`stylelint-statement-max-nesting-depth`](https://github.com/davidtheclark/stylelint-statement-max-nesting-depth).
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -407,6 +408,64 @@ a {
 ```css
 a {
   &:hover, &:visited { /* 1 */
+    b {               /* 2 */
+      top: 0;
+    }
+  }
+}
+```
+
+### `ignoreRules: ["/regex/", /regex/, "string"]`
+
+Ignore rules matching with the specified selectors.
+
+For example, with `1` and given:
+
+```json
+[".my-selector", "/^.ignored-sel/"]
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  .my-selector {   /* ignored */
+    b {      /* 1 */
+      top: 0;
+    }
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  .my-selector, .ignored-selector { /* ignored */
+    b {              /* 1 */
+      top: 0;
+    }
+  }
+}
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  .not-ignored-selector { /* 1 */
+    b {      /* 2 */
+      top: 0;
+    }
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  .my-selector, .not-ignored-selector { /* 1 */
     b {               /* 2 */
       top: 0;
     }

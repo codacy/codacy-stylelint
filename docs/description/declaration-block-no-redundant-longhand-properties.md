@@ -26,50 +26,72 @@ This rule will only complain if you've used the longhand equivalent of _all_ the
 
 This rule complains when the following shorthand properties can be used:
 
-- `margin`
-- `padding`
-- `inset`
-- `background`
-- `font`
-- `border`
-- `border-top`
-- `border-bottom`
-- `border-left`
-- `border-right`
-- `border-width`
-- `border-style`
-- `border-color`
-- `list-style`
-- `border-radius`
-- `transition`
 - `animation`
+- `background`
+- `border`
+- `border-block`
 - `border-block-end`
 - `border-block-start`
+- `border-bottom`
+- `border-color`
 - `border-image`
+- `border-inline`
 - `border-inline-end`
 - `border-inline-start`
+- `border-left`
+- `border-radius`
+- `border-right`
+- `border-style`
+- `border-top`
+- `border-width`
 - `column-rule`
 - `columns`
 - `flex`
 - `flex-flow`
+- `font`
+- `font-synthesis`
+- `gap`
 - `grid`
 - `grid-area`
 - `grid-column`
 - `grid-gap`
 - `grid-row`
 - `grid-template`
+- `inset`
+- `inset-block`
+- `inset-inline`
+- `list-style`
+- `margin`
+- `margin-block`
+- `margin-inline`
+- `mask`
 - `outline`
+- `overflow`
+- `overscroll-behavior`
+- `padding`
+- `padding-block`
+- `padding-inline`
+- `place-content`
+- `place-items`
+- `place-self`
+- `scroll-margin`
+- `scroll-margin-block`
+- `scroll-margin-inline`
+- `scroll-padding`
+- `scroll-padding-block`
+- `scroll-padding-inline`
 - `text-decoration`
 - `text-emphasis`
-- `mask`
+- `transition`
 
-**Please note** that properties are considered to be redundant if they may be written shorthand according to the specification, **regardless of the behavior of any individual browser**. For example, due to Internet Explorer's implementation of Flexbox, [it may not be possible to use the shorthand property `flex`](https://github.com/philipwalton/flexbugs#flexbug-8), but the longhand form is still considered a problem.
+> [!WARNING]
+> Please note that properties are considered to be redundant if they may be written shorthand according to the specification, **regardless of the behavior of any individual browser**. For example, due to Internet Explorer's implementation of Flexbox, [it may not be possible to use the shorthand property `flex`](https://github.com/philipwalton/flexbugs#flexbug-8), but the longhand form is still considered a problem.
 
 Flexbox-related properties can be ignored using `ignoreShorthands: ["/flex/"]` (see below).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideoptions.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/15.10.3/docsuser-guideconfigure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -151,6 +173,60 @@ a {
 ```
 
 ## Optional secondary options
+
+### `ignoreLonghands: ["string"]`
+
+Given:
+
+<!-- prettier-ignore -->
+```json
+["text-decoration-thickness", "background-size", "background-origin", "background-clip"]
+```
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: purple;
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-color: transparent;
+  background-image: none;
+  background-size: contain;
+  background-origin: border-box;
+  background-clip: text;
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a {
+  text-decoration: underline solid purple;
+  text-decoration-thickness: 1px;
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  background: none 0% 0% repeat scroll transparent;
+  background-size: contain;
+  background-origin: border-box;
+  background-clip: text;
+}
+```
 
 ### `ignoreShorthands: ["/regex/", /regex/, "string"]`
 

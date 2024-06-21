@@ -59,7 +59,8 @@ object DocGenerator {
     val param = Set(Parameter.Specification(Parameter.Name(patternName), default))
     val enabled = CodacyValues.patternsEnabled.contains(patternName)
     val level = if (CodacyValues.possibleErrorsPatterns.contains(patternName)) Result.Level.Warn else Result.Level.Info
-    Pattern.Specification(Pattern.Id(patternName), level, Pattern.Category.CodeStyle, None, param, enabled = enabled)
+    Pattern
+      .Specification(Pattern.Id(patternName), level, Pattern.Category.CodeStyle, None, None, param, enabled = enabled)
   }
 
   def PatternsFromDefaultConfig(): Map[String, Parameter.Value] = {
