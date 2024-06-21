@@ -7,40 +7,42 @@ Docker engine to allow Codacy to have [stylelint](https://github.com/stylelint/s
 
 ## Usage
 
-You can create the docker by following these steps:
+Create docker:
 
-1)  Generate base image:
+1.  Generate tool binary
+
 ```sh
-docker build -t codacy-stylelint-base .
+sbt stage
 ```
 
-2)  Generate tool image:
+2.  Generate tool docker
+
 ```sh
-sbt docker:publishLocal
+docker build -t codacy-stylelint .
 ```
 
-The docker is ran with the following command:
+Run docker:
 
 ```sh
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
-
-## Docs
-
-[Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
-
-[Tool Developer Guide - Using Scala](https://support.codacy.com/hc/en-us/articles/207280379-Tool-Developer-Guide-Using-Scala)
-
-## Test
-
-We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
-You can follow the instructions there to make sure your tool is working as expected.
 
 ## Generate Docs
 
 ```sh
 sbt "doc-generator/run"
 ```
+
+## Test
+
+We use the [codacy-plugins-test](https://github.com/codacy/codacy-plugins-test) to test our external tools integration.
+You can follow the instructions there to make sure your tool is working as expected.
+
+## Docs
+
+[Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
+
+[Tool Developer Guide - Using Scala](https://support.codacy.com/hc/en-us/articles/207280379-Tool-Developer-Guide-Using-Scala)
 
 ## What is Codacy
 

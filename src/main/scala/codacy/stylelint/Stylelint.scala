@@ -104,7 +104,8 @@ object Stylelint extends Tool {
 
   def parseCommandResult(commandResult: Try[CommandResult], targetFiles: List[String]): Try[List[StylelintResult]] = {
     commandResult.flatMap {
-      case CommandResult(ExitCodes.NO_ISSUES | ExitCodes.DETECTED_ISSUES, stdOut, _) => parseJson(stdOut)
+      case CommandResult(ExitCodes.NO_ISSUES | ExitCodes.DETECTED_ISSUES, _, results) =>
+        parseJson(results)
       case CommandResult(exitCode, stdOut, stdErr) =>
         val toolErrorMessage =
           s"""Stylelint exited with code ${printExitCode(exitCode)}
@@ -132,7 +133,6 @@ object Stylelint extends Tool {
         val errorString =
           s"""Could not parse results json:
             |$jsonString
-            |$jsonLines
             |
             |Exception: ${err.getMessage}
               """.stripMargin

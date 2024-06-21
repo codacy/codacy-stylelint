@@ -1,5 +1,8 @@
 {
+  "plugins": [
+		"@stylistic/stylelint-plugin"
+	],
   "rules": {
-    "color-hex-case": "lower"
+    "@stylistic/color-hex-case": "lower"
   }
 }

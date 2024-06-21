@@ -1,12 +1,16 @@
 {
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "build:docker": "docker build -t codacy-stylelint-base .",
+    "build:docker": "docker build -t codacy-stylelint .",
     "build:docs": "sbt doc-generator/run",
-    "test": "sbt scalafmtCheckAll scalafmtSbtCheck doc-generator/run stage",
+    "test": "sbt 'scalafmtCheckAll scalafmtSbtCheck doc-generator/run stage'",
     "preupgrade": "npx npm-check-updates -u",
-    "upgrade": "npm install --omit=dev"
+    "upgrade": "npm install"
   },
   "dependencies": {
+    "@stylistic/stylelint-plugin": "^2.1.2",
     "postcss": "^8.4.38",
     "postcss-less": "^6.0.0",
     "postcss-safe-parser": "^7.0.0",
@@ -19,7 +23,6 @@
     "stylelint": "^16.6.1",
     "stylelint-config-css-modules": "^4.4.0",
     "stylelint-config-sass-guidelines": "^11.1.0",
-    "stylelint-config-slds": "^1.0.8",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-styled-components": "^0.1.1",
