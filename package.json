@@ -27,7 +27,7 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-config-tailwindcss": "^0.0.7",
-    "stylelint-config-twbs-bootstrap": "^14.2.0",
+    "stylelint-config-twbs-bootstrap": "^15.0.0",
     "stylelint-declaration-strict-value": "^1.10.6",
     "stylelint-no-px": "^2.0.0",
     "stylelint-prettier": "^5.0.0",
