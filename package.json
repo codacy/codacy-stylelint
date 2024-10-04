@@ -13,7 +13,7 @@
     "@stylistic/stylelint-plugin": "^2.1.2",
     "postcss": "^8.4.45",
     "postcss-less": "^6.0.0",
-    "postcss-safe-parser": "^7.0.0",
+    "postcss-safe-parser": "^7.0.1",
     "postcss-sass": "^0.5.0",
     "postcss-scss": "^4.0.9",
     "postcss-styled": "^0.34.0",
