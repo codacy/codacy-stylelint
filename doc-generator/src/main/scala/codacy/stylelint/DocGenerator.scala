@@ -12,25 +12,53 @@ import scala.sys.process.Process
 object DocGenerator {
 
   def main(args: Array[String]): Unit = {
-    val tmpDirectory = File.newTemporaryDirectory()
 
-    val version = File("package.json").inputStream() { file =>
-      Json.parse(file)("dependencies")("stylelint").as[String].stripPrefix("^")
+    //val tempPluginsList =
+    listOfPlugins().map { plugin =>
+      processFolders(plugin.pluginName, plugin.url, plugin.relativeRulesDir)
     }
+//
+//    val rulesDirs: List[String] = results.map(_._1)
+//
+//    val version = File("package.json").inputStream() { file =>
+//      Json.parse(file)("dependencies")("stylelint").as[String].stripPrefix("^")
+//    }
 
-    cloneFromGitToTmpDir(tmpDirectory, version)
+//    val patterns = getListOfSubDirectories(rulesDirs) // refactor to accept list of directories
+//    initializePatternsFile(patterns, version)
+//    initializeDescriptionFile(patterns, rulesDirs)  // refactor to accept list of directories
+//    copyDescriptionFiles(patterns, rulesdirs, tmpDirectory, version)
+  }
 
-    val rulesdir = tmpDirectory + "/lib/rules"
-    val filePathForDocs = "docs/"
+  def processFolders(pluginName: String, url: String, relativeRulesDir: String): Unit = {
 
+    val tmpDirectory = File.newTemporaryDirectory()
+    val version = File("package.json").inputStream() { file =>
+      Json.parse(file)("dependencies")(pluginName).as[String].stripPrefix("^")
+    }
+    cloneFromGitToTmpDir(tmpDirectory, version, url)
+
+    val rulesdir = tmpDirectory + relativeRulesDir
+    val filePathForDocs = "/docs"
+// refactor
     val patterns = getListOfSubDirectories(rulesdir)
     initializePatternsFile(patterns, version, filePathForDocs)
     initializeDescriptionFile(patterns, rulesdir, filePathForDocs)
     copyDescriptionFiles(patterns, rulesdir, tmpDirectory, filePathForDocs, version)
+
   }
 
-  def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String): Int = {
-    Process(Seq("git", "clone", "https://github.com/stylelint/stylelint.git", tmpDirectory.pathAsString)).!
+  case class Plugin(pluginName: String, relativeRulesDir: String, url: String)
+
+  def listOfPlugins(): List[Plugin] = {
+    List (
+      Plugin("stylelint", "/lib/rules", "https://github.com/stylelint/stylelint.git"),
+      Plugin("stylelint-a11y", "/src/rules", "https://github.com/YozhikM/stylelint-a11y.git")
+    )
+  }
+
+  def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String, url: String): Int = {
+    Process(Seq("git", "clone", url, tmpDirectory.pathAsString)).!
     Process(Seq("git", "reset", "--hard", version), tmpDirectory.toJava).!
   }
 
@@ -92,9 +120,9 @@ object DocGenerator {
   def copyDescriptionFiles(folderNames: List[String],
                            rulesDirectory: String,
                            mainDirectory: File,
-                           docsDirectory: String,
+                           filePathForDocs: String,
                            version: String): Unit = {
-    val descriptionDir = File(docsDirectory + "/description/")
+    val descriptionDir = File(filePathForDocs + "/description/")
     descriptionDir.createDirectories()
     folderNames.foreach { patternName =>
       val documentationFile = File(s"$rulesDirectory/$patternName/README.md")
@@ -104,7 +132,7 @@ object DocGenerator {
       // assuming local URLs start with "../" this is the pattern used at the time of this solution
       val localUrlRegex = """\[(.+?)\]\((\.\./.+?)\)""".r
 
-      val contentWithReplacedUrls = localUrlRegex.replaceAllIn(fileContent, m => {
+      val   contentWithReplacedUrls = localUrlRegex.replaceAllIn(fileContent, m => {
         val linkText = m.group(1)
         val localUrl = m.group(2)
         val absoluteFilePath = documentationFile.parent / localUrl
