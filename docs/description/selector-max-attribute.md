@@ -13,7 +13,7 @@ This rule resolves nested selectors before counting the number of attribute sele
 
 The `:not()` pseudo-class is also evaluated separately. The rule processes the argument as if it were an independent selector, and the result does not count toward the total for the entire selector.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -74,7 +74,7 @@ The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-[type="text"][disabled]
+[type="text"][disabled] {}
 ```
 
 <!-- prettier-ignore -->

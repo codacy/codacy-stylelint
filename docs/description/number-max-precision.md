@@ -9,7 +9,7 @@ a { top: 3.245634px; }
  * This decimal place */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -143,7 +143,7 @@ For example, with `2`.
 Given:
 
 ```json
-{"/^(oklch|oklab|lch|lab)$/", 4}
+{ "/^(oklch|oklab|lch|lab)$/": 4 }
 ```
 
 The following patterns are considered problems:

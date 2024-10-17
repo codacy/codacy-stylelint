@@ -6,15 +6,14 @@ Specify a pattern for the selectors of rules nested within rules.
 ```css
     a {
       color: orange;
-      &:hover { color: pink; }
-    } ↑
+      &:hover { color: pink; } }
 /**   ↑
  * This nested selector */
 ```
 
 Non-standard selectors (e.g. selectors with Sass or Less interpolation) and selectors of rules nested within at-rules are ignored.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
