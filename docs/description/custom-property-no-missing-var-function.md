@@ -15,7 +15,7 @@ This rule has the following limitations:
 - It only reports custom properties that are defined within the same source.
 - It does not check properties that can contain author-defined identifiers, e.g. `transition-property`.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

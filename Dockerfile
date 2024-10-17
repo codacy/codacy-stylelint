@@ -4,7 +4,8 @@ WORKDIR /workdir
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps --omit=dev &&\
+    npm cache clean --force
 
 COPY docs /docs
 COPY target/universal/stage/ ./

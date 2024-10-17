@@ -3,7 +3,6 @@
     "stylelint-config-css-modules",
     "stylelint-config-standard",
     "stylelint-config-sass-guidelines",
-    "stylelint-config-standard-scss",
     "stylelint-config-styled-components",
     "stylelint-config-tailwindcss",
     "stylelint-config-twbs-bootstrap",
@@ -13,7 +12,6 @@
     "@stylistic/stylelint-plugin",
     "stylelint-declaration-strict-value",
     "stylelint-no-px",
-    "stylelint-scss",
     "stylelint-selector-bem-pattern",
     "stylelint-suitcss",
     "stylelint-selector-bem-pattern"

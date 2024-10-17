@@ -9,7 +9,7 @@ a { text-transform: uppercase; }
  * These properties and these values */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

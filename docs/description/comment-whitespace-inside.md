@@ -14,7 +14,7 @@ Any number of asterisks are allowed at the beginning or end of the comment. So `
 > [!WARNING]
 > Comments within _selector and value lists_ are currently ignored.
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

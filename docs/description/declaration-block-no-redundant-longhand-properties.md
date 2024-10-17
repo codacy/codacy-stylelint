@@ -50,6 +50,7 @@ This rule complains when the following shorthand properties can be used:
 - `flex-flow`
 - `font`
 - `font-synthesis`
+- `font-variant`
 - `gap`
 - `grid`
 - `grid-area`
@@ -89,9 +90,9 @@ This rule complains when the following shorthand properties can be used:
 
 Flexbox-related properties can be ignored using `ignoreShorthands: ["/flex/"]` (see below).
 
-The [`fix` option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
@@ -174,7 +175,7 @@ a {
 
 ## Optional secondary options
 
-### `ignoreLonghands: ["string"]`
+### `ignoreLonghands: ["array", "of", "properties"]`
 
 Given:
 
