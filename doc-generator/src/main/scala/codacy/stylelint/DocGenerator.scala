@@ -120,7 +120,8 @@ object DocGenerator {
     plugins.map { plugin =>
       val patternsDescription: Set[Pattern.Description] = plugin.patterns.map { pattern =>
         val patternDescription =
-          ParseMarkupRule.parseForDescriptions(File(plugin.tempDirectory + "/" + plugin.relativeRulesDir + "/" + pattern + "/README.md"))
+          ParseMarkupRule.parseForDescriptions(
+            File(plugin.tempDirectory + "/" + plugin.relativeRulesDir + "/" + pattern + "/README.md"))
 
         // looking for markdown links, e.g., [text](https://www.example.com)
         val urlRegex = """\[(.+?)\]\((.+?)\)""".r
