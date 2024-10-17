@@ -30,7 +30,7 @@ object DocGenerator {
       }
       val tmpDirectory = File.newTemporaryDirectory()
       cloneFromGitToTmpDir(tmpDirectory, version, plugin.url)
-      val rulesdir = tmpDirectory + plugin.relativeRulesDir
+      val rulesdir = tmpDirectory + "/" + plugin.relativeRulesDir
       val patterns = getListOfSubDirectories(rulesdir)
       val tempPlugin =
         Plugin(plugin.pluginName, plugin.relativeRulesDir, plugin.url, plugin.tree, patterns, version, tmpDirectory)
@@ -52,7 +52,7 @@ object DocGenerator {
     List(
       Plugin(
         "stylelint",
-        "/lib/rules",
+        "lib/rules",
         "https://github.com/stylelint/stylelint.git",
         "https://github.com/stylelint/stylelint",
         null,
@@ -60,7 +60,7 @@ object DocGenerator {
         null),
       Plugin(
         "stylelint-a11y",
-        "/src/rules",
+        "src/rules",
         "https://github.com/YozhikM/stylelint-a11y.git",
         "https://github.com/YozhikM/stylelint-a11y",
         null,
@@ -97,7 +97,7 @@ object DocGenerator {
       addNewPattern(patternid, default.getOrElse(patternid, Parameter.Value(JsNull)))
     }.to(Set)
     val tool = Tool.Specification(Tool.Name("stylelint"), Option(Tool.Version(version)), toolpatterns)
-    File("/docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
+    File("docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
   }
 
   def addNewPattern(patternName: String, default: Parameter.Value): Pattern.Specification = {
@@ -120,7 +120,7 @@ object DocGenerator {
     plugins.map { plugin =>
       val patternsDescription: Set[Pattern.Description] = plugin.patterns.map { pattern =>
         val patternDescription =
-          ParseMarkupRule.parseForDescriptions(File(plugin.relativeRulesDir + "/" + pattern + "/README.md"))
+          ParseMarkupRule.parseForDescriptions(File(plugin.tempDirectory + "/" + plugin.relativeRulesDir + "/" + pattern + "/README.md"))
 
         // looking for markdown links, e.g., [text](https://www.example.com)
         val urlRegex = """\[(.+?)\]\((.+?)\)""".r
@@ -144,7 +144,7 @@ object DocGenerator {
     descriptionDir.createDirectories()
     plugins.map { plugin =>
       plugin.patterns.foreach { patternName =>
-        val documentationFile = File(s"${plugin.relativeRulesDir}/$patternName/README.md")
+        val documentationFile = File(s"${plugin.tempDirectory}/${plugin.relativeRulesDir}/$patternName/README.md")
         val fileContent = documentationFile.contentAsString
 
         // looking for markdown link to local resources, e.g, [`fix` option](../../../docs/user-guide/usage/options.md#fix)

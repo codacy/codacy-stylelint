@@ -27,6 +27,9 @@ Run docker:
 docker run -it -v $srcDir:/src  <DOCKER_NAME>:<DOCKER_VERSION>
 ```
 
+## Add a new plugin
+In DocGenerator, listOfPlugins method, add a new plugin with all the necessary details and run npm install {plugin} and doc generator.
+
 ## Generate Docs
 
 ```sh

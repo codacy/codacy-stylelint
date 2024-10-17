@@ -55,6 +55,13 @@
     "description" : "comment-word-disallowed-list"
   } ]
 }, {
+  "patternId" : "font-size-is-readable",
+  "title" : "Disallow font sizes less than 15px (or 11.25pt).",
+  "parameters" : [ {
+    "name" : "font-size-is-readable",
+    "description" : "font-size-is-readable"
+  } ]
+}, {
   "patternId" : "font-family-no-missing-generic-family-keyword",
   "title" : "Disallow a missing generic family keyword within font families.",
   "parameters" : [ {
@@ -202,6 +209,13 @@
     "description" : "selector-max-specificity"
   } ]
 }, {
+  "patternId" : "no-spread-text",
+  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
+  "parameters" : [ {
+    "name" : "no-spread-text",
+    "description" : "no-spread-text"
+  } ]
+}, {
   "patternId" : "declaration-property-max-values",
   "title" : "Limit the number of values for a list of properties within declarations.",
   "parameters" : [ {
@@ -223,6 +237,13 @@
     "description" : "rule-selector-property-disallowed-list"
   } ]
 }, {
+  "patternId" : "media-prefers-color-scheme",
+  "title" : "Require implementation of certain styles for selectors with colors.",
+  "parameters" : [ {
+    "name" : "media-prefers-color-scheme",
+    "description" : "media-prefers-color-scheme"
+  } ]
+}, {
   "patternId" : "media-feature-name-disallowed-list",
   "title" : "Specify a list of disallowed media feature names.",
   "parameters" : [ {
@@ -237,11 +258,25 @@
     "description" : "color-hex-length"
   } ]
 }, {
+  "patternId" : "selector-pseudo-class-focus",
+  "title" : "Checks the presence of a pseudo-class for selectors with `:hover`.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-focus",
+    "description" : "selector-pseudo-class-focus"
+  } ]
+}, {
   "patternId" : "media-feature-name-no-vendor-prefix",
   "title" : "Disallow vendor prefixes for media feature names.",
   "parameters" : [ {
     "name" : "media-feature-name-no-vendor-prefix",
     "description" : "media-feature-name-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "no-display-none",
+  "title" : "Sources that will help you do without `{ display: none; }` and hide the content:",
+  "parameters" : [ {
+    "name" : "no-display-none",
+    "description" : "no-display-none"
   } ]
 }, {
   "patternId" : "declaration-block-no-redundant-longhand-properties",
@@ -377,6 +412,13 @@
     "description" : "selector-max-type"
   } ]
 }, {
+  "patternId" : "content-property-no-static-value",
+  "title" : "Disallow CSS generated content except aria-label attribute content and empty strings.",
+  "parameters" : [ {
+    "name" : "content-property-no-static-value",
+    "description" : "content-property-no-static-value"
+  } ]
+}, {
   "patternId" : "at-rule-empty-line-before",
   "title" : "Require or disallow an empty line before at-rules.",
   "parameters" : [ {
@@ -433,11 +475,32 @@
     "description" : "color-no-invalid-hex"
   } ]
 }, {
+  "patternId" : "line-height-is-vertical-rhythmed",
+  "title" : "Disallow not vertical rhythmed line-height.",
+  "parameters" : [ {
+    "name" : "line-height-is-vertical-rhythmed",
+    "description" : "line-height-is-vertical-rhythmed"
+  } ]
+}, {
+  "patternId" : "media-prefers-reduced-motion",
+  "title" : "Require certain styles if the animation or transition in media features.",
+  "parameters" : [ {
+    "name" : "media-prefers-reduced-motion",
+    "description" : "media-prefers-reduced-motion"
+  } ]
+}, {
   "patternId" : "selector-type-case",
   "title" : "Specify lowercase or uppercase for type selectors.",
   "parameters" : [ {
     "name" : "selector-type-case",
     "description" : "selector-type-case"
+  } ]
+}, {
+  "patternId" : "no-obsolete-attribute",
+  "title" : "Disallow obsolete attribute using.",
+  "parameters" : [ {
+    "name" : "no-obsolete-attribute",
+    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-allowed-list",
@@ -501,6 +564,13 @@
   "parameters" : [ {
     "name" : "no-unknown-custom-properties",
     "description" : "no-unknown-custom-properties"
+  } ]
+}, {
+  "patternId" : "no-text-align-justify",
+  "title" : "Disallow `{ text-align: justify; }` anywhere.",
+  "parameters" : [ {
+    "name" : "no-text-align-justify",
+    "description" : "no-text-align-justify"
   } ]
 }, {
   "patternId" : "selector-max-compound-selectors",
@@ -594,13 +664,6 @@
     "description" : "no-descending-specificity"
   } ]
 }, {
-  "patternId" : "comment-pattern",
-  "title" : "Specify a pattern for comments.",
-  "parameters" : [ {
-    "name" : "comment-pattern",
-    "description" : "comment-pattern"
-  } ]
-}, {
   "patternId" : "media-feature-name-value-no-unknown",
   "title" : "Disallow unknown values for media features.",
   "parameters" : [ {
@@ -641,6 +704,20 @@
   "parameters" : [ {
     "name" : "declaration-no-important",
     "description" : "declaration-no-important"
+  } ]
+}, {
+  "patternId" : "no-outline-none",
+  "title" : "Disallow outline clearing.",
+  "parameters" : [ {
+    "name" : "no-outline-none",
+    "description" : "no-outline-none"
+  } ]
+}, {
+  "patternId" : "comment-pattern",
+  "title" : "Specify a pattern for comments.",
+  "parameters" : [ {
+    "name" : "comment-pattern",
+    "description" : "comment-pattern"
   } ]
 }, {
   "patternId" : "selector-pseudo-class-disallowed-list",
@@ -790,13 +867,6 @@
     "description" : "declaration-property-value-allowed-list"
   } ]
 }, {
-  "patternId" : "selector-pseudo-class-allowed-list",
-  "title" : "Specify a list of allowed pseudo-class selectors.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-allowed-list",
-    "description" : "selector-pseudo-class-allowed-list"
-  } ]
-}, {
   "patternId" : "selector-max-universal",
   "title" : "Limit the number of universal selectors in a selector.",
   "parameters" : [ {
@@ -809,6 +879,20 @@
   "parameters" : [ {
     "name" : "keyframe-block-no-duplicate-selectors",
     "description" : "keyframe-block-no-duplicate-selectors"
+  } ]
+}, {
+  "patternId" : "selector-pseudo-class-allowed-list",
+  "title" : "Specify a list of allowed pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-allowed-list",
+    "description" : "selector-pseudo-class-allowed-list"
+  } ]
+}, {
+  "patternId" : "no-obsolete-element",
+  "title" : "Disallow obsolete selectors using.",
+  "parameters" : [ {
+    "name" : "no-obsolete-element",
+    "description" : "no-obsolete-element"
   } ]
 }, {
   "patternId" : "custom-property-empty-line-before",

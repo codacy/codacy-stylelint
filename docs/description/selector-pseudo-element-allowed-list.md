@@ -14,7 +14,7 @@ This rule ignores:
 - CSS2 pseudo-elements i.e. those prefixed with a single colon
 - selectors that use variable interpolation e.g. `::#{$variable} {}`
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/tree/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.6.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
