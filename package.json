@@ -32,7 +32,7 @@
     "stylelint-declaration-strict-value": "^1.10.6",
     "stylelint-no-px": "^2.0.0",
     "stylelint-prettier": "^5.0.2",
-    "stylelint-scss": "^6.8.0",
+    "stylelint-scss": "^6.8.1",
     "stylelint-selector-bem-pattern": "^4.0.1",
     "stylelint-suitcss": "^5.0.0"
   }
