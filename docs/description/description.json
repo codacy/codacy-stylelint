@@ -1,16 +1,23 @@
 [ {
-  "patternId" : "function-color-relative",
-  "title" : "Encourage the use of the scale-color over:",
-  "parameters" : [ {
-    "name" : "function-color-relative",
-    "description" : "function-color-relative"
-  } ]
-}, {
   "patternId" : "property-no-unknown",
   "title" : "Disallow unknown properties.",
   "parameters" : [ {
     "name" : "property-no-unknown",
     "description" : "property-no-unknown"
+  } ]
+}, {
+  "patternId" : "at-rule-disallowed-list",
+  "title" : "Specify a list of disallowed at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-disallowed-list",
+    "description" : "at-rule-disallowed-list"
+  } ]
+}, {
+  "patternId" : "scss_at-else-closing-brace-space-after",
+  "title" : "Require a single space or disallow whitespace after the closing brace of `@else` statements.",
+  "parameters" : [ {
+    "name" : "at-else-closing-brace-space-after",
+    "description" : "at-else-closing-brace-space-after"
   } ]
 }, {
   "patternId" : "no-irregular-whitespace",
@@ -20,18 +27,18 @@
     "description" : "no-irregular-whitespace"
   } ]
 }, {
-  "patternId" : "percent-placeholder-pattern",
-  "title" : "Specify a pattern for `%`-placeholders.",
+  "patternId" : "scss_at-else-empty-line-before",
+  "title" : "Require an empty line or disallow empty lines before `@`-else.",
   "parameters" : [ {
-    "name" : "percent-placeholder-pattern",
-    "description" : "percent-placeholder-pattern"
+    "name" : "at-else-empty-line-before",
+    "description" : "at-else-empty-line-before"
   } ]
 }, {
-  "patternId" : "at-rule-disallowed-list",
-  "title" : "Specify a list of disallowed at-rules.",
+  "patternId" : "scss_at-mixin-no-risky-nesting-selector",
+  "title" : "Disallow risky nesting selectors within a mixin.",
   "parameters" : [ {
-    "name" : "at-rule-disallowed-list",
-    "description" : "at-rule-disallowed-list"
+    "name" : "at-mixin-no-risky-nesting-selector",
+    "description" : "at-mixin-no-risky-nesting-selector"
   } ]
 }, {
   "patternId" : "selector-class-pattern",
@@ -90,11 +97,11 @@
     "description" : "lightness-notation"
   } ]
 }, {
-  "patternId" : "comment-no-loud",
-  "title" : "Disallow `/*`-comments.",
+  "patternId" : "scss_at-mixin-pattern",
+  "title" : "Specify a pattern for Sass/SCSS-like mixin names.",
   "parameters" : [ {
-    "name" : "comment-no-loud",
-    "description" : "comment-no-loud"
+    "name" : "at-mixin-pattern",
+    "description" : "at-mixin-pattern"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-no-unknown",
@@ -104,18 +111,18 @@
     "description" : "selector-pseudo-element-no-unknown"
   } ]
 }, {
-  "patternId" : "at-import-partial-extension-whitelist",
-  "title" : "Specify a whitelist of allowed file extensions for partial names in `@import` commands.",
-  "parameters" : [ {
-    "name" : "at-import-partial-extension-whitelist",
-    "description" : "at-import-partial-extension-whitelist"
-  } ]
-}, {
   "patternId" : "value-no-vendor-prefix",
   "title" : "Disallow vendor prefixes for values.",
   "parameters" : [ {
     "name" : "value-no-vendor-prefix",
     "description" : "value-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "scss_at-if-closing-brace-newline-after",
+  "title" : "Require or disallow a newline after the closing brace of `@if` statements.",
+  "parameters" : [ {
+    "name" : "at-if-closing-brace-newline-after",
+    "description" : "at-if-closing-brace-newline-after"
   } ]
 }, {
   "patternId" : "keyframes-name-pattern",
@@ -125,18 +132,32 @@
     "description" : "keyframes-name-pattern"
   } ]
 }, {
+  "patternId" : "scss_function-quote-no-quoted-strings-inside",
+  "title" : "Disallow quoted strings inside the quote function",
+  "parameters" : [ {
+    "name" : "function-quote-no-quoted-strings-inside",
+    "description" : "function-quote-no-quoted-strings-inside"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-first-in-block",
+  "title" : "Require `$`-variable declarations to be placed first in a block (root or a rule).",
+  "parameters" : [ {
+    "name" : "dollar-variable-first-in-block",
+    "description" : "dollar-variable-first-in-block"
+  } ]
+}, {
+  "patternId" : "scss_block-no-redundant-nesting",
+  "title" : "Disallow nesting a single block if it could be merged with its parent block.",
+  "parameters" : [ {
+    "name" : "block-no-redundant-nesting",
+    "description" : "block-no-redundant-nesting"
+  } ]
+}, {
   "patternId" : "declaration-block-no-duplicate-custom-properties",
   "title" : "Disallow duplicate custom properties within declaration blocks.",
   "parameters" : [ {
     "name" : "declaration-block-no-duplicate-custom-properties",
     "description" : "declaration-block-no-duplicate-custom-properties"
-  } ]
-}, {
-  "patternId" : "at-else-closing-brace-newline-after",
-  "title" : "Require or disallow a newline after the closing brace of `@else` statements.",
-  "parameters" : [ {
-    "name" : "at-else-closing-brace-newline-after",
-    "description" : "at-else-closing-brace-newline-after"
   } ]
 }, {
   "patternId" : "function-disallowed-list",
@@ -167,20 +188,6 @@
     "description" : "import-notation"
   } ]
 }, {
-  "patternId" : "at-import-partial-extension-disallowed-list",
-  "title" : "Specify a list of disallowed file extensions for partial names in `@import` commands.",
-  "parameters" : [ {
-    "name" : "at-import-partial-extension-disallowed-list",
-    "description" : "at-import-partial-extension-disallowed-list"
-  } ]
-}, {
-  "patternId" : "function-color-channel",
-  "title" : "Encourage the use of the color.channel function over related deprecated color functions:",
-  "parameters" : [ {
-    "name" : "function-color-channel",
-    "description" : "function-color-channel"
-  } ]
-}, {
   "patternId" : "shorthand-property-no-redundant-values",
   "title" : "Disallow redundant values within shorthand properties.",
   "parameters" : [ {
@@ -188,11 +195,11 @@
     "description" : "shorthand-property-no-redundant-values"
   } ]
 }, {
-  "patternId" : "selector-max-id",
-  "title" : "Limit the number of ID selectors in a selector.",
+  "patternId" : "scss_no-global-function-names",
+  "title" : "Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.",
   "parameters" : [ {
-    "name" : "selector-max-id",
-    "description" : "selector-max-id"
+    "name" : "no-global-function-names",
+    "description" : "no-global-function-names"
   } ]
 }, {
   "patternId" : "no-unknown-custom-media",
@@ -202,25 +209,18 @@
     "description" : "no-unknown-custom-media"
   } ]
 }, {
-  "patternId" : "function-calculation-no-interpolation",
-  "title" : "Disallow interpolation in `calc()`, `clamp()`, `min()`, and `max()` functions.",
+  "patternId" : "scss_load-no-partial-leading-underscore",
+  "title" : "Disallow leading underscore in partial names in `@import`, `@use`, `@forward`, and `meta.load-css` `$url` parameter.",
   "parameters" : [ {
-    "name" : "function-calculation-no-interpolation",
-    "description" : "function-calculation-no-interpolation"
+    "name" : "load-no-partial-leading-underscore",
+    "description" : "load-no-partial-leading-underscore"
   } ]
 }, {
-  "patternId" : "at-if-closing-brace-newline-after",
-  "title" : "Require or disallow a newline after the closing brace of `@if` statements.",
+  "patternId" : "selector-max-id",
+  "title" : "Limit the number of ID selectors in a selector.",
   "parameters" : [ {
-    "name" : "at-if-closing-brace-newline-after",
-    "description" : "at-if-closing-brace-newline-after"
-  } ]
-}, {
-  "patternId" : "no-dollar-variables",
-  "title" : "Disallow dollar variables within a stylesheet.",
-  "parameters" : [ {
-    "name" : "no-dollar-variables",
-    "description" : "no-dollar-variables"
+    "name" : "selector-max-id",
+    "description" : "selector-max-id"
   } ]
 }, {
   "patternId" : "property-disallowed-list",
@@ -251,39 +251,11 @@
     "description" : "custom-property-no-missing-var-function"
   } ]
 }, {
-  "patternId" : "dollar-variable-colon-space-after",
-  "title" : "Require or disallow whitespace after the colon in `$`-variable declarations.",
+  "patternId" : "scss_map-keys-quotes",
+  "title" : "Require quoted keys in Sass maps.",
   "parameters" : [ {
-    "name" : "dollar-variable-colon-space-after",
-    "description" : "dollar-variable-colon-space-after"
-  } ]
-}, {
-  "patternId" : "dollar-variable-no-namespaced-assignment",
-  "title" : "Disallow assignment to namespaced variables.",
-  "parameters" : [ {
-    "name" : "dollar-variable-no-namespaced-assignment",
-    "description" : "dollar-variable-no-namespaced-assignment"
-  } ]
-}, {
-  "patternId" : "at-mixin-argumentless-call-parentheses",
-  "title" : "Require or disallow parentheses in argumentless `@mixin` calls.",
-  "parameters" : [ {
-    "name" : "at-mixin-argumentless-call-parentheses",
-    "description" : "at-mixin-argumentless-call-parentheses"
-  } ]
-}, {
-  "patternId" : "dollar-variable-pattern",
-  "title" : "Specify a pattern for Sass-like variables.",
-  "parameters" : [ {
-    "name" : "dollar-variable-pattern",
-    "description" : "dollar-variable-pattern"
-  } ]
-}, {
-  "patternId" : "block-no-redundant-nesting",
-  "title" : "Disallow nesting a single block if it could be merged with its parent block.",
-  "parameters" : [ {
-    "name" : "block-no-redundant-nesting",
-    "description" : "block-no-redundant-nesting"
+    "name" : "map-keys-quotes",
+    "description" : "map-keys-quotes"
   } ]
 }, {
   "patternId" : "at-rule-allowed-list",
@@ -307,18 +279,11 @@
     "description" : "selector-max-specificity"
   } ]
 }, {
-  "patternId" : "at-rule-no-unknown",
-  "title" : "Disallow unknown at-rules. Should be used **instead of** Stylelint's at-rule-no-unknown.",
+  "patternId" : "scss_selector-no-union-class-name",
+  "title" : "Disallow union class names with the parent selector (`&`).",
   "parameters" : [ {
-    "name" : "at-rule-no-unknown",
-    "description" : "at-rule-no-unknown"
-  } ]
-}, {
-  "patternId" : "no-spread-text",
-  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
-  "parameters" : [ {
-    "name" : "no-spread-text",
-    "description" : "no-spread-text"
+    "name" : "selector-no-union-class-name",
+    "description" : "selector-no-union-class-name"
   } ]
 }, {
   "patternId" : "declaration-property-max-values",
@@ -328,11 +293,11 @@
     "description" : "declaration-property-max-values"
   } ]
 }, {
-  "patternId" : "media-feature-name-no-unknown",
-  "title" : "Disallow unknown media feature names.",
+  "patternId" : "scss_load-partial-extension",
+  "title" : "Require or disallow extension in `@import`, `@use`, `@forward`, and [`meta.load-css`] commands.",
   "parameters" : [ {
-    "name" : "media-feature-name-no-unknown",
-    "description" : "media-feature-name-no-unknown"
+    "name" : "load-partial-extension",
+    "description" : "load-partial-extension"
   } ]
 }, {
   "patternId" : "rule-selector-property-disallowed-list",
@@ -342,18 +307,46 @@
     "description" : "rule-selector-property-disallowed-list"
   } ]
 }, {
-  "patternId" : "at-function-pattern",
-  "title" : "Specify a pattern for Sass/SCSS-like function names.",
-  "parameters" : [ {
-    "name" : "at-function-pattern",
-    "description" : "at-function-pattern"
-  } ]
-}, {
   "patternId" : "media-prefers-color-scheme",
   "title" : "Require implementation of certain styles for selectors with colors.",
   "parameters" : [ {
     "name" : "media-prefers-color-scheme",
     "description" : "media-prefers-color-scheme"
+  } ]
+}, {
+  "patternId" : "scss_at-else-if-parentheses-space-before",
+  "title" : "Require or disallow a space before `@else if` parentheses.",
+  "parameters" : [ {
+    "name" : "at-else-if-parentheses-space-before",
+    "description" : "at-else-if-parentheses-space-before"
+  } ]
+}, {
+  "patternId" : "scss_at-import-no-partial-leading-underscore",
+  "title" : "Disallow leading underscore in partial names in `@import`.",
+  "parameters" : [ {
+    "name" : "at-import-no-partial-leading-underscore",
+    "description" : "at-import-no-partial-leading-underscore"
+  } ]
+}, {
+  "patternId" : "no-spread-text",
+  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
+  "parameters" : [ {
+    "name" : "no-spread-text",
+    "description" : "no-spread-text"
+  } ]
+}, {
+  "patternId" : "media-feature-name-no-unknown",
+  "title" : "Disallow unknown media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-no-unknown",
+    "description" : "media-feature-name-no-unknown"
+  } ]
+}, {
+  "patternId" : "scss_at-use-no-redundant-alias",
+  "title" : "Disallow redundant namespace aliases.",
+  "parameters" : [ {
+    "name" : "at-use-no-redundant-alias",
+    "description" : "at-use-no-redundant-alias"
   } ]
 }, {
   "patternId" : "media-feature-name-disallowed-list",
@@ -377,18 +370,11 @@
     "description" : "selector-pseudo-class-focus"
   } ]
 }, {
-  "patternId" : "at-mixin-no-risky-nesting-selector",
-  "title" : "Disallow risky nesting selectors within a mixin.",
+  "patternId" : "scss_at-import-partial-extension-allowed-list",
+  "title" : "Specify a list of allowed file extensions for partial names in `@import` commands.",
   "parameters" : [ {
-    "name" : "at-mixin-no-risky-nesting-selector",
-    "description" : "at-mixin-no-risky-nesting-selector"
-  } ]
-}, {
-  "patternId" : "media-feature-name-no-vendor-prefix",
-  "title" : "Disallow vendor prefixes for media feature names.",
-  "parameters" : [ {
-    "name" : "media-feature-name-no-vendor-prefix",
-    "description" : "media-feature-name-no-vendor-prefix"
+    "name" : "at-import-partial-extension-allowed-list",
+    "description" : "at-import-partial-extension-allowed-list"
   } ]
 }, {
   "patternId" : "no-display-none",
@@ -412,11 +398,39 @@
     "description" : "font-family-name-quotes"
   } ]
 }, {
+  "patternId" : "scss_double-slash-comment-empty-line-before",
+  "title" : "Require or disallow an empty line before `//`-comments.",
+  "parameters" : [ {
+    "name" : "double-slash-comment-empty-line-before",
+    "description" : "double-slash-comment-empty-line-before"
+  } ]
+}, {
   "patternId" : "selector-pseudo-element-colon-notation",
   "title" : "Specify single or double colon notation for applicable pseudo-element selectors.",
   "parameters" : [ {
     "name" : "selector-pseudo-element-colon-notation",
     "description" : "selector-pseudo-element-colon-notation"
+  } ]
+}, {
+  "patternId" : "scss_at-use-no-unnamespaced",
+  "title" : "Disallow usage of `@use` without a namespace.",
+  "parameters" : [ {
+    "name" : "at-use-no-unnamespaced",
+    "description" : "at-use-no-unnamespaced"
+  } ]
+}, {
+  "patternId" : "media-feature-name-no-vendor-prefix",
+  "title" : "Disallow vendor prefixes for media feature names.",
+  "parameters" : [ {
+    "name" : "media-feature-name-no-vendor-prefix",
+    "description" : "media-feature-name-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "scss_at-function-named-arguments",
+  "title" : "Require named parameters in SCSS function call rule.",
+  "parameters" : [ {
+    "name" : "at-function-named-arguments",
+    "description" : "at-function-named-arguments"
   } ]
 }, {
   "patternId" : "no-duplicate-at-import-rules",
@@ -447,6 +461,20 @@
     "description" : "property-no-vendor-prefix"
   } ]
 }, {
+  "patternId" : "scss_dimension-no-non-numeric-values",
+  "title" : "Interpolating a value with a unit (e.g. `#{$value}px`) results in a\n_string_ value, not as numeric value. This value then cannot be used in\nnumerical operations.  It is better to use arithmetic to apply a unit to a\nnumber (e.g. `$value * 1px`).",
+  "parameters" : [ {
+    "name" : "dimension-no-non-numeric-values",
+    "description" : "dimension-no-non-numeric-values"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-empty-line-before",
+  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
+  "parameters" : [ {
+    "name" : "dollar-variable-empty-line-before",
+    "description" : "dollar-variable-empty-line-before"
+  } ]
+}, {
   "patternId" : "keyframe-declaration-no-important",
   "title" : "Disallow invalid `!important` within keyframe declarations.",
   "parameters" : [ {
@@ -454,32 +482,11 @@
     "description" : "keyframe-declaration-no-important"
   } ]
 }, {
-  "patternId" : "at-extend-no-missing-placeholder",
-  "title" : "Disallow at-extends (`@extend`) with missing placeholders.",
+  "patternId" : "scss_at-mixin-named-arguments",
+  "title" : "Require named parameters in at-mixin call rule.",
   "parameters" : [ {
-    "name" : "at-extend-no-missing-placeholder",
-    "description" : "at-extend-no-missing-placeholder"
-  } ]
-}, {
-  "patternId" : "at-if-no-null",
-  "title" : "Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.",
-  "parameters" : [ {
-    "name" : "at-if-no-null",
-    "description" : "at-if-no-null"
-  } ]
-}, {
-  "patternId" : "at-else-if-parentheses-space-before",
-  "title" : "Require or disallow a space before `@else if` parentheses.",
-  "parameters" : [ {
-    "name" : "at-else-if-parentheses-space-before",
-    "description" : "at-else-if-parentheses-space-before"
-  } ]
-}, {
-  "patternId" : "function-no-unknown",
-  "title" : "Disallow unknown functions. Should be used **instead of** Stylelint's function-no-unknown.",
-  "parameters" : [ {
-    "name" : "function-no-unknown",
-    "description" : "function-no-unknown"
+    "name" : "at-mixin-named-arguments",
+    "description" : "at-mixin-named-arguments"
   } ]
 }, {
   "patternId" : "property-allowed-list",
@@ -510,11 +517,11 @@
     "description" : "function-calc-no-unspaced-operator"
   } ]
 }, {
-  "patternId" : "at-each-key-value-single-line",
-  "title" : "This is a rule that checks for situations where users have:",
+  "patternId" : "scss_declaration-nested-properties-no-divided-groups",
+  "title" : "Disallow nested properties of the same \"namespace\" be divided into multiple groups.",
   "parameters" : [ {
-    "name" : "at-each-key-value-single-line",
-    "description" : "at-each-key-value-single-line"
+    "name" : "declaration-nested-properties-no-divided-groups",
+    "description" : "declaration-nested-properties-no-divided-groups"
   } ]
 }, {
   "patternId" : "color-hex-alpha",
@@ -524,11 +531,11 @@
     "description" : "color-hex-alpha"
   } ]
 }, {
-  "patternId" : "function-unquote-no-unquoted-strings-inside",
-  "title" : "Disallow unquoted strings inside the unquote function",
+  "patternId" : "number-max-precision",
+  "title" : "Limit the number of decimal places allowed in numbers.",
   "parameters" : [ {
-    "name" : "function-unquote-no-unquoted-strings-inside",
-    "description" : "function-unquote-no-unquoted-strings-inside"
+    "name" : "number-max-precision",
+    "description" : "number-max-precision"
   } ]
 }, {
   "patternId" : "function-url-no-scheme-relative",
@@ -536,27 +543,6 @@
   "parameters" : [ {
     "name" : "function-url-no-scheme-relative",
     "description" : "function-url-no-scheme-relative"
-  } ]
-}, {
-  "patternId" : "dollar-variable-empty-line-after",
-  "title" : "Require an empty line or disallow empty lines after `$`-variable declarations.",
-  "parameters" : [ {
-    "name" : "dollar-variable-empty-line-after",
-    "description" : "dollar-variable-empty-line-after"
-  } ]
-}, {
-  "patternId" : "no-global-function-names",
-  "title" : "Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.",
-  "parameters" : [ {
-    "name" : "no-global-function-names",
-    "description" : "no-global-function-names"
-  } ]
-}, {
-  "patternId" : "number-max-precision",
-  "title" : "Limit the number of decimal places allowed in numbers.",
-  "parameters" : [ {
-    "name" : "number-max-precision",
-    "description" : "number-max-precision"
   } ]
 }, {
   "patternId" : "selector-id-pattern",
@@ -573,11 +559,25 @@
     "description" : "selector-nested-pattern"
   } ]
 }, {
-  "patternId" : "at-function-named-arguments",
-  "title" : "Require named parameters in SCSS function call rule.",
+  "patternId" : "scss_at-import-partial-extension",
+  "title" : "Require or disallow extension in `@import` commands.",
   "parameters" : [ {
-    "name" : "at-function-named-arguments",
-    "description" : "at-function-named-arguments"
+    "name" : "at-import-partial-extension",
+    "description" : "at-import-partial-extension"
+  } ]
+}, {
+  "patternId" : "scss_declaration-nested-properties",
+  "title" : "Require or disallow properties with `-` in their names to be in a form of a nested group.",
+  "parameters" : [ {
+    "name" : "declaration-nested-properties",
+    "description" : "declaration-nested-properties"
+  } ]
+}, {
+  "patternId" : "scss_at-each-key-value-single-line",
+  "title" : "This is a rule that checks for situations where users have:",
+  "parameters" : [ {
+    "name" : "at-each-key-value-single-line",
+    "description" : "at-each-key-value-single-line"
   } ]
 }, {
   "patternId" : "no-empty-source",
@@ -592,6 +592,13 @@
   "parameters" : [ {
     "name" : "selector-max-type",
     "description" : "selector-max-type"
+  } ]
+}, {
+  "patternId" : "scss_at-root-no-redundant",
+  "title" : "Disallow redundant `@at-root` rule.",
+  "parameters" : [ {
+    "name" : "at-root-no-redundant",
+    "description" : "at-root-no-redundant"
   } ]
 }, {
   "patternId" : "content-property-no-static-value",
@@ -650,6 +657,20 @@
     "description" : "function-no-unknown"
   } ]
 }, {
+  "patternId" : "scss_function-color-relative",
+  "title" : "Encourage the use of the scale-color over:",
+  "parameters" : [ {
+    "name" : "function-color-relative",
+    "description" : "function-color-relative"
+  } ]
+}, {
+  "patternId" : "scss_operator-no-newline-before",
+  "title" : "Disallow linebreaks before Sass operators.",
+  "parameters" : [ {
+    "name" : "operator-no-newline-before",
+    "description" : "operator-no-newline-before"
+  } ]
+}, {
   "patternId" : "color-no-invalid-hex",
   "title" : "Disallow invalid hex colors.",
   "parameters" : [ {
@@ -657,32 +678,11 @@
     "description" : "color-no-invalid-hex"
   } ]
 }, {
-  "patternId" : "at-import-no-partial-leading-underscore",
-  "title" : "Disallow leading underscore in partial names in `@import`.",
+  "patternId" : "scss_at-if-closing-brace-space-after",
+  "title" : "Require a single space or disallow whitespace after the closing brace of `@if` statements.",
   "parameters" : [ {
-    "name" : "at-import-no-partial-leading-underscore",
-    "description" : "at-import-no-partial-leading-underscore"
-  } ]
-}, {
-  "patternId" : "at-else-empty-line-before",
-  "title" : "Require an empty line or disallow empty lines before `@`-else.",
-  "parameters" : [ {
-    "name" : "at-else-empty-line-before",
-    "description" : "at-else-empty-line-before"
-  } ]
-}, {
-  "patternId" : "operator-no-newline-after",
-  "title" : "Disallow linebreaks after Sass operators.",
-  "parameters" : [ {
-    "name" : "operator-no-newline-after",
-    "description" : "operator-no-newline-after"
-  } ]
-}, {
-  "patternId" : "function-quote-no-quoted-strings-inside",
-  "title" : "Disallow quoted strings inside the quote function",
-  "parameters" : [ {
-    "name" : "function-quote-no-quoted-strings-inside",
-    "description" : "function-quote-no-quoted-strings-inside"
+    "name" : "at-if-closing-brace-space-after",
+    "description" : "at-if-closing-brace-space-after"
   } ]
 }, {
   "patternId" : "line-height-is-vertical-rhythmed",
@@ -699,6 +699,13 @@
     "description" : "media-prefers-reduced-motion"
   } ]
 }, {
+  "patternId" : "scss_operator-no-newline-after",
+  "title" : "Disallow linebreaks after Sass operators.",
+  "parameters" : [ {
+    "name" : "operator-no-newline-after",
+    "description" : "operator-no-newline-after"
+  } ]
+}, {
   "patternId" : "selector-type-case",
   "title" : "Specify lowercase or uppercase for type selectors.",
   "parameters" : [ {
@@ -713,11 +720,25 @@
     "description" : "no-obsolete-attribute"
   } ]
 }, {
-  "patternId" : "declaration-nested-properties",
-  "title" : "Require or disallow properties with `-` in their names to be in a form of a nested group.",
+  "patternId" : "scss_at-mixin-argumentless-call-parentheses",
+  "title" : "Require or disallow parentheses in argumentless `@mixin` calls.",
   "parameters" : [ {
-    "name" : "declaration-nested-properties",
-    "description" : "declaration-nested-properties"
+    "name" : "at-mixin-argumentless-call-parentheses",
+    "description" : "at-mixin-argumentless-call-parentheses"
+  } ]
+}, {
+  "patternId" : "scss_media-feature-value-dollar-variable",
+  "title" : "Require a media feature value be a `$`-variable or disallow `$`-variables in media feature values.",
+  "parameters" : [ {
+    "name" : "media-feature-value-dollar-variable",
+    "description" : "media-feature-value-dollar-variable"
+  } ]
+}, {
+  "patternId" : "selector-attribute-operator-allowed-list",
+  "title" : "Specify a list of allowed attribute operators.",
+  "parameters" : [ {
+    "name" : "selector-attribute-operator-allowed-list",
+    "description" : "selector-attribute-operator-allowed-list"
   } ]
 }, {
   "patternId" : "selector-disallowed-list",
@@ -734,18 +755,11 @@
     "description" : "unit-disallowed-list"
   } ]
 }, {
-  "patternId" : "at-mixin-pattern",
-  "title" : "Specify a pattern for Sass/SCSS-like mixin names.",
+  "patternId" : "media-feature-range-notation",
+  "title" : "Specify context or prefix notation for media feature ranges.",
   "parameters" : [ {
-    "name" : "at-mixin-pattern",
-    "description" : "at-mixin-pattern"
-  } ]
-}, {
-  "patternId" : "selector-attribute-operator-allowed-list",
-  "title" : "Specify a list of allowed attribute operators.",
-  "parameters" : [ {
-    "name" : "selector-attribute-operator-allowed-list",
-    "description" : "selector-attribute-operator-allowed-list"
+    "name" : "media-feature-range-notation",
+    "description" : "media-feature-range-notation"
   } ]
 }, {
   "patternId" : "string-no-newline",
@@ -755,32 +769,11 @@
     "description" : "string-no-newline"
   } ]
 }, {
-  "patternId" : "comment-no-empty",
-  "title" : "Disallow empty comments.",
-  "parameters" : [ {
-    "name" : "comment-no-empty",
-    "description" : "comment-no-empty"
-  } ]
-}, {
-  "patternId" : "declaration-nested-properties-no-divided-groups",
-  "title" : "Disallow nested properties of the same \"namespace\" be divided into multiple groups.",
-  "parameters" : [ {
-    "name" : "declaration-nested-properties-no-divided-groups",
-    "description" : "declaration-nested-properties-no-divided-groups"
-  } ]
-}, {
   "patternId" : "selector-max-class",
   "title" : "Limit the number of classes in a selector.",
   "parameters" : [ {
     "name" : "selector-max-class",
     "description" : "selector-max-class"
-  } ]
-}, {
-  "patternId" : "no-duplicate-mixins",
-  "title" : "Disallow duplicate mixins within a stylesheet.",
-  "parameters" : [ {
-    "name" : "no-duplicate-mixins",
-    "description" : "no-duplicate-mixins"
   } ]
 }, {
   "patternId" : "declaration-property-value-disallowed-list",
@@ -797,11 +790,11 @@
     "description" : "no-unknown-custom-properties"
   } ]
 }, {
-  "patternId" : "media-feature-value-dollar-variable",
-  "title" : "Require a media feature value be a `$`-variable or disallow `$`-variables in media feature values.",
+  "patternId" : "scss_function-unquote-no-unquoted-strings-inside",
+  "title" : "Disallow unquoted strings inside the unquote function",
   "parameters" : [ {
-    "name" : "media-feature-value-dollar-variable",
-    "description" : "media-feature-value-dollar-variable"
+    "name" : "function-unquote-no-unquoted-strings-inside",
+    "description" : "function-unquote-no-unquoted-strings-inside"
   } ]
 }, {
   "patternId" : "no-text-align-justify",
@@ -811,18 +804,18 @@
     "description" : "no-text-align-justify"
   } ]
 }, {
-  "patternId" : "at-root-no-redundant",
-  "title" : "Disallow redundant `@at-root` rule.",
+  "patternId" : "comment-no-empty",
+  "title" : "Disallow empty comments.",
   "parameters" : [ {
-    "name" : "at-root-no-redundant",
-    "description" : "at-root-no-redundant"
+    "name" : "comment-no-empty",
+    "description" : "comment-no-empty"
   } ]
 }, {
-  "patternId" : "media-feature-range-notation",
-  "title" : "Specify context or prefix notation for media feature ranges.",
+  "patternId" : "scss_partial-no-import",
+  "title" : "Disallow non-CSS `@import`s in partial files.",
   "parameters" : [ {
-    "name" : "media-feature-range-notation",
-    "description" : "media-feature-range-notation"
+    "name" : "partial-no-import",
+    "description" : "partial-no-import"
   } ]
 }, {
   "patternId" : "selector-max-compound-selectors",
@@ -832,25 +825,11 @@
     "description" : "selector-max-compound-selectors"
   } ]
 }, {
-  "patternId" : "function-url-scheme-allowed-list",
-  "title" : "Specify a list of allowed URL schemes.",
-  "parameters" : [ {
-    "name" : "function-url-scheme-allowed-list",
-    "description" : "function-url-scheme-allowed-list"
-  } ]
-}, {
   "patternId" : "at-rule-property-required-list",
   "title" : "Specify a list of required properties for an at-rule.",
   "parameters" : [ {
     "name" : "at-rule-property-required-list",
     "description" : "at-rule-property-required-list"
-  } ]
-}, {
-  "patternId" : "selector-nest-combinators",
-  "title" : "Require or disallow nesting of combinators in selectors",
-  "parameters" : [ {
-    "name" : "selector-nest-combinators",
-    "description" : "selector-nest-combinators"
   } ]
 }, {
   "patternId" : "declaration-property-value-no-unknown",
@@ -860,11 +839,25 @@
     "description" : "declaration-property-value-no-unknown"
   } ]
 }, {
-  "patternId" : "dollar-variable-colon-newline-after",
-  "title" : "Require a newline after the colon in `$`-variable declarations.",
+  "patternId" : "scss_selector-no-redundant-nesting-selector",
+  "title" : "Disallow redundant nesting selectors (`&`).",
   "parameters" : [ {
-    "name" : "dollar-variable-colon-newline-after",
-    "description" : "dollar-variable-colon-newline-after"
+    "name" : "selector-no-redundant-nesting-selector",
+    "description" : "selector-no-redundant-nesting-selector"
+  } ]
+}, {
+  "patternId" : "scss_function-calculation-no-interpolation",
+  "title" : "Disallow interpolation in `calc()`, `clamp()`, `min()`, and `max()` functions.",
+  "parameters" : [ {
+    "name" : "function-calculation-no-interpolation",
+    "description" : "function-calculation-no-interpolation"
+  } ]
+}, {
+  "patternId" : "function-url-scheme-allowed-list",
+  "title" : "Specify a list of allowed URL schemes.",
+  "parameters" : [ {
+    "name" : "function-url-scheme-allowed-list",
+    "description" : "function-url-scheme-allowed-list"
   } ]
 }, {
   "patternId" : "hue-degree-notation",
@@ -881,25 +874,25 @@
     "description" : "block-no-empty"
   } ]
 }, {
-  "patternId" : "no-unused-private-members",
-  "title" : "Disallow unused private members.",
+  "patternId" : "scss_dollar-variable-pattern",
+  "title" : "Specify a pattern for Sass-like variables.",
   "parameters" : [ {
-    "name" : "no-unused-private-members",
-    "description" : "no-unused-private-members"
+    "name" : "dollar-variable-pattern",
+    "description" : "dollar-variable-pattern"
   } ]
 }, {
-  "patternId" : "unit-allowed-list",
-  "title" : "Specify a list of allowed units.",
+  "patternId" : "scss_selector-nest-combinators",
+  "title" : "Require or disallow nesting of combinators in selectors",
   "parameters" : [ {
-    "name" : "unit-allowed-list",
-    "description" : "unit-allowed-list"
+    "name" : "selector-nest-combinators",
+    "description" : "selector-nest-combinators"
   } ]
 }, {
-  "patternId" : "double-slash-comment-whitespace-inside",
-  "title" : "Require or disallow whitespace after the `//` in `//`-comments",
+  "patternId" : "scss_declaration-property-value-no-unknown",
+  "title" : "Disallow unknown values for properties within declarations.",
   "parameters" : [ {
-    "name" : "double-slash-comment-whitespace-inside",
-    "description" : "double-slash-comment-whitespace-inside"
+    "name" : "declaration-property-value-no-unknown",
+    "description" : "declaration-property-value-no-unknown"
   } ]
 }, {
   "patternId" : "function-name-case",
@@ -909,25 +902,32 @@
     "description" : "function-name-case"
   } ]
 }, {
+  "patternId" : "unit-allowed-list",
+  "title" : "Specify a list of allowed units.",
+  "parameters" : [ {
+    "name" : "unit-allowed-list",
+    "description" : "unit-allowed-list"
+  } ]
+}, {
+  "patternId" : "scss_property-no-unknown",
+  "title" : "Disallow unknown properties. Should be used instead of Stylelint's property-no-unknown.",
+  "parameters" : [ {
+    "name" : "property-no-unknown",
+    "description" : "property-no-unknown"
+  } ]
+}, {
+  "patternId" : "scss_at-if-no-null",
+  "title" : "Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.",
+  "parameters" : [ {
+    "name" : "at-if-no-null",
+    "description" : "at-if-no-null"
+  } ]
+}, {
   "patternId" : "length-zero-no-unit",
   "title" : "Disallow units for zero lengths.",
   "parameters" : [ {
     "name" : "length-zero-no-unit",
     "description" : "length-zero-no-unit"
-  } ]
-}, {
-  "patternId" : "double-slash-comment-empty-line-before",
-  "title" : "Require or disallow an empty line before `//`-comments.",
-  "parameters" : [ {
-    "name" : "double-slash-comment-empty-line-before",
-    "description" : "double-slash-comment-empty-line-before"
-  } ]
-}, {
-  "patternId" : "map-keys-quotes",
-  "title" : "Require quoted keys in Sass maps.",
-  "parameters" : [ {
-    "name" : "map-keys-quotes",
-    "description" : "map-keys-quotes"
   } ]
 }, {
   "patternId" : "media-query-no-invalid",
@@ -937,13 +937,6 @@
     "description" : "media-query-no-invalid"
   } ]
 }, {
-  "patternId" : "dollar-variable-no-missing-interpolation",
-  "title" : "Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.",
-  "parameters" : [ {
-    "name" : "dollar-variable-no-missing-interpolation",
-    "description" : "dollar-variable-no-missing-interpolation"
-  } ]
-}, {
   "patternId" : "function-url-scheme-disallowed-list",
   "title" : "Specify a list of disallowed URL schemes.",
   "parameters" : [ {
@@ -951,18 +944,18 @@
     "description" : "function-url-scheme-disallowed-list"
   } ]
 }, {
-  "patternId" : "no-duplicate-dollar-variables",
-  "title" : "Disallow duplicate dollar variables within a stylesheet.",
+  "patternId" : "scss_at-else-closing-brace-newline-after",
+  "title" : "Require or disallow a newline after the closing brace of `@else` statements.",
   "parameters" : [ {
-    "name" : "no-duplicate-dollar-variables",
-    "description" : "no-duplicate-dollar-variables"
+    "name" : "at-else-closing-brace-newline-after",
+    "description" : "at-else-closing-brace-newline-after"
   } ]
 }, {
-  "patternId" : "operator-no-unspaced",
-  "title" : "Disallow unspaced operators in Sass operations.",
+  "patternId" : "scss_dollar-variable-empty-line-after",
+  "title" : "Require an empty line or disallow empty lines after `$`-variable declarations.",
   "parameters" : [ {
-    "name" : "operator-no-unspaced",
-    "description" : "operator-no-unspaced"
+    "name" : "dollar-variable-empty-line-after",
+    "description" : "dollar-variable-empty-line-after"
   } ]
 }, {
   "patternId" : "value-keyword-case",
@@ -979,11 +972,18 @@
     "description" : "media-feature-name-value-allowed-list"
   } ]
 }, {
-  "patternId" : "at-use-no-redundant-alias",
-  "title" : "Disallow redundant namespace aliases.",
+  "patternId" : "scss_function-color-channel",
+  "title" : "Encourage the use of the color.channel function over related deprecated color functions:",
   "parameters" : [ {
-    "name" : "at-use-no-redundant-alias",
-    "description" : "at-use-no-redundant-alias"
+    "name" : "function-color-channel",
+    "description" : "function-color-channel"
+  } ]
+}, {
+  "patternId" : "scss_no-unused-private-members",
+  "title" : "Disallow unused private members.",
+  "parameters" : [ {
+    "name" : "no-unused-private-members",
+    "description" : "no-unused-private-members"
   } ]
 }, {
   "patternId" : "no-descending-specificity",
@@ -991,6 +991,13 @@
   "parameters" : [ {
     "name" : "no-descending-specificity",
     "description" : "no-descending-specificity"
+  } ]
+}, {
+  "patternId" : "scss_at-function-pattern",
+  "title" : "Specify a pattern for Sass/SCSS-like function names.",
+  "parameters" : [ {
+    "name" : "at-function-pattern",
+    "description" : "at-function-pattern"
   } ]
 }, {
   "patternId" : "media-feature-name-value-no-unknown",
@@ -1012,13 +1019,6 @@
   "parameters" : [ {
     "name" : "color-function-notation",
     "description" : "color-function-notation"
-  } ]
-}, {
-  "patternId" : "property-no-unknown",
-  "title" : "Disallow unknown properties. Should be used instead of Stylelint's property-no-unknown.",
-  "parameters" : [ {
-    "name" : "property-no-unknown",
-    "description" : "property-no-unknown"
   } ]
 }, {
   "patternId" : "no-duplicate-selectors",
@@ -1056,11 +1056,11 @@
     "description" : "custom-property-pattern"
   } ]
 }, {
-  "patternId" : "dollar-variable-default",
-  "title" : "Require `!default` flag for `$`-variable declarations",
+  "patternId" : "scss_double-slash-comment-whitespace-inside",
+  "title" : "Require or disallow whitespace after the `//` in `//`-comments",
   "parameters" : [ {
-    "name" : "dollar-variable-default",
-    "description" : "dollar-variable-default"
+    "name" : "double-slash-comment-whitespace-inside",
+    "description" : "double-slash-comment-whitespace-inside"
   } ]
 }, {
   "patternId" : "selector-pseudo-class-disallowed-list",
@@ -1070,39 +1070,18 @@
     "description" : "selector-pseudo-class-disallowed-list"
   } ]
 }, {
-  "patternId" : "comment-no-empty",
-  "title" : "Disallow empty comments. Should be used **instead of** the Stylelint's comment-no-empty because the core rule ignores SCSS-like comments.",
+  "patternId" : "scss_at-import-partial-extension-blacklist",
+  "title" : "Specify a blacklist of disallowed file extensions for partial names in `@import` commands.",
   "parameters" : [ {
-    "name" : "comment-no-empty",
-    "description" : "comment-no-empty"
+    "name" : "at-import-partial-extension-blacklist",
+    "description" : "at-import-partial-extension-blacklist"
   } ]
 }, {
-  "patternId" : "dollar-variable-first-in-block",
-  "title" : "Require `$`-variable declarations to be placed first in a block (root or a rule).",
+  "patternId" : "scss_operator-no-unspaced",
+  "title" : "Disallow unspaced operators in Sass operations.",
   "parameters" : [ {
-    "name" : "dollar-variable-first-in-block",
-    "description" : "dollar-variable-first-in-block"
-  } ]
-}, {
-  "patternId" : "at-use-no-unnamespaced",
-  "title" : "Disallow usage of `@use` without a namespace.",
-  "parameters" : [ {
-    "name" : "at-use-no-unnamespaced",
-    "description" : "at-use-no-unnamespaced"
-  } ]
-}, {
-  "patternId" : "dimension-no-non-numeric-values",
-  "title" : "Interpolating a value with a unit (e.g. `#{$value}px`) results in a\n_string_ value, not as numeric value. This value then cannot be used in\nnumerical operations.  It is better to use arithmetic to apply a unit to a\nnumber (e.g. `$value * 1px`).",
-  "parameters" : [ {
-    "name" : "dimension-no-non-numeric-values",
-    "description" : "dimension-no-non-numeric-values"
-  } ]
-}, {
-  "patternId" : "at-mixin-parentheses-space-before",
-  "title" : "Require or disallow a space before `@mixin` parentheses.",
-  "parameters" : [ {
-    "name" : "at-mixin-parentheses-space-before",
-    "description" : "at-mixin-parentheses-space-before"
+    "name" : "operator-no-unspaced",
+    "description" : "operator-no-unspaced"
   } ]
 }, {
   "patternId" : "font-family-no-duplicate-names",
@@ -1112,11 +1091,11 @@
     "description" : "font-family-no-duplicate-names"
   } ]
 }, {
-  "patternId" : "load-no-partial-leading-underscore",
-  "title" : "Disallow leading underscore in partial names in `@import`, `@use`, `@forward`, and `meta.load-css` `$url` parameter.",
+  "patternId" : "scss_at-import-partial-extension-disallowed-list",
+  "title" : "Specify a list of disallowed file extensions for partial names in `@import` commands.",
   "parameters" : [ {
-    "name" : "load-no-partial-leading-underscore",
-    "description" : "load-no-partial-leading-underscore"
+    "name" : "at-import-partial-extension-disallowed-list",
+    "description" : "at-import-partial-extension-disallowed-list"
   } ]
 }, {
   "patternId" : "function-linear-gradient-no-nonstandard-direction",
@@ -1154,13 +1133,6 @@
     "description" : "selector-max-pseudo-class"
   } ]
 }, {
-  "patternId" : "operator-no-newline-before",
-  "title" : "Disallow linebreaks before Sass operators.",
-  "parameters" : [ {
-    "name" : "operator-no-newline-before",
-    "description" : "operator-no-newline-before"
-  } ]
-}, {
   "patternId" : "alpha-value-notation",
   "title" : "Specify percentage or number notation for alpha-values.",
   "parameters" : [ {
@@ -1196,25 +1168,25 @@
     "description" : "selector-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "selector-no-redundant-nesting-selector",
-  "title" : "Disallow redundant nesting selectors (`&`).",
+  "patternId" : "scss_double-slash-comment-inline",
+  "title" : "Require or disallow `//`-comments to be inline comments.",
   "parameters" : [ {
-    "name" : "selector-no-redundant-nesting-selector",
-    "description" : "selector-no-redundant-nesting-selector"
+    "name" : "double-slash-comment-inline",
+    "description" : "double-slash-comment-inline"
   } ]
 }, {
-  "patternId" : "at-else-closing-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the closing brace of `@else` statements.",
+  "patternId" : "scss_percent-placeholder-pattern",
+  "title" : "Specify a pattern for `%`-placeholders.",
   "parameters" : [ {
-    "name" : "at-else-closing-brace-space-after",
-    "description" : "at-else-closing-brace-space-after"
+    "name" : "percent-placeholder-pattern",
+    "description" : "percent-placeholder-pattern"
   } ]
 }, {
-  "patternId" : "at-mixin-named-arguments",
-  "title" : "Require named parameters in at-mixin call rule.",
+  "patternId" : "scss_dollar-variable-no-missing-interpolation",
+  "title" : "Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.",
   "parameters" : [ {
-    "name" : "at-mixin-named-arguments",
-    "description" : "at-mixin-named-arguments"
+    "name" : "dollar-variable-no-missing-interpolation",
+    "description" : "dollar-variable-no-missing-interpolation"
   } ]
 }, {
   "patternId" : "selector-combinator-disallowed-list",
@@ -1259,6 +1231,20 @@
     "description" : "selector-pseudo-element-allowed-list"
   } ]
 }, {
+  "patternId" : "scss_function-no-unknown",
+  "title" : "Disallow unknown functions. Should be used **instead of** Stylelint's function-no-unknown.",
+  "parameters" : [ {
+    "name" : "function-no-unknown",
+    "description" : "function-no-unknown"
+  } ]
+}, {
+  "patternId" : "scss_at-extend-no-missing-placeholder",
+  "title" : "Disallow at-extends (`@extend`) with missing placeholders.",
+  "parameters" : [ {
+    "name" : "at-extend-no-missing-placeholder",
+    "description" : "at-extend-no-missing-placeholder"
+  } ]
+}, {
   "patternId" : "custom-media-pattern",
   "title" : "Specify a pattern for custom media query names.",
   "parameters" : [ {
@@ -1273,39 +1259,11 @@
     "description" : "media-feature-name-allowed-list"
   } ]
 }, {
-  "patternId" : "at-import-partial-extension-allowed-list",
-  "title" : "Specify a list of allowed file extensions for partial names in `@import` commands.",
+  "patternId" : "scss_dollar-variable-colon-space-after",
+  "title" : "Require or disallow whitespace after the colon in `$`-variable declarations.",
   "parameters" : [ {
-    "name" : "at-import-partial-extension-allowed-list",
-    "description" : "at-import-partial-extension-allowed-list"
-  } ]
-}, {
-  "patternId" : "at-rule-conditional-no-parentheses",
-  "title" : "Disallow parentheses in conditional @ rules (if, elsif, while)",
-  "parameters" : [ {
-    "name" : "at-rule-conditional-no-parentheses",
-    "description" : "at-rule-conditional-no-parentheses"
-  } ]
-}, {
-  "patternId" : "load-partial-extension",
-  "title" : "Require or disallow extension in `@import`, `@use`, `@forward`, and [`meta.load-css`] commands.",
-  "parameters" : [ {
-    "name" : "load-partial-extension",
-    "description" : "load-partial-extension"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-allowed-list",
-  "title" : "Specify a list of allowed property and value pairs within declarations.",
-  "parameters" : [ {
-    "name" : "declaration-property-value-allowed-list",
-    "description" : "declaration-property-value-allowed-list"
-  } ]
-}, {
-  "patternId" : "selector-no-union-class-name",
-  "title" : "Disallow union class names with the parent selector (`&`).",
-  "parameters" : [ {
-    "name" : "selector-no-union-class-name",
-    "description" : "selector-no-union-class-name"
+    "name" : "dollar-variable-colon-space-after",
+    "description" : "dollar-variable-colon-space-after"
   } ]
 }, {
   "patternId" : "selector-max-universal",
@@ -1315,11 +1273,11 @@
     "description" : "selector-max-universal"
   } ]
 }, {
-  "patternId" : "at-function-parentheses-space-before",
-  "title" : "Require or disallow a space before `@function` parentheses.",
+  "patternId" : "scss_no-duplicate-dollar-variables",
+  "title" : "Disallow duplicate dollar variables within a stylesheet.",
   "parameters" : [ {
-    "name" : "at-function-parentheses-space-before",
-    "description" : "at-function-parentheses-space-before"
+    "name" : "no-duplicate-dollar-variables",
+    "description" : "no-duplicate-dollar-variables"
   } ]
 }, {
   "patternId" : "keyframe-block-no-duplicate-selectors",
@@ -1329,18 +1287,18 @@
     "description" : "keyframe-block-no-duplicate-selectors"
   } ]
 }, {
-  "patternId" : "at-import-partial-extension",
-  "title" : "Require or disallow extension in `@import` commands.",
+  "patternId" : "scss_at-import-partial-extension-whitelist",
+  "title" : "Specify a whitelist of allowed file extensions for partial names in `@import` commands.",
   "parameters" : [ {
-    "name" : "at-import-partial-extension",
-    "description" : "at-import-partial-extension"
+    "name" : "at-import-partial-extension-whitelist",
+    "description" : "at-import-partial-extension-whitelist"
   } ]
 }, {
-  "patternId" : "dollar-variable-empty-line-before",
-  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
+  "patternId" : "declaration-property-value-allowed-list",
+  "title" : "Specify a list of allowed property and value pairs within declarations.",
   "parameters" : [ {
-    "name" : "dollar-variable-empty-line-before",
-    "description" : "dollar-variable-empty-line-before"
+    "name" : "declaration-property-value-allowed-list",
+    "description" : "declaration-property-value-allowed-list"
   } ]
 }, {
   "patternId" : "selector-pseudo-class-allowed-list",
@@ -1357,18 +1315,39 @@
     "description" : "no-obsolete-element"
   } ]
 }, {
-  "patternId" : "at-import-partial-extension-blacklist",
-  "title" : "Specify a blacklist of disallowed file extensions for partial names in `@import` commands.",
+  "patternId" : "scss_at-mixin-parentheses-space-before",
+  "title" : "Require or disallow a space before `@mixin` parentheses.",
   "parameters" : [ {
-    "name" : "at-import-partial-extension-blacklist",
-    "description" : "at-import-partial-extension-blacklist"
+    "name" : "at-mixin-parentheses-space-before",
+    "description" : "at-mixin-parentheses-space-before"
   } ]
 }, {
-  "patternId" : "custom-property-empty-line-before",
-  "title" : "Require or disallow an empty line before custom properties.",
+  "patternId" : "scss_dollar-variable-no-namespaced-assignment",
+  "title" : "Disallow assignment to namespaced variables.",
   "parameters" : [ {
-    "name" : "custom-property-empty-line-before",
-    "description" : "custom-property-empty-line-before"
+    "name" : "dollar-variable-no-namespaced-assignment",
+    "description" : "dollar-variable-no-namespaced-assignment"
+  } ]
+}, {
+  "patternId" : "scss_no-dollar-variables",
+  "title" : "Disallow dollar variables within a stylesheet.",
+  "parameters" : [ {
+    "name" : "no-dollar-variables",
+    "description" : "no-dollar-variables"
+  } ]
+}, {
+  "patternId" : "scss_at-function-parentheses-space-before",
+  "title" : "Require or disallow a space before `@function` parentheses.",
+  "parameters" : [ {
+    "name" : "at-function-parentheses-space-before",
+    "description" : "at-function-parentheses-space-before"
+  } ]
+}, {
+  "patternId" : "scss_comment-no-loud",
+  "title" : "Disallow `/*`-comments.",
+  "parameters" : [ {
+    "name" : "comment-no-loud",
+    "description" : "comment-no-loud"
   } ]
 }, {
   "patternId" : "declaration-property-unit-allowed-list",
@@ -1378,13 +1357,6 @@
     "description" : "declaration-property-unit-allowed-list"
   } ]
 }, {
-  "patternId" : "dollar-variable-colon-space-before",
-  "title" : "Require a single space or disallow whitespace before the colon in `$`-variable declarations.",
-  "parameters" : [ {
-    "name" : "dollar-variable-colon-space-before",
-    "description" : "dollar-variable-colon-space-before"
-  } ]
-}, {
   "patternId" : "unit-no-unknown",
   "title" : "Disallow unknown units.",
   "parameters" : [ {
@@ -1392,25 +1364,67 @@
     "description" : "unit-no-unknown"
   } ]
 }, {
-  "patternId" : "at-if-closing-brace-space-after",
-  "title" : "Require a single space or disallow whitespace after the closing brace of `@if` statements.",
-  "parameters" : [ {
-    "name" : "at-if-closing-brace-space-after",
-    "description" : "at-if-closing-brace-space-after"
-  } ]
-}, {
-  "patternId" : "double-slash-comment-inline",
-  "title" : "Require or disallow `//`-comments to be inline comments.",
-  "parameters" : [ {
-    "name" : "double-slash-comment-inline",
-    "description" : "double-slash-comment-inline"
-  } ]
-}, {
   "patternId" : "annotation-no-unknown",
   "title" : "Disallow unknown annotations.",
   "parameters" : [ {
     "name" : "annotation-no-unknown",
     "description" : "annotation-no-unknown"
+  } ]
+}, {
+  "patternId" : "scss_comment-no-empty",
+  "title" : "Disallow empty comments. Should be used **instead of** the Stylelint's comment-no-empty because the core rule ignores SCSS-like comments.",
+  "parameters" : [ {
+    "name" : "comment-no-empty",
+    "description" : "comment-no-empty"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-colon-newline-after",
+  "title" : "Require a newline after the colon in `$`-variable declarations.",
+  "parameters" : [ {
+    "name" : "dollar-variable-colon-newline-after",
+    "description" : "dollar-variable-colon-newline-after"
+  } ]
+}, {
+  "patternId" : "custom-property-empty-line-before",
+  "title" : "Require or disallow an empty line before custom properties.",
+  "parameters" : [ {
+    "name" : "custom-property-empty-line-before",
+    "description" : "custom-property-empty-line-before"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-colon-space-before",
+  "title" : "Require a single space or disallow whitespace before the colon in `$`-variable declarations.",
+  "parameters" : [ {
+    "name" : "dollar-variable-colon-space-before",
+    "description" : "dollar-variable-colon-space-before"
+  } ]
+}, {
+  "patternId" : "scss_function-disallowed-list",
+  "title" : "Specify a list of disallowed functions.",
+  "parameters" : [ {
+    "name" : "function-disallowed-list",
+    "description" : "function-disallowed-list"
+  } ]
+}, {
+  "patternId" : "scss_at-rule-no-unknown",
+  "title" : "Disallow unknown at-rules. Should be used **instead of** Stylelint's at-rule-no-unknown.",
+  "parameters" : [ {
+    "name" : "at-rule-no-unknown",
+    "description" : "at-rule-no-unknown"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-default",
+  "title" : "Require `!default` flag for `$`-variable declarations",
+  "parameters" : [ {
+    "name" : "dollar-variable-default",
+    "description" : "dollar-variable-default"
+  } ]
+}, {
+  "patternId" : "scss_no-duplicate-mixins",
+  "title" : "Disallow duplicate mixins within a stylesheet.",
+  "parameters" : [ {
+    "name" : "no-duplicate-mixins",
+    "description" : "no-duplicate-mixins"
   } ]
 }, {
   "patternId" : "declaration-block-no-duplicate-properties",
@@ -1427,18 +1441,18 @@
     "description" : "at-rule-no-vendor-prefix"
   } ]
 }, {
+  "patternId" : "scss_at-rule-conditional-no-parentheses",
+  "title" : "Disallow parentheses in conditional @ rules (if, elsif, while)",
+  "parameters" : [ {
+    "name" : "at-rule-conditional-no-parentheses",
+    "description" : "at-rule-conditional-no-parentheses"
+  } ]
+}, {
   "patternId" : "function-allowed-list",
   "title" : "Specify a list of allowed functions.",
   "parameters" : [ {
     "name" : "function-allowed-list",
     "description" : "function-allowed-list"
-  } ]
-}, {
-  "patternId" : "partial-no-import",
-  "title" : "Disallow non-CSS `@import`s in partial files.",
-  "parameters" : [ {
-    "name" : "partial-no-import",
-    "description" : "partial-no-import"
   } ]
 }, {
   "patternId" : "declaration-property-unit-disallowed-list",

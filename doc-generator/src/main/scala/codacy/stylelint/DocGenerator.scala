@@ -127,7 +127,7 @@ object DocGenerator {
     val enabled = CodacyValues.patternsEnabled.contains(patternName)
     val level = if (CodacyValues.possibleErrorsPatterns.contains(patternName)) Result.Level.Warn else Result.Level.Info
     Pattern.Specification(
-      Pattern.Id(if (prefix.nonEmpty) s"$prefix/$patternName" else patternName),
+      Pattern.Id(if (prefix.nonEmpty) s"${prefix}_$patternName" else patternName),
       level,
       Pattern.Category.CodeStyle,
       None,
@@ -154,7 +154,7 @@ object DocGenerator {
         // looking for markdown links, e.g., [text](https://www.example.com)
         val urlRegex = """\[(.+?)\]\((.+?)\)""".r
         val descriptionWithoutUrl = urlRegex.replaceAllIn(patternDescription, m => m.group(1)).trim
-        addNewDescription(if (plugin.prefix.nonEmpty) s"${plugin.prefix}_$pattern" else pattern, descriptionWithoutUrl)
+        addNewDescription(pattern, descriptionWithoutUrl, plugin.prefix)
       }.to(Set)
 
       finalPatternsDescription ++= patternsDescription
@@ -162,10 +162,15 @@ object DocGenerator {
     File("docs/description/description.json").write(Json.prettyPrint(Json.toJson(finalPatternsDescription)))
   }
 
-  def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
+  def addNewDescription(patternName: String, patternDescription: String, prefix: String): Pattern.Description = {
     val param = Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
 
-    Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None, param)
+    Pattern.Description(
+      Pattern.Id(if (prefix.nonEmpty) s"${prefix}_$patternName" else patternName),
+      Pattern.Title(patternDescription),
+      None,
+      None,
+      param)
   }
 
   def copyDescriptionFiles(plugins: List[Plugin]): Unit = {
