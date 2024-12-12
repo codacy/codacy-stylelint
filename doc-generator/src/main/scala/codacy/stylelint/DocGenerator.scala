@@ -33,7 +33,15 @@ object DocGenerator {
       val rulesdir = tmpDirectory + "/" + plugin.relativeRulesDir
       val patterns = getListOfSubDirectories(rulesdir)
       val tempPlugin =
-        Plugin(plugin.pluginName, plugin.relativeRulesDir, plugin.url, plugin.tree, patterns, version, tmpDirectory)
+        Plugin(
+          plugin.pluginName,
+          plugin.relativeRulesDir,
+          plugin.url,
+          plugin.tree,
+          patterns,
+          version,
+          tmpDirectory,
+          plugin.prefix)
 
       tempList = tempList :+ tempPlugin
     }
@@ -46,7 +54,8 @@ object DocGenerator {
                     tree: String,
                     patterns: List[String],
                     version: String,
-                    tempDirectory: better.files.File)
+                    tempDirectory: better.files.File,
+                    prefix: String)
 
   def listOfPlugins(): List[Plugin] = {
     List(
@@ -57,7 +66,17 @@ object DocGenerator {
         "https://github.com/stylelint/stylelint",
         null,
         null,
-        null),
+        null,
+        ""),
+      Plugin(
+        "stylelint-scss",
+        "src/rules",
+        "https://github.com/stylelint-scss/stylelint-scss.git",
+        "https://github.com/stylelint-scss/stylelint-scss",
+        null,
+        null,
+        null,
+        "scss"),
       Plugin(
         "stylelint-a11y",
         "src/rules",
@@ -65,7 +84,8 @@ object DocGenerator {
         "https://github.com/YozhikM/stylelint-a11y",
         null,
         null,
-        null))
+        null,
+        ""))
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String, url: String): Int = {
@@ -91,21 +111,29 @@ object DocGenerator {
       Json.parse(file)("dependencies")("stylelint").as[String].stripPrefix("^")
     }
 
-    val patterns: List[String] = plugins.flatMap(_.patterns)
+    val patterns: List[(String, String)] =
+      plugins.flatMap(plugin => plugin.patterns.map(pattern => (pattern, plugin.prefix)))
 
-    val toolpatterns: Set[Pattern.Specification] = patterns.view.map { patternid =>
-      addNewPattern(patternid, default.getOrElse(patternid, Parameter.Value(JsNull)))
+    val toolpatterns: Set[Pattern.Specification] = patterns.view.map {
+      case (patternid, prefix) =>
+        addNewPattern(patternid, default.getOrElse(patternid, Parameter.Value(JsNull)), prefix)
     }.to(Set)
     val tool = Tool.Specification(Tool.Name("stylelint"), Option(Tool.Version(version)), toolpatterns)
     File("docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
   }
 
-  def addNewPattern(patternName: String, default: Parameter.Value): Pattern.Specification = {
+  def addNewPattern(patternName: String, default: Parameter.Value, prefix: String): Pattern.Specification = {
     val param = Set(Parameter.Specification(Parameter.Name(patternName), default))
     val enabled = CodacyValues.patternsEnabled.contains(patternName)
     val level = if (CodacyValues.possibleErrorsPatterns.contains(patternName)) Result.Level.Warn else Result.Level.Info
-    Pattern
-      .Specification(Pattern.Id(patternName), level, Pattern.Category.CodeStyle, None, None, param, enabled = enabled)
+    Pattern.Specification(
+      Pattern.Id(if (prefix.nonEmpty) s"${prefix}_$patternName" else patternName),
+      level,
+      Pattern.Category.CodeStyle,
+      None,
+      None,
+      param,
+      enabled = enabled)
   }
 
   def PatternsFromDefaultConfig(): Map[String, Parameter.Value] = {
@@ -126,7 +154,7 @@ object DocGenerator {
         // looking for markdown links, e.g., [text](https://www.example.com)
         val urlRegex = """\[(.+?)\]\((.+?)\)""".r
         val descriptionWithoutUrl = urlRegex.replaceAllIn(patternDescription, m => m.group(1)).trim
-        addNewDescription(pattern, descriptionWithoutUrl)
+        addNewDescription(pattern, descriptionWithoutUrl, plugin.prefix)
       }.to(Set)
 
       finalPatternsDescription ++= patternsDescription
@@ -134,10 +162,15 @@ object DocGenerator {
     File("docs/description/description.json").write(Json.prettyPrint(Json.toJson(finalPatternsDescription)))
   }
 
-  def addNewDescription(patternName: String, patternDescription: String): Pattern.Description = {
+  def addNewDescription(patternName: String, patternDescription: String, prefix: String): Pattern.Description = {
     val param = Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
 
-    Pattern.Description(Pattern.Id(patternName), Pattern.Title(patternDescription), None, None, param)
+    Pattern.Description(
+      Pattern.Id(if (prefix.nonEmpty) s"${prefix}_$patternName" else patternName),
+      Pattern.Title(patternDescription),
+      None,
+      None,
+      param)
   }
 
   def copyDescriptionFiles(plugins: List[Plugin]): Unit = {
@@ -160,7 +193,8 @@ object DocGenerator {
           s"[$linkText](${plugin.tree}/${plugin.version}/$relativePath)"
         })
 
-        File(s"$descriptionDir/$patternName.md").write(contentWithReplacedUrls)
+        val finalPatternName = if (plugin.prefix.nonEmpty) s"${plugin.prefix}_$patternName" else patternName
+        File(s"$descriptionDir/$finalPatternName.md").write(contentWithReplacedUrls)
       }
     }
 
