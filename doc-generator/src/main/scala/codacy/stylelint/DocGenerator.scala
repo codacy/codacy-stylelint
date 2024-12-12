@@ -154,7 +154,7 @@ object DocGenerator {
         // looking for markdown links, e.g., [text](https://www.example.com)
         val urlRegex = """\[(.+?)\]\((.+?)\)""".r
         val descriptionWithoutUrl = urlRegex.replaceAllIn(patternDescription, m => m.group(1)).trim
-        addNewDescription(pattern, descriptionWithoutUrl)
+        addNewDescription(if (plugin.prefix.nonEmpty) s"${plugin.prefix}_$pattern" else pattern, descriptionWithoutUrl)
       }.to(Set)
 
       finalPatternsDescription ++= patternsDescription
