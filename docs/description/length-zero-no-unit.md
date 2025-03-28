@@ -13,7 +13,7 @@ _Lengths_ refer to distance measurements. A length is a _dimension_, which is a 
 
 This rule ignores lengths within math functions (e.g. `calc`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
@@ -86,4 +86,26 @@ a { top: var(--foo, 0px); }
 <!-- prettier-ignore -->
 ```css
 a { top: --bar(0px); }
+```
+
+### `ignorePreludeOfAtRules: ["/regex/", /regex/, "string"]`
+
+Ignore units for zero lengths within the preludes of the specified at-rules.
+
+Given:
+
+```json
+["media", "/^--bar/"]
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+@media (height > 0px) {}
+```
+
+<!-- prettier-ignore -->
+```css
+@--bar-baz 0px;
 ```

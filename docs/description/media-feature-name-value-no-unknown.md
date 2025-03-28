@@ -11,17 +11,15 @@ Disallow unknown values for media features.
 
 This rule considers values for media features defined within the CSS specifications to be known.
 
-This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as Sass or Less, as they have their own syntaxes.
-
-This rule is experimental with some false negatives that we'll patch in minor releases.
+This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
 It sometimes overlaps with:
 
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.10.0/lib/rules/unit-no-unknown/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/unit-no-unknown/README.md)
 
 If duplicate problems are flagged, you can turn off the corresponding rule.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

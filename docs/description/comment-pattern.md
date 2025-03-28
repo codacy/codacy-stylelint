@@ -9,7 +9,7 @@ Specify a pattern for comments.
  * The pattern of this */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

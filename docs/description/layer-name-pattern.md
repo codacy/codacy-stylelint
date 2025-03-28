@@ -1,56 +1,68 @@
-# selector-attribute-operator-allowed-list
+# layer-name-pattern
 
-Specify a list of allowed attribute operators.
+Specify a pattern for layer names.
 
 <!-- prettier-ignore -->
 ```css
-[target="_blank"] {}
+@layer foo {}
 /**    ↑
- * This operator */
+ * This layer name */
 ```
 
 The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
-`array|string`: `["array", "of", "operators"]|"operator"`
+`regex|string`
 
-Given:
+A string will be translated into a RegExp like so `new RegExp(yourString)` — so be sure to escape properly.
+
+Given the string:
 
 ```json
-["=", "|="]
+"^[a-z][a-z0-9.-]*$"
 ```
 
 The following patterns are considered problems:
 
 <!-- prettier-ignore -->
 ```css
-[class*="test"] {}
+@layer Foo;
 ```
 
 <!-- prettier-ignore -->
 ```css
-[title~="flower"] {}
+@layer foo.Bar {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-[class^="top"] {}
+@layer foo, Bar {}
+```
+
+<!-- prettier-ignore -->
+```css
+@import "foo.css" layer(Bar);
 ```
 
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
 ```css
-[target] {}
+@layer foo;
 ```
 
 <!-- prettier-ignore -->
 ```css
-[target="_blank"] {}
+@layer foo.bar {}
 ```
 
 <!-- prettier-ignore -->
 ```css
-[class|="top"] {}
+@layer foo, bar {}
+```
+
+<!-- prettier-ignore -->
+```css
+@import "foo.css" layer(bar);
 ```

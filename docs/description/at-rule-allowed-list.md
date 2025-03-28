@@ -9,7 +9,9 @@ Specify a list of allowed at-rules.
  * At-rules like this */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+This rule ignores the `@charset` rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

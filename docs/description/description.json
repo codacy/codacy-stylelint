@@ -69,6 +69,13 @@
     "description" : "comment-word-disallowed-list"
   } ]
 }, {
+  "patternId" : "layer-name-pattern",
+  "title" : "Specify a pattern for layer names.",
+  "parameters" : [ {
+    "name" : "layer-name-pattern",
+    "description" : "layer-name-pattern"
+  } ]
+}, {
   "patternId" : "font-size-is-readable",
   "title" : "Disallow font sizes less than 15px (or 11.25pt).",
   "parameters" : [ {
@@ -158,6 +165,13 @@
   "parameters" : [ {
     "name" : "declaration-block-no-duplicate-custom-properties",
     "description" : "declaration-block-no-duplicate-custom-properties"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-keyword-no-deprecated",
+  "title" : "Disallow deprecated keywords for properties within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-value-keyword-no-deprecated",
+    "description" : "declaration-property-value-keyword-no-deprecated"
   } ]
 }, {
   "patternId" : "function-disallowed-list",
@@ -256,6 +270,13 @@
   "parameters" : [ {
     "name" : "map-keys-quotes",
     "description" : "map-keys-quotes"
+  } ]
+}, {
+  "patternId" : "at-rule-descriptor-no-unknown",
+  "title" : "Disallow unknown descriptors for at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-descriptor-no-unknown",
+    "description" : "at-rule-descriptor-no-unknown"
   } ]
 }, {
   "patternId" : "at-rule-allowed-list",
@@ -825,13 +846,6 @@
     "description" : "selector-max-compound-selectors"
   } ]
 }, {
-  "patternId" : "at-rule-property-required-list",
-  "title" : "Specify a list of required properties for an at-rule.",
-  "parameters" : [ {
-    "name" : "at-rule-property-required-list",
-    "description" : "at-rule-property-required-list"
-  } ]
-}, {
   "patternId" : "declaration-property-value-no-unknown",
   "title" : "Disallow unknown values for properties within declarations.",
   "parameters" : [ {
@@ -923,6 +937,13 @@
     "description" : "at-if-no-null"
   } ]
 }, {
+  "patternId" : "at-rule-prelude-no-invalid",
+  "title" : "Disallow invalid preludes for at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-prelude-no-invalid",
+    "description" : "at-rule-prelude-no-invalid"
+  } ]
+}, {
   "patternId" : "length-zero-no-unit",
   "title" : "Disallow units for zero lengths.",
   "parameters" : [ {
@@ -991,6 +1012,13 @@
   "parameters" : [ {
     "name" : "no-descending-specificity",
     "description" : "no-descending-specificity"
+  } ]
+}, {
+  "patternId" : "at-rule-property-required-list",
+  "title" : "Specify a list of required properties (or descriptors) for an at-rule.",
+  "parameters" : [ {
+    "name" : "at-rule-property-required-list",
+    "description" : "at-rule-property-required-list"
   } ]
 }, {
   "patternId" : "scss_at-function-pattern",
@@ -1133,18 +1161,18 @@
     "description" : "selector-max-pseudo-class"
   } ]
 }, {
+  "patternId" : "scss_no-duplicate-load-rules",
+  "title" : "Disallow duplicate `@import`, `@use` and `@forward` rules.",
+  "parameters" : [ {
+    "name" : "no-duplicate-load-rules",
+    "description" : "no-duplicate-load-rules"
+  } ]
+}, {
   "patternId" : "alpha-value-notation",
   "title" : "Specify percentage or number notation for alpha-values.",
   "parameters" : [ {
     "name" : "alpha-value-notation",
     "description" : "alpha-value-notation"
-  } ]
-}, {
-  "patternId" : "comment-whitespace-inside",
-  "title" : "Require or disallow whitespace on the inside of comment markers.",
-  "parameters" : [ {
-    "name" : "comment-whitespace-inside",
-    "description" : "comment-whitespace-inside"
   } ]
 }, {
   "patternId" : "no-unknown-animations",
@@ -1166,6 +1194,20 @@
   "parameters" : [ {
     "name" : "selector-no-vendor-prefix",
     "description" : "selector-no-vendor-prefix"
+  } ]
+}, {
+  "patternId" : "comment-whitespace-inside",
+  "title" : "Require or disallow whitespace on the inside of comment markers.",
+  "parameters" : [ {
+    "name" : "comment-whitespace-inside",
+    "description" : "comment-whitespace-inside"
+  } ]
+}, {
+  "patternId" : "syntax-string-no-invalid",
+  "title" : "Disallow invalid syntax strings.",
+  "parameters" : [ {
+    "name" : "syntax-string-no-invalid",
+    "description" : "syntax-string-no-invalid"
   } ]
 }, {
   "patternId" : "scss_double-slash-comment-inline",
@@ -1322,6 +1364,13 @@
     "description" : "at-mixin-parentheses-space-before"
   } ]
 }, {
+  "patternId" : "at-rule-descriptor-value-no-unknown",
+  "title" : "Disallow unknown values for descriptors within at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-descriptor-value-no-unknown",
+    "description" : "at-rule-descriptor-value-no-unknown"
+  } ]
+}, {
   "patternId" : "scss_dollar-variable-no-namespaced-assignment",
   "title" : "Disallow assignment to namespaced variables.",
   "parameters" : [ {
@@ -1425,6 +1474,13 @@
   "parameters" : [ {
     "name" : "no-duplicate-mixins",
     "description" : "no-duplicate-mixins"
+  } ]
+}, {
+  "patternId" : "at-rule-no-deprecated",
+  "title" : "Disallow deprecated at-rules.",
+  "parameters" : [ {
+    "name" : "at-rule-no-deprecated",
+    "description" : "at-rule-no-deprecated"
   } ]
 }, {
   "patternId" : "declaration-block-no-duplicate-properties",
