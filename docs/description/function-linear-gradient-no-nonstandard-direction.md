@@ -16,6 +16,13 @@ A valid and standard direction value is one of the following:
 
 A common mistake (matching outdated non-standard syntax) is to use just a side-or-corner without the preceding `to`.
 
+This rule overlaps with:
+
+- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/declaration-property-value-no-unknown/README.md)
+
+We recommend using these rules for CSS and this rule for CSS-like languages, such as SCSS and Less.
+
 ## Options
 
 ### `true`

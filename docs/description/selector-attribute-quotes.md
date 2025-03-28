@@ -9,7 +9,9 @@ Require or disallow quotes for attribute values.
  * These quotes */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.10.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept arguments.
 
 ## Options
 

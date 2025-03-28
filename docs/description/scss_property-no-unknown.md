@@ -18,7 +18,7 @@ This rule ignores:
 
 Use option `checkPrefixed` described below to turn on checking of vendor-prefixed properties.
 
-The [`message` secondary option](https://github.com/stylelint-scss/stylelint-scss/6.8.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`message` secondary option](https://github.com/stylelint-scss/stylelint-scss/6.11.1/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 

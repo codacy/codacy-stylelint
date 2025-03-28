@@ -11,18 +11,27 @@ a { top: unknown; }
 
 This rule considers values for properties defined within the CSS specifications to be known. You can use the `propertiesSyntax` and `typesSyntax` secondary options to extend the syntax.
 
-This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as Sass or Less, as they have their own syntaxes.
+You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what value syntax is known for a property.
 
-This rule is experimental with some false negatives that we'll patch in minor releases.
+This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-It sometimes overlaps with:
+This rule checks property values. You can use [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md) to disallow unknown values for descriptors within at-rules.
 
-- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/16.10.0/lib/rules/color-no-invalid-hex/README.md)
-- [`function-no-unknown`](https://github.com/stylelint/stylelint/16.10.0/lib/rules/function-no-unknown/README.md)
-- [`string-no-newline`](https://github.com/stylelint/stylelint/16.10.0/lib/rules/string-no-newline/README.md)
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.10.0/lib/rules/unit-no-unknown/README.md)
+This rule overlaps with:
 
-If duplicate problems are flagged, you can turn off the corresponding rule.
+- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/color-no-invalid-hex/README.md)
+- [`function-linear-gradient-no-nonstandard-direction`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/function-linear-gradient-no-nonstandard-direction/README.md)
+- [`function-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/function-no-unknown/README.md)
+- [`string-no-newline`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/string-no-newline/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/unit-no-unknown/README.md)
+
+You can either turn off the rules or configure them to ignore the overlaps.
+
+The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept arguments.
+
+Prior art:
+
+- [stylelint-csstree-validator](https://www.npmjs.com/package/stylelint-csstree-validator)
 
 ## Options
 
