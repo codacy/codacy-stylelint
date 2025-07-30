@@ -17,21 +17,19 @@ You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syn
 
 This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
-This rule checks descriptor values within at-rules. You can use [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/declaration-property-value-no-unknown/README.md) to disallow unknown values for properties within declarations, and [`at-rule-descriptor-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/at-rule-descriptor-no-unknown/README.md) to disallow unknown descriptors for at-rules.
+This rule checks descriptor values within at-rules. You can use [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/declaration-property-value-no-unknown/README.md) to disallow unknown values for properties within declarations, and [`at-rule-descriptor-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/at-rule-descriptor-no-unknown/README.md) to disallow unknown descriptors for at-rules.
 
 This rule overlaps with:
 
-- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/color-no-invalid-hex/README.md)
-- [`function-linear-gradient-no-nonstandard-direction`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/function-linear-gradient-no-nonstandard-direction/README.md)
-- [`function-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/function-no-unknown/README.md)
-- [`string-no-newline`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/string-no-newline/README.md)
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/unit-no-unknown/README.md)
+- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/color-no-invalid-hex/README.md)
+- [`function-linear-gradient-no-nonstandard-direction`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/function-linear-gradient-no-nonstandard-direction/README.md)
+- [`function-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/function-no-unknown/README.md)
+- [`string-no-newline`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/string-no-newline/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/unit-no-unknown/README.md)
 
 You can either turn off the rules or configure them to ignore the overlaps.
 
-For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#languageoptions) section.
+For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/configure.md#languageoptions) section.
 
 Prior art:
 
@@ -40,6 +38,12 @@ Prior art:
 ## Options
 
 ### `true`
+
+```json
+{
+  "at-rule-descriptor-value-no-unknown": true
+}
+```
 
 The following patterns are considered problems:
 

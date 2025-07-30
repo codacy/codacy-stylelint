@@ -13,17 +13,19 @@ The `::` notation was chosen for _pseudo-elements_ to establish a discrimination
 
 However, for compatibility with existing style sheets, user agents also accept the previous one-colon notation for _pseudo-elements_ introduced in CSS levels 1 and 2 (namely, `:first-line`, `:first-letter`, `:before` and `:after`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
-
-`string`: `"single"|"double"`
 
 ### `"single"`
 
 Applicable pseudo-elements _must always_ use the single colon notation.
+
+```json
+{
+  "selector-pseudo-element-colon-notation": "single"
+}
+```
 
 The following patterns are considered problems:
 
@@ -82,6 +84,12 @@ li::marker { font-variant-numeric: tabular-nums; }
 ### `"double"`
 
 Applicable pseudo-elements _must always_ use the double colon notation.
+
+```json
+{
+  "selector-pseudo-element-colon-notation": "double"
+}
+```
 
 The following patterns are considered problems:
 

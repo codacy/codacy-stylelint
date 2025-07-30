@@ -9,17 +9,19 @@ Specify string or URL notation for `@import` rules.
  *      This notation */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept arguments.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
-
-`string`: `"string"|"url"`
 
 ### `"string"`
 
 `@import` rules _must always_ use string notation.
+
+```json
+{
+  "import-notation": "string"
+}
+```
 
 The following patterns are considered problems:
 
@@ -53,6 +55,12 @@ The following patterns are _not_ considered problems:
 ### `"url"`
 
 `@import` rules _must always_ use URL notation.
+
+```json
+{
+  "import-notation": "url"
+}
+```
 
 The following patterns are considered problems:
 

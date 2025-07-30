@@ -13,13 +13,9 @@ This rule checks the `font` and `font-family` properties.
 
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept arguments.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
-
-`string`: `"always-where-required"|"always-where-recommended"|"always-unless-keyword"`
 
 _Please read the following to understand these options_:
 
@@ -36,6 +32,12 @@ For more on these subtleties, read ["Unquoted font family names in CSS"](https:/
 ### `"always-unless-keyword"`
 
 Expect quotes around every font family name that is not a keyword.
+
+```json
+{
+  "font-family-name-quotes": "always-unless-keyword"
+}
+```
 
 The following patterns are considered problems:
 
@@ -74,6 +76,12 @@ a { font: 1em 'Arial', sans-serif; }
 ### `"always-where-required"`
 
 Expect quotes only when quotes are _required_ according to the criteria above, and disallow quotes in all other cases.
+
+```json
+{
+  "font-family-name-quotes": "always-where-required"
+}
+```
 
 The following patterns are considered problems:
 
@@ -117,6 +125,12 @@ a { font: 1em Arial, sans-serif; }
 ### `"always-where-recommended"`
 
 Expect quotes only when quotes are _recommended_ according to the criteria above, and disallow quotes in all other cases. (This includes all cases where quotes are _required_, as well.)
+
+```json
+{
+  "font-family-name-quotes": "always-where-recommended"
+}
+```
 
 The following patterns are considered problems:
 

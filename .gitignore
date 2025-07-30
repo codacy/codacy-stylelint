@@ -14,3 +14,7 @@ project/metals.sbt
 node_modules/
 .stylelint-version
 .vscode/
+
+
+#Ignore vscode AI rules
+.github/copilot-instructions.md

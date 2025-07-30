@@ -11,17 +11,19 @@ Specify number or angle notation for degree hues.
 
 Because hues are so often given in degrees, a hue can also be given as a number, which is interpreted as a number of degrees.
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
-
-`string`: `"angle"|"number"`
 
 ### `"angle"`
 
 Degree hues _must always_ use angle notation.
+
+```json
+{
+  "hue-degree-notation": "angle"
+}
+```
 
 The following patterns are considered problems:
 
@@ -50,6 +52,12 @@ a { color: lch(56.29% 19.86 10deg / 15%) }
 ### `"number"`
 
 Degree hues _must always_ use the number notation.
+
+```json
+{
+  "hue-degree-notation": "number"
+}
+```
 
 The following patterns are considered problems:
 

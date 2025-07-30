@@ -9,11 +9,15 @@ a { color: #333 }
  * This hex color */
 ```
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 ## Options
 
 ### `true`
+
+```json
+{
+  "color-no-hex": true
+}
+```
 
 The following patterns are considered problems:
 
