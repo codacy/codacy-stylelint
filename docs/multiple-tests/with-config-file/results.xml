@@ -8,6 +8,7 @@
     <error source="length-zero-no-unit" line="15" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="length-zero-no-unit" line="15" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="15" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
+    <error source="color-function-alias-notation" line="15" message="Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)" severity="info" />
   </file>
   <file name="test2.less">
     <error source="alpha-value-notation" line="14" message="Expected &quot;0.2&quot; to be &quot;20%&quot; (alpha-value-notation)" severity="info" />
@@ -17,6 +18,7 @@
     <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="14" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
+    <error source="color-function-alias-notation" line="14" message="Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)" severity="info" />
   </file>
   <file name="test3.scss">
     <error source="alpha-value-notation" line="14" message="Expected &quot;0.2&quot; to be &quot;20%&quot; (alpha-value-notation)" severity="info" />
@@ -26,5 +28,6 @@
     <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="14" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
+    <error source="color-function-alias-notation" line="14" message="Expected \"rgba\" to be \"rgb\" (color-function-alias-notation)" severity="info" />
   </file>
 </checkstyle>
