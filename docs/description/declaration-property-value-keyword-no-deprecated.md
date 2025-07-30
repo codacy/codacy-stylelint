@@ -17,7 +17,7 @@ This rule flags keywords that were removed or deprecated after being in the CSS 
 - polyfilled with some adoption before any browser actually shipped
 - had an MDN page at one point in time
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
 
 Prior art:
 
@@ -26,6 +26,12 @@ Prior art:
 ## Options
 
 ### `true`
+
+```json
+{
+  "declaration-property-value-keyword-no-deprecated": true
+}
+```
 
 The following patterns are considered problems:
 
@@ -53,12 +59,21 @@ a { text-justify: inter-character; }
 
 ## Optional secondary options
 
-### `ignoreKeywords: ["/regex/", /regex/, "string"]`
+### `ignoreKeywords`
+
+```json
+{ "ignoreKeywords": ["array", "of", "keywords", "/regex/"] }
+```
 
 Given:
 
 ```json
-["ActiveBorder", "/caption/i"]
+{
+  "declaration-property-value-keyword-no-deprecated": [
+    true,
+    { "ignoreKeywords": ["ActiveBorder", "/caption/i"] }
+  ]
+}
 ```
 
 The following patterns are _not_ considered problems:

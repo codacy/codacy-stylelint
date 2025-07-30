@@ -11,13 +11,17 @@ a { display: -webkit-flex; }
 
 This rule does not fix vendor-prefixed values that weren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer) version 10.2.5. Exceptions may be added on a case by case basis.
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate values produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate values produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
 
 ## Options
 
 ### `true`
+
+```json
+{
+  "value-no-vendor-prefix": true
+}
+```
 
 The following patterns are considered problems:
 
@@ -55,12 +59,21 @@ a { background: linear-gradient(bottom, #000, #fff); }
 
 ## Optional secondary options
 
-### `ignoreValues: ["/regex/", /regex/, "string"]`
+### `ignoreValues`
+
+```json
+{ "ignoreValues": ["array", "of", "values", "/regex/"] }
+```
 
 Given:
 
 ```json
-["grab", "max-content", "/^-moz-all$/"]
+{
+  "value-no-vendor-prefix": [
+    true,
+    { "ignoreValues": ["grab", "max-content", "/^-moz-all$/"] }
+  ]
+}
 ```
 
 The following patterns are _not_ considered problems:

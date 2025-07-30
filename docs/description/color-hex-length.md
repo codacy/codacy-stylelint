@@ -9,15 +9,17 @@ a { color: #fff }
  * This hex color */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
-`string`: `"short"|"long"`
-
 ### `"short"`
+
+```json
+{
+  "color-hex-length": "short"
+}
+```
 
 The following patterns are considered problems:
 
@@ -49,6 +51,12 @@ a { color: #a4a4a4; }
 ```
 
 ### `"long"`
+
+```json
+{
+  "color-hex-length": "long"
+}
+```
 
 The following patterns are considered problems:
 

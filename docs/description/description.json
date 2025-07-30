@@ -6,6 +6,13 @@
     "description" : "property-no-unknown"
   } ]
 }, {
+  "patternId" : "no-invalid-position-declaration",
+  "title" : "Disallow invalid position declarations.",
+  "parameters" : [ {
+    "name" : "no-invalid-position-declaration",
+    "description" : "no-invalid-position-declaration"
+  } ]
+}, {
   "patternId" : "at-rule-disallowed-list",
   "title" : "Specify a list of disallowed at-rules.",
   "parameters" : [ {
@@ -244,6 +251,13 @@
     "description" : "property-disallowed-list"
   } ]
 }, {
+  "patternId" : "media-type-no-deprecated",
+  "title" : "Disallow deprecated media types.",
+  "parameters" : [ {
+    "name" : "media-type-no-deprecated",
+    "description" : "media-type-no-deprecated"
+  } ]
+}, {
   "patternId" : "no-invalid-position-at-import-rule",
   "title" : "Disallow invalid position `@import` rules.",
   "parameters" : [ {
@@ -433,6 +447,13 @@
     "description" : "selector-pseudo-element-colon-notation"
   } ]
 }, {
+  "patternId" : "nesting-selector-no-missing-scoping-root",
+  "title" : "Disallow missing scoping root for nesting selectors.",
+  "parameters" : [ {
+    "name" : "nesting-selector-no-missing-scoping-root",
+    "description" : "nesting-selector-no-missing-scoping-root"
+  } ]
+}, {
   "patternId" : "scss_at-use-no-unnamespaced",
   "title" : "Disallow usage of `@use` without a namespace.",
   "parameters" : [ {
@@ -580,6 +601,13 @@
     "description" : "selector-nested-pattern"
   } ]
 }, {
+  "patternId" : "block-no-redundant-nested-style-rules",
+  "title" : "Disallow redundant nested style rules within blocks.",
+  "parameters" : [ {
+    "name" : "block-no-redundant-nested-style-rules",
+    "description" : "block-no-redundant-nested-style-rules"
+  } ]
+}, {
   "patternId" : "scss_at-import-partial-extension",
   "title" : "Require or disallow extension in `@import` commands.",
   "parameters" : [ {
@@ -725,6 +753,13 @@
   "parameters" : [ {
     "name" : "operator-no-newline-after",
     "description" : "operator-no-newline-after"
+  } ]
+}, {
+  "patternId" : "container-name-pattern",
+  "title" : "Specify a pattern for container names.",
+  "parameters" : [ {
+    "name" : "container-name-pattern",
+    "description" : "container-name-pattern"
   } ]
 }, {
   "patternId" : "selector-type-case",
@@ -949,6 +984,13 @@
   "parameters" : [ {
     "name" : "length-zero-no-unit",
     "description" : "length-zero-no-unit"
+  } ]
+}, {
+  "patternId" : "property-no-deprecated",
+  "title" : "Disallow deprecated properties.",
+  "parameters" : [ {
+    "name" : "property-no-deprecated",
+    "description" : "property-no-deprecated"
   } ]
 }, {
   "patternId" : "media-query-no-invalid",
@@ -1404,6 +1446,13 @@
   "parameters" : [ {
     "name" : "declaration-property-unit-allowed-list",
     "description" : "declaration-property-unit-allowed-list"
+  } ]
+}, {
+  "patternId" : "color-function-alias-notation",
+  "title" : "Specify alias notation for color-functions.",
+  "parameters" : [ {
+    "name" : "color-function-alias-notation",
+    "description" : "color-function-alias-notation"
   } ]
 }, {
   "patternId" : "unit-no-unknown",

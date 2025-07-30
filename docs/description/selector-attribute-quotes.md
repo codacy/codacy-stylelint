@@ -9,17 +9,19 @@ Require or disallow quotes for attribute values.
  * These quotes */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept arguments.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
-
-`string`: `"always"|"never"`
 
 ### `"always"`
 
 Attribute values _must always_ be quoted.
+
+```json
+{
+  "selector-attribute-quotes": "always"
+}
+```
 
 The following patterns are considered problems:
 
@@ -63,6 +65,12 @@ The following patterns are _not_ considered problems:
 ### `"never"`
 
 Attribute values _must never_ be quoted.
+
+```json
+{
+  "selector-attribute-quotes": "never"
+}
+```
 
 The following patterns are considered problems:
 

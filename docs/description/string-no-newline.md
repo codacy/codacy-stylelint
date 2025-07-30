@@ -15,16 +15,22 @@ a {
 
 This rule overlaps with:
 
-- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
-- [`at-rule-prelude-no-invalid`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/at-rule-prelude-no-invalid/README.md)
-- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/declaration-property-value-no-unknown/README.md)
-- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/media-query-no-invalid/README.md)
+- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+- [`at-rule-prelude-no-invalid`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/at-rule-prelude-no-invalid/README.md)
+- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/declaration-property-value-no-unknown/README.md)
+- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/media-query-no-invalid/README.md)
 
 We recommend configuring this rule so that it doesn't overlap.
 
 ## Options
 
 ### `true`
+
+```json
+{
+  "string-no-newline": true
+}
+```
 
 The following patterns are considered problems:
 
@@ -82,11 +88,21 @@ a {
 
 ## Optional secondary options
 
-### `ignore: ["at-rule-preludes", "declaration-values"]`
+### `ignore`
+
+```json
+{ "ignore": ["array", "of", "options"] }
+```
 
 #### `"at-rule-preludes"`
 
 Ignore strings in at-rule preludes.
+
+```json
+{
+  "string-no-newline": [true, { "ignore": ["at-rule-preludes"] }]
+}
+```
 
 The following patterns are _not_ considered problems:
 

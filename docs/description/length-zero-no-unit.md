@@ -13,11 +13,17 @@ _Lengths_ refer to distance measurements. A length is a _dimension_, which is a 
 
 This rule ignores lengths within math functions (e.g. `calc`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 
 ### `true`
+
+```json
+{
+  "length-zero-no-unit": true
+}
+```
 
 The following patterns are considered problems:
 
@@ -55,11 +61,21 @@ a { top: 1.001vh }
 
 ## Optional secondary options
 
-### `ignore: ["custom-properties"]`
+### `ignore`
+
+```json
+{ "ignore": ["array", "of", "options"] }
+```
 
 #### `"custom-properties"`
 
-Ignore units for zero length in custom properties.
+Ignore units for zero lengths in custom properties.
+
+```json
+{
+  "length-zero-no-unit": [true, { "ignore": ["custom-properties"] }]
+}
+```
 
 The following pattern is _not_ considered a problem:
 
@@ -68,12 +84,20 @@ The following pattern is _not_ considered a problem:
 a { --x: 0px; }
 ```
 
-### `ignoreFunctions: ["/regex/", /regex/, "string"]`
+### `ignoreFunctions`
+
+```json
+{ "ignoreFunctions": ["array", "of", "functions", "/regex/"] }
+```
+
+Ignore units for zero lengths within the specified functions.
 
 Given:
 
 ```json
-["var", "/^--/"]
+{
+  "length-zero-no-unit": [true, { "ignoreFunctions": ["var", "/^--/"] }]
+}
 ```
 
 The following patterns are _not_ considered problems:
@@ -88,14 +112,25 @@ a { top: var(--foo, 0px); }
 a { top: --bar(0px); }
 ```
 
-### `ignorePreludeOfAtRules: ["/regex/", /regex/, "string"]`
+### `ignorePreludeOfAtRules`
+
+```json
+{
+  "ignorePreludeOfAtRules": ["array", "of", "at-rules", "/regex/"]
+}
+```
 
 Ignore units for zero lengths within the preludes of the specified at-rules.
 
 Given:
 
 ```json
-["media", "/^--bar/"]
+{
+  "length-zero-no-unit": [
+    true,
+    { "ignorePreludeOfAtRules": ["media", "/^--bar/"] }
+  ]
+}
 ```
 
 The following patterns are _not_ considered problems:

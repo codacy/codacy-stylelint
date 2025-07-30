@@ -15,15 +15,19 @@ This rule is only appropriate for CSS. You should not turn it on for CSS-like la
 
 It sometimes overlaps with:
 
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/unit-no-unknown/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/unit-no-unknown/README.md)
 
 If duplicate problems are flagged, you can turn off the corresponding rule.
-
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
 
 ## Options
 
 ### `true`
+
+```json
+{
+  "media-feature-name-value-no-unknown": true
+}
+```
 
 The following patterns are considered problems:
 

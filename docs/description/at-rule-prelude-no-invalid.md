@@ -15,17 +15,15 @@ You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syn
 
 This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-The [`message` secondary option](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#message) can accept the arguments of this rule.
-
 This rule overlaps with:
 
-- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/media-query-no-invalid/README.md)
-- [`string-no-newline`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/string-no-newline/README.md)
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.17.0/lib/rules/unit-no-unknown/README.md)
+- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/media-query-no-invalid/README.md)
+- [`string-no-newline`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/string-no-newline/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/unit-no-unknown/README.md)
 
 You can either turn off the rules or configure them to ignore the overlaps.
 
-For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.17.0/docs/user-guide/configure.md#languageoptions) section.
+For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/configure.md#languageoptions) section.
 
 Prior art:
 
@@ -34,6 +32,12 @@ Prior art:
 ## Options
 
 ### `true`
+
+```json
+{
+  "at-rule-prelude-no-invalid": true
+}
+```
 
 The following patterns are considered problems:
 
@@ -59,14 +63,23 @@ The following patterns are _not_ considered problems:
 @font-palette-values --foo {}
 ```
 
-## Secondary Options
+## Optional secondary options
 
-### `ignoreAtRules: ["/regex/", /regex/, "string"]`
+### `ignoreAtRules`
+
+```json
+{ "ignoreAtRules": ["array", "of", "at-rules", "/regex/"] }
+```
 
 Given:
 
 ```json
-["property", "/^font-/"]
+{
+  "at-rule-prelude-no-invalid": [
+    true,
+    { "ignoreAtRules": ["property", "/^font-/"] }
+  ]
+}
 ```
 
 The following patterns are _not_ considered problems:
