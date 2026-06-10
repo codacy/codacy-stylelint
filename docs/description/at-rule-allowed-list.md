@@ -11,19 +11,21 @@ Specify a list of allowed at-rules.
 
 This rule ignores the `@charset` rule.
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed at-rule.
+
 ## Options
 
 ### `Array<string>`
 
 ```json
-["array", "of", "unprefixed", "at-rules"]
+["array", "of", "at-rules", "/regex/"]
 ```
 
 Given:
 
 ```json
 {
-  "at-rule-allowed-list": ["extend", "keyframes"]
+  "at-rule-allowed-list": ["extend", "/^(-webkit-|-moz-)?keyframes$/i"]
 }
 ```
 

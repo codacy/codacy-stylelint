@@ -11,7 +11,9 @@ Disallow unknown at-rules.
 
 This rule considers at-rules defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
 
-For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/configure.md#languageoptions) section.
+For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) section.
+
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown at-rule.
 
 ## Options
 

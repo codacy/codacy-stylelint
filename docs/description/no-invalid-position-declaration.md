@@ -11,6 +11,8 @@ color: red;
 
 Declarations can only be positioned within the `<declaration-list>`, `<declaration-rule-list>` and `<block-contents>` productions.
 
+This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
+
 ## Options
 
 ### `true`
@@ -56,6 +58,56 @@ a { --foo: red; }
 ```css
 @media all {
   a {
+    color: red;
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+a {
+  @media all {
+    color: red;
+  }
+}
+```
+
+## Optional secondary options
+
+### `ignoreAtRules`
+
+```json
+{ "ignoreAtRules": ["array", "of", "at-rules", "/regex/"] }
+```
+
+Ignore nesting at-rules within specified at-rules.
+
+Given:
+
+```json
+{
+  "no-invalid-position-declaration": [
+    true,
+    { "ignoreAtRules": ["--foo", "/^--bar-/"] }
+  ]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+@--foo {
+  @media all {
+    color: red;
+  }
+}
+```
+
+<!-- prettier-ignore -->
+```css
+@--bar-baz qux {
+  @layer foo {
     color: red;
   }
 }

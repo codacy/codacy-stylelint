@@ -9,6 +9,8 @@ Specify a pattern for comments.
  * The pattern of this */
 ```
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the configured pattern.
+
 ## Options
 
 ### `string`

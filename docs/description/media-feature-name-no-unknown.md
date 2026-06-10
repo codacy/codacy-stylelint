@@ -13,6 +13,8 @@ This rule considers media feature names defined in the CSS Specifications, up to
 
 This rule ignores vendor-prefixed media feature names.
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown media feature name.
+
 ## Options
 
 ### `true`

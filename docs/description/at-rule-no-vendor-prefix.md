@@ -11,7 +11,9 @@ Disallow vendor prefixes for at-rules.
 
 This rule ignores non-standard vendor-prefixed at-rules that aren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate at-rules produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
+The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate at-rules produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
+
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the vendor-prefixed at-rule.
 
 ## Options
 
@@ -45,4 +47,35 @@ The following patterns are _not_ considered problems:
 <!-- prettier-ignore -->
 ```css
 @viewport { orientation: landscape; }
+```
+
+## Optional secondary options
+
+### `ignoreAtRules`
+
+```json
+{ "ignoreAtRules": ["array", "of", "at", "rules", "/regex/"] }
+```
+
+Given:
+
+```json
+{
+  "at-rule-no-vendor-prefix": [
+    true,
+    { "ignoreAtRules": ["-webkit-keyframes", "/-viewport/i"] }
+  ]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+@-webkit-keyframes {}
+```
+
+<!-- prettier-ignore -->
+```css
+@-ms-viewport {}
 ```

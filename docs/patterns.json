@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "16.23.0",
+  "version" : "17.13.0",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -477,6 +477,16 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-no-unknown",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "display-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "display-notation",
       "default" : null
     } ],
     "languages" : [ ],
@@ -1086,6 +1096,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "property-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "property-no-deprecated",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1116,6 +1136,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "relative-selector-nesting-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "relative-selector-nesting-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "rule-empty-line-before",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1128,6 +1158,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "rule-nesting-at-rule-required-list",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "rule-nesting-at-rule-required-list",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "rule-selector-property-disallowed-list",
     "level" : "Info",
@@ -1259,26 +1299,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "scss_at-import-no-partial-leading-underscore",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-import-no-partial-leading-underscore",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "scss_at-import-partial-extension",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-import-partial-extension",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "scss_at-import-partial-extension-allowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1289,31 +1309,11 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "scss_at-import-partial-extension-blacklist",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-import-partial-extension-blacklist",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "scss_at-import-partial-extension-disallowed-list",
     "level" : "Info",
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-import-partial-extension-disallowed-list",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "scss_at-import-partial-extension-whitelist",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "at-import-partial-extension-whitelist",
       "default" : null
     } ],
     "languages" : [ ],
@@ -1849,6 +1849,18 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "scss_selector-class-pattern",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-class-pattern",
+      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
+        "message" : "(selector) => `Expected class selector \"${selector}\" to be kebab-case`"
+      } ]
+    } ],
+    "languages" : [ ],
+    "enabled" : true
+  }, {
     "patternId" : "scss_selector-nest-combinators",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -2083,6 +2095,26 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "selector-no-deprecated",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-deprecated",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-no-invalid",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-invalid",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "selector-no-qualifying-type",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -2275,6 +2307,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "unit-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "unit-no-unknown",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2294,6 +2336,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "value-keyword-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-keyword-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "value-no-vendor-prefix",
     "level" : "Info",

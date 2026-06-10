@@ -11,6 +11,8 @@ Disallow missing scoping root for nesting selectors.
 
 CSS nesting selectors (`&`) represent the parent selector in nested CSS. When used at the top level or within certain at-rules without a scoping root, they can cause unexpected behavior or indicate a mistake in the CSS structure.
 
+This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
+
 ## Options
 
 ### `true`
@@ -62,5 +64,42 @@ a {
 ```css
 a {
   @scope (&) {}
+}
+```
+
+## Optional secondary options
+
+### `ignoreAtRules`
+
+```json
+{ "ignoreAtRules": ["array", "of", "at-rules", "/regex/"] }
+```
+
+Ignore nesting selectors within specified at-rules.
+
+Given:
+
+```json
+{
+  "nesting-selector-no-missing-scoping-root": [
+    true,
+    { "ignoreAtRules": ["--foo", "/^--bar-/"] }
+  ]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+@--foo {
+  & {}
+}
+```
+
+<!-- prettier-ignore -->
+```css
+@--bar-baz qux {
+  & {}
 }
 ```

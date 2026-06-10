@@ -9,12 +9,14 @@ Specify a list of disallowed media feature names.
  * This media feature name */
 ```
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed media feature name.
+
 ## Options
 
 ### `Array<string>`
 
 ```json
-["array", "of", "unprefixed", "media-features", "/regex/"]
+["array", "of", "media-features", "/regex/"]
 ```
 
 Given:

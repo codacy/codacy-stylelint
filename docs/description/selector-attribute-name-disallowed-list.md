@@ -9,6 +9,8 @@ Specify a list of disallowed attribute names.
  * This name */
 ```
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed attribute name.
+
 ## Options
 
 ### `Array<string>`

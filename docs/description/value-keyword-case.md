@@ -11,7 +11,9 @@ Specify lowercase or uppercase for keywords values.
 
 This rule ignores [`<custom-idents>`](https://developer.mozilla.org/en/docs/Web/CSS/custom-ident) of known properties. Keyword values which are paired with non-properties (e.g. `$vars` and custom properties), and do not conform to the primary option, can be ignored using the `ignoreKeywords: []` secondary option.
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the keyword and its expected case.
 
 ## Options
 
