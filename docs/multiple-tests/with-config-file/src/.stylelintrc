@@ -49,23 +49,16 @@
     "time-min-milliseconds": 100,
     "@stylistic/unit-case": "lower",
     "unit-no-unknown": true,
-    "value-keyword-case": "lower",
-    "no-descending-specificity": null
+    "value-keyword-case": "lower"
   },
   "overrides": [
     {
       "files": ["**/*.scss"],
-      "customSyntax": "postcss-scss",
-      "rules": {
-        "no-descending-specificity": null
-      }
+      "customSyntax": "postcss-scss"
     },
     {
       "files": ["**/*.less"],
-      "customSyntax": "postcss-less",
-      "rules": {
-        "no-descending-specificity": null
-      }
+      "customSyntax": "postcss-less"
     }
   ]
 }
