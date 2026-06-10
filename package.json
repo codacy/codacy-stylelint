@@ -10,8 +10,8 @@
     "upgrade": "npm install"
   },
   "dependencies": {
-    "@stylistic/stylelint-plugin": "^4.0.0",
-    "postcss": "^8.5.6",
+    "@stylistic/stylelint-plugin": "^5.2.0",
+    "postcss": "^8.5.15",
     "postcss-less": "^6.0.0",
     "postcss-safe-parser": "^7.0.1",
     "postcss-sass": "^0.5.0",
