@@ -28,7 +28,9 @@ This rule checks the following shorthand properties:
 - `scroll-padding`, `scroll-padding-block`, `scroll-padding-inline`
 - `inset`, `inset-block`, `inset-inline`
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the redundant value and its condensed form.
 
 ## Options
 

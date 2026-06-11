@@ -9,12 +9,14 @@ a { width: 100px; }
  * These properties and these units */
 ```
 
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the property name and the disallowed unit.
+
 ## Options
 
 ### `Object<string, Array<string>>`
 
 ```json
-{ "unprefixed-property-name": ["array", "of", "units"] }
+{ "property-name": ["array", "of", "units"] }
 ```
 
 You can specify a regex for a property name, such as `{ "/^animation/": [] }`.
@@ -25,7 +27,7 @@ Given:
 {
   "declaration-property-unit-allowed-list": {
     "font-size": ["em", "px"],
-    "/^animation/": ["s"],
+    "/^(-webkit-)?animation/": ["s"],
     "line-height": []
   }
 }

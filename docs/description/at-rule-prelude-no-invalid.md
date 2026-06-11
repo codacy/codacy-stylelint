@@ -11,19 +11,19 @@ Disallow invalid preludes for at-rules.
 
 This rule considers preludes for at-rules defined within the CSS specifications, up to and including Editor's Drafts, to be valid.
 
-You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what preludes are valid for an at-rule.
+You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what preludes are valid for an at-rule, and use the [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property to extend it.
 
-This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
+> [!WARNING]
+> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-This rule overlaps with:
+> [!NOTE]
+> When using this rule, we recommend turning off these overlapping rules or configuring them to ignore the overlaps:
+>
+> - [`media-query-no-invalid`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/media-query-no-invalid/README.md)
+> - [`string-no-newline`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/string-no-newline/README.md)
+> - [`unit-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/unit-no-unknown/README.md)
 
-- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/media-query-no-invalid/README.md)
-- [`string-no-newline`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/string-no-newline/README.md)
-- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/unit-no-unknown/README.md)
-
-You can either turn off the rules or configure them to ignore the overlaps.
-
-For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/configure.md#languageoptions) section.
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the at-rule and the invalid prelude.
 
 Prior art:
 

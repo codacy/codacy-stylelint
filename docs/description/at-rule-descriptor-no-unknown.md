@@ -13,13 +13,14 @@ Disallow unknown descriptors for at-rules.
 
 This rule considers descriptors defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
 
-You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what descriptors are known for an at-rule.
+You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what descriptors are known for an at-rule, and use the [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property to extend it.
 
-This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
+> [!WARNING]
+> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-This rule checks descriptors within at-rules. To check properties, you can use the [`property-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/property-no-unknown/README.md) rule.
+This rule checks descriptors within at-rules. To check properties, you can use the [`property-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/property-no-unknown/README.md) rule.
 
-For customizing syntax, see the [`languageOptions`](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/configure.md#languageoptions) section.
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the at-rule and the unknown descriptor.
 
 Prior art:
 

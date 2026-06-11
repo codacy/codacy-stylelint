@@ -13,9 +13,11 @@ a {
  *      This line */
 ```
 
-This rule only applies to standard property declarations. Use the [`custom-property-empty-line-before`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/custom-property-empty-line-before/README.md) rule for custom property declarations.
+This rule only applies to standard property declarations. Use the [`custom-property-empty-line-before`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/custom-property-empty-line-before/README.md) rule for custom property declarations.
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+
+This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
 
 ## Options
 
@@ -119,6 +121,40 @@ a {
 
 ```json
 { "except": ["array", "of", "options"] }
+```
+
+#### `"after-block"`
+
+Reverse the primary option for declarations that follow a block.
+
+Given:
+
+```json
+{
+  "declaration-empty-line-before": ["never", { "except": ["after-block"] }]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css 
+a {
+  a {}
+  
+  color: red;
+  top: 5px;
+}
+```
+
+<!-- prettier-ignore -->
+```css 
+a {
+  @media all {}
+  
+  color: red;
+  top: 5px;
+}
 ```
 
 #### `"after-comment"`

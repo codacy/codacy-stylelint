@@ -9,12 +9,14 @@ a { text-transform: uppercase; }
  * These properties and these values */
 ```
 
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the property name and the disallowed value.
+
 ## Options
 
 ### `Object<string, Array<string>>`
 
 ```json
-{ "unprefixed-property-name": ["array", "of", "values", "/regex/"] }
+{ "property-name": ["array", "of", "values", "/regex/"] }
 ```
 
 You can specify a regex for a property name, such as `{ "/^animation/": [] }`.
@@ -28,10 +30,10 @@ Given:
 ```json
 {
   "declaration-property-value-disallowed-list": {
-    "transform": ["/scale3d/", "/rotate3d/", "/translate3d/"],
+    "/^(-webkit-)?transform$/": ["/scale3d/", "/rotate3d/", "/translate3d/"],
     "position": ["fixed"],
     "color": ["/^green/"],
-    "/^animation/": ["/ease/"]
+    "/^(-webkit-)?animation/": ["/ease/"]
   }
 }
 ```

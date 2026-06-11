@@ -9,7 +9,9 @@ a { background: url("x.jpg") }
  *             These quotes */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.23.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
+
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the URL function name.
 
 ## Options
 

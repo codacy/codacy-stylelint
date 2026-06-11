@@ -9,6 +9,8 @@ Specify a list of required properties (or descriptors) for an at-rule.
  *  At-rule and required descriptor names */
 ```
 
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the at-rule and the required property.
+
 ## Options
 
 ### `Array<string>`

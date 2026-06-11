@@ -9,7 +9,12 @@ Limit the number of combinators in a selector.
  * These are combinators */
 ```
 
-This rule resolves nested selectors before counting the number of combinators selectors. Each selector in a [selector list](https://www.w3.org/TR/selectors4/#selector-list) is evaluated separately.
+Each selector in a [selector list](https://drafts.csswg.org/selectors-4/#grouping) is evaluated separately.
+
+> [!NOTE]
+> In versions prior to `17.0.0`, this rule would evaluate functional pseudo-classes separately, such as `:not()` and `:is()`, and resolve nested selectors (in a nonstandard way) before counting.
+
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the selector and the configured maximum.
 
 ## Options
 
@@ -34,18 +39,7 @@ a b ~ c + d {}
 
 <!-- prettier-ignore -->
 ```css
-a b ~ c {
-  & > d {}
-}
-```
-
-<!-- prettier-ignore -->
-```css
-a b {
-  & ~ c {
-    & + d {}
-  }
-}
+a b ~ c + d > e {}
 ```
 
 The following patterns are _not_ considered problems:
@@ -63,18 +57,4 @@ a b {}
 <!-- prettier-ignore -->
 ```css
 a b ~ c {}
-```
-
-<!-- prettier-ignore -->
-```css
-a b {
-  & ~ c {}
-}
-```
-
-<!-- prettier-ignore -->
-```css
-/* each selector in a selector list is evaluated separately */
-a b,
-c > d {}
 ```

@@ -13,12 +13,13 @@ This rule considers functions defined in the CSS Specifications to be known.
 
 This rule ignores double-dashed custom functions, e.g. `--custom-function()`.
 
-This rule overlaps with:
+> [!NOTE]
+> We recommend only using this rule for CSS-like languages, such as SCSS and Less. For CSS, we recommend using these more capable and overlapping rules instead:
+>
+> - [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+> - [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/declaration-property-value-no-unknown/README.md)
 
-- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
-- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/declaration-property-value-no-unknown/README.md)
-
-We recommend using these rules for CSS and this rule for CSS-like languages, such as SCSS and Less.
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown function.
 
 ## Options
 

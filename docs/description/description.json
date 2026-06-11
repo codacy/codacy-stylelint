@@ -132,13 +132,6 @@
     "description" : "value-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "scss_at-if-closing-brace-newline-after",
-  "title" : "Require or disallow a newline after the closing brace of `@if` statements.",
-  "parameters" : [ {
-    "name" : "at-if-closing-brace-newline-after",
-    "description" : "at-if-closing-brace-newline-after"
-  } ]
-}, {
   "patternId" : "keyframes-name-pattern",
   "title" : "Specify a pattern for keyframe names.",
   "parameters" : [ {
@@ -151,6 +144,20 @@
   "parameters" : [ {
     "name" : "function-quote-no-quoted-strings-inside",
     "description" : "function-quote-no-quoted-strings-inside"
+  } ]
+}, {
+  "patternId" : "scss_at-if-closing-brace-newline-after",
+  "title" : "Require or disallow a newline after the closing brace of `@if` statements.",
+  "parameters" : [ {
+    "name" : "at-if-closing-brace-newline-after",
+    "description" : "at-if-closing-brace-newline-after"
+  } ]
+}, {
+  "patternId" : "selector-no-deprecated",
+  "title" : "Disallow deprecated selectors.",
+  "parameters" : [ {
+    "name" : "selector-no-deprecated",
+    "description" : "selector-no-deprecated"
   } ]
 }, {
   "patternId" : "scss_dollar-variable-first-in-block",
@@ -193,6 +200,13 @@
   "parameters" : [ {
     "name" : "selector-combinator-allowed-list",
     "description" : "selector-combinator-allowed-list"
+  } ]
+}, {
+  "patternId" : "scss_dollar-variable-no-missing-interpolation",
+  "title" : "This rule flags four situations in which Sass variables require interpolation:",
+  "parameters" : [ {
+    "name" : "dollar-variable-no-missing-interpolation",
+    "description" : "dollar-variable-no-missing-interpolation"
   } ]
 }, {
   "patternId" : "selector-attribute-quotes",
@@ -279,6 +293,13 @@
     "description" : "custom-property-no-missing-var-function"
   } ]
 }, {
+  "patternId" : "selector-no-invalid",
+  "title" : "Disallow invalid selectors.",
+  "parameters" : [ {
+    "name" : "selector-no-invalid",
+    "description" : "selector-no-invalid"
+  } ]
+}, {
   "patternId" : "scss_map-keys-quotes",
   "title" : "Require quoted keys in Sass maps.",
   "parameters" : [ {
@@ -321,6 +342,13 @@
     "description" : "selector-no-union-class-name"
   } ]
 }, {
+  "patternId" : "no-spread-text",
+  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
+  "parameters" : [ {
+    "name" : "no-spread-text",
+    "description" : "no-spread-text"
+  } ]
+}, {
   "patternId" : "declaration-property-max-values",
   "title" : "Limit the number of values for a list of properties within declarations.",
   "parameters" : [ {
@@ -328,18 +356,18 @@
     "description" : "declaration-property-max-values"
   } ]
 }, {
-  "patternId" : "scss_load-partial-extension",
-  "title" : "Require or disallow extension in `@import`, `@use`, `@forward`, and [`meta.load-css`] commands.",
-  "parameters" : [ {
-    "name" : "load-partial-extension",
-    "description" : "load-partial-extension"
-  } ]
-}, {
   "patternId" : "rule-selector-property-disallowed-list",
   "title" : "Specify a list of disallowed properties for selectors within rules.",
   "parameters" : [ {
     "name" : "rule-selector-property-disallowed-list",
     "description" : "rule-selector-property-disallowed-list"
+  } ]
+}, {
+  "patternId" : "property-layout-mappings",
+  "title" : "Specify flow-relative or physical layout mappings for properties.",
+  "parameters" : [ {
+    "name" : "property-layout-mappings",
+    "description" : "property-layout-mappings"
   } ]
 }, {
   "patternId" : "media-prefers-color-scheme",
@@ -354,20 +382,6 @@
   "parameters" : [ {
     "name" : "at-else-if-parentheses-space-before",
     "description" : "at-else-if-parentheses-space-before"
-  } ]
-}, {
-  "patternId" : "scss_at-import-no-partial-leading-underscore",
-  "title" : "Disallow leading underscore in partial names in `@import`.",
-  "parameters" : [ {
-    "name" : "at-import-no-partial-leading-underscore",
-    "description" : "at-import-no-partial-leading-underscore"
-  } ]
-}, {
-  "patternId" : "no-spread-text",
-  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
-  "parameters" : [ {
-    "name" : "no-spread-text",
-    "description" : "no-spread-text"
   } ]
 }, {
   "patternId" : "media-feature-name-no-unknown",
@@ -538,6 +552,13 @@
     "description" : "property-allowed-list"
   } ]
 }, {
+  "patternId" : "scss_load-partial-extension",
+  "title" : "Require or disallow extension in `@import`, `@use`, `@forward`, and `meta.load-css` commands.",
+  "parameters" : [ {
+    "name" : "load-partial-extension",
+    "description" : "load-partial-extension"
+  } ]
+}, {
   "patternId" : "rule-empty-line-before",
   "title" : "Require or disallow an empty line before rules.",
   "parameters" : [ {
@@ -606,13 +627,6 @@
   "parameters" : [ {
     "name" : "block-no-redundant-nested-style-rules",
     "description" : "block-no-redundant-nested-style-rules"
-  } ]
-}, {
-  "patternId" : "scss_at-import-partial-extension",
-  "title" : "Require or disallow extension in `@import` commands.",
-  "parameters" : [ {
-    "name" : "at-import-partial-extension",
-    "description" : "at-import-partial-extension"
   } ]
 }, {
   "patternId" : "scss_declaration-nested-properties",
@@ -965,13 +979,6 @@
     "description" : "property-no-unknown"
   } ]
 }, {
-  "patternId" : "scss_at-if-no-null",
-  "title" : "Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.",
-  "parameters" : [ {
-    "name" : "at-if-no-null",
-    "description" : "at-if-no-null"
-  } ]
-}, {
   "patternId" : "at-rule-prelude-no-invalid",
   "title" : "Disallow invalid preludes for at-rules.",
   "parameters" : [ {
@@ -993,6 +1000,13 @@
     "description" : "property-no-deprecated"
   } ]
 }, {
+  "patternId" : "relative-selector-nesting-notation",
+  "title" : "Specify explicit or implicit nesting notation for relative selectors.",
+  "parameters" : [ {
+    "name" : "relative-selector-nesting-notation",
+    "description" : "relative-selector-nesting-notation"
+  } ]
+}, {
   "patternId" : "media-query-no-invalid",
   "title" : "Disallow invalid media queries.",
   "parameters" : [ {
@@ -1005,6 +1019,27 @@
   "parameters" : [ {
     "name" : "function-url-scheme-disallowed-list",
     "description" : "function-url-scheme-disallowed-list"
+  } ]
+}, {
+  "patternId" : "unit-layout-mappings",
+  "title" : "Specify flow-relative or physical layout mappings for units.",
+  "parameters" : [ {
+    "name" : "unit-layout-mappings",
+    "description" : "unit-layout-mappings"
+  } ]
+}, {
+  "patternId" : "scss_at-if-no-null",
+  "title" : "Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.",
+  "parameters" : [ {
+    "name" : "at-if-no-null",
+    "description" : "at-if-no-null"
+  } ]
+}, {
+  "patternId" : "rule-nesting-at-rule-required-list",
+  "title" : "Require rules to be nested in specific at-rules.",
+  "parameters" : [ {
+    "name" : "rule-nesting-at-rule-required-list",
+    "description" : "rule-nesting-at-rule-required-list"
   } ]
 }, {
   "patternId" : "scss_at-else-closing-brace-newline-after",
@@ -1140,13 +1175,6 @@
     "description" : "selector-pseudo-class-disallowed-list"
   } ]
 }, {
-  "patternId" : "scss_at-import-partial-extension-blacklist",
-  "title" : "Specify a blacklist of disallowed file extensions for partial names in `@import` commands.",
-  "parameters" : [ {
-    "name" : "at-import-partial-extension-blacklist",
-    "description" : "at-import-partial-extension-blacklist"
-  } ]
-}, {
   "patternId" : "scss_operator-no-unspaced",
   "title" : "Disallow unspaced operators in Sass operations.",
   "parameters" : [ {
@@ -1266,13 +1294,6 @@
     "description" : "percent-placeholder-pattern"
   } ]
 }, {
-  "patternId" : "scss_dollar-variable-no-missing-interpolation",
-  "title" : "Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.",
-  "parameters" : [ {
-    "name" : "dollar-variable-no-missing-interpolation",
-    "description" : "dollar-variable-no-missing-interpolation"
-  } ]
-}, {
   "patternId" : "selector-combinator-disallowed-list",
   "title" : "Specify a list of disallowed combinators.",
   "parameters" : [ {
@@ -1299,13 +1320,6 @@
   "parameters" : [ {
     "name" : "declaration-block-no-shorthand-property-overrides",
     "description" : "declaration-block-no-shorthand-property-overrides"
-  } ]
-}, {
-  "patternId" : "keyframe-selector-notation",
-  "title" : "Specify keyword or percentage notation for keyframe selectors.",
-  "parameters" : [ {
-    "name" : "keyframe-selector-notation",
-    "description" : "keyframe-selector-notation"
   } ]
 }, {
   "patternId" : "selector-pseudo-element-allowed-list",
@@ -1343,6 +1357,27 @@
     "description" : "media-feature-name-allowed-list"
   } ]
 }, {
+  "patternId" : "value-keyword-layout-mappings",
+  "title" : "Specify flow-relative or physical layout mappings for value keywords.",
+  "parameters" : [ {
+    "name" : "value-keyword-layout-mappings",
+    "description" : "value-keyword-layout-mappings"
+  } ]
+}, {
+  "patternId" : "keyframe-selector-notation",
+  "title" : "Specify keyword or percentage notation for keyframe selectors.",
+  "parameters" : [ {
+    "name" : "keyframe-selector-notation",
+    "description" : "keyframe-selector-notation"
+  } ]
+}, {
+  "patternId" : "declaration-property-value-allowed-list",
+  "title" : "Specify a list of allowed property and value pairs within declarations.",
+  "parameters" : [ {
+    "name" : "declaration-property-value-allowed-list",
+    "description" : "declaration-property-value-allowed-list"
+  } ]
+}, {
   "patternId" : "scss_dollar-variable-colon-space-after",
   "title" : "Require or disallow whitespace after the colon in `$`-variable declarations.",
   "parameters" : [ {
@@ -1371,20 +1406,6 @@
     "description" : "keyframe-block-no-duplicate-selectors"
   } ]
 }, {
-  "patternId" : "scss_at-import-partial-extension-whitelist",
-  "title" : "Specify a whitelist of allowed file extensions for partial names in `@import` commands.",
-  "parameters" : [ {
-    "name" : "at-import-partial-extension-whitelist",
-    "description" : "at-import-partial-extension-whitelist"
-  } ]
-}, {
-  "patternId" : "declaration-property-value-allowed-list",
-  "title" : "Specify a list of allowed property and value pairs within declarations.",
-  "parameters" : [ {
-    "name" : "declaration-property-value-allowed-list",
-    "description" : "declaration-property-value-allowed-list"
-  } ]
-}, {
   "patternId" : "selector-pseudo-class-allowed-list",
   "title" : "Specify a list of allowed pseudo-class selectors.",
   "parameters" : [ {
@@ -1397,6 +1418,20 @@
   "parameters" : [ {
     "name" : "no-obsolete-element",
     "description" : "no-obsolete-element"
+  } ]
+}, {
+  "patternId" : "display-notation",
+  "title" : "Specify short or full notation for the `display` property.",
+  "parameters" : [ {
+    "name" : "display-notation",
+    "description" : "display-notation"
+  } ]
+}, {
+  "patternId" : "scss_selector-class-pattern",
+  "title" : "Specify a pattern for class selectors.",
+  "parameters" : [ {
+    "name" : "selector-class-pattern",
+    "description" : "selector-class-pattern"
   } ]
 }, {
   "patternId" : "scss_at-mixin-parentheses-space-before",

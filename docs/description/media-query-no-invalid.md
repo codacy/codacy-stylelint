@@ -11,12 +11,15 @@ Disallow invalid media queries.
 
 Media queries must be grammatically valid according to the [Media Queries Level 5](https://www.w3.org/TR/mediaqueries-5/) specification.
 
-This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
-
 It works well with other rules that validate feature names and values:
 
-- [`media-feature-name-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/media-feature-name-no-unknown/README.md)
-- [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/16.23.0/lib/rules/media-feature-name-value-no-unknown/README.md)
+- [`media-feature-name-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/media-feature-name-no-unknown/README.md)
+- [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/media-feature-name-value-no-unknown/README.md)
+
+> [!WARNING]
+> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
+
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the media query and the reason it is invalid.
 
 ## Options
 
