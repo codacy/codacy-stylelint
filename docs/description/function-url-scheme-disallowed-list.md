@@ -16,8 +16,6 @@ This rule ignores:
 - URL arguments without an existing URL scheme
 - URL arguments with variables or variable interpolation (`$sass`, `@less`, `--custom-property`, `#{$var}`, `@{var}`, `$(var)`)
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed URL scheme.
-
 ## Options
 
 ### `Array<string>`

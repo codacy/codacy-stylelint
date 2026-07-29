@@ -9,8 +9,6 @@ Specify a pattern for container names.
  * The pattern of this */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the container name and the configured pattern.
-
 ## Options
 
 ### `string`

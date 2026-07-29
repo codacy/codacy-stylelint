@@ -11,13 +11,12 @@ a { color: #y3 }
 
 Longhand hex colors can be either 6 or 8 (with alpha channel) hexadecimal characters. And their shorthand variants are 3 and 4 characters respectively.
 
-> [!NOTE]
-> We recommend only using this rule for CSS-like languages, such as SCSS and Less. For CSS, we recommend using these more capable and overlapping rules instead:
->
-> - [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
-> - [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/declaration-property-value-no-unknown/README.md)
+This rule overlaps with:
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the invalid hex color.
+- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/declaration-property-value-no-unknown/README.md)
+
+We recommend using these rules for CSS and this rule for CSS-like languages, such as SCSS and Less.
 
 ## Options
 

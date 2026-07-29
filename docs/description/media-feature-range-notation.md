@@ -13,9 +13,7 @@ Media features of the range type can be written using prefixes or the more moder
 
 Because `min-` and `max-` both equate to range comparisons that include the value, they may be [limiting in certain situations](https://drafts.csswg.org/mediaqueries/#mq-min-max).
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
-
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the configured notation.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
 
 ## Options
 

@@ -12,8 +12,6 @@ Specify a list of disallowed words within comments.
 > [!WARNING]
 > Comments within _selector and value lists_ are currently ignored.
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed word.
-
 ## Options
 
 ### `Array<string>`

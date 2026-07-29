@@ -11,9 +11,7 @@ a { color: pink; color: orange; }
 
 This rule ignores variables (`$sass`, `@less`, `--custom-property`).
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the duplicate property.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

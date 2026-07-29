@@ -9,9 +9,7 @@ a { color: #fff }
  * This hex color */
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the hex color and its expected notation.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

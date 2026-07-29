@@ -9,14 +9,12 @@ Specify a list of allowed media feature name and value pairs.
  *    These features and values */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the media feature name and the disallowed value.
-
 ## Options
 
 ### `Object<string, Array<string>>`
 
 ```json
-{ "media-feature-name": ["array", "of", "values", "/regex/"] }
+{ "unprefixed-media-feature-name": ["array", "of", "values", "/regex/"] }
 ```
 
 You can specify a regex for a media feature name, such as `{ "/width$/": [] }`.

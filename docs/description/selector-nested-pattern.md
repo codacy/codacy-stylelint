@@ -13,8 +13,6 @@ Specify a pattern for the selectors of rules nested within rules.
 
 Non-standard selectors (e.g. selectors with Sass or Less interpolation) and selectors of rules nested within at-rules are ignored.
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the selector and the configured pattern.
-
 ## Options
 
 ### `string`

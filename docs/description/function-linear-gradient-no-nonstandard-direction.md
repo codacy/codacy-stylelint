@@ -16,13 +16,12 @@ A valid and standard direction value is one of the following:
 
 A common mistake (matching outdated non-standard syntax) is to use just a side-or-corner without the preceding `to`.
 
-> [!NOTE]
-> We recommend only using this rule for CSS-like languages, such as SCSS and Less. For CSS, we recommend using these more capable and overlapping rules instead:
->
-> - [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
-> - [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/declaration-property-value-no-unknown/README.md)
+This rule overlaps with:
 
-This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
+- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/declaration-property-value-no-unknown/README.md)
+
+We recommend using these rules for CSS and this rule for CSS-like languages, such as SCSS and Less.
 
 ## Options
 

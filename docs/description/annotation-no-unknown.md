@@ -11,8 +11,6 @@ a { color: green !imprtant; }
 
 This rule considers annotations defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown annotation.
-
 ## Options
 
 ### `true`

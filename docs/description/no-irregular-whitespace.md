@@ -9,8 +9,6 @@ Disallow irregular whitespaces.
  * Irregular whitespace. Selector would fail to match '.firstClass' */
 ```
 
-This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
-
 ## Options
 
 ### `true`

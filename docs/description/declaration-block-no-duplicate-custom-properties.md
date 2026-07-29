@@ -11,8 +11,6 @@ a { --custom-property: pink; --custom-property: orange; }
 
 This rule is case-sensitive.
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the duplicate custom property.
-
 ## Options
 
 ### `true`
