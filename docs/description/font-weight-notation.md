@@ -19,9 +19,7 @@ a { font: italic small-caps 600 16px/3 cursive; }
 
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
-
-This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the notation type, or the actual and expected font-weight values.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
 ## Options
 

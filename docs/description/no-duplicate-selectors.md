@@ -20,18 +20,7 @@ The same selector _is_ allowed to repeat in the following circumstances:
 - The duplicates are determined to originate in different stylesheets, e.g. you have concatenated or compiled files in a way that produces sourcemaps for PostCSS to read, e.g. postcss-import.
 - The duplicates are in rules with different parent nodes, e.g. inside and outside of a media query.
 
-This rule resolves nested selectors according to the [CSS Nesting specification](https://drafts.csswg.org/css-nesting/). So the following two selectors count as a problem, because the resolved selectors end up with a duplicate:
-
-<!-- prettier-ignore -->
-```css
-:is(a, b) c {}  /* without nesting */
-a, b { & c {} } /* with nesting */
-```
-
-> [!WARNING]
-> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
-
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the duplicate selector and the line where it first appeared.
+This rule resolves nested selectors. So `a b {} a { & b {} }` counts as a problem, because the resolved selectors end up with a duplicate.
 
 ## Options
 
@@ -154,32 +143,4 @@ input, textarea {
 textarea {
   border: 1px;
 }
-```
-
-### `ignoreSelectors`
-
-```json
-{ "ignoreSelectors": ["array", "of", "selectors", "/regex/"] }
-```
-
-Given:
-
-```json
-{
-  "no-duplicate-selectors": [true, { "ignoreSelectors": ["a", "/foo/"] }]
-}
-```
-
-The following patterns are _not_ considered problems:
-
-<!-- prettier-ignore -->
-```css
-a {}
-a {}
-```
-
-<!-- prettier-ignore -->
-```css
-.foo {}
-.foo {}
 ```

@@ -9,8 +9,6 @@ Specify a pattern for ID selectors.
  * These ID selectors */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the selector and the configured pattern.
-
 ## Options
 
 ### `string`

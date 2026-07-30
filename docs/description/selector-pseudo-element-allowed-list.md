@@ -14,14 +14,12 @@ This rule ignores:
 - CSS2 pseudo-elements i.e. those prefixed with a single colon
 - selectors that use variable interpolation e.g. `::#{$variable} {}`
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed pseudo-element.
-
 ## Options
 
 ### `Array<string>`
 
 ```json
-["array", "of", "pseudo-elements", "/regex/"]
+["array", "of", "unprefixed", "pseudo-elements", "/regex/"]
 ```
 
 Given:

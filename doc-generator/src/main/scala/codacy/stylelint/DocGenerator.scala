@@ -90,7 +90,10 @@ object DocGenerator {
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String, url: String): Int = {
     Process(Seq("git", "clone", url, tmpDirectory.pathAsString)).!
-    Process(Seq("git", "reset", "--hard", version), tmpDirectory.toJava).!
+    val exitCode = Process(Seq("git", "reset", "--hard", version), tmpDirectory.toJava).!
+    // some plugin repos (e.g. stylelint-scss since 4.0.0) tag releases with a "v" prefix
+    if (exitCode != 0) Process(Seq("git", "reset", "--hard", s"v$version"), tmpDirectory.toJava).!
+    else exitCode
   }
 
   def getListOfSubDirectories(directoryName: String): List[String] = {

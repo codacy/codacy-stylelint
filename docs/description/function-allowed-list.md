@@ -9,21 +9,19 @@ a { transform: scale(1); }
  * This function */
 ```
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed function.
-
 ## Options
 
 ### `Array<string>`
 
 ```json
-["array", "of", "functions", "/regex/"]
+["array", "of", "unprefixed", "functions", "/regex/"]
 ```
 
 Given:
 
 ```json
 {
-  "function-allowed-list": ["scale", "rgba", "/^(-moz-)?linear-gradient$/"]
+  "function-allowed-list": ["scale", "rgba", "/linear-gradient/"]
 }
 ```
 
@@ -84,7 +82,13 @@ a {
 
 ```json
 {
-  "exceptWithoutPropertyFallback": ["array", "of", "functions", "/regex/"]
+  "exceptWithoutPropertyFallback": [
+    "array",
+    "of",
+    "unprefixed",
+    "functions",
+    "/regex/"
+  ]
 }
 ```
 

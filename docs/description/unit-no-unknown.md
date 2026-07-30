@@ -11,18 +11,15 @@ a { width: 100pixels; }
 
 This rule considers units defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
 
-You can use the [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property to extend the known units.
+This rule overlaps with:
 
-> [!NOTE]
-> We recommend only using this rule for CSS-like languages, such as SCSS and Less. For CSS, we recommend using these more capable and overlapping rules instead:
->
-> - [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
-> - [`at-rule-prelude-no-invalid`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-prelude-no-invalid/README.md)
-> - [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/declaration-property-value-no-unknown/README.md)
-> - [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/media-feature-name-value-no-unknown/README.md)
-> - [`media-query-no-invalid`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/media-query-no-invalid/README.md)
+- [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/at-rule-descriptor-value-no-unknown/README.md)
+- [`at-rule-prelude-no-invalid`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/at-rule-prelude-no-invalid/README.md)
+- [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/declaration-property-value-no-unknown/README.md)
+- [`media-feature-name-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/media-feature-name-value-no-unknown/README.md)
+- [`media-query-no-invalid`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/media-query-no-invalid/README.md)
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown unit.
+We recommend using these rules for CSS and this rule for CSS-like languages, such as SCSS and Less.
 
 ## Options
 

@@ -9,27 +9,23 @@ a { top: unknown; }
  * property and value pairs like these */
 ```
 
-This rule considers values for properties defined in the CSS Specifications, up to and including Editor's Drafts, to be known.
+This rule considers values for properties defined within the CSS specifications to be known. You can use the `propertiesSyntax` and `typesSyntax` secondary options to extend the syntax.
 
-This rule checks the values of custom properties defined using `@property` within the same source or within the files specified in the [`referenceFiles`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#referencefiles) configuration property.
+You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what value syntax is known for a property.
 
-You can filter the [CSSTree Syntax Reference](https://csstree.github.io/docs/syntax/) to find out what value syntax is known for a property, and use the [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property to extend it.
+This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-This rule checks property values. You can use [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/at-rule-descriptor-value-no-unknown/README.md) to disallow unknown values for descriptors within at-rules.
+This rule checks property values. You can use [`at-rule-descriptor-value-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/at-rule-descriptor-value-no-unknown/README.md) to disallow unknown values for descriptors within at-rules.
 
-> [!WARNING]
-> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
+This rule overlaps with:
 
-> [!NOTE]
-> When using this rule, we recommend turning off these overlapping rules or configuring them to ignore the overlaps:
->
-> - [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/color-no-invalid-hex/README.md)
-> - [`function-linear-gradient-no-nonstandard-direction`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/function-linear-gradient-no-nonstandard-direction/README.md)
-> - [`function-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/function-no-unknown/README.md)
-> - [`string-no-newline`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/string-no-newline/README.md)
-> - [`unit-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/unit-no-unknown/README.md)
+- [`color-no-invalid-hex`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/color-no-invalid-hex/README.md)
+- [`function-linear-gradient-no-nonstandard-direction`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/function-linear-gradient-no-nonstandard-direction/README.md)
+- [`function-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/function-no-unknown/README.md)
+- [`string-no-newline`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/string-no-newline/README.md)
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/unit-no-unknown/README.md)
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the property name and the unknown value.
+You can either turn off the rules or configure them to ignore the overlaps.
 
 Prior art:
 
@@ -125,27 +121,6 @@ a { width: --unknown-value; }
 
 ### `propertiesSyntax`
 
-> [!WARNING]
-> We've **deprecated** this option and will remove it in the next major release. Use the shared and more performant [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property instead.
->
-> For example:
->
-> ```diff json
-> {
-> + "languageOptions": {
-> +   "syntax": {
-> +     "properties": { "size": "<length-percentage>" }
-> +   }
-> + },
->   "rules": {
->     "declaration-property-value-no-unknown": [
->       true,
-> -     { "propertiesSyntax": { "size": "<length-percentage>" } }
->     ]
->   }
-> }
-> ```
-
 ```json
 { "propertiesSyntax": { "property": "syntax" } }
 ```
@@ -176,31 +151,6 @@ a { size: 10px }
 ```
 
 ### `typesSyntax`
-
-> [!WARNING]
-> We've **deprecated** this option and will remove it in the next major release. Use the shared and more performant [`languageOptions`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#languageoptions) configuration property instead.
->
-> For example:
->
-> ```diff json
-> {
-> + "languageOptions": {
-> +   "syntax": {
-> +     "properties": { "top": "| <--foo()>" },
-> +     "types": { "--foo()": "--foo( <length-percentage> )" }
-> +   }
-> + },
->   "rules": {
->     "declaration-property-value-no-unknown": [
->       true,
-> -     {
-> -       "propertiesSyntax": { "top": "| <--foo()>" },
-> -       "typesSyntax": { "--foo()": "--foo( <length-percentage> )" }
-> -     }
->     ]
->   }
-> }
-> ```
 
 ```json
 { "typesSyntax": { "type": "syntax" } }

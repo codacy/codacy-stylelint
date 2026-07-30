@@ -9,8 +9,6 @@ Specify a list of disallowed properties for selectors within rules.
  * Selector and property name */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the selector and the disallowed property.
-
 ## Options
 
 ### `Object<string, Array<string>>`

@@ -11,9 +11,7 @@ a { display: -webkit-flex; }
 
 This rule does not fix vendor-prefixed values that weren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer) version 10.2.5. Exceptions may be added on a case by case basis.
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate values produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
-
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the vendor-prefixed value.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate values produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
 
 ## Options
 
@@ -73,7 +71,7 @@ Given:
 {
   "value-no-vendor-prefix": [
     true,
-    { "ignoreValues": ["-webkit-grab", "/^-moz-all$/"] }
+    { "ignoreValues": ["grab", "max-content", "/^-moz-all$/"] }
   ]
 }
 ```
@@ -87,5 +85,15 @@ a { cursor: -webkit-grab; }
 
 <!-- prettier-ignore -->
 ```css
+a { max-width: -moz-max-content; }
+```
+
+<!-- prettier-ignore -->
+```css
 a { -moz-user-select: -moz-all; }
 ```
+
+> [!WARNING]
+> An _exact_ match comparison will be performed for non-regex strings in the next major version.
+> If you want to keep the legacy behavior, please consider using a regex instead.
+> E.g. `[/^(-webkit-|-moz-)?max-content$/]`.

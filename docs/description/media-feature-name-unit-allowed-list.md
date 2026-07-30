@@ -9,8 +9,6 @@ Specify a list of allowed name and unit pairs within media features.
  * This media feature name and these units */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed unit and the media feature name.
-
 ## Options
 
 ### `Array<string>`

@@ -90,9 +90,7 @@ This rule complains when the following shorthand properties can be used:
 
 Flexbox-related properties can be ignored using `ignoreShorthands: ["/flex/"]` (see below).
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
-
-This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the shorthand property, or the redundant longhand property and its shorthand.
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix most of the problems reported by this rule.
 
 ## Options
 
@@ -139,14 +137,6 @@ a {
 }
 ```
 
-<!-- prettier-ignore -->
-```css
-a {
-  margin: 1px;
-  margin-left: 1px;
-}
-```
-
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
@@ -184,14 +174,6 @@ a {
   margin-top: 1px;
   margin-right: 2px;
   margin-bottom: 3px;
-}
-```
-
-<!-- prettier-ignore -->
-```css
-a {
-  margin: 1px;
-  margin-left: 2px;
 }
 ```
 

@@ -11,8 +11,6 @@ a { color: black }
 
 This rule ignores `$sass` and `@less` variable syntaxes.
 
-This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed named color, or a color and its named equivalent.
-
 ## Options
 
 ### `"always-where-possible"`

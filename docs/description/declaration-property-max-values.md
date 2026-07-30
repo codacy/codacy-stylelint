@@ -2,14 +2,12 @@
 
 Limit the number of values for a list of properties within declarations.
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the property name and the configured maximum.
-
 ## Options
 
 ### `Object<string, number>`
 
 ```json
-{ "property-name": 0 }
+{ "unprefixed-property-name": 0 }
 ```
 
 Specify pairs of a property and a max value. In practice, you should specify any positive integers as max values.
@@ -22,8 +20,7 @@ Given:
 {
   "declaration-property-max-values": {
     "border": 2,
-    "/^margin/": 1,
-    "/(-webkit-)?transform$/": 1
+    "/^margin/": 1
   }
 }
 ```
@@ -45,11 +42,6 @@ a { margin: 1px 2px; }
 a { margin-inline: 1px 2px; }
 ```
 
-<!-- prettier-ignore -->
-```css
-a { -webkit-transform: scale(1) rotate(30deg); }
-```
-
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
@@ -65,9 +57,4 @@ a { margin: 1px; }
 <!-- prettier-ignore -->
 ```css
 a { margin-inline: 1px; }
-```
-
-<!-- prettier-ignore -->
-```css
-a { -webkit-transform: scale(1); }
 ```

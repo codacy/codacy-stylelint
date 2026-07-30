@@ -11,14 +11,12 @@ Specify a list of allowed pseudo-class selectors.
 
 This rule ignores selectors that use variable interpolation e.g. `:#{$variable} {}`.
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed pseudo-class.
-
 ## Options
 
 ### `Array<string>`
 
 ```json
-["array", "of", "pseudo-classes", "/regex/"]
+["array", "of", "unprefixed", "pseudo-classes", "/regex/"]
 ```
 
 Given:

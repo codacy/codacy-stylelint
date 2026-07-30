@@ -10,8 +10,6 @@ Disallow duplicate `@import` rules.
  * These are duplicates */
 ```
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the duplicate URL.
-
 ## Options
 
 ### `true`

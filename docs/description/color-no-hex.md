@@ -9,8 +9,6 @@ a { color: #333 }
  * This hex color */
 ```
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed hex color.
-
 ## Options
 
 ### `true`

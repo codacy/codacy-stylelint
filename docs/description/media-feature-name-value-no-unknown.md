@@ -11,17 +11,13 @@ Disallow unknown values for media features.
 
 This rule considers values for media features defined within the CSS specifications to be known.
 
-> [!WARNING]
-> This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
+This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-> [!NOTE]
-> When using this rule, we recommend turning off these overlapping rules or configuring them to ignore the overlaps:
->
-> - [`unit-no-unknown`](https://github.com/stylelint/stylelint/17.13.0/lib/rules/unit-no-unknown/README.md)
+It sometimes overlaps with:
+
+- [`unit-no-unknown`](https://github.com/stylelint/stylelint/16.26.1/lib/rules/unit-no-unknown/README.md)
 
 If duplicate problems are flagged, you can turn off the corresponding rule.
-
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the media feature name and the unknown value.
 
 ## Options
 
@@ -60,45 +56,4 @@ The following patterns are _not_ considered problems:
 <!-- prettier-ignore -->
 ```css
 @media (width: 10px) { top: 1px; }
-```
-
-## Optional secondary options
-
-### `ignoreMediaFeatureNameValues`
-
-```json
-{
-  "ignoreMediaFeatureNameValues": {
-    "media-feature-name": ["array", "of", "values", "/regex/"]
-  }
-}
-```
-
-Ignore the specified media feature name and value pairs. You can specify a regex for a media feature name, such as `{ "/^color/": [] }`.
-
-Given:
-
-```json
-{
-  "media-feature-name-value-no-unknown": [
-    true,
-    {
-      "ignoreMediaFeatureNameValues": {
-        "/^color/": ["--foo", "/^--bar/"]
-      }
-    }
-  ]
-}
-```
-
-The following patterns are _not_ considered problems:
-
-<!-- prettier-ignore -->
-```css
-@media (color: --foo) {}
-```
-
-<!-- prettier-ignore -->
-```css
-@media (color-gamut: --bar-baz) {}
 ```

@@ -11,9 +11,7 @@ Disallow vendor prefixes for media feature names.
 
 This rule ignores non-standard vendor-prefixed media feature names that aren't handled by [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate media feature names produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
-
-This rule doesn't have any [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message).
+The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule. However, it will not remove duplicate media feature names produced when the prefixes are removed. You can use [Autoprefixer](https://github.com/postcss/autoprefixer) itself, with the [`add` option off and the `remove` option on](https://github.com/postcss/autoprefixer#options), in these situations.
 
 ## Options
 
@@ -52,35 +50,4 @@ The following patterns are _not_ considered problems:
 <!-- prettier-ignore -->
 ```css
 @media (max-resolution: 900dpi) {}
-```
-
-## Optional secondary options
-
-### `ignoreMediaFeatureNames`
-
-```json
-{ "ignoreMediaFeatureNames": ["array", "of", "feature", "names", "/regex/"] }
-```
-
-Given:
-
-```json
-{
-  "media-feature-name-no-vendor-prefix": [
-    true,
-    { "ignoreProperties": ["-webkit-min-device-pixel-ratio", "/^-o/"] }
-  ]
-}
-```
-
-The following patterns are _not_ considered problems:
-
-<!-- prettier-ignore -->
-```css
-@media (-webkit-min-device-pixel-ratio: 1) {}
-```
-
-<!-- prettier-ignore -->
-```css
-@media (-o-device-pixel-ratio > 1) {}
 ```

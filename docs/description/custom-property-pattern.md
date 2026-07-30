@@ -9,8 +9,6 @@ a { --foo-: 1px; }
  * The pattern of this */
 ```
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the custom property name and the configured pattern.
-
 ## Options
 
 ### `string`

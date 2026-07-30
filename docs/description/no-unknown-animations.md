@@ -13,9 +13,7 @@ a { animation: fancy-slide 2s linear; }
  *           And this one */
 ```
 
-This rule considers the identifiers of `@keyframes` rules defined within the same source or within the files specified in the [`referenceFiles`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#referencefiles) configuration property to be known.
-
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the unknown animation name.
+This rule considers the identifiers of `@keyframes` rules defined within the same source to be known.
 
 ## Options
 
