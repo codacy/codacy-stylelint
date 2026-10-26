@@ -66,4 +66,4 @@ a {
 
 ## Caveats
 
-If you use autofix, this rule could clash with [`at-mixin-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/7.2.0/src/rules/at-mixin-parentheses-space-before/README.md) rule.
+If you use autofix, this rule could clash with [`at-mixin-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/7.3.0/src/rules/at-mixin-parentheses-space-before/README.md) rule.
