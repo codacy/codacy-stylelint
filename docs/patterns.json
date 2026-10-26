@@ -1619,16 +1619,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "scss_function-disallowed-list",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-disallowed-list",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : true
-  }, {
     "patternId" : "scss_function-no-unknown",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -1818,18 +1808,6 @@
     } ],
     "languages" : [ ],
     "enabled" : false
-  }, {
-    "patternId" : "scss_selector-class-pattern",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-class-pattern",
-      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
-        "message" : "(selector) => `Expected class selector \"${selector}\" to be kebab-case`"
-      } ]
-    } ],
-    "languages" : [ ],
-    "enabled" : true
   }, {
     "patternId" : "scss_selector-nest-combinators",
     "level" : "Info",

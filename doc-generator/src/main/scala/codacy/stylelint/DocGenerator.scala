@@ -31,7 +31,10 @@ object DocGenerator {
       val tmpDirectory = File.newTemporaryDirectory()
       cloneFromGitToTmpDir(tmpDirectory, version, plugin.url)
       val rulesdir = tmpDirectory + "/" + plugin.relativeRulesDir
-      val patterns = getListOfSubDirectories(rulesdir)
+      val patterns = getListOfSubDirectories(rulesdir).filterNot { pattern =>
+        val patternId = if (plugin.prefix.nonEmpty) s"${plugin.prefix}_$pattern" else pattern
+        CodacyValues.blacklistedPatterns.contains(patternId)
+      }
       val tempPlugin =
         Plugin(
           plugin.pluginName,
@@ -179,6 +182,8 @@ object DocGenerator {
   def copyDescriptionFiles(plugins: List[Plugin]): Unit = {
     val descriptionDir = File("docs/description/")
     descriptionDir.createDirectories()
+    // blacklisted patterns are never written, so drop any description left over from previous runs
+    CodacyValues.blacklistedPatterns.foreach(patternId => File(s"$descriptionDir/$patternId.md").delete(swallowIOExceptions = true))
     plugins.map { plugin =>
       plugin.patterns.foreach { patternName =>
         val documentationFile = File(s"${plugin.tempDirectory}/${plugin.relativeRulesDir}/$patternName/README.md")

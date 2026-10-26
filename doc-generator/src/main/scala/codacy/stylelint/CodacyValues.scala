@@ -2,6 +2,9 @@ package codacy.stylelint
 
 object CodacyValues {
 
+  // pattern ids (with plugin prefix) that are never exposed in the docs
+  val blacklistedPatterns = Set("scss_selector-class-pattern","scss_function-disallowed-list")
+
   val patternsEnabled = Set(
     "alpha-value-notation",
     "at-rule-allowed-list",

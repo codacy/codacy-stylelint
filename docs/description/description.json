@@ -1378,13 +1378,6 @@
     "description" : "no-obsolete-element"
   } ]
 }, {
-  "patternId" : "scss_selector-class-pattern",
-  "title" : "Specify a pattern for class selectors.",
-  "parameters" : [ {
-    "name" : "selector-class-pattern",
-    "description" : "selector-class-pattern"
-  } ]
-}, {
   "patternId" : "scss_at-mixin-parentheses-space-before",
   "title" : "Require or disallow a space before `@mixin` parentheses.",
   "parameters" : [ {
@@ -1481,13 +1474,6 @@
   "parameters" : [ {
     "name" : "dollar-variable-colon-space-before",
     "description" : "dollar-variable-colon-space-before"
-  } ]
-}, {
-  "patternId" : "scss_function-disallowed-list",
-  "title" : "Specify a list of disallowed functions.",
-  "parameters" : [ {
-    "name" : "function-disallowed-list",
-    "description" : "function-disallowed-list"
   } ]
 }, {
   "patternId" : "scss_at-rule-no-unknown",
