@@ -20,7 +20,7 @@
     "postcss-styled-syntax": "^0.7.2",
     "postcss-syntax": "^0.36.2",
     "prettier": "^3.9.6",
-    "stylelint": "^16.26.1",
+    "stylelint": "^17.16.0",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-css-modules": "^4.6.0",
     "stylelint-config-sass-guidelines": "^13.0.0",

@@ -183,7 +183,8 @@ object DocGenerator {
     val descriptionDir = File("docs/description/")
     descriptionDir.createDirectories()
     // blacklisted patterns are never written, so drop any description left over from previous runs
-    CodacyValues.blacklistedPatterns.foreach(patternId => File(s"$descriptionDir/$patternId.md").delete(swallowIOExceptions = true))
+    CodacyValues.blacklistedPatterns.foreach(patternId =>
+      File(s"$descriptionDir/$patternId.md").delete(swallowIOExceptions = true))
     plugins.map { plugin =>
       plugin.patterns.foreach { patternName =>
         val documentationFile = File(s"${plugin.tempDirectory}/${plugin.relativeRulesDir}/$patternName/README.md")
