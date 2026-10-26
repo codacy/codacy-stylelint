@@ -9,6 +9,8 @@ a { color: #333 }
  * This hex color */
 ```
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the disallowed hex color.
+
 ## Options
 
 ### `true`
@@ -63,4 +65,34 @@ a { color: rgb(0, 0, 0); }
 <!-- prettier-ignore -->
 ```css
 a { color: rgba(0, 0, 0, 1); }
+```
+
+## Optional secondary options
+
+### `ignoreFunctions`
+
+```json
+{ "ignoreFunctions": ["array", "of", "functions", "/regex/"] }
+```
+
+Ignore hex colors within the specified functions.
+
+Given:
+
+```json
+{
+  "color-no-hex": [true, { "ignoreFunctions": ["var", "/^--/"] }]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: var(--foo, #fff); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: --foo(#fff); }
 ```

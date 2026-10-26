@@ -17,7 +17,9 @@ This rule flags properties that were removed or deprecated after being in the CS
 - polyfilled with some adoption before any browser actually shipped
 - had an MDN page at one point in time
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
+
+This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the deprecated property, or the property and its replacement.
 
 Prior art:
 

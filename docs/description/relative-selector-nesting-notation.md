@@ -11,9 +11,9 @@ a { & > b {} }
 
 When a relative selector starts with a combinator (like ` `, `>`, `+`, `~`), you can either use an explicit nesting selector (`&`) or rely on implicit nesting behavior. Implicit notation is more concise, but explicit notation can be more readable.
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
-This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the configured notation.
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the configured notation.
 
 ## Options
 

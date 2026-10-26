@@ -17,9 +17,9 @@ This rule flags selectors that were removed or deprecated after being in the CSS
 - polyfilled with some adoption before any browser shipped
 - given an MDN page
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) can automatically fix some of the problems reported by this rule.
 
-This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the deprecated selector, or the selector and its replacement.
+This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the deprecated selector, or the selector and its replacement.
 
 ## Options
 
