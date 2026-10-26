@@ -7,8 +7,6 @@
     <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
     <error source="length-zero-no-unit" line="15" message="Disallowed unit (length-zero-no-unit)" severity="info" />
     <error source="length-zero-no-unit" line="15" message="Disallowed unit (length-zero-no-unit)" severity="info" />
-    <error source="length-zero-no-unit" line="15" message="Unexpected unit (length-zero-no-unit)" severity="info" />
-    <error source="length-zero-no-unit" line="15" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="15" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
     <error source="color-function-alias-notation" line="15" message="Expected &quot;rgba&quot; to be &quot;rgb&quot; (color-function-alias-notation)" severity="info" />
   </file>
@@ -19,8 +17,6 @@
     <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
     <error source="length-zero-no-unit" line="14" message="Disallowed unit (length-zero-no-unit)" severity="info" />
     <error source="length-zero-no-unit" line="14" message="Disallowed unit (length-zero-no-unit)" severity="info" />
-    <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
-    <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="14" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
     <error source="color-function-alias-notation" line="14" message="Expected &quot;rgba&quot; to be &quot;rgb&quot; (color-function-alias-notation)" severity="info" />
   </file>
@@ -29,8 +25,8 @@
     <error source="color-function-notation" line="14" message="Expected modern color-function notation (color-function-notation)" severity="info" />
     <error source="@stylistic/color-hex-case" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaaaaa&quot; (@stylistic/color-hex-case)" severity="info" />
     <error source="color-hex-length" line="2" message="Expected &quot;#aaaAaa&quot; to be &quot;#aaa&quot; (color-hex-length)" severity="info" />
-    <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
-    <error source="length-zero-no-unit" line="14" message="Unexpected unit (length-zero-no-unit)" severity="info" />
+    <error source="length-zero-no-unit" line="14" message="Disallowed unit (length-zero-no-unit)" severity="info" />
+    <error source="length-zero-no-unit" line="14" message="Disallowed unit (length-zero-no-unit)" severity="info" />
     <error source="@stylistic/number-leading-zero" line="14" message="Unexpected leading zero (@stylistic/number-leading-zero)" severity="info" />
     <error source="color-function-alias-notation" line="14" message="Expected &quot;rgba&quot; to be &quot;rgb&quot; (color-function-alias-notation)" severity="info" />
   </file>
