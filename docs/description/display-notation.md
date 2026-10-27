@@ -26,9 +26,9 @@ The short notation omits defaults or switches to precomposed values, and doesn't
 
 This rule ignores `$sass`, `@less`, and `var(--custom-property)` variable syntaxes.
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) can automatically fix all of the problems reported by this rule.
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the display value and its expected notation.
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the display value and its expected notation.
 
 ## Options
 

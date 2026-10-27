@@ -11,6 +11,8 @@ a { color: black }
 
 This rule ignores `$sass` and `@less` variable syntaxes.
 
+This rule supports up to 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the disallowed named color, or a color and its named equivalent.
+
 ## Options
 
 ### `"always-where-possible"`
@@ -162,6 +164,34 @@ a {
 a {
   background-image: url(red);
 }
+```
+
+### `ignoreFunctions`
+
+```json
+{ "ignoreFunctions": ["array", "of", "functions", "/regex/"] }
+```
+
+Ignore named colors within the specified functions.
+
+Given:
+
+```json
+{
+  "color-named": ["never", { "ignoreFunctions": ["var", "/^--/"] }]
+}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+a { color: var(--foo, red); }
+```
+
+<!-- prettier-ignore -->
+```css
+a { color: --foo(red); }
 ```
 
 ### `ignoreProperties`

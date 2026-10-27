@@ -9,6 +9,8 @@ a { color: red; }
  * This rule */
 ```
 
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message) per configured at-rule pattern.
+
 ## Options
 
 ### `Array<string | RegExp>`

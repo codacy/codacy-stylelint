@@ -28,7 +28,9 @@ a:not(.foo, .bar) {}
 a:not(.foo):not(.bar) {}
 ```
 
-The [`fix` option](https://github.com/stylelint/stylelint/16.26.1/docs/user-guide/options.md#fix) option can automatically fix most of the problems reported by this rule.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) option can automatically fix most of the problems reported by this rule.
+
+This rule supports 1 [message argument](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the configured notation.
 
 ## Options
 

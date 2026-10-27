@@ -1,6 +1,6 @@
 {
   "name" : "stylelint",
-  "version" : "16.26.1",
+  "version" : "17.16.0",
   "patterns" : [ {
     "patternId" : "alpha-value-notation",
     "level" : "Info",
@@ -477,6 +477,16 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-no-unknown",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "display-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "display-notation",
       "default" : null
     } ],
     "languages" : [ ],
@@ -1086,6 +1096,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "property-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "property-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "property-no-deprecated",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -1115,6 +1135,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "relative-selector-nesting-notation",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "relative-selector-nesting-notation",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "rule-empty-line-before",
     "level" : "Info",
@@ -1619,16 +1649,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "scss_function-disallowed-list",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "function-disallowed-list",
-      "default" : null
-    } ],
-    "languages" : [ ],
-    "enabled" : true
-  }, {
     "patternId" : "scss_function-no-unknown",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -1818,18 +1838,6 @@
     } ],
     "languages" : [ ],
     "enabled" : false
-  }, {
-    "patternId" : "scss_selector-class-pattern",
-    "level" : "Info",
-    "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-class-pattern",
-      "default" : [ "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$", {
-        "message" : "(selector) => `Expected class selector \"${selector}\" to be kebab-case`"
-      } ]
-    } ],
-    "languages" : [ ],
-    "enabled" : true
   }, {
     "patternId" : "scss_selector-nest-combinators",
     "level" : "Info",
@@ -2065,6 +2073,26 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "selector-no-deprecated",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-deprecated",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "selector-no-invalid",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-invalid",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "selector-no-qualifying-type",
     "level" : "Info",
     "category" : "CodeStyle",
@@ -2074,6 +2102,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "selector-no-unmatchable",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "selector-no-unmatchable",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "selector-no-vendor-prefix",
     "level" : "Info",
@@ -2257,6 +2295,16 @@
     "languages" : [ ],
     "enabled" : true
   }, {
+    "patternId" : "unit-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "unit-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "unit-no-unknown",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2276,6 +2324,16 @@
     } ],
     "languages" : [ ],
     "enabled" : true
+  }, {
+    "patternId" : "value-keyword-layout-mappings",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "parameters" : [ {
+      "name" : "value-keyword-layout-mappings",
+      "default" : null
+    } ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "value-no-vendor-prefix",
     "level" : "Info",

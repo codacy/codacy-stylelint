@@ -11,9 +11,9 @@ a { margin-left: 0; }
 
 Physical layout properties like `margin-left` are tied to the physical dimensions of the screen. Flow-relative properties like `margin-inline-start` adapt to different writing modes and text directions, making them useful for internationalization. They are also consistent with other layout concepts like flexbox and grid, which already use flow-relative logic.
 
-The [`fix` option](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/options.md#fix) can automatically fix problems reported by this rule when both the primary option is `"flow-relative"` and the [`languageOptions.directionality`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#directionality) configuration property is configured.
+The [`fix` option](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/options.md#fix) can automatically fix problems reported by this rule when both the primary option is `"flow-relative"` and the [`languageOptions.directionality`](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#directionality) configuration property is configured.
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the disallowed mapping and the property, or the physical property and its flow-relative equivalent.
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the disallowed mapping and the property, or the physical property and its flow-relative equivalent.
 
 Prior art:
 
@@ -28,7 +28,7 @@ Prior art:
 Layout mappings for properties _must always_ be flow-relative.
 
 > [!NOTE]
-> If you want this rule to automatically fix problems, you must configure the [`languageOptions.directionality`](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#directionality) configuration property.
+> If you want this rule to automatically fix problems, you must configure the [`languageOptions.directionality`](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#directionality) configuration property.
 >
 > For example, for Latin-based languages such as English:
 >

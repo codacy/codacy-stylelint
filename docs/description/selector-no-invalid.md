@@ -14,7 +14,7 @@ This rule considers selectors defined within the CSS specifications, up to and i
 > [!WARNING]
 > This rule is only appropriate for CSS. You should not turn it on for CSS-like languages, such as SCSS or Less.
 
-This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.13.0/docs/user-guide/configure.md#message): the selector and the reason it is invalid.
+This rule supports 2 [message arguments](https://github.com/stylelint/stylelint/17.16.0/docs/user-guide/configure.md#message): the selector and the reason it is invalid.
 
 ## Options
 
@@ -48,6 +48,26 @@ a ) b {}
 :dir(foo) {}
 ```
 
+<!-- prettier-ignore -->
+```css
+:not(::before) {}
+```
+
+<!-- prettier-ignore -->
+```css
+::slotted(a .foo) {}
+```
+
+<!-- prettier-ignore -->
+```css
+a::after .foo {}
+```
+
+<!-- prettier-ignore -->
+```css
+::after::before {}
+```
+
 The following patterns are _not_ considered problems:
 
 <!-- prettier-ignore -->
@@ -68,4 +88,14 @@ a b {}
 <!-- prettier-ignore -->
 ```css
 :dir(ltr) {}
+```
+
+<!-- prettier-ignore -->
+```css
+:host(.foo) {}
+```
+
+<!-- prettier-ignore -->
+```css
+::before::marker {}
 ```
