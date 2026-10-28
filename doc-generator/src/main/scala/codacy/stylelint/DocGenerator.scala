@@ -88,7 +88,7 @@ object DocGenerator {
         null,
         null,
         null,
-        ""))
+        "a11y"))
   }
 
   def cloneFromGitToTmpDir(tmpDirectory: better.files.File, version: String, url: String): Int = {
