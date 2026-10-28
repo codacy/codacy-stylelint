@@ -1,0 +1,13 @@
+$primary: #3366ff;
+
+.button {
+  color: darken($primary, 10%);
+  background-color: lighten($primary, 20%);
+  border-color: saturate($primary, 15%);
+}
+
+.button--ghost {
+  background-color: transparentize($primary, 0.5);
+  // Preferred: no issue reported
+  color: scale-color($primary, $lightness: -10%);
+}
