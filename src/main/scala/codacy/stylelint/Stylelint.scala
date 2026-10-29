@@ -22,6 +22,28 @@ object Stylelint extends Tool {
     ".stylelintrc.js",
     "stylelint.config.js")
 
+  // Plugin patterns are documented as "<prefix>_<rule>" but stylelint expects "<prefix>/<rule>"
+  // (see doc-generator DocGenerator.listOfPlugins)
+  private case class PluginRules(prefix: String, packageName: String, overrides: Option[JsObject])
+
+  private lazy val pluginRules = List(
+    PluginRules(
+      "scss",
+      "stylelint-scss",
+      Some(Json.obj("files" -> Json.arr("**/*.scss"), "customSyntax" -> "postcss-scss"))))
+
+  private def pluginForPatternId(patternId: String): Option[PluginRules] =
+    pluginRules.find(plugin => patternId.startsWith(s"${plugin.prefix}_"))
+
+  def toRuleName(patternId: String): String =
+    pluginForPatternId(patternId).fold(patternId)(plugin =>
+      s"${plugin.prefix}/${patternId.stripPrefix(s"${plugin.prefix}_")}")
+
+  def toPatternId(ruleName: String): String =
+    pluginRules
+      .find(plugin => ruleName.startsWith(s"${plugin.prefix}/"))
+      .fold(ruleName)(plugin => s"${plugin.prefix}_${ruleName.stripPrefix(s"${plugin.prefix}/")}")
+
   //from https://stylelint.io/user-guide/usage/cli/#exit-codes
   private object ExitCodes {
     val NO_ISSUES = 0
@@ -66,11 +88,18 @@ object Stylelint extends Tool {
           parameterValue
         }.getOrElse(JsNull)
 
-        (pattern.patternId.value, parameter)
+        (toRuleName(pattern.patternId.value), parameter)
       }
+      val usedPlugins = config.flatMap(pattern => pluginForPatternId(pattern.patternId.value)).distinct
+      val pluginsConfig =
+        if (usedPlugins.isEmpty) Seq.empty
+        else
+          Seq(
+            ("plugins", JsArray(usedPlugins.map(plugin => JsString(plugin.packageName)))),
+            ("overrides", JsArray(usedPlugins.flatMap(_.overrides))))
       File
         .newTemporaryFile("codacy-stylelint", ".json")
-        .write(Json.prettyPrint(Json.toJson(JsObject(Seq(("rules", JsObject(patterns)))))))
+        .write(Json.prettyPrint(Json.toJson(JsObject(pluginsConfig :+ (("rules", JsObject(patterns)))))))
         .path
     }.orElse {
       checkForExistingConfigFile(source)
@@ -147,7 +176,7 @@ object Stylelint extends Tool {
           Result.Issue(
             Source.File(fileResultsData.source),
             Result.Message(resultData.text),
-            Pattern.Id(resultData.rule),
+            Pattern.Id(toPatternId(resultData.rule)),
             Source.Line(resultData.line))
         }
       }

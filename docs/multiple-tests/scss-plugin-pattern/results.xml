@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="1.5">
+  <file name="test.scss">
+    <error source="scss_function-color-relative" line="4" message="Expected the scale-color function to be used (scss/function-color-relative)" severity="info" />
+    <error source="scss_function-color-relative" line="5" message="Expected the scale-color function to be used (scss/function-color-relative)" severity="info" />
+    <error source="scss_function-color-relative" line="6" message="Expected the scale-color function to be used (scss/function-color-relative)" severity="info" />
+    <error source="scss_function-color-relative" line="10" message="Expected the scale-color function to be used (scss/function-color-relative)" severity="info" />
+  </file>
+</checkstyle>

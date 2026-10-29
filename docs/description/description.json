@@ -41,6 +41,13 @@
     "description" : "at-else-empty-line-before"
   } ]
 }, {
+  "patternId" : "a11y_no-text-align-justify",
+  "title" : "Disallow `{ text-align: justify; }` anywhere.",
+  "parameters" : [ {
+    "name" : "no-text-align-justify",
+    "description" : "no-text-align-justify"
+  } ]
+}, {
   "patternId" : "scss_at-mixin-no-risky-nesting-selector",
   "title" : "Disallow risky nesting selectors within a mixin.",
   "parameters" : [ {
@@ -81,13 +88,6 @@
   "parameters" : [ {
     "name" : "layer-name-pattern",
     "description" : "layer-name-pattern"
-  } ]
-}, {
-  "patternId" : "font-size-is-readable",
-  "title" : "Disallow font sizes less than 15px (or 11.25pt).",
-  "parameters" : [ {
-    "name" : "font-size-is-readable",
-    "description" : "font-size-is-readable"
   } ]
 }, {
   "patternId" : "font-family-no-missing-generic-family-keyword",
@@ -144,6 +144,13 @@
   "parameters" : [ {
     "name" : "function-quote-no-quoted-strings-inside",
     "description" : "function-quote-no-quoted-strings-inside"
+  } ]
+}, {
+  "patternId" : "a11y_no-outline-none",
+  "title" : "Disallow outline clearing.",
+  "parameters" : [ {
+    "name" : "no-outline-none",
+    "description" : "no-outline-none"
   } ]
 }, {
   "patternId" : "scss_at-if-closing-brace-newline-after",
@@ -221,6 +228,13 @@
   "parameters" : [ {
     "name" : "import-notation",
     "description" : "import-notation"
+  } ]
+}, {
+  "patternId" : "a11y_no-spread-text",
+  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
+  "parameters" : [ {
+    "name" : "no-spread-text",
+    "description" : "no-spread-text"
   } ]
 }, {
   "patternId" : "shorthand-property-no-redundant-values",
@@ -342,13 +356,6 @@
     "description" : "selector-no-union-class-name"
   } ]
 }, {
-  "patternId" : "no-spread-text",
-  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
-  "parameters" : [ {
-    "name" : "no-spread-text",
-    "description" : "no-spread-text"
-  } ]
-}, {
   "patternId" : "declaration-property-max-values",
   "title" : "Limit the number of values for a list of properties within declarations.",
   "parameters" : [ {
@@ -368,13 +375,6 @@
   "parameters" : [ {
     "name" : "property-layout-mappings",
     "description" : "property-layout-mappings"
-  } ]
-}, {
-  "patternId" : "media-prefers-color-scheme",
-  "title" : "Require implementation of certain styles for selectors with colors.",
-  "parameters" : [ {
-    "name" : "media-prefers-color-scheme",
-    "description" : "media-prefers-color-scheme"
   } ]
 }, {
   "patternId" : "scss_at-else-if-parentheses-space-before",
@@ -412,25 +412,11 @@
     "description" : "color-hex-length"
   } ]
 }, {
-  "patternId" : "selector-pseudo-class-focus",
-  "title" : "Checks the presence of a pseudo-class for selectors with `:hover`.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-focus",
-    "description" : "selector-pseudo-class-focus"
-  } ]
-}, {
   "patternId" : "scss_at-import-partial-extension-allowed-list",
   "title" : "Specify a list of allowed file extensions for partial names in `@import` commands.",
   "parameters" : [ {
     "name" : "at-import-partial-extension-allowed-list",
     "description" : "at-import-partial-extension-allowed-list"
-  } ]
-}, {
-  "patternId" : "no-display-none",
-  "title" : "Sources that will help you do without `{ display: none; }` and hide the content:",
-  "parameters" : [ {
-    "name" : "no-display-none",
-    "description" : "no-display-none"
   } ]
 }, {
   "patternId" : "declaration-block-no-redundant-longhand-properties",
@@ -517,6 +503,13 @@
     "description" : "property-no-vendor-prefix"
   } ]
 }, {
+  "patternId" : "scss_dollar-variable-empty-line-before",
+  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
+  "parameters" : [ {
+    "name" : "dollar-variable-empty-line-before",
+    "description" : "dollar-variable-empty-line-before"
+  } ]
+}, {
   "patternId" : "scss_dimension-no-non-numeric-values",
   "title" : "Interpolating a value with a unit (e.g. `#{$value}px`) results in a\n_string_ value, not as numeric value. This value then cannot be used in\nnumerical operations.  It is better to use arithmetic to apply a unit to a\nnumber (e.g. `$value * 1px`).",
   "parameters" : [ {
@@ -524,11 +517,11 @@
     "description" : "dimension-no-non-numeric-values"
   } ]
 }, {
-  "patternId" : "scss_dollar-variable-empty-line-before",
-  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
+  "patternId" : "a11y_line-height-is-vertical-rhythmed",
+  "title" : "Disallow not vertical rhythmed line-height.",
   "parameters" : [ {
-    "name" : "dollar-variable-empty-line-before",
-    "description" : "dollar-variable-empty-line-before"
+    "name" : "line-height-is-vertical-rhythmed",
+    "description" : "line-height-is-vertical-rhythmed"
   } ]
 }, {
   "patternId" : "keyframe-declaration-no-important",
@@ -543,6 +536,13 @@
   "parameters" : [ {
     "name" : "at-mixin-named-arguments",
     "description" : "at-mixin-named-arguments"
+  } ]
+}, {
+  "patternId" : "a11y_media-prefers-color-scheme",
+  "title" : "Require implementation of certain styles for selectors with colors.",
+  "parameters" : [ {
+    "name" : "media-prefers-color-scheme",
+    "description" : "media-prefers-color-scheme"
   } ]
 }, {
   "patternId" : "property-allowed-list",
@@ -571,6 +571,13 @@
   "parameters" : [ {
     "name" : "selector-pseudo-class-no-unknown",
     "description" : "selector-pseudo-class-no-unknown"
+  } ]
+}, {
+  "patternId" : "a11y_font-size-is-readable",
+  "title" : "Disallow font sizes less than 15px (or 11.25pt).",
+  "parameters" : [ {
+    "name" : "font-size-is-readable",
+    "description" : "font-size-is-readable"
   } ]
 }, {
   "patternId" : "function-calc-no-unspaced-operator",
@@ -664,13 +671,6 @@
     "description" : "at-root-no-redundant"
   } ]
 }, {
-  "patternId" : "content-property-no-static-value",
-  "title" : "Disallow CSS generated content except aria-label attribute content and empty strings.",
-  "parameters" : [ {
-    "name" : "content-property-no-static-value",
-    "description" : "content-property-no-static-value"
-  } ]
-}, {
   "patternId" : "at-rule-empty-line-before",
   "title" : "Require or disallow an empty line before at-rules.",
   "parameters" : [ {
@@ -741,25 +741,18 @@
     "description" : "color-no-invalid-hex"
   } ]
 }, {
+  "patternId" : "a11y_no-obsolete-element",
+  "title" : "Disallow obsolete selectors using.",
+  "parameters" : [ {
+    "name" : "no-obsolete-element",
+    "description" : "no-obsolete-element"
+  } ]
+}, {
   "patternId" : "scss_at-if-closing-brace-space-after",
   "title" : "Require a single space or disallow whitespace after the closing brace of `@if` statements.",
   "parameters" : [ {
     "name" : "at-if-closing-brace-space-after",
     "description" : "at-if-closing-brace-space-after"
-  } ]
-}, {
-  "patternId" : "line-height-is-vertical-rhythmed",
-  "title" : "Disallow not vertical rhythmed line-height.",
-  "parameters" : [ {
-    "name" : "line-height-is-vertical-rhythmed",
-    "description" : "line-height-is-vertical-rhythmed"
-  } ]
-}, {
-  "patternId" : "media-prefers-reduced-motion",
-  "title" : "Require certain styles if the animation or transition in media features.",
-  "parameters" : [ {
-    "name" : "media-prefers-reduced-motion",
-    "description" : "media-prefers-reduced-motion"
   } ]
 }, {
   "patternId" : "scss_operator-no-newline-after",
@@ -781,13 +774,6 @@
   "parameters" : [ {
     "name" : "selector-type-case",
     "description" : "selector-type-case"
-  } ]
-}, {
-  "patternId" : "no-obsolete-attribute",
-  "title" : "Disallow obsolete attribute using.",
-  "parameters" : [ {
-    "name" : "no-obsolete-attribute",
-    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "scss_at-mixin-argumentless-call-parentheses",
@@ -867,11 +853,11 @@
     "description" : "function-unquote-no-unquoted-strings-inside"
   } ]
 }, {
-  "patternId" : "no-text-align-justify",
-  "title" : "Disallow `{ text-align: justify; }` anywhere.",
+  "patternId" : "a11y_no-display-none",
+  "title" : "Sources that will help you do without `{ display: none; }` and hide the content:",
   "parameters" : [ {
-    "name" : "no-text-align-justify",
-    "description" : "no-text-align-justify"
+    "name" : "no-display-none",
+    "description" : "no-display-none"
   } ]
 }, {
   "patternId" : "comment-no-empty",
@@ -914,6 +900,13 @@
   "parameters" : [ {
     "name" : "selector-no-redundant-nesting-selector",
     "description" : "selector-no-redundant-nesting-selector"
+  } ]
+}, {
+  "patternId" : "a11y_content-property-no-static-value",
+  "title" : "Disallow CSS generated content except aria-label attribute content and empty strings.",
+  "parameters" : [ {
+    "name" : "content-property-no-static-value",
+    "description" : "content-property-no-static-value"
   } ]
 }, {
   "patternId" : "scss_function-calculation-no-interpolation",
@@ -1063,6 +1056,13 @@
     "description" : "dollar-variable-empty-line-after"
   } ]
 }, {
+  "patternId" : "a11y_selector-pseudo-class-focus",
+  "title" : "Checks the presence of a pseudo-class for selectors with `:hover`.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-focus",
+    "description" : "selector-pseudo-class-focus"
+  } ]
+}, {
   "patternId" : "value-keyword-case",
   "title" : "Specify lowercase or uppercase for keywords values.",
   "parameters" : [ {
@@ -1096,6 +1096,13 @@
   "parameters" : [ {
     "name" : "no-descending-specificity",
     "description" : "no-descending-specificity"
+  } ]
+}, {
+  "patternId" : "comment-pattern",
+  "title" : "Specify a pattern for comments.",
+  "parameters" : [ {
+    "name" : "comment-pattern",
+    "description" : "comment-pattern"
   } ]
 }, {
   "patternId" : "at-rule-property-required-list",
@@ -1145,20 +1152,6 @@
   "parameters" : [ {
     "name" : "declaration-no-important",
     "description" : "declaration-no-important"
-  } ]
-}, {
-  "patternId" : "no-outline-none",
-  "title" : "Disallow outline clearing.",
-  "parameters" : [ {
-    "name" : "no-outline-none",
-    "description" : "no-outline-none"
-  } ]
-}, {
-  "patternId" : "comment-pattern",
-  "title" : "Specify a pattern for comments.",
-  "parameters" : [ {
-    "name" : "comment-pattern",
-    "description" : "comment-pattern"
   } ]
 }, {
   "patternId" : "custom-property-pattern",
@@ -1385,6 +1378,13 @@
     "description" : "declaration-property-value-allowed-list"
   } ]
 }, {
+  "patternId" : "selector-pseudo-class-allowed-list",
+  "title" : "Specify a list of allowed pseudo-class selectors.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-allowed-list",
+    "description" : "selector-pseudo-class-allowed-list"
+  } ]
+}, {
   "patternId" : "scss_dollar-variable-colon-space-after",
   "title" : "Require or disallow whitespace after the colon in `$`-variable declarations.",
   "parameters" : [ {
@@ -1411,20 +1411,6 @@
   "parameters" : [ {
     "name" : "keyframe-block-no-duplicate-selectors",
     "description" : "keyframe-block-no-duplicate-selectors"
-  } ]
-}, {
-  "patternId" : "selector-pseudo-class-allowed-list",
-  "title" : "Specify a list of allowed pseudo-class selectors.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-allowed-list",
-    "description" : "selector-pseudo-class-allowed-list"
-  } ]
-}, {
-  "patternId" : "no-obsolete-element",
-  "title" : "Disallow obsolete selectors using.",
-  "parameters" : [ {
-    "name" : "no-obsolete-element",
-    "description" : "no-obsolete-element"
   } ]
 }, {
   "patternId" : "display-notation",
@@ -1502,6 +1488,13 @@
   "parameters" : [ {
     "name" : "annotation-no-unknown",
     "description" : "annotation-no-unknown"
+  } ]
+}, {
+  "patternId" : "a11y_no-obsolete-attribute",
+  "title" : "Disallow obsolete attribute using.",
+  "parameters" : [ {
+    "name" : "no-obsolete-attribute",
+    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "scss_comment-no-empty",
@@ -1586,6 +1579,13 @@
   "parameters" : [ {
     "name" : "function-allowed-list",
     "description" : "function-allowed-list"
+  } ]
+}, {
+  "patternId" : "a11y_media-prefers-reduced-motion",
+  "title" : "Require certain styles if the animation or transition in media features.",
+  "parameters" : [ {
+    "name" : "media-prefers-reduced-motion",
+    "description" : "media-prefers-reduced-motion"
   } ]
 }, {
   "patternId" : "declaration-property-unit-disallowed-list",
