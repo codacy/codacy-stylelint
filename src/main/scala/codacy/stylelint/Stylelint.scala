@@ -30,7 +30,8 @@ object Stylelint extends Tool {
     PluginRules(
       "scss",
       "stylelint-scss",
-      Some(Json.obj("files" -> Json.arr("**/*.scss"), "customSyntax" -> "postcss-scss"))))
+      Some(Json.obj("files" -> Json.arr("**/*.scss"), "customSyntax" -> "postcss-scss"))),
+    PluginRules("a11y", "@double-great/stylelint-a11y", None))
 
   private def pluginForPatternId(patternId: String): Option[PluginRules] =
     pluginRules.find(plugin => patternId.startsWith(s"${plugin.prefix}_"))

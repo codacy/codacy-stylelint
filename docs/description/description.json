@@ -6,6 +6,13 @@
     "description" : "property-no-unknown"
   } ]
 }, {
+  "patternId" : "a11y_content-property-no-static-value",
+  "title" : "Disallow static text in the `content` property.",
+  "parameters" : [ {
+    "name" : "content-property-no-static-value",
+    "description" : "content-property-no-static-value"
+  } ]
+}, {
   "patternId" : "no-invalid-position-declaration",
   "title" : "Disallow invalid position declarations.",
   "parameters" : [ {
@@ -39,13 +46,6 @@
   "parameters" : [ {
     "name" : "at-else-empty-line-before",
     "description" : "at-else-empty-line-before"
-  } ]
-}, {
-  "patternId" : "a11y_no-text-align-justify",
-  "title" : "Disallow `{ text-align: justify; }` anywhere.",
-  "parameters" : [ {
-    "name" : "no-text-align-justify",
-    "description" : "no-text-align-justify"
   } ]
 }, {
   "patternId" : "scss_at-mixin-no-risky-nesting-selector",
@@ -146,13 +146,6 @@
     "description" : "function-quote-no-quoted-strings-inside"
   } ]
 }, {
-  "patternId" : "a11y_no-outline-none",
-  "title" : "Disallow outline clearing.",
-  "parameters" : [ {
-    "name" : "no-outline-none",
-    "description" : "no-outline-none"
-  } ]
-}, {
   "patternId" : "scss_at-if-closing-brace-newline-after",
   "title" : "Require or disallow a newline after the closing brace of `@if` statements.",
   "parameters" : [ {
@@ -228,13 +221,6 @@
   "parameters" : [ {
     "name" : "import-notation",
     "description" : "import-notation"
-  } ]
-}, {
-  "patternId" : "a11y_no-spread-text",
-  "title" : "Require width of text greater than 45 characters and less than 80 characters.",
-  "parameters" : [ {
-    "name" : "no-spread-text",
-    "description" : "no-spread-text"
   } ]
 }, {
   "patternId" : "shorthand-property-no-redundant-values",
@@ -356,6 +342,13 @@
     "description" : "selector-no-union-class-name"
   } ]
 }, {
+  "patternId" : "a11y_no-obsolete-element",
+  "title" : "Disallow selectors that target obsolete HTML elements.",
+  "parameters" : [ {
+    "name" : "no-obsolete-element",
+    "description" : "no-obsolete-element"
+  } ]
+}, {
   "patternId" : "declaration-property-max-values",
   "title" : "Limit the number of values for a list of properties within declarations.",
   "parameters" : [ {
@@ -417,6 +410,13 @@
   "parameters" : [ {
     "name" : "at-import-partial-extension-allowed-list",
     "description" : "at-import-partial-extension-allowed-list"
+  } ]
+}, {
+  "patternId" : "a11y_media-prefers-reduced-motion",
+  "title" : "Require a `prefers-reduced-motion` override for transitions and animations. The `--fix` option adds the override.",
+  "parameters" : [ {
+    "name" : "media-prefers-reduced-motion",
+    "description" : "media-prefers-reduced-motion"
   } ]
 }, {
   "patternId" : "declaration-block-no-redundant-longhand-properties",
@@ -503,13 +503,6 @@
     "description" : "property-no-vendor-prefix"
   } ]
 }, {
-  "patternId" : "scss_dollar-variable-empty-line-before",
-  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
-  "parameters" : [ {
-    "name" : "dollar-variable-empty-line-before",
-    "description" : "dollar-variable-empty-line-before"
-  } ]
-}, {
   "patternId" : "scss_dimension-no-non-numeric-values",
   "title" : "Interpolating a value with a unit (e.g. `#{$value}px`) results in a\n_string_ value, not as numeric value. This value then cannot be used in\nnumerical operations.  It is better to use arithmetic to apply a unit to a\nnumber (e.g. `$value * 1px`).",
   "parameters" : [ {
@@ -517,11 +510,11 @@
     "description" : "dimension-no-non-numeric-values"
   } ]
 }, {
-  "patternId" : "a11y_line-height-is-vertical-rhythmed",
-  "title" : "Disallow not vertical rhythmed line-height.",
+  "patternId" : "scss_dollar-variable-empty-line-before",
+  "title" : "Require an empty line or disallow empty lines before `$`-variable declarations.",
   "parameters" : [ {
-    "name" : "line-height-is-vertical-rhythmed",
-    "description" : "line-height-is-vertical-rhythmed"
+    "name" : "dollar-variable-empty-line-before",
+    "description" : "dollar-variable-empty-line-before"
   } ]
 }, {
   "patternId" : "keyframe-declaration-no-important",
@@ -536,13 +529,6 @@
   "parameters" : [ {
     "name" : "at-mixin-named-arguments",
     "description" : "at-mixin-named-arguments"
-  } ]
-}, {
-  "patternId" : "a11y_media-prefers-color-scheme",
-  "title" : "Require implementation of certain styles for selectors with colors.",
-  "parameters" : [ {
-    "name" : "media-prefers-color-scheme",
-    "description" : "media-prefers-color-scheme"
   } ]
 }, {
   "patternId" : "property-allowed-list",
@@ -571,13 +557,6 @@
   "parameters" : [ {
     "name" : "selector-pseudo-class-no-unknown",
     "description" : "selector-pseudo-class-no-unknown"
-  } ]
-}, {
-  "patternId" : "a11y_font-size-is-readable",
-  "title" : "Disallow font sizes less than 15px (or 11.25pt).",
-  "parameters" : [ {
-    "name" : "font-size-is-readable",
-    "description" : "font-size-is-readable"
   } ]
 }, {
   "patternId" : "function-calc-no-unspaced-operator",
@@ -613,6 +592,13 @@
   "parameters" : [ {
     "name" : "function-url-no-scheme-relative",
     "description" : "function-url-no-scheme-relative"
+  } ]
+}, {
+  "patternId" : "a11y_no-display-none",
+  "title" : "Disallow hiding content with `display: none`.",
+  "parameters" : [ {
+    "name" : "no-display-none",
+    "description" : "no-display-none"
   } ]
 }, {
   "patternId" : "selector-id-pattern",
@@ -678,6 +664,13 @@
     "description" : "at-rule-empty-line-before"
   } ]
 }, {
+  "patternId" : "a11y_no-text-align-justify",
+  "title" : "Disallow `text-align: justify`.",
+  "parameters" : [ {
+    "name" : "no-text-align-justify",
+    "description" : "no-text-align-justify"
+  } ]
+}, {
   "patternId" : "function-url-quotes",
   "title" : "Require or disallow quotes for urls.",
   "parameters" : [ {
@@ -704,6 +697,13 @@
   "parameters" : [ {
     "name" : "selector-max-combinators",
     "description" : "selector-max-combinators"
+  } ]
+}, {
+  "patternId" : "a11y_line-height-is-vertical-rhythmed",
+  "title" : "Require line heights that fit a baseline grid.",
+  "parameters" : [ {
+    "name" : "line-height-is-vertical-rhythmed",
+    "description" : "line-height-is-vertical-rhythmed"
   } ]
 }, {
   "patternId" : "color-no-hex",
@@ -739,13 +739,6 @@
   "parameters" : [ {
     "name" : "color-no-invalid-hex",
     "description" : "color-no-invalid-hex"
-  } ]
-}, {
-  "patternId" : "a11y_no-obsolete-element",
-  "title" : "Disallow obsolete selectors using.",
-  "parameters" : [ {
-    "name" : "no-obsolete-element",
-    "description" : "no-obsolete-element"
   } ]
 }, {
   "patternId" : "scss_at-if-closing-brace-space-after",
@@ -788,6 +781,13 @@
   "parameters" : [ {
     "name" : "media-feature-value-dollar-variable",
     "description" : "media-feature-value-dollar-variable"
+  } ]
+}, {
+  "patternId" : "a11y_no-spread-text",
+  "title" : "Require text `max-width` between 45ch and 80ch.",
+  "parameters" : [ {
+    "name" : "no-spread-text",
+    "description" : "no-spread-text"
   } ]
 }, {
   "patternId" : "selector-attribute-operator-allowed-list",
@@ -853,13 +853,6 @@
     "description" : "function-unquote-no-unquoted-strings-inside"
   } ]
 }, {
-  "patternId" : "a11y_no-display-none",
-  "title" : "Sources that will help you do without `{ display: none; }` and hide the content:",
-  "parameters" : [ {
-    "name" : "no-display-none",
-    "description" : "no-display-none"
-  } ]
-}, {
   "patternId" : "comment-no-empty",
   "title" : "Disallow empty comments.",
   "parameters" : [ {
@@ -902,13 +895,6 @@
     "description" : "selector-no-redundant-nesting-selector"
   } ]
 }, {
-  "patternId" : "a11y_content-property-no-static-value",
-  "title" : "Disallow CSS generated content except aria-label attribute content and empty strings.",
-  "parameters" : [ {
-    "name" : "content-property-no-static-value",
-    "description" : "content-property-no-static-value"
-  } ]
-}, {
   "patternId" : "scss_function-calculation-no-interpolation",
   "title" : "Disallow interpolation in `calc()`, `clamp()`, `min()`, and `max()` functions.",
   "parameters" : [ {
@@ -921,6 +907,13 @@
   "parameters" : [ {
     "name" : "function-url-scheme-allowed-list",
     "description" : "function-url-scheme-allowed-list"
+  } ]
+}, {
+  "patternId" : "a11y_selector-pseudo-class-focus",
+  "title" : "Require a `:focus` or `:focus-visible` companion for `:hover` selectors. The `--fix` option adds a `:focus` variant of the selector.",
+  "parameters" : [ {
+    "name" : "selector-pseudo-class-focus",
+    "description" : "selector-pseudo-class-focus"
   } ]
 }, {
   "patternId" : "hue-degree-notation",
@@ -1056,18 +1049,18 @@
     "description" : "dollar-variable-empty-line-after"
   } ]
 }, {
-  "patternId" : "a11y_selector-pseudo-class-focus",
-  "title" : "Checks the presence of a pseudo-class for selectors with `:hover`.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-focus",
-    "description" : "selector-pseudo-class-focus"
-  } ]
-}, {
   "patternId" : "value-keyword-case",
   "title" : "Specify lowercase or uppercase for keywords values.",
   "parameters" : [ {
     "name" : "value-keyword-case",
     "description" : "value-keyword-case"
+  } ]
+}, {
+  "patternId" : "a11y_no-obsolete-attribute",
+  "title" : "Disallow selectors that target obsolete HTML attributes.",
+  "parameters" : [ {
+    "name" : "no-obsolete-attribute",
+    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "media-feature-name-value-allowed-list",
@@ -1124,6 +1117,13 @@
   "parameters" : [ {
     "name" : "media-feature-name-value-no-unknown",
     "description" : "media-feature-name-value-no-unknown"
+  } ]
+}, {
+  "patternId" : "a11y_media-prefers-color-scheme",
+  "title" : "Require a `prefers-color-scheme` override for colors.",
+  "parameters" : [ {
+    "name" : "media-prefers-color-scheme",
+    "description" : "media-prefers-color-scheme"
   } ]
 }, {
   "patternId" : "selector-attribute-name-disallowed-list",
@@ -1371,6 +1371,13 @@
     "description" : "keyframe-selector-notation"
   } ]
 }, {
+  "patternId" : "a11y_no-outline-none",
+  "title" : "Disallow removing the focus outline without an alternative.",
+  "parameters" : [ {
+    "name" : "no-outline-none",
+    "description" : "no-outline-none"
+  } ]
+}, {
   "patternId" : "declaration-property-value-allowed-list",
   "title" : "Specify a list of allowed property and value pairs within declarations.",
   "parameters" : [ {
@@ -1462,6 +1469,13 @@
     "description" : "comment-no-loud"
   } ]
 }, {
+  "patternId" : "a11y_font-size-is-readable",
+  "title" : "Disallow font sizes smaller than 15px.",
+  "parameters" : [ {
+    "name" : "font-size-is-readable",
+    "description" : "font-size-is-readable"
+  } ]
+}, {
   "patternId" : "declaration-property-unit-allowed-list",
   "title" : "Specify a list of allowed property and unit pairs within declarations.",
   "parameters" : [ {
@@ -1488,13 +1502,6 @@
   "parameters" : [ {
     "name" : "annotation-no-unknown",
     "description" : "annotation-no-unknown"
-  } ]
-}, {
-  "patternId" : "a11y_no-obsolete-attribute",
-  "title" : "Disallow obsolete attribute using.",
-  "parameters" : [ {
-    "name" : "no-obsolete-attribute",
-    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "scss_comment-no-empty",
@@ -1579,13 +1586,6 @@
   "parameters" : [ {
     "name" : "function-allowed-list",
     "description" : "function-allowed-list"
-  } ]
-}, {
-  "patternId" : "a11y_media-prefers-reduced-motion",
-  "title" : "Require certain styles if the animation or transition in media features.",
-  "parameters" : [ {
-    "name" : "media-prefers-reduced-motion",
-    "description" : "media-prefers-reduced-motion"
   } ]
 }, {
   "patternId" : "declaration-property-unit-disallowed-list",

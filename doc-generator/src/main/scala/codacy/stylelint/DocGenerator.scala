@@ -81,10 +81,10 @@ object DocGenerator {
         null,
         "scss"),
       Plugin(
-        "stylelint-a11y",
+        "@double-great/stylelint-a11y",
         "src/rules",
-        "https://github.com/YozhikM/stylelint-a11y.git",
-        "https://github.com/YozhikM/stylelint-a11y",
+        "https://github.com/double-great/stylelint-a11y.git",
+        "https://github.com/double-great/stylelint-a11y",
         null,
         null,
         null,

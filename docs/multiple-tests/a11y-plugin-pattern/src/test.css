@@ -1,0 +1,18 @@
+.button:focus {
+  outline: none;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+/* Fine: the outline is replaced by a visible alternative */
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3366ff;
+}
+
+/* Fine: not a :focus selector */
+.card {
+  outline: none;
+}
