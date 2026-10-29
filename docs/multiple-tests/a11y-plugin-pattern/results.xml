@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<checkstyle version="1.5">
+  <file name="test.css">
+    <error source="a11y_no-outline-none" line="1" message="Expected &quot;outline&quot; to not be removed without alternative in .button:focus (a11y/no-outline-none)" severity="info" />
+    <error source="a11y_no-outline-none" line="5" message="Expected &quot;outline&quot; to not be removed without alternative in .link:focus (a11y/no-outline-none)" severity="info" />
+  </file>
+</checkstyle>

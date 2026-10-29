@@ -1,0 +1,1 @@
+{"tools":[{"name":"stylelint","patterns":[{"patternId":"a11y_no-outline-none","parameters":[{"name":"no-outline-none","value":true}]}]}]}
