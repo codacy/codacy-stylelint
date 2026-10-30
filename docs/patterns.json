@@ -5,121 +5,85 @@
     "patternId" : "a11y_content-property-no-static-value",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "content-property-no-static-value",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_font-size-is-readable",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "font-size-is-readable",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_line-height-is-vertical-rhythmed",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "line-height-is-vertical-rhythmed",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_media-prefers-color-scheme",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-prefers-color-scheme",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_media-prefers-reduced-motion",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "media-prefers-reduced-motion",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-display-none",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-display-none",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-obsolete-attribute",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-obsolete-attribute",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-obsolete-element",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-obsolete-element",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-outline-none",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-outline-none",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-spread-text",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-spread-text",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_no-text-align-justify",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "no-text-align-justify",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_selector-pseudo-class-focus",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ {
-      "name" : "selector-pseudo-class-focus",
-      "default" : null
-    } ],
-    "languages" : [ ],
+    "parameters" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "alpha-value-notation",
@@ -131,7 +95,7 @@
         "exceptProperties" : [ "opacity", "fill-opacity", "flood-opacity", "stop-opacity", "stroke-opacity" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "annotation-no-unknown",
@@ -141,7 +105,7 @@
       "name" : "annotation-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-allowed-list",
@@ -151,7 +115,7 @@
       "name" : "at-rule-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "at-rule-descriptor-no-unknown",
@@ -161,7 +125,7 @@
       "name" : "at-rule-descriptor-no-unknown",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-descriptor-value-no-unknown",
@@ -171,7 +135,7 @@
       "name" : "at-rule-descriptor-value-no-unknown",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-disallowed-list",
@@ -181,7 +145,7 @@
       "name" : "at-rule-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "at-rule-empty-line-before",
@@ -194,7 +158,7 @@
         "ignore" : [ "after-comment" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "at-rule-no-deprecated",
@@ -204,7 +168,7 @@
       "name" : "at-rule-no-deprecated",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-no-unknown",
@@ -214,7 +178,7 @@
       "name" : "at-rule-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-no-vendor-prefix",
@@ -224,7 +188,7 @@
       "name" : "at-rule-no-vendor-prefix",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "at-rule-prelude-no-invalid",
@@ -234,7 +198,7 @@
       "name" : "at-rule-prelude-no-invalid",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "at-rule-property-required-list",
@@ -244,7 +208,7 @@
       "name" : "at-rule-property-required-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "block-no-empty",
@@ -254,7 +218,7 @@
       "name" : "block-no-empty",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "block-no-redundant-nested-style-rules",
@@ -264,7 +228,7 @@
       "name" : "block-no-redundant-nested-style-rules",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "color-function-alias-notation",
@@ -274,7 +238,7 @@
       "name" : "color-function-alias-notation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "color-function-notation",
@@ -284,7 +248,7 @@
       "name" : "color-function-notation",
       "default" : "modern"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "color-hex-alpha",
@@ -294,7 +258,7 @@
       "name" : "color-hex-alpha",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "color-hex-length",
@@ -304,7 +268,7 @@
       "name" : "color-hex-length",
       "default" : "short"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "color-named",
@@ -314,7 +278,7 @@
       "name" : "color-named",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "color-no-hex",
@@ -324,7 +288,7 @@
       "name" : "color-no-hex",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "color-no-invalid-hex",
@@ -334,7 +298,7 @@
       "name" : "color-no-invalid-hex",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "comment-empty-line-before",
@@ -347,7 +311,7 @@
         "ignore" : [ "stylelint-commands" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "comment-no-empty",
@@ -357,7 +321,7 @@
       "name" : "comment-no-empty",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "comment-pattern",
@@ -367,7 +331,7 @@
       "name" : "comment-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "comment-whitespace-inside",
@@ -377,7 +341,7 @@
       "name" : "comment-whitespace-inside",
       "default" : "always"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "comment-word-disallowed-list",
@@ -387,7 +351,7 @@
       "name" : "comment-word-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "container-name-pattern",
@@ -397,7 +361,7 @@
       "name" : "container-name-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "custom-media-pattern",
@@ -409,7 +373,7 @@
         "message" : "(name) => `Expected custom media query name \"${name}\" to be kebab-case`"
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "custom-property-empty-line-before",
@@ -422,7 +386,7 @@
         "ignore" : [ "after-comment", "inside-single-line-block" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "custom-property-no-missing-var-function",
@@ -432,7 +396,7 @@
       "name" : "custom-property-no-missing-var-function",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "custom-property-pattern",
@@ -444,7 +408,7 @@
         "message" : "(name) => `Expected custom media query name \"${name}\" to be kebab-case`"
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-block-no-duplicate-custom-properties",
@@ -454,7 +418,7 @@
       "name" : "declaration-block-no-duplicate-custom-properties",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "declaration-block-no-duplicate-properties",
@@ -466,7 +430,7 @@
         "ignore" : [ "consecutive-duplicates-with-different-syntaxes" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "declaration-block-no-redundant-longhand-properties",
@@ -476,7 +440,7 @@
       "name" : "declaration-block-no-redundant-longhand-properties",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-block-no-shorthand-property-overrides",
@@ -486,7 +450,7 @@
       "name" : "declaration-block-no-shorthand-property-overrides",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "declaration-block-single-line-max-declarations",
@@ -496,7 +460,7 @@
       "name" : "declaration-block-single-line-max-declarations",
       "default" : 1
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-empty-line-before",
@@ -509,7 +473,7 @@
         "ignore" : [ "after-comment", "inside-single-line-block" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-no-important",
@@ -519,7 +483,7 @@
       "name" : "declaration-no-important",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-max-values",
@@ -529,7 +493,7 @@
       "name" : "declaration-property-max-values",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-unit-allowed-list",
@@ -539,7 +503,7 @@
       "name" : "declaration-property-unit-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-unit-disallowed-list",
@@ -549,7 +513,7 @@
       "name" : "declaration-property-unit-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-value-allowed-list",
@@ -559,7 +523,7 @@
       "name" : "declaration-property-value-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-value-disallowed-list",
@@ -569,7 +533,7 @@
       "name" : "declaration-property-value-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "declaration-property-value-keyword-no-deprecated",
@@ -579,7 +543,7 @@
       "name" : "declaration-property-value-keyword-no-deprecated",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "declaration-property-value-no-unknown",
@@ -589,7 +553,7 @@
       "name" : "declaration-property-value-no-unknown",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "display-notation",
@@ -599,7 +563,7 @@
       "name" : "display-notation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "font-family-name-quotes",
@@ -609,7 +573,7 @@
       "name" : "font-family-name-quotes",
       "default" : "always-where-recommended"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "font-family-no-duplicate-names",
@@ -619,7 +583,7 @@
       "name" : "font-family-no-duplicate-names",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "font-family-no-missing-generic-family-keyword",
@@ -629,7 +593,7 @@
       "name" : "font-family-no-missing-generic-family-keyword",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "font-weight-notation",
@@ -639,7 +603,7 @@
       "name" : "font-weight-notation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-allowed-list",
@@ -649,7 +613,7 @@
       "name" : "function-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-calc-no-unspaced-operator",
@@ -659,7 +623,7 @@
       "name" : "function-calc-no-unspaced-operator",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "function-disallowed-list",
@@ -669,7 +633,7 @@
       "name" : "function-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-linear-gradient-no-nonstandard-direction",
@@ -679,7 +643,7 @@
       "name" : "function-linear-gradient-no-nonstandard-direction",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "function-name-case",
@@ -689,7 +653,7 @@
       "name" : "function-name-case",
       "default" : "lower"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-no-unknown",
@@ -699,7 +663,7 @@
       "name" : "function-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "function-url-no-scheme-relative",
@@ -709,7 +673,7 @@
       "name" : "function-url-no-scheme-relative",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-url-quotes",
@@ -719,7 +683,7 @@
       "name" : "function-url-quotes",
       "default" : "always"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-url-scheme-allowed-list",
@@ -729,7 +693,7 @@
       "name" : "function-url-scheme-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "function-url-scheme-disallowed-list",
@@ -739,7 +703,7 @@
       "name" : "function-url-scheme-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "hue-degree-notation",
@@ -749,7 +713,7 @@
       "name" : "hue-degree-notation",
       "default" : "angle"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "import-notation",
@@ -759,7 +723,7 @@
       "name" : "import-notation",
       "default" : "url"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "keyframe-block-no-duplicate-selectors",
@@ -769,7 +733,7 @@
       "name" : "keyframe-block-no-duplicate-selectors",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "keyframe-declaration-no-important",
@@ -779,7 +743,7 @@
       "name" : "keyframe-declaration-no-important",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "keyframe-selector-notation",
@@ -789,7 +753,7 @@
       "name" : "keyframe-selector-notation",
       "default" : "percentage-unless-within-keyword-only-block"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "keyframes-name-pattern",
@@ -801,7 +765,7 @@
         "message" : "(name) => `Expected keyframe name \"${name}\" to be kebab-case`"
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "layer-name-pattern",
@@ -811,7 +775,7 @@
       "name" : "layer-name-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "length-zero-no-unit",
@@ -823,7 +787,7 @@
         "ignore" : [ "custom-properties" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "lightness-notation",
@@ -833,7 +797,7 @@
       "name" : "lightness-notation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "max-nesting-depth",
@@ -843,7 +807,7 @@
       "name" : "max-nesting-depth",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-allowed-list",
@@ -853,7 +817,7 @@
       "name" : "media-feature-name-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-disallowed-list",
@@ -863,7 +827,7 @@
       "name" : "media-feature-name-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-no-unknown",
@@ -873,7 +837,7 @@
       "name" : "media-feature-name-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "media-feature-name-no-vendor-prefix",
@@ -883,7 +847,7 @@
       "name" : "media-feature-name-no-vendor-prefix",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-unit-allowed-list",
@@ -893,7 +857,7 @@
       "name" : "media-feature-name-unit-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-value-allowed-list",
@@ -903,7 +867,7 @@
       "name" : "media-feature-name-value-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-feature-name-value-no-unknown",
@@ -913,7 +877,7 @@
       "name" : "media-feature-name-value-no-unknown",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "media-feature-range-notation",
@@ -923,7 +887,7 @@
       "name" : "media-feature-range-notation",
       "default" : "context"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "media-query-no-invalid",
@@ -933,7 +897,7 @@
       "name" : "media-query-no-invalid",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "media-type-no-deprecated",
@@ -943,7 +907,7 @@
       "name" : "media-type-no-deprecated",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "named-grid-areas-no-invalid",
@@ -953,7 +917,7 @@
       "name" : "named-grid-areas-no-invalid",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "nesting-selector-no-missing-scoping-root",
@@ -963,7 +927,7 @@
       "name" : "nesting-selector-no-missing-scoping-root",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-descending-specificity",
@@ -973,7 +937,7 @@
       "name" : "no-descending-specificity",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-duplicate-at-import-rules",
@@ -983,7 +947,7 @@
       "name" : "no-duplicate-at-import-rules",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-duplicate-selectors",
@@ -993,7 +957,7 @@
       "name" : "no-duplicate-selectors",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-empty-source",
@@ -1003,7 +967,7 @@
       "name" : "no-empty-source",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-invalid-double-slash-comments",
@@ -1013,7 +977,7 @@
       "name" : "no-invalid-double-slash-comments",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-invalid-position-at-import-rule",
@@ -1023,7 +987,7 @@
       "name" : "no-invalid-position-at-import-rule",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-invalid-position-declaration",
@@ -1033,7 +997,7 @@
       "name" : "no-invalid-position-declaration",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-irregular-whitespace",
@@ -1043,7 +1007,7 @@
       "name" : "no-irregular-whitespace",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-unknown-animations",
@@ -1053,7 +1017,7 @@
       "name" : "no-unknown-animations",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-unknown-custom-media",
@@ -1063,7 +1027,7 @@
       "name" : "no-unknown-custom-media",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "no-unknown-custom-properties",
@@ -1073,7 +1037,7 @@
       "name" : "no-unknown-custom-properties",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "number-max-precision",
@@ -1083,7 +1047,7 @@
       "name" : "number-max-precision",
       "default" : 4
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "property-allowed-list",
@@ -1093,7 +1057,7 @@
       "name" : "property-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "property-disallowed-list",
@@ -1103,7 +1067,7 @@
       "name" : "property-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "property-layout-mappings",
@@ -1113,7 +1077,7 @@
       "name" : "property-layout-mappings",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "property-no-deprecated",
@@ -1123,7 +1087,7 @@
       "name" : "property-no-deprecated",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "property-no-unknown",
@@ -1133,7 +1097,7 @@
       "name" : "property-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "property-no-vendor-prefix",
@@ -1143,7 +1107,7 @@
       "name" : "property-no-vendor-prefix",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "relative-selector-nesting-notation",
@@ -1153,7 +1117,7 @@
       "name" : "relative-selector-nesting-notation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "rule-empty-line-before",
@@ -1166,7 +1130,7 @@
         "ignore" : [ "after-comment" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "rule-nesting-at-rule-required-list",
@@ -1176,7 +1140,7 @@
       "name" : "rule-nesting-at-rule-required-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "rule-selector-property-disallowed-list",
@@ -1186,7 +1150,7 @@
       "name" : "rule-selector-property-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "scss_at-each-key-value-single-line",
@@ -1196,7 +1160,7 @@
       "name" : "at-each-key-value-single-line",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-else-closing-brace-newline-after",
@@ -1206,7 +1170,7 @@
       "name" : "at-else-closing-brace-newline-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-else-closing-brace-space-after",
@@ -1216,7 +1180,7 @@
       "name" : "at-else-closing-brace-space-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-else-empty-line-before",
@@ -1226,7 +1190,7 @@
       "name" : "at-else-empty-line-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-else-if-parentheses-space-before",
@@ -1236,7 +1200,7 @@
       "name" : "at-else-if-parentheses-space-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-extend-no-missing-placeholder",
@@ -1246,7 +1210,7 @@
       "name" : "at-extend-no-missing-placeholder",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-function-named-arguments",
@@ -1256,7 +1220,7 @@
       "name" : "at-function-named-arguments",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-function-parentheses-space-before",
@@ -1266,7 +1230,7 @@
       "name" : "at-function-parentheses-space-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-function-pattern",
@@ -1276,7 +1240,7 @@
       "name" : "at-function-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-if-closing-brace-newline-after",
@@ -1286,7 +1250,7 @@
       "name" : "at-if-closing-brace-newline-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-if-closing-brace-space-after",
@@ -1296,7 +1260,7 @@
       "name" : "at-if-closing-brace-space-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-if-no-null",
@@ -1306,7 +1270,7 @@
       "name" : "at-if-no-null",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-import-partial-extension-allowed-list",
@@ -1316,7 +1280,7 @@
       "name" : "at-import-partial-extension-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-import-partial-extension-disallowed-list",
@@ -1326,7 +1290,7 @@
       "name" : "at-import-partial-extension-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-mixin-argumentless-call-parentheses",
@@ -1336,7 +1300,7 @@
       "name" : "at-mixin-argumentless-call-parentheses",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-mixin-named-arguments",
@@ -1346,7 +1310,7 @@
       "name" : "at-mixin-named-arguments",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-mixin-no-risky-nesting-selector",
@@ -1356,7 +1320,7 @@
       "name" : "at-mixin-no-risky-nesting-selector",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-mixin-parentheses-space-before",
@@ -1366,7 +1330,7 @@
       "name" : "at-mixin-parentheses-space-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-mixin-pattern",
@@ -1376,7 +1340,7 @@
       "name" : "at-mixin-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-root-no-redundant",
@@ -1386,7 +1350,7 @@
       "name" : "at-root-no-redundant",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-rule-conditional-no-parentheses",
@@ -1396,7 +1360,7 @@
       "name" : "at-rule-conditional-no-parentheses",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-rule-no-unknown",
@@ -1406,7 +1370,7 @@
       "name" : "at-rule-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-use-no-redundant-alias",
@@ -1416,7 +1380,7 @@
       "name" : "at-use-no-redundant-alias",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_at-use-no-unnamespaced",
@@ -1426,7 +1390,7 @@
       "name" : "at-use-no-unnamespaced",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_block-no-redundant-nesting",
@@ -1436,7 +1400,7 @@
       "name" : "block-no-redundant-nesting",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_comment-no-empty",
@@ -1446,7 +1410,7 @@
       "name" : "comment-no-empty",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_comment-no-loud",
@@ -1456,7 +1420,7 @@
       "name" : "comment-no-loud",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_declaration-nested-properties",
@@ -1466,7 +1430,7 @@
       "name" : "declaration-nested-properties",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_declaration-nested-properties-no-divided-groups",
@@ -1476,7 +1440,7 @@
       "name" : "declaration-nested-properties-no-divided-groups",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_declaration-property-value-no-unknown",
@@ -1486,7 +1450,7 @@
       "name" : "declaration-property-value-no-unknown",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dimension-no-non-numeric-values",
@@ -1496,7 +1460,7 @@
       "name" : "dimension-no-non-numeric-values",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-colon-newline-after",
@@ -1506,7 +1470,7 @@
       "name" : "dollar-variable-colon-newline-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-colon-space-after",
@@ -1516,7 +1480,7 @@
       "name" : "dollar-variable-colon-space-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-colon-space-before",
@@ -1526,7 +1490,7 @@
       "name" : "dollar-variable-colon-space-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-default",
@@ -1536,7 +1500,7 @@
       "name" : "dollar-variable-default",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-empty-line-after",
@@ -1546,7 +1510,7 @@
       "name" : "dollar-variable-empty-line-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-empty-line-before",
@@ -1556,7 +1520,7 @@
       "name" : "dollar-variable-empty-line-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-first-in-block",
@@ -1566,7 +1530,7 @@
       "name" : "dollar-variable-first-in-block",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-no-missing-interpolation",
@@ -1576,7 +1540,7 @@
       "name" : "dollar-variable-no-missing-interpolation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-no-namespaced-assignment",
@@ -1586,7 +1550,7 @@
       "name" : "dollar-variable-no-namespaced-assignment",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_dollar-variable-pattern",
@@ -1596,7 +1560,7 @@
       "name" : "dollar-variable-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_double-slash-comment-empty-line-before",
@@ -1606,7 +1570,7 @@
       "name" : "double-slash-comment-empty-line-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_double-slash-comment-inline",
@@ -1616,7 +1580,7 @@
       "name" : "double-slash-comment-inline",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_double-slash-comment-whitespace-inside",
@@ -1626,7 +1590,7 @@
       "name" : "double-slash-comment-whitespace-inside",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-calculation-no-interpolation",
@@ -1636,7 +1600,7 @@
       "name" : "function-calculation-no-interpolation",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-color-channel",
@@ -1646,7 +1610,7 @@
       "name" : "function-color-channel",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-color-relative",
@@ -1656,7 +1620,7 @@
       "name" : "function-color-relative",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-no-unknown",
@@ -1666,7 +1630,7 @@
       "name" : "function-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-quote-no-quoted-strings-inside",
@@ -1676,7 +1640,7 @@
       "name" : "function-quote-no-quoted-strings-inside",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_function-unquote-no-unquoted-strings-inside",
@@ -1686,7 +1650,7 @@
       "name" : "function-unquote-no-unquoted-strings-inside",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_load-no-partial-leading-underscore",
@@ -1696,7 +1660,7 @@
       "name" : "load-no-partial-leading-underscore",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_load-partial-extension",
@@ -1706,7 +1670,7 @@
       "name" : "load-partial-extension",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_map-keys-quotes",
@@ -1716,7 +1680,7 @@
       "name" : "map-keys-quotes",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_media-feature-value-dollar-variable",
@@ -1726,7 +1690,7 @@
       "name" : "media-feature-value-dollar-variable",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-dollar-variables",
@@ -1736,7 +1700,7 @@
       "name" : "no-dollar-variables",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-duplicate-dollar-variables",
@@ -1746,7 +1710,7 @@
       "name" : "no-duplicate-dollar-variables",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-duplicate-load-rules",
@@ -1756,7 +1720,7 @@
       "name" : "no-duplicate-load-rules",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-duplicate-mixins",
@@ -1766,7 +1730,7 @@
       "name" : "no-duplicate-mixins",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-global-function-names",
@@ -1776,7 +1740,7 @@
       "name" : "no-global-function-names",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_no-unused-private-members",
@@ -1786,7 +1750,7 @@
       "name" : "no-unused-private-members",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_operator-no-newline-after",
@@ -1796,7 +1760,7 @@
       "name" : "operator-no-newline-after",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_operator-no-newline-before",
@@ -1806,7 +1770,7 @@
       "name" : "operator-no-newline-before",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_operator-no-unspaced",
@@ -1816,7 +1780,7 @@
       "name" : "operator-no-unspaced",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_partial-no-import",
@@ -1826,7 +1790,7 @@
       "name" : "partial-no-import",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_percent-placeholder-pattern",
@@ -1836,7 +1800,7 @@
       "name" : "percent-placeholder-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_property-no-unknown",
@@ -1846,7 +1810,7 @@
       "name" : "property-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_selector-nest-combinators",
@@ -1856,7 +1820,7 @@
       "name" : "selector-nest-combinators",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_selector-no-redundant-nesting-selector",
@@ -1866,7 +1830,7 @@
       "name" : "selector-no-redundant-nesting-selector",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "scss_selector-no-union-class-name",
@@ -1876,7 +1840,7 @@
       "name" : "selector-no-union-class-name",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-anb-no-unmatchable",
@@ -1886,7 +1850,7 @@
       "name" : "selector-anb-no-unmatchable",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-attribute-name-disallowed-list",
@@ -1896,7 +1860,7 @@
       "name" : "selector-attribute-name-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-attribute-operator-allowed-list",
@@ -1906,7 +1870,7 @@
       "name" : "selector-attribute-operator-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-attribute-operator-disallowed-list",
@@ -1916,7 +1880,7 @@
       "name" : "selector-attribute-operator-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-attribute-quotes",
@@ -1926,7 +1890,7 @@
       "name" : "selector-attribute-quotes",
       "default" : "always"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-class-pattern",
@@ -1938,7 +1902,7 @@
         "message" : "(selector) => `Expected class selector \"${selector}\" to be kebab-case`"
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-combinator-allowed-list",
@@ -1948,7 +1912,7 @@
       "name" : "selector-combinator-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-combinator-disallowed-list",
@@ -1958,7 +1922,7 @@
       "name" : "selector-combinator-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-disallowed-list",
@@ -1968,7 +1932,7 @@
       "name" : "selector-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-id-pattern",
@@ -1980,7 +1944,7 @@
         "message" : "(selector) => `Expected id selector \"${selector}\" to be kebab-case`"
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-attribute",
@@ -1990,7 +1954,7 @@
       "name" : "selector-max-attribute",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-class",
@@ -2000,7 +1964,7 @@
       "name" : "selector-max-class",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-combinators",
@@ -2010,7 +1974,7 @@
       "name" : "selector-max-combinators",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-compound-selectors",
@@ -2020,7 +1984,7 @@
       "name" : "selector-max-compound-selectors",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-id",
@@ -2030,7 +1994,7 @@
       "name" : "selector-max-id",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-pseudo-class",
@@ -2040,7 +2004,7 @@
       "name" : "selector-max-pseudo-class",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-specificity",
@@ -2050,7 +2014,7 @@
       "name" : "selector-max-specificity",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-type",
@@ -2060,7 +2024,7 @@
       "name" : "selector-max-type",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-max-universal",
@@ -2070,7 +2034,7 @@
       "name" : "selector-max-universal",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-nested-pattern",
@@ -2080,7 +2044,7 @@
       "name" : "selector-nested-pattern",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-no-deprecated",
@@ -2090,7 +2054,7 @@
       "name" : "selector-no-deprecated",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-no-invalid",
@@ -2100,7 +2064,7 @@
       "name" : "selector-no-invalid",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-no-qualifying-type",
@@ -2110,7 +2074,7 @@
       "name" : "selector-no-qualifying-type",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-no-unmatchable",
@@ -2120,7 +2084,7 @@
       "name" : "selector-no-unmatchable",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-no-vendor-prefix",
@@ -2130,7 +2094,7 @@
       "name" : "selector-no-vendor-prefix",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-not-notation",
@@ -2140,7 +2104,7 @@
       "name" : "selector-not-notation",
       "default" : "complex"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-allowed-list",
@@ -2150,7 +2114,7 @@
       "name" : "selector-pseudo-class-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-disallowed-list",
@@ -2160,7 +2124,7 @@
       "name" : "selector-pseudo-class-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-class-no-unknown",
@@ -2170,7 +2134,7 @@
       "name" : "selector-pseudo-class-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-pseudo-element-allowed-list",
@@ -2180,7 +2144,7 @@
       "name" : "selector-pseudo-element-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-colon-notation",
@@ -2190,7 +2154,7 @@
       "name" : "selector-pseudo-element-colon-notation",
       "default" : "double"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-disallowed-list",
@@ -2200,7 +2164,7 @@
       "name" : "selector-pseudo-element-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-pseudo-element-no-unknown",
@@ -2210,7 +2174,7 @@
       "name" : "selector-pseudo-element-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "selector-type-case",
@@ -2220,7 +2184,7 @@
       "name" : "selector-type-case",
       "default" : "lower"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "selector-type-no-unknown",
@@ -2232,7 +2196,7 @@
         "ignore" : [ "custom-elements" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "shorthand-property-no-redundant-values",
@@ -2242,7 +2206,7 @@
       "name" : "shorthand-property-no-redundant-values",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "string-no-newline",
@@ -2252,7 +2216,7 @@
       "name" : "string-no-newline",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "syntax-string-no-invalid",
@@ -2262,7 +2226,7 @@
       "name" : "syntax-string-no-invalid",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "time-min-milliseconds",
@@ -2272,7 +2236,7 @@
       "name" : "time-min-milliseconds",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "unit-allowed-list",
@@ -2282,7 +2246,7 @@
       "name" : "unit-allowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "unit-disallowed-list",
@@ -2292,7 +2256,7 @@
       "name" : "unit-disallowed-list",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "unit-layout-mappings",
@@ -2302,7 +2266,7 @@
       "name" : "unit-layout-mappings",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "unit-no-unknown",
@@ -2312,7 +2276,7 @@
       "name" : "unit-no-unknown",
       "default" : true
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "value-keyword-case",
@@ -2322,7 +2286,7 @@
       "name" : "value-keyword-case",
       "default" : "lower"
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   }, {
     "patternId" : "value-keyword-layout-mappings",
@@ -2332,7 +2296,7 @@
       "name" : "value-keyword-layout-mappings",
       "default" : null
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "value-no-vendor-prefix",
@@ -2344,7 +2308,7 @@
         "ignoreValues" : [ "box", "inline-box" ]
       } ]
     } ],
-    "languages" : [ ],
+    "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
   } ]
 }

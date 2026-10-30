@@ -84,10 +84,11 @@ object Stylelint extends Tool {
   def getConfigFile(source: Source.Directory, configuration: Option[List[Pattern.Definition]]): Path = {
     configuration.map { config =>
       val patterns = config.map { pattern =>
+        // patterns without parameters are plain on/off rules, so enabling them means `true`
         val parameter = pattern.parameters.headOption.map { param =>
           val parameterValue: JsValue = param.value
           parameterValue
-        }.getOrElse(JsNull)
+        }.getOrElse(JsBoolean(true))
 
         (toRuleName(pattern.patternId.value), parameter)
       }

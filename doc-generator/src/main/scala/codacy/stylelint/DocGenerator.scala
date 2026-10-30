@@ -3,6 +3,7 @@ package codacy.stylelint
 import java.nio.charset.Charset
 import better.files.{File, Resource}
 import com.codacy.plugins.api._
+import com.codacy.plugins.api.languages.{Language, Languages}
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
 import play.api.libs.json.{JsNull, Json}
 
@@ -128,8 +129,16 @@ object DocGenerator {
     File("docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
   }
 
+  // plugins whose rules are only switched on with `true`, so their patterns have no parameters
+  val parameterlessPluginPrefixes: Set[String] = Set("a11y")
+
   def addNewPattern(patternName: String, default: Parameter.Value, prefix: String): Pattern.Specification = {
-    val param = Set(Parameter.Specification(Parameter.Name(patternName), default))
+    val param =
+      if (parameterlessPluginPrefixes.contains(prefix)) Set.empty[Parameter.Specification]
+      else Set(Parameter.Specification(Parameter.Name(patternName), default))
+    // scss rules only run on .scss files; core and a11y rules run on every file type the engine analyses
+    val languages: Set[Language] =
+      if (prefix == "scss") Set(Languages.SASS) else Set(Languages.CSS, Languages.LESS, Languages.SASS)
     val enabled = CodacyValues.patternsEnabled.contains(patternName)
     val level = if (CodacyValues.possibleErrorsPatterns.contains(patternName)) Result.Level.Warn else Result.Level.Info
     Pattern.Specification(
@@ -139,6 +148,7 @@ object DocGenerator {
       None,
       None,
       param,
+      languages,
       enabled = enabled)
   }
 
@@ -169,7 +179,9 @@ object DocGenerator {
   }
 
   def addNewDescription(patternName: String, patternDescription: String, prefix: String): Pattern.Description = {
-    val param = Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
+    val param =
+      if (parameterlessPluginPrefixes.contains(prefix)) Set.empty[Parameter.Description]
+      else Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
 
     Pattern.Description(
       Pattern.Id(if (prefix.nonEmpty) s"${prefix}_$patternName" else patternName),
