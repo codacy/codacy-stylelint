@@ -5,21 +5,30 @@
     "patternId" : "a11y_content-property-no-static-value",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "content-property-no-static-value",
+      "default" : true
+    } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_font-size-is-readable",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "font-size-is-readable",
+      "default" : true
+    } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
     "patternId" : "a11y_line-height-is-vertical-rhythmed",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "line-height-is-vertical-rhythmed",
+      "default" : true
+    } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {
@@ -68,7 +77,10 @@
     "patternId" : "a11y_no-spread-text",
     "level" : "Info",
     "category" : "CodeStyle",
-    "parameters" : [ ],
+    "parameters" : [ {
+      "name" : "no-spread-text",
+      "default" : true
+    } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
   }, {

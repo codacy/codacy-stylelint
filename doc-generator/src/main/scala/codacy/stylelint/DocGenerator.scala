@@ -5,7 +5,7 @@ import better.files.{File, Resource}
 import com.codacy.plugins.api._
 import com.codacy.plugins.api.languages.{Language, Languages}
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
-import play.api.libs.json.{JsNull, Json}
+import play.api.libs.json.{JsBoolean, JsNull, Json}
 
 import scala.sys.process.Process
 
@@ -129,12 +129,23 @@ object DocGenerator {
     File("docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
   }
 
-  // plugins whose rules are only switched on with `true`, so their patterns have no parameters
-  val parameterlessPluginPrefixes: Set[String] = Set("a11y")
+  // a11y rules are switched on with `true`, so their patterns have no parameters, except the rules
+  // that accept optional secondary options: those keep a parameter, defaulting to `true`
+  val a11yRulesWithSecondaryOptions: Set[String] =
+    Set(
+      "content-property-no-static-value",
+      "font-size-is-readable",
+      "line-height-is-vertical-rhythmed",
+      "no-spread-text")
+
+  def isParameterless(patternName: String, prefix: String): Boolean =
+    prefix == "a11y" && !a11yRulesWithSecondaryOptions.contains(patternName)
 
   def addNewPattern(patternName: String, default: Parameter.Value, prefix: String): Pattern.Specification = {
     val param =
-      if (parameterlessPluginPrefixes.contains(prefix)) Set.empty[Parameter.Specification]
+      if (isParameterless(patternName, prefix)) Set.empty[Parameter.Specification]
+      else if (prefix == "a11y")
+        Set(Parameter.Specification(Parameter.Name(patternName), Parameter.Value(JsBoolean(true))))
       else Set(Parameter.Specification(Parameter.Name(patternName), default))
     // scss rules only run on .scss files; core and a11y rules run on every file type the engine analyses
     val languages: Set[Language] =
@@ -180,7 +191,7 @@ object DocGenerator {
 
   def addNewDescription(patternName: String, patternDescription: String, prefix: String): Pattern.Description = {
     val param =
-      if (parameterlessPluginPrefixes.contains(prefix)) Set.empty[Parameter.Description]
+      if (isParameterless(patternName, prefix)) Set.empty[Parameter.Description]
       else Set(Parameter.Description(Parameter.Name(patternName), Parameter.DescriptionText(patternName)))
 
     Pattern.Description(
