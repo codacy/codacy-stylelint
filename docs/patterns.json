@@ -125,7 +125,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -135,7 +135,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-descriptor-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -145,7 +145,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-descriptor-value-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -155,7 +155,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -178,7 +178,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-no-deprecated",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -208,7 +208,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-prelude-no-invalid",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -218,7 +218,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-property-required-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -238,7 +238,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-no-redundant-nested-style-rules",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -248,7 +248,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-function-alias-notation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -268,7 +268,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-hex-alpha",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -288,7 +288,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-named",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -298,7 +298,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "color-no-hex",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -341,7 +341,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "comment-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -361,7 +361,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "comment-word-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -371,7 +371,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "container-name-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -493,7 +493,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-no-important",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -503,7 +503,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-max-values",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -513,7 +513,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-unit-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -523,7 +523,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-unit-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -533,7 +533,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -543,7 +543,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -553,7 +553,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-keyword-no-deprecated",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -563,7 +563,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -573,7 +573,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "display-notation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -613,7 +613,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "font-weight-notation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -623,7 +623,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -643,7 +643,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -683,7 +683,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-no-scheme-relative",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -703,7 +703,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-scheme-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -713,7 +713,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-url-scheme-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -785,7 +785,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "layer-name-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -807,7 +807,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "lightness-notation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -817,7 +817,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "max-nesting-depth",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -827,7 +827,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -837,7 +837,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -867,7 +867,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-unit-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -877,7 +877,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-value-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -887,7 +887,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-name-value-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -907,7 +907,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-query-no-invalid",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -917,7 +917,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-type-no-deprecated",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -937,7 +937,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "nesting-selector-no-missing-scoping-root",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -967,7 +967,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-duplicate-selectors",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1007,7 +1007,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-invalid-position-declaration",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1027,7 +1027,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unknown-animations",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1037,7 +1037,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unknown-custom-media",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1047,7 +1047,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unknown-custom-properties",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1067,7 +1067,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1077,7 +1077,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1087,7 +1087,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-layout-mappings",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1097,7 +1097,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "property-no-deprecated",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1127,7 +1127,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "relative-selector-nesting-notation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1150,7 +1150,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "rule-nesting-at-rule-required-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -1160,7 +1160,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "rule-selector-property-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1170,7 +1170,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-each-key-value-single-line",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1180,7 +1180,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-else-closing-brace-newline-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1190,7 +1190,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-else-closing-brace-space-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1200,7 +1200,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-else-empty-line-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1210,7 +1210,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-else-if-parentheses-space-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1220,7 +1220,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-extend-no-missing-placeholder",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1230,7 +1230,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-function-named-arguments",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1240,7 +1240,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-function-parentheses-space-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1250,7 +1250,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-function-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1260,7 +1260,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-if-closing-brace-newline-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1270,7 +1270,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-if-closing-brace-space-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1280,7 +1280,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-if-no-null",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1290,7 +1290,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-import-partial-extension-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1300,7 +1300,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-import-partial-extension-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1310,7 +1310,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-mixin-argumentless-call-parentheses",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1320,7 +1320,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-mixin-named-arguments",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1330,7 +1330,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-mixin-no-risky-nesting-selector",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1340,7 +1340,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-mixin-parentheses-space-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1350,7 +1350,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-mixin-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1360,7 +1360,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-root-no-redundant",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1370,7 +1370,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-rule-conditional-no-parentheses",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1390,7 +1390,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-use-no-redundant-alias",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1400,7 +1400,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "at-use-no-unnamespaced",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1410,7 +1410,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "block-no-redundant-nesting",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1430,7 +1430,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "comment-no-loud",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1440,7 +1440,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-nested-properties",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1450,7 +1450,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-nested-properties-no-divided-groups",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1460,7 +1460,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "declaration-property-value-no-unknown",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1470,7 +1470,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dimension-no-non-numeric-values",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1480,7 +1480,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-colon-newline-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1490,7 +1490,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-colon-space-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1500,7 +1500,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-colon-space-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1510,7 +1510,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-default",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1520,7 +1520,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-empty-line-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1530,7 +1530,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-empty-line-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1540,7 +1540,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-first-in-block",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1550,7 +1550,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-no-missing-interpolation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1560,7 +1560,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-no-namespaced-assignment",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1570,7 +1570,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "dollar-variable-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1580,7 +1580,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "double-slash-comment-empty-line-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1590,7 +1590,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "double-slash-comment-inline",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1600,7 +1600,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "double-slash-comment-whitespace-inside",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1610,7 +1610,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-calculation-no-interpolation",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1620,7 +1620,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-color-channel",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1630,7 +1630,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-color-relative",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1650,7 +1650,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-quote-no-quoted-strings-inside",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1660,7 +1660,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "function-unquote-no-unquoted-strings-inside",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1670,7 +1670,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "load-no-partial-leading-underscore",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1680,7 +1680,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "load-partial-extension",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1690,7 +1690,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "map-keys-quotes",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1700,7 +1700,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "media-feature-value-dollar-variable",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1710,7 +1710,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-dollar-variables",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1720,7 +1720,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-duplicate-dollar-variables",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1730,7 +1730,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-duplicate-load-rules",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1740,7 +1740,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-duplicate-mixins",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1750,7 +1750,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-global-function-names",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1760,7 +1760,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "no-unused-private-members",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1770,7 +1770,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "operator-no-newline-after",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1780,7 +1780,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "operator-no-newline-before",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1790,7 +1790,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "operator-no-unspaced",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1800,7 +1800,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "partial-no-import",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1810,7 +1810,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "percent-placeholder-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1830,7 +1830,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-nest-combinators",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1840,7 +1840,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-redundant-nesting-selector",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1850,7 +1850,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-union-class-name",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "SASS" ],
     "enabled" : false
@@ -1870,7 +1870,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-name-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1880,7 +1880,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1890,7 +1890,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-attribute-operator-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1922,7 +1922,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1932,7 +1932,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-combinator-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1942,7 +1942,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1964,7 +1964,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-attribute",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1974,7 +1974,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-class",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1984,7 +1984,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-combinators",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -1994,7 +1994,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-compound-selectors",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2004,7 +2004,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-id",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2014,7 +2014,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-pseudo-class",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2024,7 +2024,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-specificity",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2034,7 +2034,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-type",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2044,7 +2044,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-max-universal",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2054,7 +2054,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-nested-pattern",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2064,7 +2064,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-deprecated",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -2074,7 +2074,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-invalid",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -2084,7 +2084,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-qualifying-type",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2094,7 +2094,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-no-unmatchable",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -2124,7 +2124,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2134,7 +2134,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-class-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2154,7 +2154,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-element-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2174,7 +2174,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "selector-pseudo-element-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2236,7 +2236,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "syntax-string-no-invalid",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -2246,7 +2246,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "time-min-milliseconds",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2256,7 +2256,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-allowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2266,7 +2266,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-disallowed-list",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : true
@@ -2276,7 +2276,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "unit-layout-mappings",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
@@ -2306,7 +2306,7 @@
     "category" : "CodeStyle",
     "parameters" : [ {
       "name" : "value-keyword-layout-mappings",
-      "default" : null
+      "default" : true
     } ],
     "languages" : [ "CSS", "LESS", "SASS" ],
     "enabled" : false
