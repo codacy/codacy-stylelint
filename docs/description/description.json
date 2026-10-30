@@ -342,12 +342,9 @@
     "description" : "selector-no-union-class-name"
   } ]
 }, {
-  "patternId" : "a11y_no-obsolete-element",
-  "title" : "Disallow selectors that target obsolete HTML elements.",
-  "parameters" : [ {
-    "name" : "no-obsolete-element",
-    "description" : "no-obsolete-element"
-  } ]
+  "patternId" : "a11y_no-outline-none",
+  "title" : "Disallow removing the focus outline without an alternative.",
+  "parameters" : [ ]
 }, {
   "patternId" : "declaration-property-max-values",
   "title" : "Limit the number of values for a list of properties within declarations.",
@@ -412,13 +409,6 @@
     "description" : "at-import-partial-extension-allowed-list"
   } ]
 }, {
-  "patternId" : "a11y_media-prefers-reduced-motion",
-  "title" : "Require a `prefers-reduced-motion` override for transitions and animations. The `--fix` option adds the override.",
-  "parameters" : [ {
-    "name" : "media-prefers-reduced-motion",
-    "description" : "media-prefers-reduced-motion"
-  } ]
-}, {
   "patternId" : "declaration-block-no-redundant-longhand-properties",
   "title" : "Disallow redundant longhand properties within declaration-block.",
   "parameters" : [ {
@@ -474,6 +464,10 @@
     "name" : "at-function-named-arguments",
     "description" : "at-function-named-arguments"
   } ]
+}, {
+  "patternId" : "a11y_no-text-align-justify",
+  "title" : "Disallow `text-align: justify`.",
+  "parameters" : [ ]
 }, {
   "patternId" : "no-duplicate-at-import-rules",
   "title" : "Disallow duplicate `@import` rules.",
@@ -594,12 +588,16 @@
     "description" : "function-url-no-scheme-relative"
   } ]
 }, {
-  "patternId" : "a11y_no-display-none",
-  "title" : "Disallow hiding content with `display: none`.",
+  "patternId" : "selector-nested-pattern",
+  "title" : "Specify a pattern for the selectors of rules nested within rules.",
   "parameters" : [ {
-    "name" : "no-display-none",
-    "description" : "no-display-none"
+    "name" : "selector-nested-pattern",
+    "description" : "selector-nested-pattern"
   } ]
+}, {
+  "patternId" : "a11y_selector-pseudo-class-focus",
+  "title" : "Require a `:focus` or `:focus-visible` companion for `:hover` selectors. The `--fix` option adds a `:focus` variant of the selector.",
+  "parameters" : [ ]
 }, {
   "patternId" : "selector-id-pattern",
   "title" : "Specify a pattern for ID selectors.",
@@ -608,12 +606,9 @@
     "description" : "selector-id-pattern"
   } ]
 }, {
-  "patternId" : "selector-nested-pattern",
-  "title" : "Specify a pattern for the selectors of rules nested within rules.",
-  "parameters" : [ {
-    "name" : "selector-nested-pattern",
-    "description" : "selector-nested-pattern"
-  } ]
+  "patternId" : "a11y_no-obsolete-attribute",
+  "title" : "Disallow selectors that target obsolete HTML attributes.",
+  "parameters" : [ ]
 }, {
   "patternId" : "block-no-redundant-nested-style-rules",
   "title" : "Disallow redundant nested style rules within blocks.",
@@ -662,13 +657,6 @@
   "parameters" : [ {
     "name" : "at-rule-empty-line-before",
     "description" : "at-rule-empty-line-before"
-  } ]
-}, {
-  "patternId" : "a11y_no-text-align-justify",
-  "title" : "Disallow `text-align: justify`.",
-  "parameters" : [ {
-    "name" : "no-text-align-justify",
-    "description" : "no-text-align-justify"
   } ]
 }, {
   "patternId" : "function-url-quotes",
@@ -909,12 +897,9 @@
     "description" : "function-url-scheme-allowed-list"
   } ]
 }, {
-  "patternId" : "a11y_selector-pseudo-class-focus",
-  "title" : "Require a `:focus` or `:focus-visible` companion for `:hover` selectors. The `--fix` option adds a `:focus` variant of the selector.",
-  "parameters" : [ {
-    "name" : "selector-pseudo-class-focus",
-    "description" : "selector-pseudo-class-focus"
-  } ]
+  "patternId" : "a11y_no-obsolete-element",
+  "title" : "Disallow selectors that target obsolete HTML elements.",
+  "parameters" : [ ]
 }, {
   "patternId" : "hue-degree-notation",
   "title" : "Specify number or angle notation for degree hues.",
@@ -1042,6 +1027,10 @@
     "description" : "at-else-closing-brace-newline-after"
   } ]
 }, {
+  "patternId" : "a11y_media-prefers-reduced-motion",
+  "title" : "Require a `prefers-reduced-motion` override for transitions and animations. The `--fix` option adds the override.",
+  "parameters" : [ ]
+}, {
   "patternId" : "scss_dollar-variable-empty-line-after",
   "title" : "Require an empty line or disallow empty lines after `$`-variable declarations.",
   "parameters" : [ {
@@ -1054,13 +1043,6 @@
   "parameters" : [ {
     "name" : "value-keyword-case",
     "description" : "value-keyword-case"
-  } ]
-}, {
-  "patternId" : "a11y_no-obsolete-attribute",
-  "title" : "Disallow selectors that target obsolete HTML attributes.",
-  "parameters" : [ {
-    "name" : "no-obsolete-attribute",
-    "description" : "no-obsolete-attribute"
   } ]
 }, {
   "patternId" : "media-feature-name-value-allowed-list",
@@ -1119,13 +1101,6 @@
     "description" : "media-feature-name-value-no-unknown"
   } ]
 }, {
-  "patternId" : "a11y_media-prefers-color-scheme",
-  "title" : "Require a `prefers-color-scheme` override for colors.",
-  "parameters" : [ {
-    "name" : "media-prefers-color-scheme",
-    "description" : "media-prefers-color-scheme"
-  } ]
-}, {
   "patternId" : "selector-attribute-name-disallowed-list",
   "title" : "Specify a list of disallowed attribute names.",
   "parameters" : [ {
@@ -1174,6 +1149,10 @@
     "name" : "selector-pseudo-class-disallowed-list",
     "description" : "selector-pseudo-class-disallowed-list"
   } ]
+}, {
+  "patternId" : "a11y_media-prefers-color-scheme",
+  "title" : "Require a `prefers-color-scheme` override for colors.",
+  "parameters" : [ ]
 }, {
   "patternId" : "scss_operator-no-unspaced",
   "title" : "Disallow unspaced operators in Sass operations.",
@@ -1371,13 +1350,6 @@
     "description" : "keyframe-selector-notation"
   } ]
 }, {
-  "patternId" : "a11y_no-outline-none",
-  "title" : "Disallow removing the focus outline without an alternative.",
-  "parameters" : [ {
-    "name" : "no-outline-none",
-    "description" : "no-outline-none"
-  } ]
-}, {
   "patternId" : "declaration-property-value-allowed-list",
   "title" : "Specify a list of allowed property and value pairs within declarations.",
   "parameters" : [ {
@@ -1482,6 +1454,10 @@
     "name" : "declaration-property-unit-allowed-list",
     "description" : "declaration-property-unit-allowed-list"
   } ]
+}, {
+  "patternId" : "a11y_no-display-none",
+  "title" : "Disallow hiding content with `display: none`.",
+  "parameters" : [ ]
 }, {
   "patternId" : "color-function-alias-notation",
   "title" : "Specify alias notation for color-functions.",

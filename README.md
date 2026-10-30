@@ -82,13 +82,13 @@ Note: as of this writing, `docs/patterns.json` shows `"version": "17.13.0"` whil
 ### 3. Step-by-step update procedure
 
 1. **Bump the version(s)** in `package.json` (and run `npm install` to refresh `package-lock.json`), and any CI orb versions in `.circleci/config.yml`, as scoped by the task.
-2. **Regenerate the docs.** Requires `git` and network access: `sbt "doc-generator/run"`. Review the diff for new/removed/renamed patterns in `docs/patterns.json` and `docs/description/*` and any stale `docs/multiple-tests` fixture references.
-3. **Compile, format and stage the Scala binary:** `sbt "scalafmtCheckAll; scalafmtSbtCheck; doc-generator/run; stage"` (this is exactly what `npm test` and the CI `publish_docker_local` job run).
+2. **Regenerate the docs.** Requires `git` and network access: `sbt "doc-generator/run"`. Commit the result: CI does not regenerate it. Review the diff for new/removed/renamed patterns in `docs/patterns.json` and `docs/description/*` and any stale `docs/multiple-tests` fixture references.
+3. **Compile, format and stage the Scala binary:** `sbt "scalafmtCheckAll; scalafmtSbtCheck; doc-generator/run; stage"` (this is what `npm test` runs; the CI `publish_docker_local` job runs the same without `doc-generator/run`).
 4. **Build the Docker image**: `docker build -t codacy-stylelint .`
 5. **Run `codacy-plugins-test` locally** before pushing — clone https://github.com/codacy/codacy-plugins-test and run the relevant DockerTest commands (this repo's CI runs `run_multiple_tests: true`, i.e. the `multiple` test suite against `docs/multiple-tests/*`) against your local image tag.
 6. **Iterate on failures**, re-running only the relevant DockerTest command after each fix.
 7. **Commit** the version bump(s) together with the regenerated `docs/` files (and `package-lock.json`) in one change.
-8. **Push and open a PR.** CI runs `checkout_and_version` -> `publish_docker_local` (scalafmt + doc-generator + stage + docker build) -> `plugins_test` -> `publish_docker` (master only) -> `tag_version`.
+8. **Push and open a PR.** CI runs `checkout_and_version` -> `publish_docker_local` (scalafmt + stage + docker build with the committed `docs/`) -> `plugins_test` -> `publish_docker` (master only) -> `tag_version`.
 9. **Poll the PR's real CI checks until they all pass — local validation is NOT the finish line.** After every push, run `gh pr checks <pr-url>` and keep re-polling (short sleep while any check is `pending`) until all checks finish. If a check fails, fetch its actual log (CircleCI API/UI for the failing job — don't guess), find the true root cause, fix it, push again (never `--no-verify`, never force-push), and re-poll. Repeat until every check is green. **The CI environment's toolchain can differ from your local one**, so a clean local run does not guarantee CI passes. Only stop iterating when every check passes, or you hit a genuine product/infra decision that needs a human — in which case explain it in the PR rather than guessing.
 
 ### 4. Common failure modes and fixes

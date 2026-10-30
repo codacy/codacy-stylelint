@@ -15,8 +15,7 @@ workflows:
           install_sbt_version: "1.10.1"
           cmd: |
             sbt "scalafmtCheckAll;
-              scalafmtSbtCheck; 
-              doc-generator/run;
+              scalafmtSbtCheck;
               stage"
             docker build -t $CIRCLE_PROJECT_REPONAME .
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
