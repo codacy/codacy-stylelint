@@ -123,7 +123,10 @@ object DocGenerator {
 
     val toolpatterns: Set[Pattern.Specification] = patterns.view.map {
       case (patternid, prefix) =>
-        addNewPattern(patternid, default.getOrElse(patternid, Parameter.Value(JsNull)), prefix)
+        // a `null` default would turn the rule off when the pattern is enabled, so default to `true`
+        val patternDefault =
+          default.get(patternid).filterNot(_ == Parameter.Value(JsNull)).getOrElse(Parameter.Value(JsBoolean(true)))
+        addNewPattern(patternid, patternDefault, prefix)
     }.to(Set)
     val tool = Tool.Specification(Tool.Name("stylelint"), Option(Tool.Version(version)), toolpatterns)
     File("docs/patterns.json").write(Json.prettyPrint(Json.toJson(tool)))
